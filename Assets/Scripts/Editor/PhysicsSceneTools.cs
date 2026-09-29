@@ -17,7 +17,7 @@ namespace PowderFlow
             ConfigureProject();Directory.CreateDirectory("Assets/Scenes");
             var scene=EditorSceneManager.NewScene(NewSceneSetup.EmptyScene,NewSceneMode.Single);
             var world=new GameObject("Physics test world").AddComponent<PhysicsTestWorld>();
-            world.physicsConfig=Config<SkiPhysicsConfig>("SkiPhysicsConfig");world.cameraConfig=Config<CameraConfig>("CameraConfig");
+            world.physicsConfig=Config<SkiPhysicsConfig>("SkiPhysicsConfig");world.cameraConfig=Config<CameraConfig>("CameraConfig");world.trickConfig=Config<TrickConfig>("TrickConfig");
             EditorSceneManager.SaveScene(scene,"Assets/Scenes/PhysicsTest.unity");
             EditorBuildSettings.scenes=new[]{new EditorBuildSettingsScene("Assets/Scenes/PhysicsTest.unity",true)};
             AssetDatabase.SaveAssets();Debug.Log("M2 PHYSICS SCENE READY");
