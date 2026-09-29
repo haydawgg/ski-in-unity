@@ -4,7 +4,7 @@ namespace PowderFlow
     [CreateAssetMenu(menuName="PowderFlow/Graphics")]
     public class GraphicsConfig:ScriptableObject
     {
-        public Material snowMaterial,skyMaterial,particleMaterial,trackMaterial;
+        public Material snowMaterial,propSnowMaterial,skyMaterial,particleMaterial,trackMaterial;
         public UnityEngine.Rendering.VolumeProfile postProfile;
         public Color sunsetTop=new Color(.19f,.19f,.39f),sunsetHorizon=new Color(.88f,.56f,.65f),sunsetAmbient=new Color(.44f,.35f,.57f),sunsetLight=new Color(1,.75f,.68f);
         public Color dayTop=new Color(.08f,.3f,.68f),dayHorizon=new Color(.64f,.81f,.94f),dayAmbient=new Color(.45f,.55f,.69f),dayLight=new Color(1,.98f,.94f);
@@ -12,5 +12,16 @@ namespace PowderFlow
         public float trackSpacing=.22f,trackWidth=.07f,trackLift=.015f,trackLifetime=100;
         public int trackSamples=1100,maxParticles=1000;
         public float sprayRate=50,sprayLift=1.6f,landingBurst=80,crashBurst=180;
+        [Header("Visual polish / atmosphere")]
+        public Color sunsetFog=new Color(.49f,.51f,.66f),dayFog=new Color(.58f,.73f,.86f);
+        public Color sunsetCloud=new Color(.73f,.66f,.77f),dayCloud=new Color(.94f,.96f,.99f);
+        public float daySunIntensity=1.7f,dayFogDensity=.00055f,cloudScale=2.8f,cloudCoverage=.48f,cloudSoftness=.22f,sunRadius=.55f;
+        [Header("Visual polish / surface")]
+        public Color snowTint=new Color(.82f,.88f,.95f),rockTint=new Color(.16f,.19f,.25f);
+        public float rippleStrength=.05f,rippleScale=3f,snowVariation=.065f,glitter=.16f,detailDistance=80,lightWrap=.16f,rimStrength=.055f;
+        [Header("Visual polish / post and shadows")]
+        public float exposure=.1f,contrast=5,saturation=-4,bloomIntensity=.28f,bloomThreshold=1.1f,vignetteIntensity=.10f;
+        public float shadowDepthBias=.6f,shadowNormalBias=.35f,ambientOcclusion=.38f;
+        public int shadowResolution=4096;
     }
 }

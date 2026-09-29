@@ -1,5 +1,7 @@
 # PowderFlow delivery report
 
+**Historical M10 report.** Visual polish now has a separate plan in `VISUAL_POLISH_PLAN.md` and current results in `VisualPolish/Phase1/REPORT.md`. VP1 found and repaired empty saved post components, missing renderer post resources, stripped player fog and incomplete snow material assignment. The M9/M10 rendering descriptions below recorded the intended configuration; those specific effects were not fully active in the delivered M10 player. The original package is preserved locally as `Builds/Packages/PowderFlow-M10-Linux.tar.gz`; the usual `PowderFlow-Linux.tar.gz` path contains the latest build and uses the VP1 checksum.
+
 ## Delivered
 
 A playable Unity 6000.3.25f1 / URP freestyle skiing game and Linux x86_64 development build. The ten milestone commits record setup through packaging; `MILESTONES.md` records each gate. The entire art pipeline runs headlessly in Blender 5.2.2 and Unity batch mode.

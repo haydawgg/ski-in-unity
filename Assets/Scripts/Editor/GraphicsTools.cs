@@ -14,17 +14,51 @@ namespace PowderFlow
             var config=Config<GraphicsConfig>("GraphicsConfig");
             Material Make(string name,string shader){string path="Assets/Art/Materials/"+name+".mat";var m=AssetDatabase.LoadAssetAtPath<Material>(path);if(!m){m=new Material(Shader.Find(shader));AssetDatabase.CreateAsset(m,path);}return m;}
             config.snowMaterial=Make("AlpineSnow","PowderFlow/Alpine Snow");config.skyMaterial=Make("AlpineSky","PowderFlow/Alpine Sky");
+            config.snowMaterial.enableInstancing=true;
+            config.snowMaterial.SetColor("_BaseColor",config.snowTint);config.snowMaterial.SetColor("_RockColor",config.rockTint);
+            config.snowMaterial.SetFloat("_RippleStrength",config.rippleStrength);config.snowMaterial.SetFloat("_RippleScale",config.rippleScale);config.snowMaterial.SetFloat("_Variation",config.snowVariation);config.snowMaterial.SetFloat("_Glitter",config.glitter);config.snowMaterial.SetFloat("_DetailDistance",config.detailDistance);config.snowMaterial.SetFloat("_Wrap",config.lightWrap);config.snowMaterial.SetFloat("_RimStrength",config.rimStrength);EditorUtility.SetDirty(config.snowMaterial);
+            config.snowMaterial.SetFloat("_SlopeBlend",1);
+            config.propSnowMaterial=Make("PackedSnow","PowderFlow/Alpine Snow");config.propSnowMaterial.CopyPropertiesFromMaterial(config.snowMaterial);config.propSnowMaterial.SetFloat("_SlopeBlend",0);EditorUtility.SetDirty(config.propSnowMaterial);
             config.trackMaterial=Make("SkiGrooves","PowderFlow/Ski Grooves");config.trackMaterial.shader=Shader.Find("PowderFlow/Ski Grooves");config.trackMaterial.SetColor("_BaseColor",new Color(.24f,.28f,.4f,.35f));
             config.particleMaterial=Make("SnowFlakes","Universal Render Pipeline/Particles/Unlit");config.particleMaterial.SetColor("_BaseColor",Color.white);config.particleMaterial.SetFloat("_Surface",1);config.particleMaterial.SetFloat("_SrcBlend",5);config.particleMaterial.SetFloat("_DstBlend",10);config.particleMaterial.SetFloat("_ZWrite",0);config.particleMaterial.EnableKeyword("_SURFACE_TYPE_TRANSPARENT");config.particleMaterial.renderQueue=3000;
             Directory.CreateDirectory("Assets/Art/Textures");var texture=new Texture2D(32,32,TextureFormat.RGBA32,false);for(int y=0;y<32;y++)for(int x=0;x<32;x++){float d=Vector2.Distance(new Vector2(x,y),new Vector2(15.5f,15.5f))/15.5f;texture.SetPixel(x,y,new Color(1,1,1,Mathf.Pow(Mathf.Clamp01(1-d),1.3f)));}texture.Apply();File.WriteAllBytes("Assets/Art/Textures/SnowFlake.png",texture.EncodeToPNG());AssetDatabase.ImportAsset("Assets/Art/Textures/SnowFlake.png");config.particleMaterial.SetTexture("_BaseMap",AssetDatabase.LoadAssetAtPath<Texture2D>("Assets/Art/Textures/SnowFlake.png"));Object.DestroyImmediate(texture);
-            if(!config.postProfile){var profile=ScriptableObject.CreateInstance<VolumeProfile>();AssetDatabase.CreateAsset(profile,"Assets/Settings/AlpinePost.asset");var tone=profile.Add<Tonemapping>(true);tone.mode.Override(TonemappingMode.ACES);var bloom=profile.Add<Bloom>(true);bloom.threshold.Override(1);bloom.intensity.Override(.55f);var vignette=profile.Add<Vignette>(true);vignette.intensity.Override(.12f);config.postProfile=profile;}
+            if(!config.postProfile){config.postProfile=ScriptableObject.CreateInstance<VolumeProfile>();AssetDatabase.CreateAsset(config.postProfile,"Assets/Settings/AlpinePost.asset");}
+            var tone=PersistEffect<Tonemapping>(config.postProfile);tone.mode.Override(TonemappingMode.ACES);
+            var bloom=PersistEffect<Bloom>(config.postProfile);bloom.threshold.Override(config.bloomThreshold);bloom.intensity.Override(config.bloomIntensity);bloom.scatter.Override(.65f);
+            var vignette=PersistEffect<Vignette>(config.postProfile);vignette.intensity.Override(config.vignetteIntensity);vignette.smoothness.Override(.65f);
+            var grading=PersistEffect<ColorAdjustments>(config.postProfile);grading.postExposure.Override(config.exposure);grading.contrast.Override(config.contrast);grading.saturation.Override(config.saturation);
+            foreach(var effect in config.postProfile.components)EditorUtility.SetDirty(effect);EditorUtility.SetDirty(config.postProfile);
             var renderer=AssetDatabase.LoadAssetAtPath<UniversalRendererData>("Assets/Settings/PowderFlowRenderer.asset");bool has=false;foreach(var f in renderer.rendererFeatures)if(f is ScreenSpaceAmbientOcclusion)has=true;
+            renderer.postProcessData=AssetDatabase.LoadAssetAtPath<PostProcessData>("Packages/com.unity.render-pipelines.universal/Runtime/Data/PostProcessData.asset");
+            if(!renderer.postProcessData)throw new System.Exception("Missing URP post-process resources");
             if(!has){var ao=ScriptableObject.CreateInstance<ScreenSpaceAmbientOcclusion>();ao.name="Alpine SSAO";AssetDatabase.AddObjectToAsset(ao,renderer);renderer.rendererFeatures.Add(ao);var settings=new SerializedObject(ao);settings.FindProperty("m_Settings.Downsample").boolValue=true;settings.FindProperty("m_Settings.Intensity").floatValue=.6f;settings.ApplyModifiedPropertiesWithoutUndo();EditorUtility.SetDirty(renderer);renderer.SetDirty();}
+            foreach(var feature in renderer.rendererFeatures)if(feature is ScreenSpaceAmbientOcclusion){var settings=new SerializedObject(feature);settings.FindProperty("m_Settings.Intensity").floatValue=config.ambientOcclusion;settings.ApplyModifiedPropertiesWithoutUndo();EditorUtility.SetDirty(feature);}
+            EditorUtility.SetDirty(renderer);renderer.SetDirty();
+            var pipeline=(UniversalRenderPipelineAsset)GraphicsSettings.defaultRenderPipeline;
+            var pipelineSettings=new SerializedObject(pipeline);pipelineSettings.FindProperty("m_SoftShadowsSupported").boolValue=true;pipelineSettings.ApplyModifiedPropertiesWithoutUndo();
+            pipeline.supportsCameraDepthTexture=true;pipeline.colorGradingMode=ColorGradingMode.HighDynamicRange;pipeline.mainLightShadowmapResolution=config.shadowResolution;pipeline.shadowDepthBias=config.shadowDepthBias;pipeline.shadowNormalBias=config.shadowNormalBias;EditorUtility.SetDirty(pipeline);
+            var graphics=new SerializedObject(AssetDatabase.LoadAllAssetsAtPath("ProjectSettings/GraphicsSettings.asset")[0]);graphics.FindProperty("m_FogStripping").intValue=1;graphics.FindProperty("m_FogKeepExp").boolValue=true;graphics.FindProperty("m_FogKeepExp2").boolValue=true;graphics.ApplyModifiedPropertiesWithoutUndo();
             var catalog=Config<AssetCatalog>("AssetCatalog");foreach(var a in catalog.assets)
             {
-                var obj=PrefabUtility.LoadPrefabContents(AssetDatabase.GetAssetPath(a.prefab));foreach(var r in obj.GetComponentsInChildren<Renderer>()){var mats=r.sharedMaterials;for(int i=0;i<mats.Length;i++)if(mats[i]&&mats[i].name=="snow")mats[i]=config.snowMaterial;r.sharedMaterials=mats;}PrefabUtility.SaveAsPrefabAsset(obj,AssetDatabase.GetAssetPath(a.prefab));PrefabUtility.UnloadPrefabContents(obj);
+                var obj=PrefabUtility.LoadPrefabContents(AssetDatabase.GetAssetPath(a.prefab));
+                var snow=a.type=="Mountain"||a.name=="ValleyFloor"?config.snowMaterial:config.propSnowMaterial;
+                foreach(var r in obj.GetComponentsInChildren<Renderer>()){var mats=r.sharedMaterials;for(int i=0;i<mats.Length;i++)if(mats[i]&&(mats[i]==config.snowMaterial||mats[i]==config.propSnowMaterial||mats[i].name=="snow"||mats[i].name.StartsWith("snow.")))mats[i]=snow;r.sharedMaterials=mats;}PrefabUtility.SaveAsPrefabAsset(obj,AssetDatabase.GetAssetPath(a.prefab));PrefabUtility.UnloadPrefabContents(obj);
             }
-            EditorUtility.SetDirty(config);var scene=EditorSceneManager.OpenScene("Assets/Scenes/Mountain.unity");var world=Object.FindFirstObjectByType<MountainWorld>();world.graphicsConfig=config;EditorSceneManager.SaveScene(scene);AssetDatabase.SaveAssets();Debug.Log("M9 GRAPHICS CONFIGURED");
+            EditorUtility.SetDirty(config);var scene=EditorSceneManager.OpenScene("Assets/Scenes/Mountain.unity");var world=Object.FindFirstObjectByType<MountainWorld>();world.graphicsConfig=config;RenderSettings.fog=true;RenderSettings.fogMode=FogMode.Exponential;RenderSettings.fogDensity=config.fogDensity;RenderSettings.fogColor=config.sunsetFog;EditorSceneManager.SaveScene(scene);AssetDatabase.SaveAssets();Debug.Log("ALPINE GRAPHICS CONFIGURED / persistent post + fog + soft shadows");
+        }
+        static T PersistEffect<T>(VolumeProfile profile) where T:VolumeComponent
+        {
+            if(!profile.TryGet(out T effect))effect=profile.Add<T>(true);
+            if(!AssetDatabase.Contains(effect)){effect.name=typeof(T).Name;AssetDatabase.AddObjectToAsset(effect,profile);}
+            effect.active=true;return effect;
+        }
+        [MenuItem("PowderFlow/Apply Visual Polish Foundation")]
+        public static void ConfigureVisualPolish()
+        {
+            var c=Config<GraphicsConfig>("GraphicsConfig");
+            c.sunsetTop=new Color(.16f,.20f,.36f);c.sunsetHorizon=new Color(.76f,.49f,.56f);c.sunsetAmbient=new Color(.34f,.38f,.51f);c.sunsetLight=new Color(1,.79f,.65f);
+            c.dayTop=new Color(.035f,.21f,.49f);c.dayHorizon=new Color(.58f,.76f,.91f);c.dayAmbient=new Color(.44f,.52f,.64f);c.dayLight=new Color(1,.98f,.94f);
+            c.sunIntensity=1.25f;c.daySunIntensity=1.7f;c.rippleStrength=.05f;c.rippleScale=3;c.fogDensity=.00065f;EditorUtility.SetDirty(c);ConfigureGraphics();
         }
     }
 }

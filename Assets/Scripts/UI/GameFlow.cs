@@ -10,10 +10,17 @@ namespace PowderFlow
         public GameSystemConfig config;public bool startInMenu;
         public static bool ScoreSession;public bool menu;public float Remaining {get;private set;}
         string page="main";int selected;MountainWorld world;GUIStyle title,body,button;Texture2D shade;
+        void Awake()
+        {
+            var args=System.Environment.GetCommandLineArgs();
+            if(System.Array.Exists(args,a=>a=="--smoke-test"||a=="--menu-capture"))Application.runInBackground=true;
+        }
         void Start()
         {
             world=GetComponent<MountainWorld>();Remaining=config.sessionDuration;menu=startInMenu;Time.timeScale=menu?0:1;
-            world.player.ResetTo(world.player.startPosition,world.player.startRotation);ApplySettings();
+            world.player.ResetTo(world.player.startPosition,world.player.startRotation);
+            if(System.Array.Exists(System.Environment.GetCommandLineArgs(),a=>a=="--visual-day"))SaveStore.Current.day=true;
+            ApplySettings();
             if(System.Array.Exists(System.Environment.GetCommandLineArgs(),a=>a=="--smoke-test")){menu=false;Time.timeScale=1;gameObject.AddComponent<StandaloneSmokeTest>().flow=this;}
             else if(System.Array.Exists(System.Environment.GetCommandLineArgs(),a=>a=="--menu-capture"))gameObject.AddComponent<StandaloneSmokeTest>().flow=this;
         }

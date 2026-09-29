@@ -1,0 +1,54 @@
+{
+  "phase": "VP1",
+  "date": "2026-09-29",
+  "unity": "6000.3.25f1",
+  "blender": "5.2.2",
+  "editMode": {
+    "passed": 23,
+    "failed": 0
+  },
+  "playMode": {
+    "passed": 12,
+    "failed": 0
+  },
+  "finalGraphicsPlayMode": {
+    "passed": 1,
+    "failed": 0
+  },
+  "connectedDescentMeters": 1405,
+  "regionsVisited": 5,
+  "fixedCameraGpuFlushFps": 312.9,
+  "nativeProfiles": {
+    "Sunset": {
+      "averageFps": 652.48,
+      "averageFrameMs": 1.53,
+      "p95FrameMs": 1.93,
+      "p99FrameMs": 2.66,
+      "width": 1920,
+      "height": 1080,
+      "quality": 2,
+      "maxSpeed": 17.49,
+      "distance": 101.85,
+      "gpu": "AMD Radeon RX 6600 XT (radeonsi, navi23, ACO, DRM 3.64, 7.2.8-1-cachyos)"
+    },
+    "Day": {
+      "averageFps": 737.68,
+      "averageFrameMs": 1.36,
+      "p95FrameMs": 1.6,
+      "p99FrameMs": 1.91,
+      "width": 1920,
+      "height": 1080,
+      "quality": 2,
+      "maxSpeed": 17.49,
+      "distance": 101.85,
+      "gpu": "AMD Radeon RX 6600 XT (radeonsi, navi23, ACO, DRM 3.64, 7.2.8-1-cachyos)"
+    }
+  },
+  "linuxBuildBytes": 183332044,
+  "packageBytes": 70472527,
+  "packageSha256": "95ebdbb5bd5a1421ca7c7e9e00f1698d1bc712159687c158c9ec98294137f2d4",
+  "nativeMenuExitCode": 0,
+  "packageLaunchExitCode": 0,
+  "method": "Visible native Wayland player, High quality, 1920x1080, 2 second warm-up then 12 second automatic tuck, VSync disabled. Short upper-run measurement; GPU-flushed camera render is separate.",
+  "packageLaunchMethod": "Extracted to Builds/VisualPolishPackageValidation; portable Play.sh --menu-capture produced a fresh 1920x1080 PNG and exited 0 without runtime/shader errors."
+}

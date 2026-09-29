@@ -36,9 +36,10 @@ namespace PowderFlow
                     for(int i=0;i<list.Length;i++)
                     {
                         if(!list[i])continue;
-                        string materialPath="Assets/Art/Materials/"+list[i].name.Replace(" ","_")+".mat";
+                        string materialName=System.Text.RegularExpressions.Regex.Replace(list[i].name,@"\.\d{3}$","");
+                        string materialPath="Assets/Art/Materials/"+materialName.Replace(" ","_")+".mat";
                         var material=AssetDatabase.LoadAssetAtPath<Material>(materialPath);
-                        if(!material){material=new Material(Shader.Find("Universal Render Pipeline/Lit"));material.color=list[i].color;material.SetFloat("_Smoothness",.18f);material.enableInstancing=true;AssetDatabase.CreateAsset(material,materialPath);}
+                        if(!material){material=new Material(Shader.Find("Universal Render Pipeline/Lit"));material.name=materialName;material.color=list[i].color;material.SetFloat("_Smoothness",.18f);material.enableInstancing=true;AssetDatabase.CreateAsset(material,materialPath);}
                         list[i]=material;
                     }
                     renderer.sharedMaterials=list;

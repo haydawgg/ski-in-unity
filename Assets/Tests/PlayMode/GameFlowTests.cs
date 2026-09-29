@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Collections.Generic;
 using System.IO;
 using NUnit.Framework;
 using UnityEngine;
@@ -14,6 +15,28 @@ namespace PowderFlow.Tests
     public class GameFlowTests:PlayWorldTestBase
     {
 #if UNITY_EDITOR
+        readonly List<InputDevice> suspended=new List<InputDevice>();
+        readonly List<Gamepad> testPads=new List<Gamepad>();
+        Keyboard testKeyboard;InputSettings.UpdateMode previousUpdateMode;InputSettings.BackgroundBehavior previousBackground;InputSettings.EditorInputBehaviorInPlayMode previousEditorInput;
+        [SetUp]public void IsolateVirtualInput()
+        {
+            previousUpdateMode=InputSystem.settings.updateMode;
+            previousBackground=InputSystem.settings.backgroundBehavior;previousEditorInput=InputSystem.settings.editorInputBehaviorInPlayMode;
+            InputSystem.settings.backgroundBehavior=InputSettings.BackgroundBehavior.IgnoreFocus;
+            InputSystem.settings.editorInputBehaviorInPlayMode=InputSettings.EditorInputBehaviorInPlayMode.AllDeviceInputAlwaysGoesToGameView;
+            InputSystem.settings.updateMode=InputSettings.UpdateMode.ProcessEventsManually;
+            foreach(var device in InputSystem.devices)if(device.enabled){suspended.Add(device);InputSystem.DisableDevice(device);}
+            testKeyboard=InputSystem.AddDevice<Keyboard>();testKeyboard.MakeCurrent();
+        }
+        [TearDown]public void RestoreInputDevices()
+        {
+            foreach(var pad in testPads)if(pad.added)InputSystem.RemoveDevice(pad);testPads.Clear();
+            if(testKeyboard!=null&&testKeyboard.added)InputSystem.RemoveDevice(testKeyboard);
+            foreach(var device in suspended)if(device.added)InputSystem.EnableDevice(device);suspended.Clear();
+            InputSystem.settings.updateMode=previousUpdateMode;
+            InputSystem.settings.backgroundBehavior=previousBackground;InputSystem.settings.editorInputBehaviorInPlayMode=previousEditorInput;
+        }
+        Gamepad CreatePad(){var pad=InputSystem.AddDevice<Gamepad>();testPads.Add(pad);pad.MakeCurrent();return pad;}
         GameFlow Create(bool menu,float duration=150)
         {
             var obj=new GameObject();obj.SetActive(false);var world=obj.AddComponent<MountainWorld>();world.catalog=AssetDatabase.LoadAssetAtPath<AssetCatalog>("Assets/Settings/AssetCatalog.asset");world.physicsConfig=AssetDatabase.LoadAssetAtPath<SkiPhysicsConfig>("Assets/Settings/SkiPhysicsConfig.asset");world.trickConfig=AssetDatabase.LoadAssetAtPath<TrickConfig>("Assets/Settings/TrickConfig.asset");world.cameraConfig=AssetDatabase.LoadAssetAtPath<CameraConfig>("Assets/Settings/CameraConfig.asset");world.worldConfig=AssetDatabase.LoadAssetAtPath<WorldConfig>("Assets/Settings/WorldConfig.asset");world.graphicsConfig=AssetDatabase.LoadAssetAtPath<GraphicsConfig>("Assets/Settings/GraphicsConfig.asset");
@@ -21,7 +44,7 @@ namespace PowderFlow.Tests
         }
         [UnityTest]public IEnumerator GamepadCanLaunchFreeRideFromMainMenu()
         {
-            var flow=Create(true);var pad=InputSystem.AddDevice<Gamepad>();yield return null;Assert.That(flow.menu,Is.True);
+            var flow=Create(true);var pad=CreatePad();yield return null;Assert.That(flow.menu,Is.True);
             InputSystem.QueueStateEvent(pad,new GamepadState().WithButton(GamepadButton.South));InputSystem.Update();yield return null;yield return null;
             InputSystem.RemoveDevice(pad);Assert.That(SceneManager.GetActiveScene().name,Is.EqualTo("Mountain"));Assert.That(Object.FindFirstObjectByType<GameFlow>().menu,Is.False);
         }
@@ -39,17 +62,18 @@ namespace PowderFlow.Tests
         }
         [UnityTest]public IEnumerator RightStickControlsRailBalanceWithoutChangingSteering()
         {
-            var obj=new GameObject("Input fixture");var input=obj.AddComponent<SkierInput>();var pad=InputSystem.AddDevice<Gamepad>();
+            var obj=new GameObject("Input fixture");var input=obj.AddComponent<SkierInput>();var pad=CreatePad();
             try
             {
                 InputSystem.QueueStateEvent(pad,new GamepadState{rightStick=new Vector2(.8f,0)});InputSystem.Update();yield return null;
+                Debug.Log($"VIRTUAL INPUT focused={Application.isFocused} enabled={pad.enabled} current={Gamepad.current==pad} value={pad.rightStick.ReadValue()} injected={input.injected} roll={input.roll}");
                 Assert.That(input.roll,Is.GreaterThan(.5f));Assert.That(input.steer,Is.EqualTo(0).Within(.01f));
             }
             finally{InputSystem.RemoveDevice(pad);Object.Destroy(obj);}
         }
         [UnityTest]public IEnumerator GamepadSettingsCanSavePortraitResolution()
         {
-            var prior=SaveStore.Current;string folder=Path.Combine(Path.GetTempPath(),"powderflow-settings-"+System.Guid.NewGuid());SaveStore.OverridePath=Path.Combine(folder,"save.json");SaveStore.Current=new SavedGame();var pad=InputSystem.AddDevice<Gamepad>();
+            var prior=SaveStore.Current;string folder=Path.Combine(Path.GetTempPath(),"powderflow-settings-"+System.Guid.NewGuid());SaveStore.OverridePath=Path.Combine(folder,"save.json");SaveStore.Current=new SavedGame();var pad=CreatePad();
             try
             {
                 Create(true);yield return null;yield return Press(pad,GamepadButton.DpadDown);yield return Press(pad,GamepadButton.DpadDown);yield return Press(pad,GamepadButton.South);

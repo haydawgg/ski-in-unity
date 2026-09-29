@@ -8,6 +8,12 @@ namespace PowderFlow
         public bool tuck, brake, crouch, grabLeft, grabRight, modifierLeft, modifierRight;
         public bool pop, reset, marker, returnMarker, debugToggle, pause, lighting;
         public bool injected;
+        public void BeginInjected()
+        {
+            injected=true;steer=flip=roll=0;
+            tuck=brake=crouch=grabLeft=grabRight=modifierLeft=modifierRight=false;
+            pop=reset=marker=returnMarker=debugToggle=pause=lighting=false;
+        }
         void Update()
         {
             if (injected) return;

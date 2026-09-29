@@ -2,6 +2,12 @@
 
 An original, playable freestyle skiing game made with Unity URP and Blender. Gravity drives the skier down a connected 1.5 km mountain; carve, pop, rotate, grab, grind, land switch, and retry lines with session markers.
 
+## Visual polish
+
+The detailed seven-phase plan is in `Documentation/VISUAL_POLISH_PLAN.md`. The first pass repairs persistent post-processing, native-player fog, soft shadows and generated snow material assignments, then refines the Day/Sunset palette, clouds and snow detail. Skier/clothing, vegetation, props, motion effects and UI have dedicated later phases.
+
+Current captures and validation are in `Documentation/VisualPolish/Phase1/REPORT.md`. `Documentation/FINAL_REPORT.md` and `Documentation/Validation/` preserve the earlier M10 delivery results. The latest archive remains `Builds/Packages/PowderFlow-Linux.tar.gz`.
+
 ## Play the Linux build
 
 From this project directory:
@@ -56,6 +62,7 @@ export BLENDER_BIN=/usr/bin/blender
 Tools/Build/setup.sh
 python Tools/Build/generate_audio.py
 Tools/Build/generate-assets.sh all
+Tools/Build/polish-graphics.sh
 Tools/Build/test.sh EditMode
 Tools/Build/test.sh PlayMode
 Tools/Build/build-linux.sh
@@ -65,7 +72,9 @@ Tools/Build/run.sh
 
 `generate-assets.sh character` and `generate-assets.sh environment` regenerate individual stages. Asset generation saves `.blend` sources, exports FBX and rail-path JSON, validates the manifest, and runs the Unity importer. No manual per-asset import work is required.
 
-EditMode runs without graphics. PlayMode and the standalone build require a graphics session. Results and diagnostics are in ignored `Logs/`; the delivered validation summary is in `Documentation/FINAL_REPORT.md` and `Documentation/Validation/`.
+EditMode runs without graphics. PlayMode and the standalone build require a graphics session. Results and diagnostics are in ignored `Logs/`. An optional second argument filters tests, for example `Tools/Build/test.sh PlayMode PowderFlow.Tests.GraphicsPlayTests`.
+
+`polish-graphics.sh` reapplies the VP1 palette and render foundation. In Unity use **PowderFlow → Apply Visual Polish Foundation**. GraphicsConfig and the snow/sky materials contain editable parameters; normal asset regeneration reapplies graphics and preserves these assignments.
 
 Unity occasionally reports a Bee backend closed-pipe failure before compilation. If the log contains that specific transient failure, rerun the command once. Actual C# errors must be fixed. The licensing retry and bundled .NET shutdown messages seen on this workstation did not prevent successful tests or builds.
 
@@ -73,10 +82,11 @@ To repeat the standalone 1080p smoke profile and capture:
 
 ```bash
 Tools/Build/run.sh --smoke-test -screen-width 1920 -screen-height 1080 -screen-fullscreen 0 -logFile "$PWD/Logs/standalone.log"
+Tools/Build/run.sh --smoke-test --visual-day -screen-width 1920 -screen-height 1080 -screen-fullscreen 0 -logFile "$PWD/Logs/standalone-day.log"
 Tools/Build/run.sh --menu-capture -logFile "$PWD/Logs/menu.log"
 ```
 
-The first runs an automatic tuck descent for 14 seconds, writes `smoke-report.json` and `smoke-gameplay.png` beside the executable, and exits. The second captures the main menu and exits. These diagnostic flags are optional.
+The smoke test runs an automatic tuck descent for 14 seconds, writes `smoke-report.json` and `smoke-gameplay.png` beside the executable, and exits. Its JSON includes average FPS and p95/p99 frame times. `--visual-day` selects Day for that launch. The menu capture exits after saving `smoke-menu.png`. Diagnostic launches run in the background so focus changes do not suspend them; normal play retains its focus behavior. These flags are optional.
 
 ## Controls
 

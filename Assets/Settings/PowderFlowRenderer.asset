@@ -19,7 +19,7 @@ MonoBehaviour:
     AfterOpaque: 0
     Source: 1
     NormalSamples: 1
-    Intensity: 0.6
+    Intensity: 0.38
     DirectLightingStrength: 0.25
     Radius: 0.035
     Samples: 1
@@ -54,7 +54,7 @@ MonoBehaviour:
   - {fileID: -2915136107368222706}
   m_RendererFeatureMap: 
   m_UseNativeRenderPass: 0
-  postProcessData: {fileID: 0}
+  postProcessData: {fileID: 11400000, guid: 41439944d30ece34e96484bdb6645b55, type: 2}
   m_AssetVersion: 3
   m_PrepassLayerMask:
     serializedVersion: 2

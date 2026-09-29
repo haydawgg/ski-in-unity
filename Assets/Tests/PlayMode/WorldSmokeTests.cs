@@ -11,7 +11,7 @@ namespace PowderFlow.Tests
             var root=new GameObject("Test world");root.SetActive(false);
             var world=root.AddComponent<PhysicsTestWorld>();world.physicsConfig=ScriptableObject.CreateInstance<SkiPhysicsConfig>();world.cameraConfig=ScriptableObject.CreateInstance<CameraConfig>();world.trickConfig=ScriptableObject.CreateInstance<TrickConfig>();
             root.SetActive(true);yield return null;
-            world.player.Input.injected=true;
+            world.player.Input.BeginInjected();
             Time.timeScale=10;
             yield return new WaitForSeconds(4);
             Assert.That(world.player.Speed,Is.GreaterThan(6));

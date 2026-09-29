@@ -14,7 +14,7 @@ namespace PowderFlow.Tests
         {
 #if UNITY_EDITOR
             var obj=new GameObject();obj.SetActive(false);var world=obj.AddComponent<MountainWorld>();world.catalog=AssetDatabase.LoadAssetAtPath<AssetCatalog>("Assets/Settings/AssetCatalog.asset");world.physicsConfig=AssetDatabase.LoadAssetAtPath<SkiPhysicsConfig>("Assets/Settings/SkiPhysicsConfig.asset");world.trickConfig=AssetDatabase.LoadAssetAtPath<TrickConfig>("Assets/Settings/TrickConfig.asset");world.cameraConfig=AssetDatabase.LoadAssetAtPath<CameraConfig>("Assets/Settings/CameraConfig.asset");world.worldConfig=AssetDatabase.LoadAssetAtPath<WorldConfig>("Assets/Settings/WorldConfig.asset");world.graphicsConfig=AssetDatabase.LoadAssetAtPath<GraphicsConfig>("Assets/Settings/GraphicsConfig.asset");obj.SetActive(true);yield return null;
-            var p=world.player;p.Input.injected=true;world.Respawn(1);Camera camera=null;foreach(var follow in Object.FindObjectsByType<SkiCameraController>(FindObjectsSortMode.None))if(follow.skier==p)camera=follow.GetComponent<Camera>();
+            var p=world.player;p.Input.BeginInjected();world.Respawn(1);Camera camera=null;foreach(var follow in Object.FindObjectsByType<SkiCameraController>(FindObjectsSortMode.None))if(follow.skier==p)camera=follow.GetComponent<Camera>();
             yield return new WaitForSeconds(.4f);
             camera.transform.position=p.Body.position+new Vector3(0,2.2f,-6);camera.transform.LookAt(p.Body.position+Vector3.up*.4f);camera.fieldOfView=73;
             var benchmark=new RenderTexture(1920,1080,24);camera.targetTexture=benchmark;var pixel=new Texture2D(1,1,TextureFormat.RGB24,false);
@@ -23,6 +23,14 @@ namespace PowderFlow.Tests
             double fps=90/(Time.realtimeSinceStartupAsDouble-start);Debug.Log($"M9 SYNCHRONOUS 1080P RENDER FPS {fps:F1}");camera.targetTexture=null;RenderTexture.active=null;Object.Destroy(pixel);Object.Destroy(benchmark);
             Capture(camera,"Sunset",1920,1080);world.GetComponent<AlpineLighting>().Apply(true);yield return null;camera.transform.position=p.Body.position+new Vector3(0,2.2f,-6);camera.transform.LookAt(p.Body.position+Vector3.up*.4f);Capture(camera,"Day",1920,1080);
             var rt=new RenderTexture(720,1280,24);camera.targetTexture=rt;yield return null;camera.transform.position=p.Body.position+new Vector3(0,2.2f,-8.1f);camera.transform.LookAt(p.Body.position+Vector3.up*.4f);Capture(camera,"Portrait",720,1280);camera.targetTexture=null;Object.Destroy(rt);
+            foreach(bool day in new[]{false,true})
+            {
+                world.GetComponent<AlpineLighting>().Apply(day);yield return null;camera.fieldOfView=65;
+                camera.transform.position=world.OnSnow(-25,355,3);camera.transform.LookAt(world.OnSnow(10,450,3));
+                Capture(camera,day?"DayParkDetail":"SunsetParkDetail",1920,1080);
+                camera.transform.position=world.OnSnow(-65,70,9);camera.transform.LookAt(world.OnSnow(0,1000,12));
+                Capture(camera,day?"DayVista":"SunsetVista",1920,1080);
+            }
             Assert.That(p.GetComponent<SnowTrackSystem>(),Is.Not.Null);Assert.That(p.GetComponent<SnowEffectsController>(),Is.Not.Null);Assert.That(fps,Is.GreaterThan(60));Object.Destroy(obj);
 #endif
         }

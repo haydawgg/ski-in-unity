@@ -72,3 +72,11 @@
 - Try: `Tools/Build/run.sh`, choose FREE RIDE. A/D carves, W tucks, S brakes, hold/release Space pops, arrows flip/roll, Q/E grabs, R retries, T/Y stores/retries a grounded marker. Or open MainMenu.unity in Unity and press Play. Build/package commands and complete controls are in README.md.
 - Deliverables: `Builds/Packages/PowderFlow-Linux.tar.gz`, portable Play.sh, source/FBX assets, validation XML/JSON, gameplay/menu/lighting captures, README and FINAL_REPORT.
 - Issues/limits: the default X11 launch stalled on this Wayland desktop; Play.sh selects native Wayland and has an X11 opt-out. Human feel/visual matching and hours-long play are not certified. HLSL/Generic rig, approximate grab poses, no billboard/shrub assets, some source constants, preset outfits and Linux-only packaging are documented differences. Optional replay/photo/challenges and music are omitted.
+
+## VP1 — Visual polish rendering foundation: passed
+
+- Created a detailed seven-phase visual polish plan. Repaired empty saved Volume effects, missing renderer post resources, stripped player fog, disabled soft shadows and Blender numeric snow material names. Added separate prop snow, balanced Day/Sunset, improved clouds and refined snow detail.
+- Checks: EditMode **23/23**, PlayMode **12/12**; final targeted render/capture repeat **1/1**. Connected descent reached **1,405 m** through five regions. No native runtime exceptions or shader errors in the successful launches.
+- Latest Linux build: **183,332,044 bytes**. Visible 1080p High-quality short profile: Sunset **652.48 FPS**, p95 **1.93 ms**, p99 **2.66 ms**; Day **737.68 FPS**, p95 **1.60 ms**, p99 **1.91 ms**. Both measure a 12-second upper-run tuck after two seconds of warm-up, not a complete mountain stress run.
+- Fixed injected test input and virtual gamepad/focus isolation; capture/profile launches now run in the background. No ski-force, air or rail tuning changes. Refreshed Linux archive, captures, XML and profiles are described in `VisualPolish/Phase1/REPORT.md`.
+- The previous M9/M10 rendering descriptions recorded intended settings that were not fully active in the saved build; FINAL_REPORT now records the VP1 correction. Primitive clothing/trees, repeated ridge shape, motion effects and menu presentation remain the later polish phases. Next: VP2 skier/clothing/skis/pose readability.

@@ -9,7 +9,7 @@ namespace PowderFlow.Tests
         [UnityTest]public IEnumerator GrabsRagdollAndInstantResetAreConnected()
         {
             var root=new GameObject();root.SetActive(false);var world=root.AddComponent<PhysicsTestWorld>();world.physicsConfig=ScriptableObject.CreateInstance<SkiPhysicsConfig>();world.cameraConfig=ScriptableObject.CreateInstance<CameraConfig>();world.trickConfig=ScriptableObject.CreateInstance<TrickConfig>();root.SetActive(true);yield return null;
-            var p=world.player;p.Input.injected=true;p.ResetTo(new Vector3(100,60,0),Quaternion.identity);yield return new WaitForFixedUpdate();
+            var p=world.player;p.Input.BeginInjected();p.ResetTo(new Vector3(100,60,0),Quaternion.identity);yield return new WaitForFixedUpdate();
             var grab=p.GetComponent<GrabSystem>();
             for(int choice=0;choice<8;choice++)
             {

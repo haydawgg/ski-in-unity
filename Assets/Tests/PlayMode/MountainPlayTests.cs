@@ -14,7 +14,7 @@ namespace PowderFlow.Tests
         {
 #if UNITY_EDITOR
             var obj=new GameObject();obj.SetActive(false);var world=obj.AddComponent<MountainWorld>();world.catalog=AssetDatabase.LoadAssetAtPath<AssetCatalog>("Assets/Settings/AssetCatalog.asset");world.physicsConfig=AssetDatabase.LoadAssetAtPath<SkiPhysicsConfig>("Assets/Settings/SkiPhysicsConfig.asset");world.trickConfig=AssetDatabase.LoadAssetAtPath<TrickConfig>("Assets/Settings/TrickConfig.asset");world.cameraConfig=AssetDatabase.LoadAssetAtPath<CameraConfig>("Assets/Settings/CameraConfig.asset");world.worldConfig=AssetDatabase.LoadAssetAtPath<WorldConfig>("Assets/Settings/WorldConfig.asset");obj.SetActive(true);yield return null;
-            world.player.Input.injected=true;world.player.Input.tuck=true;Time.timeScale=12;
+            world.player.Input.BeginInjected();world.player.Input.tuck=true;Time.timeScale=12;
             var areas=new HashSet<string>();float max=0;
             for(int i=0;i<140&&max<1380;i++)
             {
