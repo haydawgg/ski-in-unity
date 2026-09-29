@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 917598401d36d6898a84ca610ce5dc91, type: 3}
+  m_Name: AssetCatalog
+  m_EditorClassIdentifier: PowderFlow::PowderFlow.AssetCatalog
+  assets:
+  - name: Skier
+    type: Character
+    prefab: {fileID: 3723794963440931544, guid: a47daf1d0284f2baa8a1ccea4f20f2b2, type: 3}
+    metadata: 

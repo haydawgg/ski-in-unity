@@ -34,3 +34,10 @@
 - EditMode 17/17 and PlayMode 4/4 pass. Live tests capture and exit all three rail types while retaining >6 m/s. Kink projection is continuous; rotation and pops carry into air.
 - Try PhysicsTest: aim skis toward a rail from above; A/D rotates the slide, arrow left/right balances, Space release pops out. T/Y markers provide retries.
 - Fixed reset imposing an unnecessary capture cooldown. Rail paths are ready for JSON-driven Blender import in M7; no asset metadata has been imported yet.
+
+## M6 — Blender character: passed
+
+- Added deterministic original 8,148-triangle skinned skier, helmet/goggles/fabric slots, 1.7 m separate twin-tip skis, bindings, poles and 17 source poses. Blender source is in ArtSource/Blender, FBX/preview/manifest in Assets/Art/Generated. Added catalog/importer, AssetPreview scene, runtime outfit colors and imported-bone pose binding.
+- Manifest validation passes; EditMode 18/18, graphics-enabled PlayMode 5/5 pass. Imported rig height and required bones validated; crossed-ski motion proven in the real imported rig. Blender and Unity frames inspected (Documentation/Screenshots/M6-character.png).
+- Try PhysicsTest to ski with the generated model; AssetPreview shows the model alone. `Tools/Build/generate-assets.sh character` regenerates and imports it.
+- Camera now snaps to the skier on reset. Rig uses Generic import to preserve extra ski/pole bones; naming/hierarchy is humanoid-compatible, but no retargeted Humanoid animation is required for procedural posing. Full nographics PlayMode launch stalled after importing the skinned rig; tests now run with graphics enabled. Some test fixture cameras warn about duplicate AudioListeners; production has one listener.

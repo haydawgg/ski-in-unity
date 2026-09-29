@@ -20,7 +20,8 @@ namespace PowderFlow
             if(!root||!leftSki||!skier)return;
             float bend=skier.Input.crouch?1:skier.Input.tuck?.75f:skier.Compression;
             if(grab&&grab.Current!=GrabType.None)bend=1;
-            Pose(leftThigh,new Vector3(-bend*55,0,0));Pose(rightThigh,new Vector3(-bend*55,0,0));Pose(leftShin,new Vector3(bend*95,0,0));Pose(rightShin,new Vector3(bend*95,0,0));
+            float thighAngle=grab&&grab.Current!=GrabType.None ? -130 : -bend*55;
+            Pose(leftThigh,new Vector3(thighAngle,0,0));Pose(rightThigh,new Vector3(thighAngle,0,0));Pose(leftShin,new Vector3(bend*95,0,0));Pose(rightShin,new Vector3(bend*95,0,0));
             Pose(leftFoot,new Vector3(-bend*40,0,0));Pose(rightFoot,new Vector3(-bend*40,0,0));Pose(spine,new Vector3(bend*25,0,0));
             root.localRotation=Quaternion.Euler(0,0,-skier.Edge*skier.config.maximumLean*(skier.Grounded?1:.25f));
             Pose(leftArm,new Vector3(-20-bend*25,0,-15));Pose(rightArm,new Vector3(-20-bend*25,0,15));Pose(leftElbow,new Vector3(-25,0,0));Pose(rightElbow,new Vector3(-25,0,0));

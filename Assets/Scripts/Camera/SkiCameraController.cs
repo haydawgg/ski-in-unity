@@ -7,6 +7,8 @@ namespace PowderFlow
         Vector3 springVelocity, heading=Vector3.forward;
         Camera lens;
         void Awake() { lens=GetComponent<Camera>(); }
+        void Start(){if(skier)skier.ResetPerformed+=Snap;}
+        void Snap(){heading=Vector3.ProjectOnPlane(skier.transform.forward,Vector3.up).normalized;springVelocity=Vector3.zero;transform.position=skier.transform.position-heading*config.distance+Vector3.up*config.height;}
         void LateUpdate()
         {
             if(!skier||!config)return;

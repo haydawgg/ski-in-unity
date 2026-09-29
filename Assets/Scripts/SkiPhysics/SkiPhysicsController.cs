@@ -107,8 +107,8 @@ namespace PowderFlow
         public void EnterAirWithoutRestartingTrick(){contactLock=trickConfig.takeoffContactLock;previousGrounded=false;Grounded=false;Air.Begin(Body,Input,trickConfig,Vector3.zero);}
         public void ResetTo(Vector3 position,Quaternion rotation)
         {
-            ResetPerformed?.Invoke();Body.isKinematic=false;Body.position=position; Body.rotation=rotation; Body.linearVelocity=Body.angularVelocity=Vector3.zero;
-            SupportNormal=rotation*Vector3.up; Edge=0;Bailed=false;contactLock=0;airTime=0;preload=Vector3.zero;previousGrounded=false;
+            Body.isKinematic=false;Body.position=position; Body.rotation=rotation; Body.linearVelocity=Body.angularVelocity=Vector3.zero;
+            SupportNormal=rotation*Vector3.up; Edge=0;Bailed=false;contactLock=0;airTime=0;preload=Vector3.zero;previousGrounded=false;ResetPerformed?.Invoke();
         }
         void Update() { if(Input && Input.reset)ResetTo(safePosition,safeRotation); }
     }

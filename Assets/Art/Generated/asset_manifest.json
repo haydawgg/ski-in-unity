@@ -1,0 +1,35 @@
+{
+  "seed": 42,
+  "assets": [
+    {
+      "name": "Skier",
+      "type": "Character",
+      "generator": "Tools/Blender/build_all_assets.py",
+      "parameters": {
+        "seed": 42,
+        "heightMeters": 1.85,
+        "skiLength": 1.7,
+        "sourcePoses": 17
+      },
+      "blenderVersion": "5.2.2 LTS",
+      "fbxPath": "Assets/Art/Generated/Character/Skier.fbx",
+      "previewPath": "Assets/Art/Generated/Character/Skier.png",
+      "triangleCount": 8148,
+      "bounds": [
+        [
+          -0.44968661665916443,
+          -0.8500000238418579,
+          -1.2000000476837158
+        ],
+        [
+          0.44968661665916443,
+          0.8500000238418579,
+          1.059999942779541
+        ]
+      ],
+      "lodCount": 1,
+      "collisionAsset": "",
+      "timestamp": "2026-09-29T21:35:07.273270+00:00"
+    }
+  ]
+}
