@@ -13,6 +13,7 @@ namespace PowderFlow.Tests
             var a=Object.Instantiate(catalog.Find("Mountain00"));var b=Object.Instantiate(catalog.Find("Mountain01"));Physics.SyncTransforms();
             Assert.That(Physics.Raycast(new Vector3(0,1000,149.99f),Vector3.down,out var one,2000),Is.True);
             Assert.That(Physics.Raycast(new Vector3(0,1000,150.01f),Vector3.down,out var two,2000),Is.True);
+            Assert.That(one.point.y,Is.EqualTo(MountainWorld.Height(0,149.99f)).Within(.1f));
             Assert.That(Mathf.Abs(one.point.y-two.point.y),Is.LessThan(.02f));Assert.That(Vector3.Dot(one.normal,two.normal),Is.GreaterThan(.99f));
             Object.DestroyImmediate(a);Object.DestroyImmediate(b);
         }

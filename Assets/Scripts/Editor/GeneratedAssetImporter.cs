@@ -28,8 +28,8 @@ namespace PowderFlow
             foreach(var asset in manifest.assets)
             {
                 var model=AssetDatabase.LoadAssetAtPath<GameObject>(asset.fbxPath);if(!model)throw new Exception("Missing imported model "+asset.name);
-                var instance=UnityEngine.Object.Instantiate(model);instance.name=asset.name;
-                var anim=instance.GetComponent<Animator>();if(anim)anim.enabled=false;
+                var content=UnityEngine.Object.Instantiate(model);var instance=new GameObject(asset.name);content.transform.SetParent(instance.transform,false);
+                var anim=instance.GetComponentInChildren<Animator>();if(anim)anim.enabled=false;
                 foreach(var renderer in instance.GetComponentsInChildren<Renderer>())
                 {
                     var list=renderer.sharedMaterials;
@@ -62,6 +62,7 @@ namespace PowderFlow
                 {
                     var data=JsonUtility.FromJson<RailMetadata>(metadata);var rail=instance.AddComponent<RailPath>();rail.railId=data.railId;rail.points=data.points;rail.width=data.width;
                 }
+                foreach(var previousLod in instance.GetComponentsInChildren<LODGroup>())UnityEngine.Object.DestroyImmediate(previousLod);
                 var lodRenderers=new List<Renderer[]>();
                 for(int lod=0;lod<3;lod++){var collection=new List<Renderer>();foreach(var renderer in instance.GetComponentsInChildren<Renderer>())if(renderer.name.Contains("LOD"+lod))collection.Add(renderer);lodRenderers.Add(collection.ToArray());}
                 if(lodRenderers[0].Length>0){var group=instance.GetComponent<LODGroup>();if(!group)group=instance.AddComponent<LODGroup>();group.SetLODs(new[]{new LOD(.2f,lodRenderers[0]),new LOD(.08f,lodRenderers[1]),new LOD(.015f,lodRenderers[2])});group.RecalculateBounds();}

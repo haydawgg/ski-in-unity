@@ -8,6 +8,7 @@ namespace PowderFlow
         public TrickConfig trickConfig; public AirControlSystem Air { get; private set; }
         public event System.Action ResetPerformed; public event System.Action TookOff; public event System.Action<LandingResult> Landed;
         public LandingResult LastLanding { get; private set; }
+        public bool PowderOverride;public SurfaceType Surface=>PowderOverride?SurfaceType.Powder:Contacts.Surface;
         public bool Bailed { get; set; } public float Compression { get; private set; }
         float contactLock,airTime; Vector3 preload; bool previousGrounded;
         public Rigidbody Body { get; private set; }
@@ -85,13 +86,13 @@ namespace PowderFlow
                 Body.AddForce(normal*Mathf.Max(0,support),ForceMode.Acceleration);
                 float grip=Mathf.Lerp(config.flatGrip,config.edgeGrip,Mathf.Abs(Edge));
                 if(Input.brake)grip=config.skidGrip;
-                if(Contacts.Surface==SurfaceType.Powder)grip*=.65f;
-                if(Contacts.Surface==SurfaceType.Ice)grip*=.4f;
+                if(Surface==SurfaceType.Powder)grip*=.65f;
+                if(Surface==SurfaceType.Ice)grip*=.4f;
                 float lateralAccel=Mathf.Clamp(-lateral*grip,-config.maximumGrip,config.maximumGrip);
                 Body.AddForce(side*lateralAccel,ForceMode.Acceleration);
-                float friction=CarvingSystem.Friction(Contacts.Surface,config)*Physics.gravity.magnitude;
+                float friction=CarvingSystem.Friction(Surface,config)*Physics.gravity.magnitude;
                 if(Mathf.Abs(longitudinal)>.05f)Body.AddForce(-forward*Mathf.Sign(longitudinal)*Mathf.Min(friction,Mathf.Abs(longitudinal)/dt),ForceMode.Acceleration);
-                if(Contacts.Surface==SurfaceType.Powder)Body.AddForce(-Vector3.ProjectOnPlane(Body.linearVelocity,normal)*config.powderDrag,ForceMode.Acceleration);
+                if(Surface==SurfaceType.Powder)Body.AddForce(-Vector3.ProjectOnPlane(Body.linearVelocity,normal)*config.powderDrag,ForceMode.Acceleration);
                 if(Input.brake && Speed>.05f)Body.AddForce(-Body.linearVelocity.normalized*Mathf.Min(config.brakeDeceleration,Speed/dt),ForceMode.Acceleration);
                 float yawRate=Mathf.Abs(Edge)<.02f ? 0 : longitudinal/CarvingSystem.Radius(Mathf.Abs(longitudinal),Edge,config)*Mathf.Sign(Edge);
                 var target=Quaternion.AngleAxis(yawRate*Mathf.Rad2Deg*dt,normal)*Quaternion.LookRotation(forward,normal);
@@ -108,7 +109,7 @@ namespace PowderFlow
         public void ResetTo(Vector3 position,Quaternion rotation)
         {
             Body.isKinematic=false;Body.position=position; Body.rotation=rotation; Body.linearVelocity=Body.angularVelocity=Vector3.zero;
-            SupportNormal=rotation*Vector3.up; Edge=0;Bailed=false;contactLock=0;airTime=0;preload=Vector3.zero;previousGrounded=false;ResetPerformed?.Invoke();
+            SupportNormal=rotation*Vector3.up; Edge=0;Bailed=false;PowderOverride=false;contactLock=0;airTime=0;preload=Vector3.zero;previousGrounded=false;ResetPerformed?.Invoke();
         }
         void Update() { if(Input && Input.reset)ResetTo(safePosition,safeRotation); }
     }

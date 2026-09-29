@@ -9,9 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 915890273207008713}
-  - component: {fileID: 1430829803766372683}
-  - component: {fileID: 591640945688889844}
-  - component: {fileID: 8930604850690768124}
   - component: {fileID: 4408309859073264461}
   m_Layer: 0
   m_Name: LiftCable
@@ -28,28 +25,77 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2651649634782530933}
   serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 196906148471450788}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4408309859073264461
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2651649634782530933}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8cad4ed5b146b836b9f6d6ca15ab856d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: PowderFlow::PowderFlow.SnowSurface
+  type: 0
+  depth: 1
+--- !u!1 &5513362691407799716
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 196906148471450788}
+  - component: {fileID: 2188381757791214135}
+  - component: {fileID: 7249259562523710738}
+  - component: {fileID: 2300706419951380260}
+  m_Layer: 0
+  m_Name: LiftCable(Clone)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &196906148471450788
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5513362691407799716}
+  serializedVersion: 2
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
   m_LocalPosition: {x: -0, y: 0, z: 50}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 915890273207008713}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &1430829803766372683
+--- !u!33 &2188381757791214135
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2651649634782530933}
+  m_GameObject: {fileID: 5513362691407799716}
   m_Mesh: {fileID: -7966592091268404495, guid: 0575c4e5e1d75e08a854ad9ade30177c, type: 3}
---- !u!23 &591640945688889844
+--- !u!23 &7249259562523710738
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2651649634782530933}
+  m_GameObject: {fileID: 5513362691407799716}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -92,13 +138,13 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &8930604850690768124
+--- !u!64 &2300706419951380260
 MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2651649634782530933}
+  m_GameObject: {fileID: 5513362691407799716}
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -114,17 +160,3 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -7966592091268404495, guid: 0575c4e5e1d75e08a854ad9ade30177c, type: 3}
---- !u!114 &4408309859073264461
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2651649634782530933}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8cad4ed5b146b836b9f6d6ca15ab856d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: PowderFlow::PowderFlow.SnowSurface
-  type: 0
-  depth: 1

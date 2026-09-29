@@ -48,3 +48,10 @@
 - `Tools/Build/generate-assets.sh all` regenerates, validates and imports all assets successfully. EditMode 19/19 passed, including adjacent chunk collision height/normal continuity and imported tree LOD/path metadata.
 - Try AssetPreview for the skier; generated prefabs are in Assets/Prefabs/Generated. Asset selection and full world assembly follow in M8.
 - Preview meshes/normals/UVs/scale validated. Trees use three geometry LODs rather than a texture billboard; colliders are simple trunks. Rocks/jump colliders reuse their low-poly visual surfaces. No downloaded assets or textures.
+
+## M8 — Connected mountain: passed
+
+- Added a deterministic 1.5 km/approximately 345 m vertical mountain, flowing jump/rail/box lines, freeride powder zone, trees/rocks, ridge hut, lift cable/towers and floodlights, region labels, area respawns and boundary resets. All world meshes come from Blender prefabs.
+- Continuous physics descent reached 1,408 m, traversed all five regions and launched/landed features without NaN or bail; EditMode 19/19 still pass. Scene is Assets/Scenes/Mountain.unity.
+- Try Mountain, Play, carve toward center kickers or side rails, use markers for feature retries. The complete line runs toward +Z. Reaching the end returns to the start.
+- Fixed FBX single-mesh orientation loss by preserving imported transforms inside neutral prefab roots; added an expected world-height check to seam tests. Tree/rock placement avoids core approaches. Subjective line variety and freeride tuning remain part of final playtesting.

@@ -119,7 +119,7 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &1779578745
+--- !u!1 &1716790471
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -127,35 +127,40 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1779578747}
-  - component: {fileID: 1779578746}
+  - component: {fileID: 1716790473}
+  - component: {fileID: 1716790472}
   m_Layer: 0
-  m_Name: Asset preview
+  m_Name: PowderFlow Mountain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1779578746
+--- !u!114 &1716790472
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1779578745}
+  m_GameObject: {fileID: 1716790471}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f73f2b753b16234a5909ba0de9fe3e3a, type: 3}
+  m_Script: {fileID: 11500000, guid: 4e2af5e18d7b26cbaa0c2c9aa1fc3964, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: PowderFlow::PowderFlow.AssetPreviewWorld
+  m_EditorClassIdentifier: PowderFlow::PowderFlow.MountainWorld
   catalog: {fileID: 11400000, guid: 50f24d0ced83b05cb8a7c6b65078de34, type: 2}
---- !u!4 &1779578747
+  physicsConfig: {fileID: 11400000, guid: 218f12ef09de3991b8fa53af388d71de, type: 2}
+  trickConfig: {fileID: 11400000, guid: 1f9c2c7c417f42afa95279e6017ece64, type: 2}
+  cameraConfig: {fileID: 11400000, guid: 332f55a43842168b0a2d7743046040df, type: 2}
+  worldConfig: {fileID: 11400000, guid: 3e21ded1740fc0f25a63643a6a4111b8, type: 2}
+  player: {fileID: 0}
+--- !u!4 &1716790473
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1779578745}
+  m_GameObject: {fileID: 1716790471}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -168,4 +173,4 @@ Transform:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 1779578747}
+  - {fileID: 1716790473}

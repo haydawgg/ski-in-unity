@@ -14,8 +14,11 @@ namespace PowderFlow
             var obj=GameObject.CreatePrimitive(PrimitiveType.Cube);obj.name=name;obj.transform.SetPositionAndRotation(pos,rot);obj.transform.localScale=scale;
             obj.GetComponent<Renderer>().sharedMaterial=Material(color);return obj;
         }
+        public static bool FactoryOnly;
         void Awake()
         {
+            if(FactoryOnly)return;
+            var existing=new System.Collections.Generic.HashSet<GameObject>(gameObject.scene.GetRootGameObjects());
             for(int i=0;i<5;i++)
             {
                 float angle=new[]{0,5,15,30,45}[i];var rotation=Quaternion.Euler(angle,0,0);
@@ -35,6 +38,7 @@ namespace PowderFlow
             SpawnPlayer(new Vector3(100,13,0),Quaternion.Euler(15,0,0));
             var sun=new GameObject("Sun").AddComponent<Light>();sun.type=LightType.Directional;sun.intensity=1.6f;sun.transform.rotation=Quaternion.Euler(25,-35,0);sun.shadows=LightShadows.Soft;
             RenderSettings.ambientLight=new Color(.42f,.49f,.63f);RenderSettings.fog=true;RenderSettings.fogColor=new Color(.6f,.7f,.83f);RenderSettings.fogDensity=.0008f;
+            foreach(var item in gameObject.scene.GetRootGameObjects())if(item!=gameObject&&!existing.Contains(item))item.transform.SetParent(transform,true);
         }
         public void SpawnPlayer(Vector3 position,Quaternion rotation)
         {
