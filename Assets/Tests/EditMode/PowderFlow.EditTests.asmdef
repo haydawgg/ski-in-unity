@@ -1,0 +1,4 @@
+{
+  "name": "PowderFlow.EditTests", "references": ["PowderFlow"],
+  "includePlatforms": ["Editor"], "optionalUnityReferences": ["TestAssemblies"]
+}

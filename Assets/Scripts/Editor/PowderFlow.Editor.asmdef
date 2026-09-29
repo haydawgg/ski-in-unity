@@ -1,0 +1,5 @@
+{
+  "name": "PowderFlow.Editor", "rootNamespace": "PowderFlow",
+  "references": ["PowderFlow", "Unity.RenderPipelines.Core.Runtime", "Unity.RenderPipelines.Universal.Runtime", "Unity.RenderPipelines.Universal.Editor"],
+  "includePlatforms": ["Editor"]
+}

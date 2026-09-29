@@ -1,0 +1,5 @@
+{
+  "name": "PowderFlow", "rootNamespace": "PowderFlow",
+  "references": ["Unity.InputSystem", "Unity.RenderPipelines.Core.Runtime", "Unity.RenderPipelines.Universal.Runtime"],
+  "autoReferenced": true
+}
