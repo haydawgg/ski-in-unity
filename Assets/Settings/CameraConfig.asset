@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10322f08289ffb328ae3dba2c17f2aa1, type: 3}
+  m_Name: CameraConfig
+  m_EditorClassIdentifier: PowderFlow::PowderFlow.CameraConfig
+  distance: 6
+  height: 2.2
+  airHeight: 1.2
+  followDamping: 0.18
+  lookAhead: 3
+  lookHeight: 0.55
+  normalFov: 73
+  speedFov: 82
+  speedReference: 35
+  speedPullback: 2.5
+  obstructionRadius: 0.25
+  directionResponse: 3
+  cameraSensitivity: 1
+  portraitPullback: 1.35
+  landingShake: 0.07

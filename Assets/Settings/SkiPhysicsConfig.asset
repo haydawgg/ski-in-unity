@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42d5e5bd39d79b9b8b3fe216a22276c0, type: 3}
+  m_Name: SkiPhysicsConfig
+  m_EditorClassIdentifier: PowderFlow::PowderFlow.SkiPhysicsConfig
+  mass: 80
+  rideHeight: 0.75
+  probeLift: 0.3
+  probeRange: 1.8
+  probeRadius: 0.06
+  skiSeparation: 0.38
+  contactHalfLength: 0.5
+  contactReach: 1.05
+  supportSpring: 180
+  supportDamping: 25
+  normalResponse: 9
+  snowFriction: 0.035
+  iceFriction: 0.012
+  powderFriction: 0.07
+  powderDrag: 0.35
+  flatGrip: 2
+  edgeGrip: 10
+  maximumGrip: 18
+  steerResponse: 5
+  sidecutRadius: 14
+  speedRadiusScale: 900
+  brakeDeceleration: 9
+  skidGrip: 0.65
+  airDensity: 1.225
+  uprightDragArea: 0.6
+  tuckDragArea: 0.28
+  rotationResponse: 9
+  maximumLean: 36
+  safeSpeed: 28
+  resetDepth: -500
+  safeRecordInterval: 2
+  popImpulse: 3.8
+  popSpeedScale: 0.025
+  popBuffer: 0.14
+  crouchHeight: 0.12
