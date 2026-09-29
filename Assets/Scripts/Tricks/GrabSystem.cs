@@ -26,7 +26,7 @@ namespace PowderFlow
         {
             var ski=Current==GrabType.Mute||Current==GrabType.Japan ? (LeftHand?rightSki:leftSki) : LeftHand?leftSki:rightSki;
             float along=Current==GrabType.Tail||Current==GrabType.Blunt?-.7f:Current==GrabType.Nose?.72f:0;
-            return ski.TransformPoint(new Vector3(0,.06f,along));
+            return ski.position+ski.up*along+transform.up*.06f;
         }
     }
 }

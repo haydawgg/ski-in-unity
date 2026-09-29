@@ -307,6 +307,10 @@ MonoBehaviour:
     type: EnvironmentDistant
     prefab: {fileID: 1942623942299980201, guid: 8b4aed85c2474fa0ba6e5918be3ca925, type: 3}
     metadata: 
+  - name: ValleyFloor
+    type: EnvironmentDistant
+    prefab: {fileID: 5988784919229968531, guid: 535f70b7ccc4e4a37b045de7c0a150f2, type: 3}
+    metadata: 
   - name: Hut
     type: Environment
     prefab: {fileID: 8534013679285753160, guid: a46129b6c9d552cc4a4ef45d9fed17cf, type: 3}

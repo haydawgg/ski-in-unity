@@ -119,6 +119,13 @@ def build_environment():
     for args in [('JumpSmall',6,10,1.8,0),('JumpMedium',10,16,4.5,0),('JumpLarge',18,24,8,0),('Tabletop',18,18,5,12),('Hip',12,15,4,0),('QuarterPipe',16,7,6,0)]:records.append(jump(*args))
     for i in range(10):records.append(mountain(i))
     for i in range(3):records.append(ridge(i))
+    clear();vertices=[];faces=[]
+    for j in range(21):
+        z=1500+j*40
+        for i in range(31):x=-750+i*50;vertices.append((x,10-.005*(z-1500)+(abs(x)/750)**2*16,z))
+    for j in range(20):
+        for i in range(30):a=j*31+i;faces.append((a,a+31,a+32,a+1))
+    mesh('LowerValleyBackdrop',vertices,faces,snow_material());records.append(export('ValleyFloor','EnvironmentDistant',{'seed':42,'collision':False}))
     for name in ['Hut','LiftTower','Floodlight','Fence','Sign','Flag','LiftCable']:records.append(prop(name))
     return records
 if __name__=='__main__':build_environment()

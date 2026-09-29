@@ -4,6 +4,12 @@ namespace PowderFlow
 {
     public static partial class EditorTools
     {
+        public static void DiagnoseCharacter()
+        {
+            var obj=Object.Instantiate(Config<AssetCatalog>("AssetCatalog").Find("Skier"));
+            foreach(var r in obj.GetComponentsInChildren<Renderer>())if(r.name.Contains("TwinTip")||r.name.Contains("SkiPole"))Debug.Log("MODEL "+r.name+" bounds "+r.bounds+" localrot "+r.transform.rotation);
+            Object.DestroyImmediate(obj);
+        }
         public static void DiagnoseTerrain()
         {
             var catalog=Config<AssetCatalog>("AssetCatalog");var obj=Object.Instantiate(catalog.Find("Mountain00"));Physics.SyncTransforms();

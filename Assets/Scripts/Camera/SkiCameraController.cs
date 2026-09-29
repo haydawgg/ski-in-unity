@@ -8,7 +8,7 @@ namespace PowderFlow
         Camera lens;
         void Awake() { lens=GetComponent<Camera>(); }
         void Start(){if(skier)skier.ResetPerformed+=Snap;}
-        void Snap(){heading=Vector3.ProjectOnPlane(skier.transform.forward,Vector3.up).normalized;springVelocity=Vector3.zero;transform.position=skier.transform.position-heading*config.distance+Vector3.up*config.height;}
+        void Snap(){heading=Vector3.ProjectOnPlane(skier.transform.forward,Vector3.up).normalized;springVelocity=Vector3.zero;transform.position=skier.Body.position-heading*config.distance+Vector3.up*config.height;transform.rotation=Quaternion.LookRotation(skier.Body.position+Vector3.up*config.lookHeight-transform.position,Vector3.up);}
         void LateUpdate()
         {
             if(!skier||!config)return;

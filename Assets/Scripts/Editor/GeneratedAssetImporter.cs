@@ -71,7 +71,7 @@ namespace PowderFlow
             }
             var catalog=Config<AssetCatalog>("AssetCatalog");catalog.assets=records.ToArray();EditorUtility.SetDirty(catalog);
             var scene=EditorSceneManager.OpenScene("Assets/Scenes/PhysicsTest.unity");var world=UnityEngine.Object.FindFirstObjectByType<PhysicsTestWorld>();world.catalog=catalog;EditorSceneManager.SaveScene(scene);
-            CreateAssetPreview(catalog);AssetDatabase.SaveAssets();Debug.Log("GENERATED IMPORT PASS "+records.Count);
+            CreateAssetPreview(catalog);AssetDatabase.SaveAssets();if(File.Exists("Assets/Settings/GraphicsConfig.asset")&&File.Exists("Assets/Scenes/Mountain.unity"))ConfigureGraphics();Debug.Log("GENERATED IMPORT PASS "+records.Count);
         }
         public static void CreateAssetPreview(AssetCatalog catalog)
         {

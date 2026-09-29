@@ -4,12 +4,13 @@ namespace PowderFlow
 {
     public class BailSystem : MonoBehaviour
     {
+        public event System.Action Crashed;
         SkiPhysicsController skier;SkierPose pose;GameObject ragdoll;float remaining;
         void Start(){skier=GetComponent<SkiPhysicsController>();pose=GetComponent<SkierPose>();skier.Landed+=OnLand;skier.ResetPerformed+=Clear;}
         void OnLand(LandingResult landing){if(landing.quality==LandingQuality.Bail)Crash();}
         public void Crash()
         {
-            if(ragdoll)return;skier.Bailed=true;remaining=skier.trickConfig.bailRecovery;
+            if(ragdoll)return;Crashed?.Invoke();skier.Bailed=true;remaining=skier.trickConfig.bailRecovery;
             if(pose&&pose.root)
             {
                 ragdoll=Instantiate(pose.root.gameObject,pose.root.position,pose.root.rotation);ragdoll.name="Momentum ragdoll";pose.root.gameObject.SetActive(false);

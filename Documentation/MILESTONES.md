@@ -55,3 +55,10 @@
 - Continuous physics descent reached 1,408 m, traversed all five regions and launched/landed features without NaN or bail; EditMode 19/19 still pass. Scene is Assets/Scenes/Mountain.unity.
 - Try Mountain, Play, carve toward center kickers or side rails, use markers for feature retries. The complete line runs toward +Z. Reaching the end returns to the start.
 - Fixed FBX single-mesh orientation loss by preserving imported transforms inside neutral prefab roots; added an expected world-height check to seam tests. Tree/rock placement avoids core approaches. Subjective line variety and freeride tuning remain part of final playtesting.
+
+## M9 — Graphics: passed with documented implementation differences
+
+- Added original procedural URP snow/rock blend, wind-ripple normals/glitter, gradient/cloud/sun sky, ACES/bloom/SSAO, sunset/day lighting and fog, per-ski persistent fading groove meshes, bounded spray/landing/crash flakes and final valley backdrop. Captured 1920×1080 Sunset/Day and 720×1280 portrait frames.
+- Graphics render test passes with 428.8 FPS in a synchronous GPU-flushed offscreen 1080p camera benchmark on Radeon RX 6600 XT. This measures rendering, not full standalone gameplay; standalone profile follows in M10. Shader compilation has no errors. Imported-ski crossing direction check also passes.
+- Try Mountain; L switches Day/Sunset. Screenshots are in Documentation/Screenshots. Tracks remain around 100 seconds with 1,100 samples per ski and stop across air/reset gaps.
+- Fixed ski burial, Blender bone-axis crossing/grab targets, a background gap and graphics assignments after regeneration. Snow/sky are source HLSL shaders (with editable material properties), not Shader Graph files; this keeps the automated pipeline reproducible. Lighting/geometry is stylized, and no reference video was supplied for a literal visual comparison. Human subjective visual matching is not asserted.

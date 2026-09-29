@@ -4,7 +4,7 @@ namespace PowderFlow
 {
     public class MountainWorld : MonoBehaviour
     {
-        public AssetCatalog catalog;public SkiPhysicsConfig physicsConfig;public TrickConfig trickConfig;public CameraConfig cameraConfig;public WorldConfig worldConfig;
+        public GraphicsConfig graphicsConfig;public AssetCatalog catalog;public SkiPhysicsConfig physicsConfig;public TrickConfig trickConfig;public CameraConfig cameraConfig;public WorldConfig worldConfig;
         public SkiPhysicsController player;public string Area {get;private set;}="RIDGE / EASY RUN";
         public static float Height(float x,float z)
         {
@@ -20,8 +20,9 @@ namespace PowderFlow
         }
         void Awake()
         {
+            Place("ValleyFloor",Vector3.zero,Quaternion.identity);
             for(int i=0;i<10;i++)Place($"Mountain{i:00}",Vector3.zero,Quaternion.identity);
-            for(int i=0;i<3;i++){Place("Ridge"+i,new Vector3(i==0?-650:i==1?650:0,100,i==2?1800:600),Quaternion.Euler(0,i==0?90:i==1?-90:0,0));}
+            for(int i=0;i<3;i++){Place("Ridge"+i,new Vector3(i==0?-650:i==1?650:0,i==2?-30:100,i==2?1800:600),Quaternion.Euler(0,i==0?90:i==1?-90:0,0));}
             for(int i=0;i<worldConfig.jumpLocations.Length;i++)
             {
                 float z=worldConfig.jumpLocations[i];string model=i==0?"JumpSmall":i==3?"Tabletop":i==4?"JumpLarge":"JumpMedium";Place(model,OnSnow(0,z,.02f),Quaternion.identity);
@@ -61,6 +62,7 @@ namespace PowderFlow
             var camera=Camera.main;if(camera)camera.transform.SetParent(transform,true);
             var sun=new GameObject("Mountain sun").AddComponent<Light>();sun.transform.SetParent(transform);sun.type=LightType.Directional;sun.shadows=LightShadows.Soft;sun.intensity=1.7f;sun.transform.rotation=Quaternion.Euler(13,-30,0);
             RenderSettings.ambientLight=new Color(.47f,.37f,.59f);RenderSettings.fog=true;RenderSettings.fogColor=new Color(.52f,.50f,.68f);RenderSettings.fogDensity=.0007f;
+            if(graphicsConfig){gameObject.AddComponent<AlpineLighting>().config=graphicsConfig;player.gameObject.AddComponent<SnowTrackSystem>().config=graphicsConfig;player.gameObject.AddComponent<SnowEffectsController>().config=graphicsConfig;}
         }
         void AddPowderZone(Vector3 center,Vector3 size)
         {

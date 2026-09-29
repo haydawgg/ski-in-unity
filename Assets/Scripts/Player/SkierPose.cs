@@ -10,7 +10,7 @@ namespace PowderFlow
         public void Cache(){neutral.Clear();if(root)foreach(var t in root.GetComponentsInChildren<Transform>())neutral[t]=t.localRotation;}
         public void Bind(Transform source)
         {
-            root=source;Transform Find(string n){foreach(var t in source.GetComponentsInChildren<Transform>())if(t.name==n)return t;return null;}
+            root=source;var driver=GetComponent<SkiPhysicsController>();if(driver&&driver.config)root.localPosition=Vector3.up*driver.config.visualRideOffset;Transform Find(string n){foreach(var t in source.GetComponentsInChildren<Transform>())if(t.name==n)return t;return null;}
             hips=Find("Hips");spine=Find("Spine");head=Find("Head");leftArm=Find("UpperArm_L");leftElbow=Find("LowerArm_L");leftHand=Find("Hand_L");rightArm=Find("UpperArm_R");rightElbow=Find("LowerArm_R");rightHand=Find("Hand_R");
             leftThigh=Find("Thigh_L");leftShin=Find("Shin_L");leftFoot=Find("Foot_L");rightThigh=Find("Thigh_R");rightShin=Find("Shin_R");rightFoot=Find("Foot_R");leftSki=Find("Ski_L");rightSki=Find("Ski_R");leftPole=Find("Pole_L");rightPole=Find("Pole_R");Cache();
         }
@@ -26,9 +26,10 @@ namespace PowderFlow
             root.localRotation=Quaternion.Euler(0,0,-skier.Edge*skier.config.maximumLean*(skier.Grounded?1:.25f));
             Pose(leftArm,new Vector3(-20-bend*25,0,-15));Pose(rightArm,new Vector3(-20-bend*25,0,15));Pose(leftElbow,new Vector3(-25,0,0));Pose(rightElbow,new Vector3(-25,0,0));
             bool crossed=!skier.Grounded&&(skier.Input.modifierLeft || (grab&&grab.Current==GrabType.CrissCross));
-            Pose(leftSki,new Vector3(0,crossed?30:0,crossed?-12:0));Pose(rightSki,new Vector3(0,crossed?-30:0,crossed?12:0));
+            Pose(leftSki,Vector3.zero);Pose(rightSki,Vector3.zero);
+            if(crossed){leftSki.rotation=Quaternion.AngleAxis(30,skier.transform.up)*leftSki.rotation;rightSki.rotation=Quaternion.AngleAxis(-30,skier.transform.up)*rightSki.rotation;}
             float swing=skier.Grounded?0:Mathf.Sin(Time.time*4)*25;
-            Pose(leftPole,new Vector3(-30+swing,0,15));Pose(rightPole,new Vector3(-30-swing,0,-15));
+            Pose(leftPole,new Vector3(-55+swing,0,15));Pose(rightPole,new Vector3(-55-swing,0,-15));
             if(grab&&grab.Current!=GrabType.None)
             {
                 Vector3 target=grab.Target(leftSki,rightSki);
