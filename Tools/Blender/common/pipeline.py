@@ -60,7 +60,11 @@ def preview(path,objects):
     coords=[o.matrix_world@Vector(p) for o in objects if o.type=='MESH' for p in o.bound_box];center=sum(coords,Vector())/len(coords);extent=max((p-center).length for p in coords)
     bpy.ops.object.camera_add(location=center+Vector((extent*1.7,-extent*2.2,extent*.9)));camera=bpy.context.object;camera.rotation_euler=(center-camera.location).to_track_quat('-Z','Y').to_euler();bpy.context.scene.camera=camera
     bpy.ops.object.light_add(type='AREA',location=center+Vector((extent,-extent,extent*2)));light=bpy.context.object;light.data.energy=max(600,extent*extent*500);light.data.shape='DISK';light.data.size=max(1,extent)
+    hidden=[]
+    for obj in objects:
+        if 'LOD' in obj.name and 'LOD0' not in obj.name:obj.hide_render=True;hidden.append(obj)
     scene=bpy.context.scene;scene.render.engine='CYCLES';scene.cycles.samples=12;scene.render.resolution_x=480;scene.render.resolution_y=480;scene.render.resolution_percentage=100;scene.world.color=(.18,.18,.18);scene.render.filepath=str(path);bpy.ops.render.render(write_still=True)
+    for obj in hidden:obj.hide_render=False
     bpy.data.objects.remove(camera,do_unlink=True);bpy.data.objects.remove(light,do_unlink=True)
 def export(name,kind,parameters,preview_image=False,metadata=None):
     folder=OUT/kind;folder.mkdir(parents=True,exist_ok=True);SOURCE.mkdir(parents=True,exist_ok=True)

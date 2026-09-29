@@ -41,3 +41,10 @@
 - Manifest validation passes; EditMode 18/18, graphics-enabled PlayMode 5/5 pass. Imported rig height and required bones validated; crossed-ski motion proven in the real imported rig. Blender and Unity frames inspected (Documentation/Screenshots/M6-character.png).
 - Try PhysicsTest to ski with the generated model; AssetPreview shows the model alone. `Tools/Build/generate-assets.sh character` regenerates and imports it.
 - Camera now snaps to the skier on reset. Rig uses Generic import to preserve extra ski/pole bones; naming/hierarchy is humanoid-compatible, but no retargeted Humanoid animation is required for procedural posing. Full nographics PlayMode launch stalled after importing the skinned rig; tests now run with graphics enabled. Some test fixture cameras warn about duplicate AudioListeners; production has one listener.
+
+## M7 — Environment generation: passed
+
+- Added seeded pines (3 LODs each), six rocks, five rails/five boxes with JSON paths, six smooth jumps, ten 400×150 m gameplay chunks, three ridge silhouettes, hut/lift/floodlight/fence/sign/flag/cable props. Catalog contains 47 assets, with Blender sources, FBX, manifests and selected previews.
+- `Tools/Build/generate-assets.sh all` regenerates, validates and imports all assets successfully. EditMode 19/19 passed, including adjacent chunk collision height/normal continuity and imported tree LOD/path metadata.
+- Try AssetPreview for the skier; generated prefabs are in Assets/Prefabs/Generated. Asset selection and full world assembly follow in M8.
+- Preview meshes/normals/UVs/scale validated. Trees use three geometry LODs rather than a texture billboard; colliders are simple trunks. Rocks/jump colliders reuse their low-poly visual surfaces. No downloaded assets or textures.

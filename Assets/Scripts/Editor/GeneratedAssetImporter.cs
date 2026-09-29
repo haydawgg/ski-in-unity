@@ -46,7 +46,11 @@ namespace PowderFlow
                 string metadataPath=Path.ChangeExtension(asset.fbxPath,".json"),metadata=File.Exists(metadataPath)?File.ReadAllText(metadataPath):"";
                 if(asset.type!="Character" && asset.type!="Skis" && asset.type!="EnvironmentDistant")
                 {
-                    foreach(var filter in instance.GetComponentsInChildren<MeshFilter>())
+                    if(asset.type=="Trees")
+                    {
+                        var trunk=instance.AddComponent<CapsuleCollider>();trunk.height=asset.name=="Pine2"?12:asset.name=="Pine1"?8:asset.name=="Pine3"?7:5;trunk.radius=.25f;trunk.center=Vector3.up*trunk.height*.5f;
+                    }
+                    else foreach(var filter in instance.GetComponentsInChildren<MeshFilter>())
                     {
                         if(filter.name.Contains("LOD")&&!filter.name.Contains("LOD0"))continue;
                         var collider=filter.gameObject.AddComponent<MeshCollider>();collider.sharedMesh=filter.sharedMesh;
@@ -60,7 +64,7 @@ namespace PowderFlow
                 }
                 var lodRenderers=new List<Renderer[]>();
                 for(int lod=0;lod<3;lod++){var collection=new List<Renderer>();foreach(var renderer in instance.GetComponentsInChildren<Renderer>())if(renderer.name.Contains("LOD"+lod))collection.Add(renderer);lodRenderers.Add(collection.ToArray());}
-                if(lodRenderers[0].Length>0){var group=instance.AddComponent<LODGroup>();group.SetLODs(new[]{new LOD(.2f,lodRenderers[0]),new LOD(.08f,lodRenderers[1]),new LOD(.015f,lodRenderers[2])});group.RecalculateBounds();}
+                if(lodRenderers[0].Length>0){var group=instance.GetComponent<LODGroup>();if(!group)group=instance.AddComponent<LODGroup>();group.SetLODs(new[]{new LOD(.2f,lodRenderers[0]),new LOD(.08f,lodRenderers[1]),new LOD(.015f,lodRenderers[2])});group.RecalculateBounds();}
                 var prefab=PrefabUtility.SaveAsPrefabAsset(instance,"Assets/Prefabs/Generated/"+asset.name+".prefab");UnityEngine.Object.DestroyImmediate(instance);
                 records.Add(new GeneratedAsset{name=asset.name,type=asset.type,prefab=prefab,metadata=metadata});
             }
