@@ -37,6 +37,7 @@ namespace PowderFlow
         void FixedUpdate() { if(config) Step(Time.fixedDeltaTime); }
         public void Step(float dt)
         {
+            if(TryGetComponent<RailSystem>(out var rail)&&rail.Riding){Grounded=false;return;}
             Contacts.Sample(Body,config);
             contactLock=Mathf.Max(0,contactLock-dt);
             Grounded=Contacts.Grounded && contactLock<=0 && !Bailed;
@@ -103,6 +104,7 @@ namespace PowderFlow
             if(visual)visual.localRotation=Quaternion.Euler(0,0,-Edge*config.maximumLean);
             if(Body.position.y<config.resetDepth)ResetTo(startPosition,startRotation);
         }
+        public void EnterAirWithoutRestartingTrick(){contactLock=trickConfig.takeoffContactLock;previousGrounded=false;Grounded=false;Air.Begin(Body,Input,trickConfig,Vector3.zero);}
         public void ResetTo(Vector3 position,Quaternion rotation)
         {
             ResetPerformed?.Invoke();Body.isKinematic=false;Body.position=position; Body.rotation=rotation; Body.linearVelocity=Body.angularVelocity=Vector3.zero;

@@ -26,6 +26,12 @@ namespace PowderFlow
             powder.AddComponent<SnowSurface>().type=SurfaceType.Powder;
             TestFeatureBuilder.Kicker(new Vector3(100,3,35),10,12,4);
             TestFeatureBuilder.Kicker(new Vector3(100,-11,90),14,18,7);
+            for(int j=0;j<3;j++)
+            {
+                var rail=new GameObject("Temporary rail "+j).AddComponent<RailPath>();rail.transform.position=new Vector3(93+j*7,1,50+j*12);rail.railId=j==0?"Flat":j==1?"Down":"Kink";
+                rail.points=j==2?new[]{Vector3.zero,new Vector3(0,-1,5),new Vector3(0,-3,10)}:new[]{Vector3.zero,new Vector3(0,j==0?0:-3,10)};
+                for(int k=1;k<rail.points.Length;k++){var a=rail.transform.TransformPoint(rail.points[k-1]);var b=rail.transform.TransformPoint(rail.points[k]);var beam=Solid("Rail tube",(a+b)*.5f,new Vector3(.13f,.13f,Vector3.Distance(a,b)),Quaternion.LookRotation(b-a),Color.black);beam.transform.SetParent(rail.transform,true);}
+            }
             SpawnPlayer(new Vector3(100,13,0),Quaternion.Euler(15,0,0));
             var sun=new GameObject("Sun").AddComponent<Light>();sun.type=LightType.Directional;sun.intensity=1.6f;sun.transform.rotation=Quaternion.Euler(25,-35,0);sun.shadows=LightShadows.Soft;
             RenderSettings.ambientLight=new Color(.42f,.49f,.63f);RenderSettings.fog=true;RenderSettings.fogColor=new Color(.6f,.7f,.83f);RenderSettings.fogDensity=.0008f;
@@ -38,7 +44,7 @@ namespace PowderFlow
             obj.AddComponent<Rigidbody>(); obj.AddComponent<SkierInput>();obj.AddComponent<SkiContactSystem>();
             player=obj.AddComponent<SkiPhysicsController>();player.Initialize(physicsConfig);player.trickConfig=trickConfig;
             var pose=obj.AddComponent<SkierPose>();pose.Bind(TemporarySkierBuilder.Build(obj.transform));
-            obj.AddComponent<TrickTracker>();obj.AddComponent<GrabSystem>();obj.AddComponent<ComboSystem>();obj.AddComponent<SessionMarkerSystem>();obj.AddComponent<BailSystem>();
+            obj.AddComponent<TrickTracker>();obj.AddComponent<GrabSystem>();obj.AddComponent<ComboSystem>();obj.AddComponent<SessionMarkerSystem>();obj.AddComponent<BailSystem>();obj.AddComponent<RailSystem>();
             obj.AddComponent<RideHUD>().skier=player;
             var camera=new GameObject("Follow camera").AddComponent<Camera>();camera.tag="MainCamera";camera.farClipPlane=3000;camera.transform.position=position-new Vector3(0,-3,6);camera.gameObject.AddComponent<AudioListener>();
             var follow=camera.gameObject.AddComponent<SkiCameraController>();follow.skier=player;follow.config=cameraConfig;

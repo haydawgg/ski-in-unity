@@ -27,3 +27,10 @@
 - EditMode 16/16; PlayMode 3/3. Tested 180–1080 quantization, accumulated 720 rotation, Cork 720 Safety/Backflip Mute names, perfect-vs-clean scoring and bail cancellation; all grab selections, >=13 ragdoll bodies and reset below one second pass live.
 - Try PhysicsTest. Q Safety / E Mute; Shift+Q Tail / Shift+E Nose; Ctrl+Q Stale / Ctrl+E Method; both modifiers+Q Japan / +E Blunt; Q+E criss-cross. T stores a grounded marker; Y retries it. Arrow up/down flips, arrow left/right rolls. R resets after a failed landing.
 - Issues: grabs currently use articulated temporary geometry. Final reach, cloth silhouette and humanoid bones are checked again when Blender character replaces it in M6. One Unity Bee backend launch failed transiently; a fresh launch compiled and passed.
+
+## M5 — Rails: automated gate passed
+
+- Added world-space sampled path projection/tangents, forgiving rail capture, directional gravity/friction, balance, yaw control, tangent/pop exits and trick/combo duration tracking; temporary flat/down/kink rails in PhysicsTest.
+- EditMode 17/17 and PlayMode 4/4 pass. Live tests capture and exit all three rail types while retaining >6 m/s. Kink projection is continuous; rotation and pops carry into air.
+- Try PhysicsTest: aim skis toward a rail from above; A/D rotates the slide, arrow left/right balances, Space release pops out. T/Y markers provide retries.
+- Fixed reset imposing an unnecessary capture cooldown. Rail paths are ready for JSON-driven Blender import in M7; no asset metadata has been imported yet.
