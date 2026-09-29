@@ -37,8 +37,9 @@ namespace PowderFlow
             capsule.material=new PhysicsMaterial("Frictionless body"){dynamicFriction=0,staticFriction=0,bounciness=0};
             obj.AddComponent<Rigidbody>(); obj.AddComponent<SkierInput>();obj.AddComponent<SkiContactSystem>();
             player=obj.AddComponent<SkiPhysicsController>();player.Initialize(physicsConfig);player.trickConfig=trickConfig;
-            var body=GameObject.CreatePrimitive(PrimitiveType.Capsule);body.name="Temporary skier visual";Destroy(body.GetComponent<Collider>());body.transform.SetParent(obj.transform,false);body.transform.localPosition=new Vector3(0,.2f,0);body.transform.localScale=new Vector3(.55f,.68f,.55f);body.GetComponent<Renderer>().sharedMaterial=Material(new Color(.22f,.48f,.42f));player.visual=body.transform;
-            foreach(float x in new[]{-.19f,.19f}){var ski=Solid("Temporary ski",Vector3.zero,new Vector3(.11f,.04f,1.7f),Quaternion.identity,Color.black);Destroy(ski.GetComponent<Collider>());ski.transform.SetParent(obj.transform,false);ski.transform.localPosition=new Vector3(x,-.65f,0);}
+            var pose=obj.AddComponent<SkierPose>();pose.Bind(TemporarySkierBuilder.Build(obj.transform));
+            obj.AddComponent<TrickTracker>();obj.AddComponent<GrabSystem>();obj.AddComponent<ComboSystem>();obj.AddComponent<SessionMarkerSystem>();obj.AddComponent<BailSystem>();
+            obj.AddComponent<RideHUD>().skier=player;
             var camera=new GameObject("Follow camera").AddComponent<Camera>();camera.tag="MainCamera";camera.farClipPlane=3000;camera.transform.position=position-new Vector3(0,-3,6);camera.gameObject.AddComponent<AudioListener>();
             var follow=camera.gameObject.AddComponent<SkiCameraController>();follow.skier=player;follow.config=cameraConfig;
             obj.AddComponent<SkiDebugOverlay>().skier=player;

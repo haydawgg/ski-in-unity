@@ -20,3 +20,10 @@
 - EditMode 9/9, PlayMode 2/2 passed. Actual continuous-kicker simulation launches at (0, 8.38, 12.07) m/s from an 18 m/s approach. Ballistic range, momentum conservation, 54% tuck spin-up, transition speed retention, switch and bail thresholds pass. A simulated medium-height 360 lands with >10 m/s forward speed.
 - Try PhysicsTest: Space hold/release pops, A/D spins while airborne, arrows flip/roll, W tucks; Ctrl preloads/corks. R retries.
 - Issues: the character remains temporary and landing visual compression will be connected to its procedural pose in M4/M6. The reliable spin test uses medium-kicker-equivalent airtime; complete feature lines need later world playtesting.
+
+## M4 — Tricks and scoring: automated gate passed
+
+- Added quaternion rotation accumulation, composed trick names, eight grab selections plus criss-cross, two-bone hand IK, procedural crouch/lean/crossing/pole motion, combo scoring, HUD, 16-body jointed momentum ragdoll, marker and immediate reset.
+- EditMode 16/16; PlayMode 3/3. Tested 180–1080 quantization, accumulated 720 rotation, Cork 720 Safety/Backflip Mute names, perfect-vs-clean scoring and bail cancellation; all grab selections, >=13 ragdoll bodies and reset below one second pass live.
+- Try PhysicsTest. Q Safety / E Mute; Shift+Q Tail / Shift+E Nose; Ctrl+Q Stale / Ctrl+E Method; both modifiers+Q Japan / +E Blunt; Q+E criss-cross. T stores a grounded marker; Y retries it. Arrow up/down flips, arrow left/right rolls. R resets after a failed landing.
+- Issues: grabs currently use articulated temporary geometry. Final reach, cloth silhouette and humanoid bones are checked again when Blender character replaces it in M6. One Unity Bee backend launch failed transiently; a fresh launch compiled and passed.

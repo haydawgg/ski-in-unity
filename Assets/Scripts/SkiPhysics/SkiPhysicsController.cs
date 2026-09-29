@@ -6,7 +6,7 @@ namespace PowderFlow
     {
         public SkiPhysicsConfig config;
         public TrickConfig trickConfig; public AirControlSystem Air { get; private set; }
-        public event System.Action TookOff; public event System.Action<LandingResult> Landed;
+        public event System.Action ResetPerformed; public event System.Action TookOff; public event System.Action<LandingResult> Landed;
         public LandingResult LastLanding { get; private set; }
         public bool Bailed { get; set; } public float Compression { get; private set; }
         float contactLock,airTime; Vector3 preload; bool previousGrounded;
@@ -105,7 +105,7 @@ namespace PowderFlow
         }
         public void ResetTo(Vector3 position,Quaternion rotation)
         {
-            Body.position=position; Body.rotation=rotation; Body.linearVelocity=Body.angularVelocity=Vector3.zero;
+            ResetPerformed?.Invoke();Body.isKinematic=false;Body.position=position; Body.rotation=rotation; Body.linearVelocity=Body.angularVelocity=Vector3.zero;
             SupportNormal=rotation*Vector3.up; Edge=0;Bailed=false;contactLock=0;airTime=0;preload=Vector3.zero;previousGrounded=false;
         }
         void Update() { if(Input && Input.reset)ResetTo(safePosition,safeRotation); }

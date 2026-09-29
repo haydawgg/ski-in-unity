@@ -9,7 +9,7 @@ namespace PowderFlow.Tests
         [UnityTest] public IEnumerator DownhillSceneKeepsSkierStableDuringCarving()
         {
             var root=new GameObject("Test world");root.SetActive(false);
-            var world=root.AddComponent<PhysicsTestWorld>();world.physicsConfig=ScriptableObject.CreateInstance<SkiPhysicsConfig>();world.cameraConfig=ScriptableObject.CreateInstance<CameraConfig>();
+            var world=root.AddComponent<PhysicsTestWorld>();world.physicsConfig=ScriptableObject.CreateInstance<SkiPhysicsConfig>();world.cameraConfig=ScriptableObject.CreateInstance<CameraConfig>();world.trickConfig=ScriptableObject.CreateInstance<TrickConfig>();
             root.SetActive(true);yield return null;
             world.player.Input.injected=true;
             Time.timeScale=10;
