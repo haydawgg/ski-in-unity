@@ -1,0 +1,178 @@
+{
+  "unity": "6000.3.25f1",
+  "blender": "5.2.2",
+  "date": "2026-09-29",
+  "assetEntries": 48,
+  "buildBytes": 178064392,
+  "cameraBenchmarkFps": 469.0,
+  "standalone": {
+    "averageFps": 751.8,
+    "maxSpeed": 17.49,
+    "distance": 101.9,
+    "gpu": "AMD Radeon RX 6600 XT (radeonsi, navi23, ACO, DRM 3.64, 7.2.8-1-cachyos)"
+  },
+  "standaloneMode": "visible player, native Wayland, uncapped 1920x1080, 2s warmup + 12s measurement",
+  "tests": {
+    "EditMode": {
+      "total": "21",
+      "passed": "21",
+      "failed": "0",
+      "result": "Passed",
+      "duration": "0.438267",
+      "cases": [
+        {
+          "name": "AngularMomentumConservedAndTuckSpeedsSpin",
+          "result": "Passed"
+        },
+        {
+          "name": "FifteenMeterPerSecondRampLaunchFollowsBallisticArc",
+          "result": "Passed"
+        },
+        {
+          "name": "SlopeTransitionPreservesMoreSpeedAndFailedTrickBails",
+          "result": "Passed"
+        },
+        {
+          "name": "GeneratedCharacterHasRequiredBonesAndSeparateSkis",
+          "result": "Passed"
+        },
+        {
+          "name": "GeneratedCatalogHasLodsPathsAndSeamlessTerrain",
+          "result": "Passed"
+        },
+        {
+          "name": "BrakeStopsAndPowderSlows",
+          "result": "Passed"
+        },
+        {
+          "name": "CarvingTurnsSmoothlyAndKeepsContact",
+          "result": "Passed"
+        },
+        {
+          "name": "GravityAcceleratesAndUphillSlows",
+          "result": "Passed"
+        },
+        {
+          "name": "SwitchCarvingUsesTravelDirection",
+          "result": "Passed"
+        },
+        {
+          "name": "TerminalSpeedAndTuckAreSane",
+          "result": "Passed"
+        },
+        {
+          "name": "ContinuousKickerLaunchesFromEntryMomentum",
+          "result": "Passed"
+        },
+        {
+          "name": "KinkPathProjectionAndTangentsStayContinuous",
+          "result": "Passed"
+        },
+        {
+          "name": "SettingsAndHighScoreRoundTripAndReplaceAtomically",
+          "result": "Passed"
+        },
+        {
+          "name": "LinearUrpAndHundredHertzAreConfigured",
+          "result": "Passed"
+        },
+        {
+          "name": "CompositionNamesAndScoresActualMotion",
+          "result": "Passed"
+        },
+        {
+          "name": "SpinsQuantizeWithinTolerance(180)",
+          "result": "Passed"
+        },
+        {
+          "name": "SpinsQuantizeWithinTolerance(360)",
+          "result": "Passed"
+        },
+        {
+          "name": "SpinsQuantizeWithinTolerance(540)",
+          "result": "Passed"
+        },
+        {
+          "name": "SpinsQuantizeWithinTolerance(720)",
+          "result": "Passed"
+        },
+        {
+          "name": "SpinsQuantizeWithinTolerance(1080)",
+          "result": "Passed"
+        },
+        {
+          "name": "TrackerAccumulatesBeyondAFullRevolution",
+          "result": "Passed"
+        }
+      ]
+    },
+    "PlayMode": {
+      "total": "12",
+      "passed": "12",
+      "failed": "0",
+      "result": "Passed",
+      "duration": "31.4823584",
+      "cases": [
+        {
+          "name": "FullSpinCanLandWithForwardMomentum",
+          "result": "Passed"
+        },
+        {
+          "name": "GeneratedCharacterPoseUsesIndependentSkisAndPoleLag",
+          "result": "Passed"
+        },
+        {
+          "name": "GamepadCanLaunchFreeRideFromMainMenu",
+          "result": "Passed"
+        },
+        {
+          "name": "GamepadSettingsCanSavePortraitResolution",
+          "result": "Passed"
+        },
+        {
+          "name": "RightStickControlsRailBalanceWithoutChangingSteering",
+          "result": "Passed"
+        },
+        {
+          "name": "SessionEndsAndPreservesSavedHighScore",
+          "result": "Passed"
+        },
+        {
+          "name": "SunsetDayPortraitAndPerformanceRender",
+          "result": "Passed"
+        },
+        {
+          "name": "TopToBottomRunTraversesConnectedMountain",
+          "result": "Passed"
+        },
+        {
+          "name": "FlatDownAndKinkRailsCaptureAndExitWithMomentum",
+          "result": "Passed"
+        },
+        {
+          "name": "ActualSpinsAndForwardBackwardFlipsCanLand",
+          "result": "Passed"
+        },
+        {
+          "name": "GrabsRagdollAndInstantResetAreConnected",
+          "result": "Passed"
+        },
+        {
+          "name": "DownhillSceneKeepsSkierStableDuringCarving",
+          "result": "Passed"
+        }
+      ]
+    }
+  },
+  "package": {
+    "path": "Builds/Packages/PowderFlow-Linux.tar.gz",
+    "sizeBytes": 66621844,
+    "sha256": "7bc3b7eba06694721209f3f729d7f2ca26bc5cd3c370f690eceb2317b2d1e11d",
+    "extractedLaunch": {
+      "result": "Passed",
+      "exitCode": 0,
+      "mode": "visible native Wayland main menu capture",
+      "runtimeExceptions": 0
+    }
+  }
+}

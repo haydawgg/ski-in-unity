@@ -6,10 +6,16 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 6b4966b666c45d0cdacf893fadb2b81e
+  - enabled: 1
     path: Assets/Scenes/Mountain.unity
     guid: a1cf3a602ed3caf9597169721bdd4e23
   - enabled: 1
     path: Assets/Scenes/PhysicsTest.unity
     guid: 266597ba65177a7a999bf1938fb7b7b9
+  - enabled: 1
+    path: Assets/Scenes/AssetPreview.unity
+    guid: 56b52b3001f4f541082be10d210e296a
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0

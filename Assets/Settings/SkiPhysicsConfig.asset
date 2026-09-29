@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42d5e5bd39d79b9b8b3fe216a22276c0, type: 3}
   m_Name: SkiPhysicsConfig
   m_EditorClassIdentifier: PowderFlow::PowderFlow.SkiPhysicsConfig
+  visualRideOffset: 0.07
   mass: 80
   rideHeight: 0.75
   probeLift: 0.3
@@ -33,6 +34,7 @@ MonoBehaviour:
   steerResponse: 5
   sidecutRadius: 14
   speedRadiusScale: 900
+  brakeRotationRate: 2
   brakeDeceleration: 9
   skidGrip: 0.65
   airDensity: 1.225
@@ -40,7 +42,7 @@ MonoBehaviour:
   tuckDragArea: 0.28
   rotationResponse: 9
   maximumLean: 36
-  safeSpeed: 28
+  safeSpeed: 45
   resetDepth: -500
   safeRecordInterval: 2
   popImpulse: 3.8

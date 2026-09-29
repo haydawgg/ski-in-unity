@@ -8,7 +8,7 @@ using UnityEditor;
 #endif
 namespace PowderFlow.Tests
 {
-    public class MountainPlayTests
+    public class MountainPlayTests : PlayWorldTestBase
     {
         [UnityTest]public IEnumerator TopToBottomRunTraversesConnectedMountain()
         {

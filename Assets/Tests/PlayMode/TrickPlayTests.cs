@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.TestTools;
 namespace PowderFlow.Tests
 {
-    public class TrickPlayTests
+    public class TrickPlayTests : PlayWorldTestBase
     {
         [UnityTest]public IEnumerator GrabsRagdollAndInstantResetAreConnected()
         {

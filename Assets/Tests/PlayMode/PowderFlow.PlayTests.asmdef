@@ -1,4 +1,4 @@
 {
-  "name": "PowderFlow.PlayTests", "references": ["PowderFlow"],
+  "name": "PowderFlow.PlayTests", "references": ["PowderFlow", "Unity.InputSystem"],
   "optionalUnityReferences": ["TestAssemblies"]
 }

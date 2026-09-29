@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.TestTools;
 namespace PowderFlow.Tests
 {
-    public class AirPlayTests
+    public class AirPlayTests : PlayWorldTestBase
     {
         [UnityTest] public IEnumerator FullSpinCanLandWithForwardMomentum()
         {

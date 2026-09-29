@@ -8,7 +8,7 @@ using UnityEditor;
 #endif
 namespace PowderFlow.Tests
 {
-    public class GraphicsPlayTests
+    public class GraphicsPlayTests : PlayWorldTestBase
     {
         [UnityTest]public IEnumerator SunsetDayPortraitAndPerformanceRender()
         {

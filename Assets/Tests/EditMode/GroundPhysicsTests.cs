@@ -25,6 +25,8 @@ namespace PowderFlow.Tests
         {Place(20);Simulate(5);Assert.That(controller.Speed,Is.GreaterThan(10));Assert.That(controller.Grounded,Is.True);Place(-15,15);Simulate(3);Assert.That(controller.Speed,Is.LessThan(15));}
         [Test] public void TerminalSpeedAndTuckAreSane()
         {Place(20);Simulate(100);float normal=controller.Speed;controller.Input.tuck=true;Place(20);Simulate(100);float tuck=controller.Speed;TestContext.WriteLine($"Terminal upright {normal:F2}, tuck {tuck:F2}");Assert.That(normal,Is.InRange(25f,40f));Assert.That(tuck,Is.GreaterThan(normal+5));Assert.That(tuck,Is.LessThan(45));}
+        [Test] public void SwitchCarvingUsesTravelDirection()
+        {Place(15,15);controller.Body.rotation=Quaternion.AngleAxis(180,slope.transform.up)*slope.transform.rotation;controller.Input.steer=.7f;Simulate(2);Assert.That(controller.Body.linearVelocity.x,Is.GreaterThan(1));}
         [Test] public void BrakeStopsAndPowderSlows()
         {Place(0,15);controller.Input.brake=true;Simulate(3);Assert.That(controller.Speed,Is.LessThan(1));controller.Input.brake=false;Place(15,15);slope.GetComponent<SnowSurface>().type=SurfaceType.Powder;Simulate(5);Assert.That(controller.Speed,Is.LessThan(15));Assert.That(controller.Contacts.Surface,Is.EqualTo(SurfaceType.Powder));}
         [Test] public void CarvingTurnsSmoothlyAndKeepsContact()

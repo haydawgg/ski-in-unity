@@ -14,9 +14,9 @@ namespace PowderFlow
             var k=Keyboard.current; var p=Gamepad.current;
             float Held(Key key) => k!=null && k[key].isPressed ? 1 : 0;
             bool Press(Key key) => k!=null && k[key].wasPressedThisFrame;
-            steer=Mathf.Clamp(Held(Key.D)-Held(Key.A)+(p?.leftStick.x.ReadValue()??0)+(p?.rightStick.x.ReadValue()??0),-1,1);
-            flip=Mathf.Clamp(Held(Key.UpArrow)-Held(Key.DownArrow)+(p?.leftStick.y.ReadValue()??0)+(p?.rightStick.y.ReadValue()??0),-1,1);
-            roll=Held(Key.RightArrow)-Held(Key.LeftArrow);
+            steer=Mathf.Clamp((Held(Key.D)-Held(Key.A))*SaveStore.Current.keyboardSensitivity+(p?.leftStick.x.ReadValue()??0)*SaveStore.Current.gamepadSensitivity,-1,1);
+            flip=Mathf.Clamp((Held(Key.UpArrow)-Held(Key.DownArrow))*SaveStore.Current.keyboardSensitivity+((p?.leftStick.y.ReadValue()??0)+(p?.rightStick.y.ReadValue()??0))*SaveStore.Current.gamepadSensitivity,-1,1);
+            roll=Mathf.Clamp((Held(Key.RightArrow)-Held(Key.LeftArrow))*SaveStore.Current.keyboardSensitivity+(p?.rightStick.x.ReadValue()??0)*SaveStore.Current.gamepadSensitivity,-1,1);
             tuck=Held(Key.W)>0 || (p?.buttonNorth.isPressed??false);
             brake=Held(Key.S)>0 || (p?.buttonWest.isPressed??false);
             bool previous=crouch;

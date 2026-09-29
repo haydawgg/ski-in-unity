@@ -8,7 +8,7 @@ namespace PowderFlow
         public LandingQuality LastQuality { get; private set; }
         float idle;string previousName="";int repeats;
         SkiPhysicsController skier;
-        void Start(){skier=GetComponent<SkiPhysicsController>();GetComponent<TrickTracker>().Completed+=Score;}
+        void Start(){skier=GetComponent<SkiPhysicsController>();GetComponent<TrickTracker>().Completed+=Score;GetComponent<BailSystem>().Crashed+=Cancel;}
         public static int Calculate(TrickRecord r,TrickConfig c)
         {
             if(r.landing==LandingQuality.Bail)return 0;
@@ -26,6 +26,7 @@ namespace PowderFlow
             Combo+=LastPoints*Multiplier;Total+=LastPoints*Multiplier;Multiplier=Mathf.Min(8,Multiplier+1);idle=0;
         }
         void Update(){FeedbackTime-=Time.deltaTime;idle+=Time.deltaTime;if(idle>skier.trickConfig.comboTimeout || (skier.Speed<.5f&&idle>2)){Combo=0;Multiplier=1;}}
+        void Cancel(){Combo=0;Multiplier=1;}
         public void Restart(){Total=Combo=0;Multiplier=1;}
     }
 }

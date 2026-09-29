@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.TestTools;
 namespace PowderFlow.Tests
 {
-    public class WorldSmokeTests
+    public class WorldSmokeTests : PlayWorldTestBase
     {
         [UnityTest] public IEnumerator DownhillSceneKeepsSkierStableDuringCarving()
         {

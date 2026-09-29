@@ -12,7 +12,7 @@ namespace PowderFlow
         void LateUpdate()
         {
             if(!skier.Grounded||skier.Speed<2)return;
-            float rate=(Mathf.Abs(skier.Edge)*skier.Speed+skier.Slip*4)*config.sprayRate*.08f;if(skier.Surface==SurfaceType.Powder)rate*=2;
+            float rate=(Mathf.Abs(skier.Edge)*skier.Speed+skier.Slip*4+(skier.Input.brake?12:0))*config.sprayRate*.08f;if(skier.Surface==SurfaceType.Powder)rate*=2;
             int count=Mathf.Min(30,Mathf.FloorToInt(rate*Time.deltaTime));
             for(int i=0;i<count;i++){var contact=i%2==0?skier.Contacts.left:skier.Contacts.right;if(!contact.hit)continue;var p=new ParticleSystem.EmitParams{position=contact.point,velocity=contact.normal*Random.Range(.2f,config.sprayLift)+skier.transform.right*Random.Range(-2,2)-skier.Body.linearVelocity*.12f};spray.Emit(p,1);}
         }

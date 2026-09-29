@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.TestTools;
 namespace PowderFlow.Tests
 {
-    public class RailPlayTests
+    public class RailPlayTests : PlayWorldTestBase
     {
         [UnityTest] public IEnumerator FlatDownAndKinkRailsCaptureAndExitWithMomentum()
         {

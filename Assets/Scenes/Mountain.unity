@@ -129,6 +129,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1716790473}
   - component: {fileID: 1716790472}
+  - component: {fileID: 1716790474}
   m_Layer: 0
   m_Name: PowderFlow Mountain
   m_TagString: Untagged
@@ -146,8 +147,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e2af5e18d7b26cbaa0c2c9aa1fc3964, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: PowderFlow::PowderFlow.MountainWorld
+  systemConfig: {fileID: 11400000, guid: 8b5acb99a7b8452d0beed95bcd900926, type: 2}
   graphicsConfig: {fileID: 11400000, guid: 62e26beb995bad96f85b28709b3dd381, type: 2}
   catalog: {fileID: 11400000, guid: 50f24d0ced83b05cb8a7c6b65078de34, type: 2}
   physicsConfig: {fileID: 11400000, guid: 218f12ef09de3991b8fa53af388d71de, type: 2}
@@ -170,6 +172,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1716790474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1716790471}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19e6eb1d4493b4b56ab518fc460a5aa3, type: 3}
+  m_Name:
+  m_EditorClassIdentifier: PowderFlow::PowderFlow.GameFlow
+  config: {fileID: 11400000, guid: 8b5acb99a7b8452d0beed95bcd900926, type: 2}
+  startInMenu: 0
+  menu: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

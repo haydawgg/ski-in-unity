@@ -4,7 +4,7 @@ namespace PowderFlow
 {
     public class MountainWorld : MonoBehaviour
     {
-        public GraphicsConfig graphicsConfig;public AssetCatalog catalog;public SkiPhysicsConfig physicsConfig;public TrickConfig trickConfig;public CameraConfig cameraConfig;public WorldConfig worldConfig;
+        public GameSystemConfig systemConfig;public GraphicsConfig graphicsConfig;public AssetCatalog catalog;public SkiPhysicsConfig physicsConfig;public TrickConfig trickConfig;public CameraConfig cameraConfig;public WorldConfig worldConfig;
         public SkiPhysicsController player;public string Area {get;private set;}="RIDGE / EASY RUN";
         public static float Height(float x,float z)
         {
@@ -29,10 +29,11 @@ namespace PowderFlow
                 Place("Flag",OnSnow(-12,z),Quaternion.identity);Place("Flag",OnSnow(12,z),Quaternion.identity);
             }
             var types=new[]{"flat","down","kink","rainbow","wide"};
+            var boxTypes=new[]{"flat","down","kink","narrow","wide"};
             for(int i=0;i<5;i++)
             {
                 float z=210+i*115;Place("Rail_"+types[i],OnSnow(i%2==0?-17:17,z),Quaternion.identity);
-                Place("Box_"+types[Mathf.Min(i,2)],OnSnow(i%2==0?20:-20,z+45),Quaternion.identity);
+                Place("Box_"+boxTypes[i],OnSnow(i%2==0?20:-20,z+45),Quaternion.identity);
                 Place("JumpSmall",OnSnow(i%2==0?-17:17,z-23),Quaternion.identity);
             }
             Place("QuarterPipe",OnSnow(-45,690),Quaternion.Euler(0,30,0));Place("Hip",OnSnow(45,760),Quaternion.Euler(0,-15,0));
@@ -59,9 +60,10 @@ namespace PowderFlow
             // The component is added after Awake; disable its world generation via a factory flag.
             helper.SpawnPlayer(spawn,Quaternion.Euler(13,0,0));player=helper.player;
             player.transform.SetParent(transform,true);
-            var camera=Camera.main;if(camera)camera.transform.SetParent(transform,true);
+            var camera=helper.followCamera;if(camera)camera.transform.SetParent(transform,true);
             var sun=new GameObject("Mountain sun").AddComponent<Light>();sun.transform.SetParent(transform);sun.type=LightType.Directional;sun.shadows=LightShadows.Soft;sun.intensity=1.7f;sun.transform.rotation=Quaternion.Euler(13,-30,0);
             RenderSettings.ambientLight=new Color(.47f,.37f,.59f);RenderSettings.fog=true;RenderSettings.fogColor=new Color(.52f,.50f,.68f);RenderSettings.fogDensity=.0007f;
+            if(systemConfig)player.gameObject.AddComponent<AudioController>().config=systemConfig;
             if(graphicsConfig){gameObject.AddComponent<AlpineLighting>().config=graphicsConfig;player.gameObject.AddComponent<SnowTrackSystem>().config=graphicsConfig;player.gameObject.AddComponent<SnowEffectsController>().config=graphicsConfig;}
         }
         void AddPowderZone(Vector3 center,Vector3 size)

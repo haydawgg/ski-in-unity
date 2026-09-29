@@ -15,7 +15,7 @@ namespace PowderFlow.Tests
             Assert.That(Physics.Raycast(new Vector3(0,1000,150.01f),Vector3.down,out var two,2000),Is.True);
             Assert.That(one.point.y,Is.EqualTo(MountainWorld.Height(0,149.99f)).Within(.1f));
             Assert.That(Mathf.Abs(one.point.y-two.point.y),Is.LessThan(.02f));Assert.That(Vector3.Dot(one.normal,two.normal),Is.GreaterThan(.99f));
-            Object.DestroyImmediate(a);Object.DestroyImmediate(b);
+            Object.DestroyImmediate(a);Object.DestroyImmediate(b);var freeride=Object.Instantiate(catalog.Find("Mountain07"));Physics.SyncTransforms();Assert.That(Physics.Raycast(new Vector3(90,1000,1100),Vector3.down,out var offCenter,2000),Is.True);Assert.That(offCenter.point.y,Is.EqualTo(MountainWorld.Height(90,1100)).Within(.15f));Object.DestroyImmediate(freeride);
         }
     }
 }

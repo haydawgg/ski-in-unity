@@ -6,7 +6,7 @@ ROOT=Path(__file__).resolve().parents[3]
 OUT=ROOT/'Assets/Art/Generated'
 SOURCE=ROOT/'ArtSource/Blender'
 MATERIALS={}
-def v(p): return (p[0],-p[2],p[1])
+def v(p): return (-p[0],-p[2],p[1])
 def clear():
     bpy.ops.object.select_all(action='SELECT');bpy.ops.object.delete(use_global=False);MATERIALS.clear()
 def material(name,color,roughness=.65):

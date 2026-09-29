@@ -29,7 +29,7 @@
       ],
       "lodCount": 1,
       "collisionAsset": "",
-      "timestamp": "2026-09-29T21:45:11.522925+00:00"
+      "timestamp": "2026-09-29T22:22:26.564700+00:00"
     },
     {
       "name": "Pine0",
@@ -58,7 +58,7 @@
       ],
       "lodCount": 3,
       "collisionAsset": "Assets/Art/Generated/Trees/Pine0.fbx",
-      "timestamp": "2026-09-29T22:00:20.046136+00:00"
+      "timestamp": "2026-09-29T22:22:26.608696+00:00"
     },
     {
       "name": "Pine1",
@@ -87,7 +87,7 @@
       ],
       "lodCount": 3,
       "collisionAsset": "Assets/Art/Generated/Trees/Pine1.fbx",
-      "timestamp": "2026-09-29T22:00:20.084025+00:00"
+      "timestamp": "2026-09-29T22:22:26.654604+00:00"
     },
     {
       "name": "Pine2",
@@ -116,7 +116,7 @@
       ],
       "lodCount": 3,
       "collisionAsset": "Assets/Art/Generated/Trees/Pine2.fbx",
-      "timestamp": "2026-09-29T22:00:20.592218+00:00"
+      "timestamp": "2026-09-29T22:22:27.148070+00:00"
     },
     {
       "name": "Pine3",
@@ -145,7 +145,7 @@
       ],
       "lodCount": 3,
       "collisionAsset": "Assets/Art/Generated/Trees/Pine3.fbx",
-      "timestamp": "2026-09-29T22:00:20.632044+00:00"
+      "timestamp": "2026-09-29T22:22:27.189424+00:00"
     },
     {
       "name": "Rock0",
@@ -172,7 +172,7 @@
       ],
       "lodCount": 1,
       "collisionAsset": "Assets/Art/Generated/Rocks/Rock0.fbx",
-      "timestamp": "2026-09-29T22:00:21.076225+00:00"
+      "timestamp": "2026-09-29T22:22:27.645996+00:00"
     },
     {
       "name": "Rock1",
@@ -199,7 +199,7 @@
       ],
       "lodCount": 1,
       "collisionAsset": "Assets/Art/Generated/Rocks/Rock1.fbx",
-      "timestamp": "2026-09-29T22:00:21.083917+00:00"
+      "timestamp": "2026-09-29T22:22:27.655317+00:00"
     },
     {
       "name": "Rock2",
@@ -226,7 +226,7 @@
       ],
       "lodCount": 1,
       "collisionAsset": "Assets/Art/Generated/Rocks/Rock2.fbx",
-      "timestamp": "2026-09-29T22:00:21.089877+00:00"
+      "timestamp": "2026-09-29T22:22:27.663684+00:00"
     },
     {
       "name": "Rock3",
@@ -253,7 +253,7 @@
       ],
       "lodCount": 1,
       "collisionAsset": "Assets/Art/Generated/Rocks/Rock3.fbx",
-      "timestamp": "2026-09-29T22:00:21.096125+00:00"
+      "timestamp": "2026-09-29T22:22:27.671827+00:00"
     },
     {
       "name": "Rock4",
@@ -280,7 +280,7 @@
       ],
       "lodCount": 1,
       "collisionAsset": "Assets/Art/Generated/Rocks/Rock4.fbx",
-      "timestamp": "2026-09-29T22:00:21.102805+00:00"
+      "timestamp": "2026-09-29T22:22:27.680068+00:00"
     },
     {
       "name": "Rock5",
@@ -307,7 +307,7 @@
       ],
       "lodCount": 1,
       "collisionAsset": "Assets/Art/Generated/Rocks/Rock5.fbx",
-      "timestamp": "2026-09-29T22:00:21.109432+00:00"
+      "timestamp": "2026-09-29T22:22:27.687956+00:00"
     },
     {
       "name": "Rail_flat",
@@ -337,7 +337,7 @@
       ],
       "lodCount": 1,
       "collisionAsset": "Assets/Art/Generated/Rails/Rail_flat.fbx",
-      "timestamp": "2026-09-29T22:00:21.120008+00:00",
+      "timestamp": "2026-09-29T22:22:27.701598+00:00",
       "metadata": {
         "railId": "Flat",
         "width": 0.13,
@@ -383,7 +383,7 @@
       ],
       "lodCount": 1,
       "collisionAsset": "Assets/Art/Generated/Rails/Rail_down.fbx",
-      "timestamp": "2026-09-29T22:00:21.131402+00:00",
+      "timestamp": "2026-09-29T22:22:27.714840+00:00",
       "metadata": {
         "railId": "Down",
         "width": 0.13,
@@ -429,7 +429,7 @@
       ],
       "lodCount": 1,
       "collisionAsset": "Assets/Art/Generated/Rails/Rail_kink.fbx",
-      "timestamp": "2026-09-29T22:00:21.534308+00:00",
+      "timestamp": "2026-09-29T22:22:28.144328+00:00",
       "metadata": {
         "railId": "Kink",
         "width": 0.13,
@@ -480,7 +480,7 @@
       ],
       "lodCount": 1,
       "collisionAsset": "Assets/Art/Generated/Rails/Rail_rainbow.fbx",
-      "timestamp": "2026-09-29T22:00:21.578588+00:00",
+      "timestamp": "2026-09-29T22:22:28.183222+00:00",
       "metadata": {
         "railId": "Rainbow",
         "width": 0.13,
@@ -641,7 +641,7 @@
       ],
       "lodCount": 1,
       "collisionAsset": "Assets/Art/Generated/Rails/Rail_wide.fbx",
-      "timestamp": "2026-09-29T22:00:21.591164+00:00",
+      "timestamp": "2026-09-29T22:22:28.197039+00:00",
       "metadata": {
         "railId": "Wide",
         "width": 0.13,
@@ -685,7 +685,7 @@
       ],
       "lodCount": 1,
       "collisionAsset": "Assets/Art/Generated/Boxes/Box_flat.fbx",
-      "timestamp": "2026-09-29T22:00:21.598795+00:00",
+      "timestamp": "2026-09-29T22:22:28.205337+00:00",
       "metadata": {
         "railId": "Flat Box",
         "width": 0.65,
@@ -824,7 +824,7 @@
       ],
       "lodCount": 1,
       "collisionAsset": "Assets/Art/Generated/Boxes/Box_down.fbx",
-      "timestamp": "2026-09-29T22:00:21.605445+00:00",
+      "timestamp": "2026-09-29T22:22:28.212294+00:00",
       "metadata": {
         "railId": "Down Box",
         "width": 0.65,
@@ -963,7 +963,7 @@
       ],
       "lodCount": 1,
       "collisionAsset": "Assets/Art/Generated/Boxes/Box_wide.fbx",
-      "timestamp": "2026-09-29T22:00:22.042669+00:00",
+      "timestamp": "2026-09-29T22:22:28.639982+00:00",
       "metadata": {
         "railId": "Wide Box",
         "width": 1.8,
@@ -1102,7 +1102,7 @@
       ],
       "lodCount": 1,
       "collisionAsset": "Assets/Art/Generated/Boxes/Box_narrow.fbx",
-      "timestamp": "2026-09-29T22:00:22.050145+00:00",
+      "timestamp": "2026-09-29T22:22:28.648527+00:00",
       "metadata": {
         "railId": "Narrow Box",
         "width": 0.65,
@@ -1241,7 +1241,7 @@
       ],
       "lodCount": 1,
       "collisionAsset": "Assets/Art/Generated/Boxes/Box_kink.fbx",
-      "timestamp": "2026-09-29T22:00:22.056575+00:00",
+      "timestamp": "2026-09-29T22:22:28.656488+00:00",
       "metadata": {
         "railId": "Kink Box",
         "width": 0.65,
@@ -1383,7 +1383,7 @@
       ],
       "lodCount": 1,
       "collisionAsset": "Assets/Art/Generated/Jumps/JumpSmall.fbx",
-      "timestamp": "2026-09-29T22:00:22.066316+00:00"
+      "timestamp": "2026-09-29T22:22:28.668081+00:00"
     },
     {
       "name": "JumpMedium",
@@ -1414,7 +1414,7 @@
       ],
       "lodCount": 1,
       "collisionAsset": "Assets/Art/Generated/Jumps/JumpMedium.fbx",
-      "timestamp": "2026-09-29T22:00:22.505491+00:00"
+      "timestamp": "2026-09-29T22:22:29.124871+00:00"
     },
     {
       "name": "JumpLarge",
@@ -1445,7 +1445,7 @@
       ],
       "lodCount": 1,
       "collisionAsset": "Assets/Art/Generated/Jumps/JumpLarge.fbx",
-      "timestamp": "2026-09-29T22:00:22.516321+00:00"
+      "timestamp": "2026-09-29T22:22:29.136977+00:00"
     },
     {
       "name": "Tabletop",
@@ -1476,7 +1476,7 @@
       ],
       "lodCount": 1,
       "collisionAsset": "Assets/Art/Generated/Jumps/Tabletop.fbx",
-      "timestamp": "2026-09-29T22:00:22.525175+00:00"
+      "timestamp": "2026-09-29T22:22:29.149091+00:00"
     },
     {
       "name": "Hip",
@@ -1507,7 +1507,7 @@
       ],
       "lodCount": 1,
       "collisionAsset": "Assets/Art/Generated/Jumps/Hip.fbx",
-      "timestamp": "2026-09-29T22:00:22.534825+00:00"
+      "timestamp": "2026-09-29T22:22:29.160485+00:00"
     },
     {
       "name": "QuarterPipe",
@@ -1538,7 +1538,7 @@
       ],
       "lodCount": 1,
       "collisionAsset": "Assets/Art/Generated/Jumps/QuarterPipe.fbx",
-      "timestamp": "2026-09-29T22:00:22.544471+00:00"
+      "timestamp": "2026-09-29T22:22:29.172096+00:00"
     },
     {
       "name": "Mountain00",
@@ -1569,7 +1569,7 @@
       ],
       "lodCount": 1,
       "collisionAsset": "Assets/Art/Generated/Mountain/Mountain00.fbx",
-      "timestamp": "2026-09-29T22:00:22.573288+00:00"
+      "timestamp": "2026-09-29T22:22:29.202405+00:00"
     },
     {
       "name": "Mountain01",
@@ -1600,7 +1600,7 @@
       ],
       "lodCount": 1,
       "collisionAsset": "Assets/Art/Generated/Mountain/Mountain01.fbx",
-      "timestamp": "2026-09-29T22:00:22.601726+00:00"
+      "timestamp": "2026-09-29T22:22:29.232888+00:00"
     },
     {
       "name": "Mountain02",
@@ -1631,7 +1631,7 @@
       ],
       "lodCount": 1,
       "collisionAsset": "Assets/Art/Generated/Mountain/Mountain02.fbx",
-      "timestamp": "2026-09-29T22:00:22.630928+00:00"
+      "timestamp": "2026-09-29T22:22:29.263823+00:00"
     },
     {
       "name": "Mountain03",
@@ -1662,7 +1662,7 @@
       ],
       "lodCount": 1,
       "collisionAsset": "Assets/Art/Generated/Mountain/Mountain03.fbx",
-      "timestamp": "2026-09-29T22:00:22.659467+00:00"
+      "timestamp": "2026-09-29T22:22:29.294082+00:00"
     },
     {
       "name": "Mountain04",
@@ -1693,7 +1693,7 @@
       ],
       "lodCount": 1,
       "collisionAsset": "Assets/Art/Generated/Mountain/Mountain04.fbx",
-      "timestamp": "2026-09-29T22:00:22.687923+00:00"
+      "timestamp": "2026-09-29T22:22:29.324949+00:00"
     },
     {
       "name": "Mountain05",
@@ -1724,7 +1724,7 @@
       ],
       "lodCount": 1,
       "collisionAsset": "Assets/Art/Generated/Mountain/Mountain05.fbx",
-      "timestamp": "2026-09-29T22:00:22.716598+00:00"
+      "timestamp": "2026-09-29T22:22:29.355324+00:00"
     },
     {
       "name": "Mountain06",
@@ -1755,7 +1755,7 @@
       ],
       "lodCount": 1,
       "collisionAsset": "Assets/Art/Generated/Mountain/Mountain06.fbx",
-      "timestamp": "2026-09-29T22:00:22.745721+00:00"
+      "timestamp": "2026-09-29T22:22:29.385896+00:00"
     },
     {
       "name": "Mountain07",
@@ -1786,7 +1786,7 @@
       ],
       "lodCount": 1,
       "collisionAsset": "Assets/Art/Generated/Mountain/Mountain07.fbx",
-      "timestamp": "2026-09-29T22:00:22.773832+00:00"
+      "timestamp": "2026-09-29T22:22:29.416517+00:00"
     },
     {
       "name": "Mountain08",
@@ -1817,7 +1817,7 @@
       ],
       "lodCount": 1,
       "collisionAsset": "Assets/Art/Generated/Mountain/Mountain08.fbx",
-      "timestamp": "2026-09-29T22:00:22.802561+00:00"
+      "timestamp": "2026-09-29T22:22:29.447274+00:00"
     },
     {
       "name": "Mountain09",
@@ -1848,7 +1848,7 @@
       ],
       "lodCount": 1,
       "collisionAsset": "Assets/Art/Generated/Mountain/Mountain09.fbx",
-      "timestamp": "2026-09-29T22:00:22.831490+00:00"
+      "timestamp": "2026-09-29T22:22:29.477560+00:00"
     },
     {
       "name": "Ridge0",
@@ -1875,7 +1875,7 @@
       ],
       "lodCount": 1,
       "collisionAsset": "",
-      "timestamp": "2026-09-29T22:00:22.850204+00:00"
+      "timestamp": "2026-09-29T22:22:29.497829+00:00"
     },
     {
       "name": "Ridge1",
@@ -1902,7 +1902,7 @@
       ],
       "lodCount": 1,
       "collisionAsset": "",
-      "timestamp": "2026-09-29T22:00:22.869428+00:00"
+      "timestamp": "2026-09-29T22:22:29.517722+00:00"
     },
     {
       "name": "Ridge2",
@@ -1929,7 +1929,7 @@
       ],
       "lodCount": 1,
       "collisionAsset": "",
-      "timestamp": "2026-09-29T22:00:22.887674+00:00"
+      "timestamp": "2026-09-29T22:22:29.537757+00:00"
     },
     {
       "name": "ValleyFloor",
@@ -1957,7 +1957,7 @@
       ],
       "lodCount": 1,
       "collisionAsset": "",
-      "timestamp": "2026-09-29T22:00:22.899671+00:00"
+      "timestamp": "2026-09-29T22:22:29.550511+00:00"
     },
     {
       "name": "Hut",
@@ -1984,7 +1984,7 @@
       ],
       "lodCount": 1,
       "collisionAsset": "Assets/Art/Generated/Environment/Hut.fbx",
-      "timestamp": "2026-09-29T22:00:23.350244+00:00"
+      "timestamp": "2026-09-29T22:22:30.011168+00:00"
     },
     {
       "name": "LiftTower",
@@ -2011,7 +2011,7 @@
       ],
       "lodCount": 1,
       "collisionAsset": "Assets/Art/Generated/Environment/LiftTower.fbx",
-      "timestamp": "2026-09-29T22:00:23.361658+00:00"
+      "timestamp": "2026-09-29T22:22:30.024022+00:00"
     },
     {
       "name": "Floodlight",
@@ -2038,7 +2038,7 @@
       ],
       "lodCount": 1,
       "collisionAsset": "Assets/Art/Generated/Environment/Floodlight.fbx",
-      "timestamp": "2026-09-29T22:00:23.371011+00:00"
+      "timestamp": "2026-09-29T22:22:30.036872+00:00"
     },
     {
       "name": "Fence",
@@ -2065,7 +2065,7 @@
       ],
       "lodCount": 1,
       "collisionAsset": "Assets/Art/Generated/Environment/Fence.fbx",
-      "timestamp": "2026-09-29T22:00:23.381478+00:00"
+      "timestamp": "2026-09-29T22:22:30.047751+00:00"
     },
     {
       "name": "Sign",
@@ -2092,7 +2092,7 @@
       ],
       "lodCount": 1,
       "collisionAsset": "Assets/Art/Generated/Environment/Sign.fbx",
-      "timestamp": "2026-09-29T22:00:23.389635+00:00"
+      "timestamp": "2026-09-29T22:22:30.057023+00:00"
     },
     {
       "name": "Flag",
@@ -2107,19 +2107,19 @@
       "triangleCount": 56,
       "bounds": [
         [
-          -0.03500000014901161,
+          -1.0,
           -0.03500000014901161,
           0.0
         ],
         [
-          1.0,
+          0.03500000014901161,
           0.03500000014901161,
           2.5
         ]
       ],
       "lodCount": 1,
       "collisionAsset": "Assets/Art/Generated/Environment/Flag.fbx",
-      "timestamp": "2026-09-29T22:00:23.397446+00:00"
+      "timestamp": "2026-09-29T22:22:30.065684+00:00"
     },
     {
       "name": "LiftCable",
@@ -2146,7 +2146,7 @@
       ],
       "lodCount": 1,
       "collisionAsset": "Assets/Art/Generated/Environment/LiftCable.fbx",
-      "timestamp": "2026-09-29T22:00:23.404527+00:00"
+      "timestamp": "2026-09-29T22:22:30.073351+00:00"
     }
   ]
 }

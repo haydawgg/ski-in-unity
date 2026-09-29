@@ -4,7 +4,7 @@ namespace PowderFlow
     public class PhysicsTestWorld : MonoBehaviour
     {
         public SkiPhysicsConfig physicsConfig; public CameraConfig cameraConfig; public TrickConfig trickConfig;
-        public SkiPhysicsController player;public AssetCatalog catalog;
+        public Camera followCamera;public SkiPhysicsController player;public AssetCatalog catalog;
         public static Material Material(Color color)
         {
             var m=new Material(Shader.Find("Universal Render Pipeline/Lit"));m.color=color;return m;
@@ -50,7 +50,7 @@ namespace PowderFlow
             var pose=obj.AddComponent<SkierPose>();pose.Bind(catalog&&catalog.Find("Skier") ? Instantiate(catalog.Find("Skier"),obj.transform).transform : TemporarySkierBuilder.Build(obj.transform));obj.AddComponent<OutfitSystem>();
             obj.AddComponent<TrickTracker>();obj.AddComponent<GrabSystem>();obj.AddComponent<ComboSystem>();obj.AddComponent<SessionMarkerSystem>();obj.AddComponent<BailSystem>();obj.AddComponent<RailSystem>();
             obj.AddComponent<RideHUD>().skier=player;
-            var camera=new GameObject("Follow camera").AddComponent<Camera>();camera.tag="MainCamera";camera.farClipPlane=3000;camera.transform.position=position-new Vector3(0,-3,6);camera.gameObject.AddComponent<AudioListener>();
+            var camera=new GameObject("Follow camera").AddComponent<Camera>();followCamera=camera;camera.tag="MainCamera";camera.farClipPlane=3000;camera.transform.position=position-new Vector3(0,-3,6);camera.gameObject.AddComponent<AudioListener>();
             var follow=camera.gameObject.AddComponent<SkiCameraController>();follow.skier=player;follow.config=cameraConfig;
             obj.AddComponent<SkiDebugOverlay>().skier=player;
         }
