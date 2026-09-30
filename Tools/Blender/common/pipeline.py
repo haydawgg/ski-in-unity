@@ -55,14 +55,14 @@ def validate(objects):
         bounds.extend(o.matrix_world@Vector(p) for p in o.bound_box)
     assert tris>0 and tris<4000000,tris
     return tris,[[min(p[i] for p in bounds) for i in range(3)],[max(p[i] for p in bounds) for i in range(3)]]
-def preview(path,objects):
+def preview(path,objects,front=False):
     # Preview rig is excluded from FBX export.
     coords=[o.matrix_world@Vector(p) for o in objects if o.type=='MESH' for p in o.bound_box];center=sum(coords,Vector())/len(coords);extent=max((p-center).length for p in coords)
-    bpy.ops.object.camera_add(location=center+Vector((extent*1.7,-extent*2.2,extent*.9)));camera=bpy.context.object;camera.rotation_euler=(center-camera.location).to_track_quat('-Z','Y').to_euler();camera.data.clip_end=max(1000,extent*10);bpy.context.scene.camera=camera
-    bpy.ops.object.light_add(type='AREA',location=center+Vector((extent,-extent,extent*2)));light=bpy.context.object;light.data.energy=max(600,extent*extent*500);light.data.shape='DISK';light.data.size=max(1,extent)
+    bpy.ops.object.camera_add(location=center+Vector((-extent*1.7,extent*2.2,extent*.9) if front else (extent*1.7,-extent*2.2,extent*.9)));camera=bpy.context.object;camera.rotation_euler=(center-camera.location).to_track_quat('-Z','Y').to_euler();camera.data.clip_end=max(1000,extent*10);bpy.context.scene.camera=camera
+    bpy.ops.object.light_add(type='AREA',location=center+Vector((-extent,extent,extent*2) if front else (extent,-extent,extent*2)));light=bpy.context.object;light.data.energy=max(600,extent*extent*500);light.data.shape='DISK';light.data.size=max(1,extent)
     hidden=[]
     for obj in objects:
-        if 'LOD' in obj.name and 'LOD0' not in obj.name:obj.hide_render=True;hidden.append(obj)
+        if obj.name.startswith('Collision_') or ('LOD' in obj.name and 'LOD0' not in obj.name):obj.hide_render=True;hidden.append(obj)
     scene=bpy.context.scene;scene.render.engine='CYCLES';scene.cycles.samples=12;scene.render.resolution_x=480;scene.render.resolution_y=480;scene.render.resolution_percentage=100;scene.world.color=(.18,.18,.18);scene.render.filepath=str(path);bpy.ops.render.render(write_still=True)
     for obj in hidden:obj.hide_render=False
     bpy.data.objects.remove(camera,do_unlink=True);bpy.data.objects.remove(light,do_unlink=True)
@@ -74,7 +74,7 @@ def export(name,kind,parameters,preview_image=False,metadata=None):
     for o in objects:o.select_set(True)
     fbx=folder/(name+'.fbx');bpy.ops.export_scene.fbx(filepath=str(fbx),use_selection=True,axis_forward='-Z',axis_up='Y',apply_scale_options='FBX_SCALE_ALL',add_leaf_bones=False,bake_anim=False,use_mesh_modifiers=True)
     image=folder/(name+'.png')
-    if preview_image:preview(image,objects)
+    if preview_image:preview(image,objects,parameters.get('frontPreview',False))
     record={'name':name,'type':kind,'generator':'Tools/Blender/build_all_assets.py','parameters':parameters,'blenderVersion':bpy.app.version_string,'fbxPath':str(fbx.relative_to(ROOT)),'previewPath':str(image.relative_to(ROOT)) if preview_image else '', 'triangleCount':tris,'bounds':bounds,'lodCount':parameters.get('lodCount',1),'collisionAsset':str(fbx.relative_to(ROOT)) if kind not in ('Character','Skis','EnvironmentDistant','EnvironmentAccent') else '', 'timestamp':datetime.datetime.now(datetime.timezone.utc).isoformat()}
     if metadata:(folder/(name+'.json')).write_text(json.dumps(metadata,indent=2));record['metadata']=metadata
     return record

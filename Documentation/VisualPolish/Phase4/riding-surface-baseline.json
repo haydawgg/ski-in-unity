@@ -1,0 +1,64 @@
+{
+    "surfaces": [
+        {
+            "asset": "JumpSmall",
+            "mesh": "ContinuousSnowSurface",
+            "sha256": "17d8436f82d0fdfaf1c9f91e94d5630871c6f0d4ebc9a1805ff373cc1e0215ad"
+        },
+        {
+            "asset": "JumpSmall",
+            "mesh": "SnowSides",
+            "sha256": "3870c5c1f67ae7bfe8f86d79ada87778a88f13da7850c065ea3f0dcd5a82ce35"
+        },
+        {
+            "asset": "JumpMedium",
+            "mesh": "ContinuousSnowSurface",
+            "sha256": "8522d06a2ed7a253d0aced6c6a61c97fca4c35c0bccda4c37fdeb872f9b55faf"
+        },
+        {
+            "asset": "JumpMedium",
+            "mesh": "SnowSides",
+            "sha256": "596c9c17a878e8942b62b30f6cff1c73c4b208b47459a567d51e1524a1059322"
+        },
+        {
+            "asset": "JumpLarge",
+            "mesh": "ContinuousSnowSurface",
+            "sha256": "7be91129a5330fff7ae32ae76b7dc783d20488e357316c9d93573fd70e23e6e6"
+        },
+        {
+            "asset": "JumpLarge",
+            "mesh": "SnowSides",
+            "sha256": "e112c3243adaf42457838e24772eebc045e00fe453d0e6fdec933e156d27edf5"
+        },
+        {
+            "asset": "Tabletop",
+            "mesh": "ContinuousSnowSurface",
+            "sha256": "196e3862943fba90e36eb2d896fb915f49f68380e9b76fb50ffbdcbffd269476"
+        },
+        {
+            "asset": "Tabletop",
+            "mesh": "SnowSides",
+            "sha256": "4a9a8571189d3628f5030f35f0d06760d040092777bb5ab908fb44042b1d2f9f"
+        },
+        {
+            "asset": "Hip",
+            "mesh": "ContinuousSnowSurface",
+            "sha256": "7d9375d4f12e8fb34340e4e4d7e09c717a6456b87fbf4474e8ead8e9cd06b306"
+        },
+        {
+            "asset": "Hip",
+            "mesh": "SnowSides",
+            "sha256": "fe0485f195e22b2d67bcccfda11a63c9ff0d93c4786a0a6a7efb6e5e33ca3c21"
+        },
+        {
+            "asset": "QuarterPipe",
+            "mesh": "ContinuousSnowSurface",
+            "sha256": "c819fc446f987725d689249a6341ba1230edd3e3203d445b9862cb823738784c"
+        },
+        {
+            "asset": "QuarterPipe",
+            "mesh": "SnowSides",
+            "sha256": "b909b36452bcd905e441b6a6ff6d685d3266a0245a9f4d9e18903f77d037c1ca"
+        }
+    ]
+}

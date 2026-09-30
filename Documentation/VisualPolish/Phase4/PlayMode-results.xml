@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="2" result="Passed" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-09-30 01:48:48Z" end-time="2026-09-30 01:48:55Z" duration="7.3687593">
+  <test-suite type="TestSuite" id="1035" name="PowderFlow" fullname="PowderFlow" runstate="Runnable" testcasecount="15" result="Passed" start-time="2026-09-30 01:48:48Z" end-time="2026-09-30 01:48:55Z" duration="7.368759" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="PlayMode" />
+    </properties>
+    <test-suite type="Assembly" id="1029" name="PowderFlow.PlayTests.dll" fullname="/home/haydend/Documents/ChatGPT/ski-in-unity/Library/ScriptAssemblies/PowderFlow.PlayTests.dll" runstate="Runnable" testcasecount="15" result="Passed" start-time="2026-09-30 01:48:48Z" end-time="2026-09-30 01:48:55Z" duration="7.364013" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="143539" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="PlayMode" />
+        <property name="EditorOnly" value="False" />
+      </properties>
+      <test-suite type="TestSuite" id="1030" name="PowderFlow" fullname="PowderFlow" runstate="Runnable" testcasecount="15" result="Passed" start-time="2026-09-30 01:48:48Z" end-time="2026-09-30 01:48:55Z" duration="7.359899" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="SetUpFixture" id="1020" name="Tests" fullname="PowderFlow.Tests.PlayTestIsolation" classname="PowderFlow.Tests.PlayTestIsolation" runstate="Runnable" testcasecount="15" result="Passed" start-time="2026-09-30 01:48:48Z" end-time="2026-09-30 01:48:55Z" duration="7.352644" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestFixture" id="1016" name="MountainPlayTests" fullname="PowderFlow.Tests.MountainPlayTests" classname="PowderFlow.Tests.MountainPlayTests" runstate="Runnable" testcasecount="1" result="Passed" start-time="2026-09-30 01:48:48Z" end-time="2026-09-30 01:48:54Z" duration="5.856367" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1017" name="TopToBottomRunTraversesConnectedMountain" fullname="PowderFlow.Tests.MountainPlayTests.TopToBottomRunTraversesConnectedMountain" methodname="TopToBottomRunTraversesConnectedMountain" classname="PowderFlow.Tests.MountainPlayTests" runstate="Runnable" seed="1555982493" result="Passed" start-time="2026-09-30 01:48:48Z" end-time="2026-09-30 01:48:54Z" duration="5.847803" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[RUN t=0 z=13 speed=1.6 bail=False pos=(-0.02, 353.18, 12.80) ground=True reach=1.05 L=True
+RUN t=20 z=205 speed=17.3 bail=False pos=(-1.07, 308.29, 205.31) ground=True reach=1.05 L=True
+RUN t=40 z=688 speed=23.0 bail=False pos=(-7.86, 198.00, 687.93) ground=False reach=1.05 L=False
+RUN t=60 z=1237 speed=28.8 bail=False pos=(-16.22, 71.71, 1236.57) ground=True reach=1.05 L=True
+MOUNTAIN RUN maximum 1382m; areas 5
+]]></output>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1018" name="ParkPolishTests" fullname="PowderFlow.Tests.ParkPolishTests" classname="PowderFlow.Tests.ParkPolishTests" runstate="Runnable" testcasecount="1" result="Passed" start-time="2026-09-30 01:48:54Z" end-time="2026-09-30 01:48:55Z" duration="1.488472" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1019" name="ConnectedLiftClearApproachesAndParkCaptures" fullname="PowderFlow.Tests.ParkPolishTests.ConnectedLiftClearApproachesAndParkCaptures" methodname="ConnectedLiftClearApproachesAndParkCaptures" classname="PowderFlow.Tests.ParkPolishTests" runstate="Runnable" seed="48863647" result="Passed" start-time="2026-09-30 01:48:54Z" end-time="2026-09-30 01:48:55Z" duration="1.484482" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[VP4 REVIEW: 14 towers, 26 connected spans, 52 chairs, five region boards; clear approaches; Day/Sunset captures
+Saving results to: /home/haydend/.config/unity3d/PowderFlow Studio/PowderFlow/TestResults.xml
+]]></output>
+            </test-case>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

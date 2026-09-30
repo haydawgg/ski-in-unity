@@ -22,7 +22,7 @@ namespace PowderFlow
             // Hip/quarter-pipe approaches, lift spans and fence retain clean space.
             if(x>-65-radius&&x<-25+radius&&z>665-radius&&z<740+radius)return true;
             if(x>25-radius&&x<65+radius&&z>735-radius&&z<805+radius)return true;
-            if(Mathf.Abs(x+85)<5+radius||Mathf.Abs(x-40)<3+radius)return true;
+            if(Mathf.Abs(x-config.liftX)<5+radius||Mathf.Abs(x-40)<3+radius)return true;
             return false;
         }
         public void Build(MountainWorld source)

@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &3837015746053963083
+--- !u!1 &2827357507547137309
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,24 +8,24 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7116960658957335813}
-  - component: {fileID: 6839686847111595584}
-  - component: {fileID: 5065965477931732443}
-  - component: {fileID: 8177065031793082555}
+  - component: {fileID: 7676675165379738311}
+  - component: {fileID: 2390678927660696964}
+  - component: {fileID: 6713432315159391743}
+  - component: {fileID: 6556609757242112363}
   m_Layer: 0
-  m_Name: SnowSides
+  m_Name: Collision_ContinuousSnowSurface
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &7116960658957335813
+--- !u!4 &7676675165379738311
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3837015746053963083}
+  m_GameObject: {fileID: 2827357507547137309}
   serializedVersion: 2
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
   m_LocalPosition: {x: -0, y: 0, z: 0}
@@ -34,22 +34,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 3543408030171309701}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &6839686847111595584
+--- !u!33 &2390678927660696964
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3837015746053963083}
-  m_Mesh: {fileID: -5444914118527459609, guid: 0bd635d7c3b557409bc7683c0f70af10, type: 3}
---- !u!23 &5065965477931732443
+  m_GameObject: {fileID: 2827357507547137309}
+  m_Mesh: {fileID: 2667131496990267284, guid: 0bd635d7c3b557409bc7683c0f70af10, type: 3}
+--- !u!23 &6713432315159391743
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3837015746053963083}
-  m_Enabled: 1
+  m_GameObject: {fileID: 2827357507547137309}
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -91,13 +91,13 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &8177065031793082555
+--- !u!64 &6556609757242112363
 MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3837015746053963083}
+  m_GameObject: {fileID: 2827357507547137309}
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -112,7 +112,7 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: -5444914118527459609, guid: 0bd635d7c3b557409bc7683c0f70af10, type: 3}
+  m_Mesh: {fileID: 2667131496990267284, guid: 0bd635d7c3b557409bc7683c0f70af10, type: 3}
 --- !u!1 &4379637183334239707
 GameObject:
   m_ObjectHideFlags: 0
@@ -142,8 +142,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 7748621780545351050}
-  - {fileID: 7116960658957335813}
+  - {fileID: 7676675165379738311}
+  - {fileID: 8715353928008223660}
+  - {fileID: 6124314586842001007}
   m_Father: {fileID: 1694528718207882921}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5444935759635492728
@@ -189,11 +190,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8cad4ed5b146b836b9f6d6ca15ab856d, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: PowderFlow::PowderFlow.SnowSurface
   type: 0
   depth: 1
---- !u!1 &7003500529331233777
+--- !u!1 &6353927000261512012
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -201,24 +202,23 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7748621780545351050}
-  - component: {fileID: 8245128074129011227}
-  - component: {fileID: 3223164650289446348}
-  - component: {fileID: 3981467219080454158}
+  - component: {fileID: 6124314586842001007}
+  - component: {fileID: 295712101704678642}
+  - component: {fileID: 4818593022181084272}
   m_Layer: 0
-  m_Name: ContinuousSnowSurface
+  m_Name: Visual_Tabletop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &7748621780545351050
+--- !u!4 &6124314586842001007
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7003500529331233777}
+  m_GameObject: {fileID: 6353927000261512012}
   serializedVersion: 2
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
   m_LocalPosition: {x: -0, y: 0, z: 0}
@@ -227,21 +227,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 3543408030171309701}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &8245128074129011227
+--- !u!33 &295712101704678642
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7003500529331233777}
-  m_Mesh: {fileID: 6201675513259991271, guid: 0bd635d7c3b557409bc7683c0f70af10, type: 3}
---- !u!23 &3223164650289446348
+  m_GameObject: {fileID: 6353927000261512012}
+  m_Mesh: {fileID: -9019937222438747919, guid: 0bd635d7c3b557409bc7683c0f70af10, type: 3}
+--- !u!23 &4818593022181084272
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7003500529331233777}
+  m_GameObject: {fileID: 6353927000261512012}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -284,13 +284,104 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &3981467219080454158
+--- !u!1 &9069874182622587666
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8715353928008223660}
+  - component: {fileID: 3656470767748232628}
+  - component: {fileID: 4208864557119125961}
+  - component: {fileID: 2560447492182773437}
+  m_Layer: 0
+  m_Name: Collision_SnowSides
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8715353928008223660
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9069874182622587666}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3543408030171309701}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &3656470767748232628
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9069874182622587666}
+  m_Mesh: {fileID: 2843422096169113406, guid: 0bd635d7c3b557409bc7683c0f70af10, type: 3}
+--- !u!23 &4208864557119125961
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9069874182622587666}
+  m_Enabled: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 436814fea60cbcdb984a35320766b2b9, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_MaskInteraction: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &2560447492182773437
 MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7003500529331233777}
+  m_GameObject: {fileID: 9069874182622587666}
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -305,4 +396,4 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: 6201675513259991271, guid: 0bd635d7c3b557409bc7683c0f70af10, type: 3}
+  m_Mesh: {fileID: 2843422096169113406, guid: 0bd635d7c3b557409bc7683c0f70af10, type: 3}

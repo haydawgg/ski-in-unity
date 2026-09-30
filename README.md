@@ -4,9 +4,9 @@ An original, playable freestyle skiing game made with Unity URP and Blender. Gra
 
 ## Visual polish
 
-The detailed seven-phase plan is in `Documentation/VISUAL_POLISH_PLAN.md`. VP1 repairs persistent post-processing, native-player fog, soft shadows and snow assignments. VP2 adds a tailored 10,846-triangle skier, continuous garments, equipment details, coordinated outfits, readable materials and improved grab/pose handling. VP3 adds asymmetric pines, crossfaded LODs, rock/shrub clusters, region composition and layered ridges. Props, motion effects and UI follow in later phases.
+The detailed seven-phase plan is in `Documentation/VISUAL_POLISH_PLAN.md`. VP1 repairs persistent post-processing, native-player fog, soft shadows and snow assignments. VP2 adds a tailored 10,846-triangle skier, continuous garments, equipment details, coordinated outfits, readable materials and improved grab/pose handling. VP3 adds asymmetric pines, crossfaded LODs, rock/shrub clusters, region composition and layered ridges. VP4 finishes park hardware, jump side banks, lodge/lift/light detail and original wayfinding. Motion effects and UI follow in later phases.
 
-Current captures and validation are in `Documentation/VisualPolish/Phase3/REPORT.md`; VP1/VP2 evidence remains in their phase folders. `Documentation/FINAL_REPORT.md` and `Documentation/Validation/` preserve the earlier M10 delivery results. The latest archive remains `Builds/Packages/PowderFlow-Linux.tar.gz`.
+Current captures and validation are in `Documentation/VisualPolish/Phase4/REPORT.md`; earlier evidence remains in its phase folders. `Documentation/FINAL_REPORT.md` and `Documentation/Validation/` preserve the earlier M10 delivery results. The latest archive remains `Builds/Packages/PowderFlow-Linux.tar.gz`.
 
 ## Play the Linux build
 
@@ -74,7 +74,7 @@ Tools/Build/package.sh
 Tools/Build/run.sh
 ```
 
-`generate-assets.sh character`, `generate-assets.sh environment` and `generate-assets.sh scenery` regenerate individual stages. The scenery stage updates trees, rocks, shrubs and distant ranges while retaining the validated riding-terrain exports. Asset generation saves `.blend` sources, exports FBX and rail-path JSON, validates the manifest, and runs the Unity importer. No manual per-asset import work is required.
+`generate-assets.sh character`, `generate-assets.sh environment`, `generate-assets.sh scenery` and `generate-assets.sh park` regenerate individual stages. The scenery stage updates trees, rocks, shrubs and distant ranges. The park stage updates rails, boxes, jump visuals and props. Both retain mountain terrain; the park stage also preserves rail paths and validated jump collision triangles. Asset generation saves `.blend` sources, exports FBX and rail-path JSON, validates the manifest, and runs the Unity importer. No manual per-asset import work is required.
 
 EditMode runs without graphics. PlayMode and the standalone build require a graphics session. Results and diagnostics are in ignored `Logs/`. An optional second argument filters tests, for example `Tools/Build/test.sh PlayMode PowderFlow.Tests.GraphicsPlayTests`.
 
@@ -82,7 +82,7 @@ EditMode runs without graphics. PlayMode and the standalone build require a grap
 
 `polish-character.sh` applies the character material response from `Assets/Settings/CharacterVisualConfig.asset`. The same config contains pose values, grab angles, pole motion and six outfit palettes. Character regeneration reapplies these materials automatically. **PowderFlow → Configure Character Visuals** is the matching editor command.
 
-`Assets/Settings/WorldConfig.asset` controls regional tree density/scale/spacing and ridge layer placement. MountainScenery keeps the central route, freeride corridor and side-feature approaches clear. Shrubs are visual accents; trees retain simple trunk capsules. `polish-environment.sh` reapplies scenery material response and disables distant-backdrop shadow casting; regeneration applies it automatically. `python Tools/Validation/capture_regions.py` captures one capped Sunset/Easy run by default. Its optional `--only SunsetPark DayFreeride` selects specific views when visual review needs them. It checks launch, travel, resolution and the 144 FPS setting without measuring performance; it is not a routine phase gate.
+`Assets/Settings/WorldConfig.asset` controls regional tree density/scale/spacing, ridge layers, lift layout, sign offset and outer marker placement. MountainScenery keeps the central route, freeride corridor and side-feature approaches clear. Shrubs are visual accents; trees retain simple trunk capsules. `polish-environment.sh` reapplies scenery materials, disables distant-backdrop shadow casting and configures the Alpine Prop shader for readable shaded hardware/lettering; regeneration applies it automatically. `python Tools/Validation/capture_regions.py` captures one capped Sunset/Easy run by default. Its optional `--only SunsetPark DayFreeride` selects specific views when visual review needs them. It checks launch, travel, resolution and the 144 FPS setting without measuring performance; it is not a routine phase gate.
 
 Unity occasionally reports a Bee backend closed-pipe failure before compilation. If the log contains that specific transient failure, rerun the command once. Actual C# errors must be fixed. The licensing retry and bundled .NET shutdown messages seen on this workstation did not prevent successful tests or builds.
 
@@ -129,8 +129,8 @@ Settings include volumes, sensitivities, FOV, quality, Day/Sunset, six outfits, 
 - **Tricks and rails:** cumulative quaternion rotation tracking, grab hand IK, composed names, repeat penalties, combos, rail projection/capture/balance and momentum-preserving pop exits. Bails use a jointed ragdoll.
 - **Camera:** travel-following spring camera with speed FOV, obstruction casts, portrait framing, landing shake and an upright horizon during rotations.
 - **World:** ten Blender terrain chunks, approximately 345 m drop, designed jump/rail lines, ridge/easy area, park, big air, freeride powder and lower run. A seeded generator places vegetation and props away from central approaches.
-- **Art:** `Tools/Blender` creates all 52 asset entries. The skier uses five skinned renderers with continuous joint weights and separate equipment bones. `ArtSource/Blender` stores editable source files; `Assets/Art/Generated` stores FBX, previews and metadata. `GeneratedAssetImporter` builds prefabs, colliders, LODs, materials and `AssetCatalog` automatically.
-- **Rendering/audio:** original URP snow/rock and sky shaders, ACES/bloom/SSAO, two lighting presets, fading per-ski grooves, capped snow particles, and generated WAV loops/impacts. No downloaded content or music.
+- **Art:** `Tools/Blender` creates all 63 asset entries. The skier uses five skinned renderers with continuous joint weights and separate equipment bones. `ArtSource/Blender` stores editable source files; `Assets/Art/Generated` stores FBX, previews and metadata. `GeneratedAssetImporter` builds prefabs, colliders, LODs, materials and `AssetCatalog` automatically.
+- **Rendering/audio:** original URP snow/rock and sky shaders, ACES/bloom/SSAO, two lighting presets, fading per-ski grooves, capped snow particles, and generated WAV loops/impacts. Mesh-lettered signs use installed DejaVu Sans Bold; its notice is in `Documentation/DEJAVU_FONT_LICENSE.txt` and the package. No downloaded art or music.
 - **Tuning:** `Assets/Settings` holds physics, trick, camera, world, graphics and game-system ScriptableObjects. Runtime code lives in `Assets/Scripts` by subsystem; automated checks are in `Assets/Tests`.
 
 ## Scope and limitations
@@ -138,7 +138,7 @@ Settings include volumes, sensitivities, FOV, quality, Day/Sunset, six outfits, 
 The core playable loop, build and automation are implemented. This delivery remains a stylized development game that needs human feedback on skiing feel, grab readability, camera framing and line variety.
 
 - Snow and sky are editable HLSL shaders rather than Shader Graph assets. The Blender rig uses Generic import to retain ski/pole bones; it has a humanoid-compatible hierarchy, not Humanoid retargeting.
-- Grab poses are procedural approximations. Trees have three geometry LODs; no billboard LOD. Some low-poly world meshes share visual/collision geometry.
+- Grab poses are procedural approximations. Trees have three geometry LODs; no billboard LOD. Park assets use hidden Collision_ meshes for their riding surfaces; decorative banks, hardware and markers add no collisions. Rocks and some scenery retain simple shared meshes/capsules. Lift chairs are static scenery.
 - Most gameplay tuning is in ScriptableObjects; some layout, pose, VFX and UI constants remain in source.
 - Audio is generated Foley without a music track. Music volume is retained for future music. Outfit customization uses six coordinated color presets.
 - Physics debug gizmos require the Unity Scene view. Optional photo mode, replay buffer and challenges are not included.

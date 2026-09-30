@@ -20,7 +20,7 @@ results = {}
 for name, area, day in scenarios:
     if name not in selected:
         continue
-    log = ROOT / 'Logs' / ('VP3-native-' + name + '.log')
+    log = ROOT / 'Logs' / ('visual-native-' + name + '.log')
     player_dir = ROOT / 'Builds/Linux'
     for filename in ['smoke-report.json', 'smoke-gameplay.png']:
         (player_dir / filename).unlink(missing_ok=True)

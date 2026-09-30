@@ -30,3 +30,6 @@ under ~/.config/unity3d/PowderFlow Studio/PowderFlow/.
 Original Blender-generated content and procedural audio.
 This development build still needs human feedback on skiing feel,
 grab readability and visual polish. Photo/replay modes are not included.
+
+Sign lettering uses DejaVu Sans Bold mesh outlines.
+Font notices: ThirdPartyLicenses/DejaVu.txt.

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="3" result="Passed" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-09-30 01:47:33Z" end-time="2026-09-30 01:47:33Z" duration="0.0901391">
+  <test-suite type="TestSuite" id="1000" name="PowderFlow" fullname="PowderFlow" runstate="Runnable" testcasecount="26" result="Passed" start-time="2026-09-30 01:47:33Z" end-time="2026-09-30 01:47:33Z" duration="0.090139" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="EditMode" />
+    </properties>
+    <test-suite type="Assembly" id="1039" name="PowderFlow.EditTests.dll" fullname="/home/haydend/Documents/ChatGPT/ski-in-unity/Library/ScriptAssemblies/PowderFlow.EditTests.dll" runstate="Runnable" testcasecount="26" result="Passed" start-time="2026-09-30 01:47:33Z" end-time="2026-09-30 01:47:33Z" duration="0.086445" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="143183" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="EditMode" />
+        <property name="EditorOnly" value="True" />
+      </properties>
+      <test-suite type="TestSuite" id="1040" name="PowderFlow" fullname="PowderFlow" runstate="Runnable" testcasecount="26" result="Passed" start-time="2026-09-30 01:47:33Z" end-time="2026-09-30 01:47:33Z" duration="0.086185" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="TestSuite" id="1041" name="Tests" fullname="PowderFlow.Tests" runstate="Runnable" testcasecount="26" result="Passed" start-time="2026-09-30 01:47:33Z" end-time="2026-09-30 01:47:33Z" duration="0.085992" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestFixture" id="1008" name="EnvironmentAssetTests" fullname="PowderFlow.Tests.EnvironmentAssetTests" classname="PowderFlow.Tests.EnvironmentAssetTests" runstate="Runnable" testcasecount="2" result="Passed" start-time="2026-09-30 01:47:33Z" end-time="2026-09-30 01:47:33Z" duration="0.049809" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1009" name="GeneratedCatalogHasLodsPathsAndSeamlessTerrain" fullname="PowderFlow.Tests.EnvironmentAssetTests.GeneratedCatalogHasLodsPathsAndSeamlessTerrain" methodname="GeneratedCatalogHasLodsPathsAndSeamlessTerrain" classname="PowderFlow.Tests.EnvironmentAssetTests" runstate="Runnable" seed="1820958719" result="Passed" start-time="2026-09-30 01:47:33Z" end-time="2026-09-30 01:47:33Z" duration="0.040128" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1010" name="SceneryLodsAreBoundedAndAccentsAreNonColliding" fullname="PowderFlow.Tests.EnvironmentAssetTests.SceneryLodsAreBoundedAndAccentsAreNonColliding" methodname="SceneryLodsAreBoundedAndAccentsAreNonColliding" classname="PowderFlow.Tests.EnvironmentAssetTests" runstate="Runnable" seed="893971925" result="Passed" start-time="2026-09-30 01:47:33Z" end-time="2026-09-30 01:47:33Z" duration="0.003863" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1022" name="ParkAssetTests" fullname="PowderFlow.Tests.ParkAssetTests" classname="PowderFlow.Tests.ParkAssetTests" runstate="Runnable" testcasecount="1" result="Passed" start-time="2026-09-30 01:47:33Z" end-time="2026-09-30 01:47:33Z" duration="0.035193" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1023" name="ImportedParkRetainsSurfacesAndUsesOnlyExplicitCollision" fullname="PowderFlow.Tests.ParkAssetTests.ImportedParkRetainsSurfacesAndUsesOnlyExplicitCollision" methodname="ImportedParkRetainsSurfacesAndUsesOnlyExplicitCollision" classname="PowderFlow.Tests.ParkAssetTests" runstate="Runnable" seed="339158430" result="Passed" start-time="2026-09-30 01:47:33Z" end-time="2026-09-30 01:47:33Z" duration="0.034206" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[Saving results to: /home/haydend/.config/unity3d/PowderFlow Studio/PowderFlow/TestResults.xml
+]]></output>
+            </test-case>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

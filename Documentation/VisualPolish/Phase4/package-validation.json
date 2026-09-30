@@ -1,0 +1,13 @@
+{
+  "path": "Builds/Packages/PowderFlow-Linux.tar.gz",
+  "bytes": 71128613,
+  "sha256": "80ed6eac2ff0910c9c0ae98c7e6f4e4c82fbfdccd34010dd400cef170a98bda8",
+  "extractedDirectory": "Builds/ParkPackageValidation/Linux",
+  "extractedLaunchExitCode": 0,
+  "menuCaptureSize": [
+    1920,
+    1080
+  ],
+  "fontNoticeIncluded": true,
+  "diagnosticFilesExcluded": true
+}

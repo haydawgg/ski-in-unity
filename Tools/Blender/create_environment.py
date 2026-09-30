@@ -92,46 +92,14 @@ def rock(variant):
         if face.normal.z>.48 and face.center.z>0:face.material_index=1
     return export(f'Rock{variant}','Rocks',{'seed':420+variant,'snowLedges':True},variant==0)
 def rail(kind):
-    clear();steel=material('steel',(.028,.035,.05),.3);length=12;w=.13
-    if kind=='kink':points=[(0,1.2,0),(0,.3,6),(0,-1.4,12)]
-    elif kind=='rainbow':points=[(0,1.2+1.8*math.sin(math.pi*i/24),length*i/24) for i in range(25)]
-    elif kind=='down':points=[(0,1.2,0),(0,-1.5,length)]
-    else:points=[(0,1.2,0),(0,1.2,length)]
-    for i in range(1,len(points)):rod('BlackTube_'+str(i),points[i-1],points[i],.07 if kind!='wide' else .13,steel,12)
-    for z in [1,4,8,11]:
-        y=1.2 if kind=='flat' else 1.2-.225*z
-        rod('Support'+str(z),(0,-.23*z,z),(0,y,z),.04,steel,8);box('Foot'+str(z),(0,-.23*z,z),(.6,.08,.4),steel)
-    metadata={'railId':kind.title(),'width':w,'points':[{'x':x,'y':y,'z':z} for x,y,z in points]}
-    return export('Rail_'+kind,'Rails',{'length':length,'height':1.2,'tubeRadius':.07,'seed':42},kind=='kink',metadata)
+    from create_park import rail as generate
+    return generate(kind)
 def grind_box(kind):
-    clear();steel=material('steel',(.035,.04,.055));top=material('box_top',(.20,.34,.39),.35);length=10;width=1.8 if kind=='wide' else .65;points=[]
-    for i in range(21):
-        z=length*i/20;y=.8-(.23*z if kind=='down' else max(0,z-5)*.3 if kind=='kink' else 0);points.append((0,y,z))
-    vertices=[]
-    for x,y,z in points:vertices.extend([(-width*.5,y,z),(width*.5,y,z),(-width*.5,y-.5,z),(width*.5,y-.5,z)])
-    faces=[]
-    for i in range(20):a=i*4;faces.extend([(a,a+4,a+5,a+1),(a,a+2,a+6,a+4),(a+1,a+5,a+7,a+3)])
-    mesh('BoxRidingSurface',vertices,faces,top)
-    return export('Box_'+kind,'Boxes',{'width':width,'length':length},kind=='wide',{'railId':kind.title()+' Box','width':width,'points':[{'x':x,'y':y,'z':z} for x,y,z in points]})
+    from create_park import grind_box as generate
+    return generate(kind)
 def jump(name,width,length,height,deck=0):
-    clear();mat=snow_material();vertices=[];faces=[];sections=96;total=length+deck+(length*1.5 if deck else 0)
-    for i in range(sections+1):
-        z=total*i/sections
-        if z<=length:y=-.23*z+height*(z/length)**2
-        elif z<=length+deck:y=-.23*z+height
-        else:
-            t=(z-length-deck)/(total-length-deck);y=-.23*z+height*(1-t*t*(3-2*t))
-        for x in [-width*.5,width*.5]:vertices.append((x,y,z))
-    for i in range(sections):a=i*2;faces.append((a,a+2,a+3,a+1))
-    mesh('ContinuousSnowSurface',vertices,faces,mat)
-    # Sides are closed down to the terrain; no staircase riding collision.
-    sideverts=[];sidefaces=[]
-    for side in [0,1]:
-        start=len(sideverts)
-        for i in range(sections+1):x,y,z=vertices[i*2+side];sideverts.extend([(x,y,z),(x,-.23*z-.1,z)])
-        for i in range(sections):a=start+i*2;sidefaces.append((a,a+1,a+3,a+2))
-    mesh('SnowSides',sideverts,sidefaces,mat)
-    return export(name,'Jumps',{'width':width,'length':length,'height':height,'deck':deck,'continuousCollision':True},name=='JumpMedium')
+    from create_park import jump as generate
+    return generate(name,width,length,height,deck)
 def mountain(chunk):
     clear();mat=snow_material();vertices=[];faces=[];nx=80;nz=30
     for j in range(nz+1):
@@ -189,24 +157,8 @@ def build_scenery():
     records=[tree(i) for i in range(4)]+[rock(i) for i in range(6)]+[shrub(i) for i in range(2)]
     records.extend(ridge(i) for i in range(5));records.append(valley());return records
 def prop(kind):
-    clear();steel=material('steel',(.04,.045,.065));wood=material('wood',(.26,.14,.09));snow=snow_material();light=material('lamp',(.98,.87,.65))
-    if kind=='Hut':
-        box('RidgeLodge',(0,1.5,0),(7,3,5),wood,.05);box('SnowRoof',(0,3.1,0),(8,.28,6),snow,.05);box('Door',(0,1,.0+2.52),(1.3,2,.04),steel)
-        for x in [-2,2]:box('Window'+str(x),(x,1.8,2.52),(1.1,.9,.04),light)
-    elif kind=='LiftTower':
-        rod('Tower',(0,0,0),(0,14,0),.24,steel);rod('CrossArm',(-4,14,0),(4,14,0),.2,steel)
-        for x in [-3,3]:box('CableWheel'+str(x),(x,14.2,0),(.5,.4,.5),steel,.08)
-    elif kind=='Floodlight':
-        rod('Mast',(0,0,0),(0,10,0),.1,steel);box('LampHousing',(0,10,0),(1.2,.4,.5),steel,.04);box('LampLens',(0,9.95,.26),(1,.25,.04),light)
-    elif kind=='Fence':
-        for z in [0,2,4]:rod('Post'+str(z),(0,0,z),(0,1.2,z),.06,wood)
-        for y in [.4,1]:rod('CrossRail'+str(y),(0,y,0),(0,y,4),.035,wood)
-    elif kind=='Sign':
-        rod('Signpost',(0,0,0),(0,2.3,0),.07,wood);box('DirectionBoard',(0,2,0),(2.5,.6,.14),wood,.06)
-    elif kind=='Flag':
-        rod('FlagPole',(0,0,0),(0,2.5,0),.035,steel);box('Flag',(0.5,2.1,0),(1,.55,.025),material('flag',(.93,.35,.22)))
-    elif kind=='LiftCable':rod('Cable',(0,0,0),(0,0,100),.025,steel,6)
-    return export(kind,'Environment',{'seed':42},kind=='Hut')
+    from create_park import prop as generate
+    return generate(kind)
 def build_environment():
     records=[]
     for i in range(4):records.append(tree(i))
@@ -218,6 +170,7 @@ def build_environment():
     for i in range(2):records.append(shrub(i))
     for i in range(5):records.append(ridge(i))
     records.append(valley())
-    for name in ['Hut','LiftTower','Floodlight','Fence','Sign','Flag','LiftCable']:records.append(prop(name))
+    from create_park import REGIONS
+    for name in ['Hut','LiftTower','Floodlight','Fence','Sign','Flag','LiftCable','LiftChair','StartGate','BoundaryMarker','FeatureEasy','FeatureMedium','FeatureExpert']+['Sign'+r[0] for r in REGIONS]:records.append(prop(name))
     return records
 if __name__=='__main__':build_environment()

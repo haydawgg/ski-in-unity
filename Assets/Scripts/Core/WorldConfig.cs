@@ -31,6 +31,8 @@ namespace PowderFlow
             new RidgeLayer(3,new Vector3(-350,-45,2070),7,new Vector3(1.3f,.9f,1.15f)),
             new RidgeLayer(4,new Vector3(400,-55,2520),-8,new Vector3(1.6f,1.25f,1.2f))};
         public float length=1500,width=400,treeExclusion=28,boundary=190,endReset=1480;
+        public int liftTowerCount=14;
+        public float liftX=-85,liftStartZ=30,liftSpacing=100,regionSignX=-29,boundaryMarkerX=116;
         public Vector3 start=new Vector3(0,0,12),park=new Vector3(0,0,280),bigJump=new Vector3(0,0,820),freeride=new Vector3(75,0,970);
         public float[] jumpLocations={105,310,440,590,900};
     }

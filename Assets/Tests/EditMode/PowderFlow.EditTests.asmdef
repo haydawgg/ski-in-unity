@@ -1,4 +1,15 @@
 {
-  "name": "PowderFlow.EditTests", "references": ["PowderFlow", "Unity.RenderPipelines.Core.Runtime", "Unity.RenderPipelines.Universal.Runtime"],
-  "includePlatforms": ["Editor"], "optionalUnityReferences": ["TestAssemblies"]
+  "name": "PowderFlow.EditTests",
+  "references": [
+    "PowderFlow",
+    "Unity.RenderPipelines.Core.Runtime",
+    "Unity.RenderPipelines.Universal.Runtime",
+    "PowderFlow.Editor"
+  ],
+  "includePlatforms": [
+    "Editor"
+  ],
+  "optionalUnityReferences": [
+    "TestAssemblies"
+  ]
 }

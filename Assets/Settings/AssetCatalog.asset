@@ -13,6 +13,122 @@ MonoBehaviour:
   m_Name: AssetCatalog
   m_EditorClassIdentifier: PowderFlow::PowderFlow.AssetCatalog
   assets:
+  - name: Mountain00
+    type: Mountain
+    prefab: {fileID: 7507868363525628443, guid: dad3107b2d7e5ff2ea73e42fb5511a14, type: 3}
+    metadata:
+  - name: Mountain01
+    type: Mountain
+    prefab: {fileID: 5251975792060126341, guid: 9813d2b947ff7a167b71e08fea1114a5, type: 3}
+    metadata:
+  - name: Mountain02
+    type: Mountain
+    prefab: {fileID: 6500480057219502458, guid: 9c39e4807ca3ed1ca86d5d9930d438e3, type: 3}
+    metadata:
+  - name: Mountain03
+    type: Mountain
+    prefab: {fileID: 356242756996477106, guid: 21477e51257468d3ca7efb8d8bd8f06c, type: 3}
+    metadata:
+  - name: Mountain04
+    type: Mountain
+    prefab: {fileID: 9072281765263610561, guid: 90e6a0f5ccee285f7b9d723c9bf20ccb, type: 3}
+    metadata:
+  - name: Mountain05
+    type: Mountain
+    prefab: {fileID: 5228029073254439440, guid: f53a09e9d3459038eb224c45bf7a2e77, type: 3}
+    metadata:
+  - name: Mountain06
+    type: Mountain
+    prefab: {fileID: 8831934802433203866, guid: f8639438fcbefe3dcb510228297c3ef9, type: 3}
+    metadata:
+  - name: Mountain07
+    type: Mountain
+    prefab: {fileID: 7001316329117472340, guid: 4464849b5214ab311a67ee1dd7dfcb69, type: 3}
+    metadata:
+  - name: Mountain08
+    type: Mountain
+    prefab: {fileID: 6906947276853249475, guid: 49cd1b208516f043995967b580677fdf, type: 3}
+    metadata:
+  - name: Mountain09
+    type: Mountain
+    prefab: {fileID: 6726686525382259984, guid: cd13015dd6fbc086483d7e9d24b672f8, type: 3}
+    metadata:
+  - name: Skier
+    type: Character
+    prefab: {fileID: 3723794963440931544, guid: a47daf1d0284f2baa8a1ccea4f20f2b2, type: 3}
+    metadata:
+  - name: Pine0
+    type: Trees
+    prefab: {fileID: 2038967046395071161, guid: d24ce1f93c1f84f17affe623b96ab47a, type: 3}
+    metadata:
+  - name: Pine1
+    type: Trees
+    prefab: {fileID: 4932503013689924869, guid: e34e46b97ec4ce56fabe564dc52559fa, type: 3}
+    metadata:
+  - name: Pine2
+    type: Trees
+    prefab: {fileID: 411650333271597811, guid: deb7cb5c3cf0e2890a65a81ccf4e0348, type: 3}
+    metadata:
+  - name: Pine3
+    type: Trees
+    prefab: {fileID: 5425173722577871745, guid: 15edfa0926bb31dc6941f4dc249bc500, type: 3}
+    metadata:
+  - name: Rock0
+    type: Rocks
+    prefab: {fileID: 8202282408205972030, guid: bf7e3c52cb4b8b9fbb1f8309829e81c0, type: 3}
+    metadata:
+  - name: Rock1
+    type: Rocks
+    prefab: {fileID: 5039389858974913224, guid: 4d8c982dba0ec9923985326fa0fcf235, type: 3}
+    metadata:
+  - name: Rock2
+    type: Rocks
+    prefab: {fileID: 4608248517444412855, guid: 1e2c151c82973a042aa7c9f61382eaf8, type: 3}
+    metadata:
+  - name: Rock3
+    type: Rocks
+    prefab: {fileID: 1280489994367941343, guid: 31ed2b27ffa3157a4994f139f2a33aec, type: 3}
+    metadata:
+  - name: Rock4
+    type: Rocks
+    prefab: {fileID: 7354995866940410094, guid: e9b35f45bb8c05dfbbcc7bba785dbf45, type: 3}
+    metadata:
+  - name: Rock5
+    type: Rocks
+    prefab: {fileID: 488078717052570560, guid: 3a0fd102165849e65971019ac5da9a16, type: 3}
+    metadata:
+  - name: Shrub0
+    type: EnvironmentAccent
+    prefab: {fileID: 4540122590716740018, guid: 41c5ce988aa614b25b11b74494b8c33b, type: 3}
+    metadata:
+  - name: Shrub1
+    type: EnvironmentAccent
+    prefab: {fileID: 6434374661753568907, guid: 87fabc5c83c5b37a68ddfe48294773d6, type: 3}
+    metadata:
+  - name: Ridge0
+    type: EnvironmentDistant
+    prefab: {fileID: 5804924285833546649, guid: bfb121835293b4cfca6664266e1bb112, type: 3}
+    metadata:
+  - name: Ridge1
+    type: EnvironmentDistant
+    prefab: {fileID: 5158228307167791746, guid: c24050de9cd063380b5177a4e9cc1ee8, type: 3}
+    metadata:
+  - name: Ridge2
+    type: EnvironmentDistant
+    prefab: {fileID: 1942623942299980201, guid: 8b4aed85c2474fa0ba6e5918be3ca925, type: 3}
+    metadata:
+  - name: Ridge3
+    type: EnvironmentDistant
+    prefab: {fileID: 6405574626545332893, guid: 4071fb957e891add19c74348d14a30c7, type: 3}
+    metadata:
+  - name: Ridge4
+    type: EnvironmentDistant
+    prefab: {fileID: 5223320828439511927, guid: c884ef0d871e14e94be59e36bf4727ea, type: 3}
+    metadata:
+  - name: ValleyFloor
+    type: EnvironmentDistant
+    prefab: {fileID: 5988784919229968531, guid: 535f70b7ccc4e4a37b045de7c0a150f2, type: 3}
+    metadata:
   - name: Rail_flat
     type: Rails
     prefab: {fileID: 6383793352132039829, guid: 427f98d394fc60fd2953bd6c065881be, type: 3}
@@ -211,46 +327,6 @@ MonoBehaviour:
     type: Jumps
     prefab: {fileID: 2656638885383307148, guid: ab20537471eb9ac3eb9ecb5610da14f1, type: 3}
     metadata:
-  - name: Mountain00
-    type: Mountain
-    prefab: {fileID: 7507868363525628443, guid: dad3107b2d7e5ff2ea73e42fb5511a14, type: 3}
-    metadata:
-  - name: Mountain01
-    type: Mountain
-    prefab: {fileID: 5251975792060126341, guid: 9813d2b947ff7a167b71e08fea1114a5, type: 3}
-    metadata:
-  - name: Mountain02
-    type: Mountain
-    prefab: {fileID: 6500480057219502458, guid: 9c39e4807ca3ed1ca86d5d9930d438e3, type: 3}
-    metadata:
-  - name: Mountain03
-    type: Mountain
-    prefab: {fileID: 356242756996477106, guid: 21477e51257468d3ca7efb8d8bd8f06c, type: 3}
-    metadata:
-  - name: Mountain04
-    type: Mountain
-    prefab: {fileID: 9072281765263610561, guid: 90e6a0f5ccee285f7b9d723c9bf20ccb, type: 3}
-    metadata:
-  - name: Mountain05
-    type: Mountain
-    prefab: {fileID: 5228029073254439440, guid: f53a09e9d3459038eb224c45bf7a2e77, type: 3}
-    metadata:
-  - name: Mountain06
-    type: Mountain
-    prefab: {fileID: 8831934802433203866, guid: f8639438fcbefe3dcb510228297c3ef9, type: 3}
-    metadata:
-  - name: Mountain07
-    type: Mountain
-    prefab: {fileID: 7001316329117472340, guid: 4464849b5214ab311a67ee1dd7dfcb69, type: 3}
-    metadata:
-  - name: Mountain08
-    type: Mountain
-    prefab: {fileID: 6906947276853249475, guid: 49cd1b208516f043995967b580677fdf, type: 3}
-    metadata:
-  - name: Mountain09
-    type: Mountain
-    prefab: {fileID: 6726686525382259984, guid: cd13015dd6fbc086483d7e9d24b672f8, type: 3}
-    metadata:
   - name: Hut
     type: Environment
     prefab: {fileID: 8534013679285753160, guid: a46129b6c9d552cc4a4ef45d9fed17cf, type: 3}
@@ -267,92 +343,60 @@ MonoBehaviour:
     type: Environment
     prefab: {fileID: 7683284667454150347, guid: a0933cbfc7feff3e883783a0f0a9b516, type: 3}
     metadata:
+  - name: Flag
+    type: EnvironmentAccent
+    prefab: {fileID: 5884804111444004310, guid: f400a3b2a180dd11ebf745fdb25841f6, type: 3}
+    metadata:
+  - name: LiftCable
+    type: EnvironmentAccent
+    prefab: {fileID: 2651649634782530933, guid: 3b2c68f83859a7117a75a14028cb3f0f, type: 3}
+    metadata:
+  - name: LiftChair
+    type: EnvironmentAccent
+    prefab: {fileID: 5180490415458429868, guid: 2baf836987d9bd81dba01ae1eb8873f4, type: 3}
+    metadata:
+  - name: StartGate
+    type: EnvironmentAccent
+    prefab: {fileID: 7266458209809994529, guid: 6842ba8da2d90d9d3883b472377f1931, type: 3}
+    metadata:
+  - name: BoundaryMarker
+    type: EnvironmentAccent
+    prefab: {fileID: 6534576083916446857, guid: 22fb31120c230725c85512e3adcd9ac4, type: 3}
+    metadata:
+  - name: FeatureEasy
+    type: EnvironmentAccent
+    prefab: {fileID: 7936019791858239909, guid: 21117b12bfdc36b49b5626de7dc8f054, type: 3}
+    metadata:
+  - name: FeatureMedium
+    type: EnvironmentAccent
+    prefab: {fileID: 732894785650079980, guid: dafd2c5d0d11d2796b92e1dec843841f, type: 3}
+    metadata:
+  - name: FeatureExpert
+    type: EnvironmentAccent
+    prefab: {fileID: 3468887405624892343, guid: 2eda9155893ca5952812c6227b6cf17b, type: 3}
+    metadata:
   - name: Sign
     type: Environment
     prefab: {fileID: 6072030456589495219, guid: f544aea38ebf5d75ea3ae0d27ae48cf9, type: 3}
     metadata:
-  - name: Flag
+  - name: SignEasy
     type: Environment
-    prefab: {fileID: 5884804111444004310, guid: f400a3b2a180dd11ebf745fdb25841f6, type: 3}
+    prefab: {fileID: 2273835523919086016, guid: cf076d23d99614e2cb4b72a2c00081c1, type: 3}
     metadata:
-  - name: LiftCable
+  - name: SignPark
     type: Environment
-    prefab: {fileID: 2651649634782530933, guid: 3b2c68f83859a7117a75a14028cb3f0f, type: 3}
+    prefab: {fileID: 720190079471862236, guid: 42278b483f8696beabd4eeef9de5d5de, type: 3}
     metadata:
-  - name: Skier
-    type: Character
-    prefab: {fileID: 3723794963440931544, guid: a47daf1d0284f2baa8a1ccea4f20f2b2, type: 3}
+  - name: SignBigAir
+    type: Environment
+    prefab: {fileID: 824159154707656854, guid: a815da53ebfd846f49817a436374aff7, type: 3}
     metadata:
-  - name: Pine0
-    type: Trees
-    prefab: {fileID: 2038967046395071161, guid: d24ce1f93c1f84f17affe623b96ab47a, type: 3}
+  - name: SignFreeride
+    type: Environment
+    prefab: {fileID: 509951997423711457, guid: 0a7186f24ff0390739c172fe7d1d33c4, type: 3}
     metadata:
-  - name: Pine1
-    type: Trees
-    prefab: {fileID: 4932503013689924869, guid: e34e46b97ec4ce56fabe564dc52559fa, type: 3}
-    metadata:
-  - name: Pine2
-    type: Trees
-    prefab: {fileID: 411650333271597811, guid: deb7cb5c3cf0e2890a65a81ccf4e0348, type: 3}
-    metadata:
-  - name: Pine3
-    type: Trees
-    prefab: {fileID: 5425173722577871745, guid: 15edfa0926bb31dc6941f4dc249bc500, type: 3}
-    metadata:
-  - name: Rock0
-    type: Rocks
-    prefab: {fileID: 8202282408205972030, guid: bf7e3c52cb4b8b9fbb1f8309829e81c0, type: 3}
-    metadata:
-  - name: Rock1
-    type: Rocks
-    prefab: {fileID: 5039389858974913224, guid: 4d8c982dba0ec9923985326fa0fcf235, type: 3}
-    metadata:
-  - name: Rock2
-    type: Rocks
-    prefab: {fileID: 4608248517444412855, guid: 1e2c151c82973a042aa7c9f61382eaf8, type: 3}
-    metadata:
-  - name: Rock3
-    type: Rocks
-    prefab: {fileID: 1280489994367941343, guid: 31ed2b27ffa3157a4994f139f2a33aec, type: 3}
-    metadata:
-  - name: Rock4
-    type: Rocks
-    prefab: {fileID: 7354995866940410094, guid: e9b35f45bb8c05dfbbcc7bba785dbf45, type: 3}
-    metadata:
-  - name: Rock5
-    type: Rocks
-    prefab: {fileID: 488078717052570560, guid: 3a0fd102165849e65971019ac5da9a16, type: 3}
-    metadata:
-  - name: Shrub0
-    type: EnvironmentAccent
-    prefab: {fileID: 4540122590716740018, guid: 41c5ce988aa614b25b11b74494b8c33b, type: 3}
-    metadata:
-  - name: Shrub1
-    type: EnvironmentAccent
-    prefab: {fileID: 6434374661753568907, guid: 87fabc5c83c5b37a68ddfe48294773d6, type: 3}
-    metadata:
-  - name: Ridge0
-    type: EnvironmentDistant
-    prefab: {fileID: 5804924285833546649, guid: bfb121835293b4cfca6664266e1bb112, type: 3}
-    metadata:
-  - name: Ridge1
-    type: EnvironmentDistant
-    prefab: {fileID: 5158228307167791746, guid: c24050de9cd063380b5177a4e9cc1ee8, type: 3}
-    metadata:
-  - name: Ridge2
-    type: EnvironmentDistant
-    prefab: {fileID: 1942623942299980201, guid: 8b4aed85c2474fa0ba6e5918be3ca925, type: 3}
-    metadata:
-  - name: Ridge3
-    type: EnvironmentDistant
-    prefab: {fileID: 6405574626545332893, guid: 4071fb957e891add19c74348d14a30c7, type: 3}
-    metadata:
-  - name: Ridge4
-    type: EnvironmentDistant
-    prefab: {fileID: 5223320828439511927, guid: c884ef0d871e14e94be59e36bf4727ea, type: 3}
-    metadata:
-  - name: ValleyFloor
-    type: EnvironmentDistant
-    prefab: {fileID: 5988784919229968531, guid: 535f70b7ccc4e4a37b045de7c0a150f2, type: 3}
+  - name: SignLower
+    type: Environment
+    prefab: {fileID: 8666491348663467951, guid: 13c0bcba18013e54b8c8ded60a272e5d, type: 3}
     metadata:
   characterVisuals: {fileID: 11400000, guid: 8da08260566aeed7e89ee2470cdd2fd5, type: 2}

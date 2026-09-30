@@ -29,9 +29,11 @@ namespace PowderFlow
             {
                 var model=AssetDatabase.LoadAssetAtPath<GameObject>(asset.fbxPath);if(!model)throw new Exception("Missing imported model "+asset.name);
                 var content=UnityEngine.Object.Instantiate(model);var instance=new GameObject(asset.name);content.transform.SetParent(instance.transform,false);
+                bool explicitCollision=false;foreach(var filter in instance.GetComponentsInChildren<MeshFilter>())if(filter.name.StartsWith("Collision_"))explicitCollision=true;
                 var anim=instance.GetComponentInChildren<Animator>();if(anim)anim.enabled=false;
                 foreach(var renderer in instance.GetComponentsInChildren<Renderer>())
                 {
+                    if(renderer.name.StartsWith("Collision_"))renderer.enabled=false;
                     if(asset.type=="EnvironmentDistant")renderer.shadowCastingMode=UnityEngine.Rendering.ShadowCastingMode.Off;
                     if(asset.type=="Character"&&renderer is SkinnedMeshRenderer skinned){skinned.updateWhenOffscreen=true;skinned.localBounds=new Bounds(Vector3.zero,Vector3.one*4);}
                     var list=renderer.sharedMaterials;
@@ -55,6 +57,7 @@ namespace PowderFlow
                     }
                     else foreach(var filter in instance.GetComponentsInChildren<MeshFilter>())
                     {
+                        if(explicitCollision&&!filter.name.StartsWith("Collision_"))continue;
                         if(filter.name.Contains("LOD")&&!filter.name.Contains("LOD0"))continue;
                         var collider=filter.gameObject.AddComponent<MeshCollider>();collider.sharedMesh=filter.sharedMesh;
                     }

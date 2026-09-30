@@ -97,3 +97,12 @@
 - All runtime sessions now use a **144 FPS cap**. Removed automatic timed render benchmarks, frame-time collection and FPS success gates at the user's request. Targeted behavior/visual checks replace frequent performance runs.
 - Linux build **188,154,425 bytes**; one capped 1080p gameplay launch and extracted-package menu launch exit 0. Report, archive checksum, captures and limits: `VisualPolish/Phase3/REPORT.md`.
 - Existing Park camera/jump overlap is recorded for VP6 obstruction review. Next: **VP4 park features and mountain props**.
+
+## VP4 — Park features and mountain props: passed
+
+- Finished all five rails/boxes with connected supports, caps/panels, bevels, footplates, wear and entry trim. Added visual snow banks/aprons to all six jump assets while retaining their original top/side collision triangles. Ten terrain FBXs and ten rail/box path JSON files match their saved hashes.
+- Added lodge roof/gables/windows/door detail, lift sheaves/braces/ladders, connected cables, static chairs and finished floodlight/fence hardware. The world has **14 towers, 26 connected cable spans and 52 static chairs**. Five original region signs, three grades of feature panel, boundary poles, flags and a start gate share a slate/teal/cream/orange palette.
+- The importer uses explicit hidden collision meshes and leaves decorative banks/hardware/markers noncolliding. Alpine Prop materials retain readable shaded lettering/wood; DejaVu font notices ship with the package. The manifest has **63 assets**, with a focused 34-asset park stage.
+- Checks: targeted EditMode **3/3**, PlayMode **2/2**, shader check **1/1** and final park visual review **1/1**. The connected descent reaches **1,382 m** through five regions. Inspected eighteen Day/Sunset park/prop views; corrected underexposed sign/lodge shade, missing chevron faces, hidden entry bands and an open lodge gable.
+- One High-quality 1080p Sunset Park run uses the **144 FPS cap**, travels **92.33 m** and exits 0. The Linux build and extracted-package menu launch pass; no runtime/shader errors. No performance benchmark or regional launch matrix was used. Build size, archive checksum, captures and limits are in `VisualPolish/Phase4/REPORT.md` and its summary.
+- Static lift chairs and the existing Park camera/jump overlap remain documented. Next: **VP5 snow interaction and motion effects**.

@@ -95,3 +95,9 @@ MonoBehaviour:
     position: {x: 400, y: -55, z: 2520}
     scale: {x: 1.6, y: 1.25, z: 1.2}
     yaw: -8
+  liftTowerCount: 14
+  liftX: -85
+  liftStartZ: 30
+  liftSpacing: 100
+  regionSignX: -29
+  boundaryMarkerX: 116

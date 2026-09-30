@@ -1,5 +1,7 @@
 # VP3 — Mountain and vegetation composition
 
+**Historical VP3 report.** Current delivery results are in `../Phase4/REPORT.md`. The original VP3 archive is preserved locally as `Builds/Packages/PowderFlow-VP3-Linux.tar.gz`; the usual `PowderFlow-Linux.tar.gz` path now contains VP4 and uses its checksum.
+
 Completed 2026-09-29. VP3 replaces repeated cone trees and ridge walls with varied alpine scenery. Gameplay, menus, editor Play mode and diagnostics now use a **144 FPS cap**, as requested. Routine performance benchmarks and FPS success gates have been removed.
 
 ## What changed

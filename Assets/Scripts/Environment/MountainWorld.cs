@@ -25,7 +25,6 @@ namespace PowderFlow
             for(int i=0;i<worldConfig.jumpLocations.Length;i++)
             {
                 float z=worldConfig.jumpLocations[i];string model=i==0?"JumpSmall":i==3?"Tabletop":i==4?"JumpLarge":"JumpMedium";Place(model,OnSnow(0,z,.02f),Quaternion.identity);
-                Place("Flag",OnSnow(-12,z),Quaternion.identity);Place("Flag",OnSnow(12,z),Quaternion.identity);
             }
             var types=new[]{"flat","down","kink","rainbow","wide"};
             var boxTypes=new[]{"flat","down","kink","narrow","wide"};
@@ -37,14 +36,7 @@ namespace PowderFlow
             }
             Place("QuarterPipe",OnSnow(-45,690),Quaternion.Euler(0,30,0));Place("Hip",OnSnow(45,760),Quaternion.Euler(0,-15,0));
             gameObject.AddComponent<MountainScenery>().Build(this);
-            Place("Hut",OnSnow(-70,30),Quaternion.Euler(0,20,0));
-            for(int i=0;i<14;i++)
-            {
-                float z=30+i*100;Place("LiftTower",OnSnow(-85,z),Quaternion.identity);Place("LiftCable",OnSnow(-82,z,14),Quaternion.Euler(13,0,0));
-                if(i>2&&i<8)Place("Floodlight",OnSnow(-40,z),Quaternion.identity);
-                Place("Fence",OnSnow(40,z),Quaternion.identity);
-            }
-            for(int i=0;i<5;i++)Place("Sign",OnSnow(-9,60+i*300),Quaternion.identity);
+            gameObject.AddComponent<MountainProps>().Build(this);
             AddPowderZone(new Vector3(90,0,1120),new Vector3(95,70,360));
             Physics.SyncTransforms();
             var spawn=OnSnow(worldConfig.start.x,worldConfig.start.z,physicsConfig.rideHeight);

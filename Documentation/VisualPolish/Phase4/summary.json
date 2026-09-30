@@ -1,0 +1,88 @@
+{
+  "phase": "VP4",
+  "status": "complete",
+  "baselineCommit": "5e3d23d",
+  "assetCount": 63,
+  "parkStage": {
+    "assetCount": 34,
+    "exportedTrianglesIncludingCollision": 64088
+  },
+  "mountainProps": {
+    "liftTowers": 14,
+    "cableSpans": 26,
+    "staticChairs": 52,
+    "regionBoards": 5,
+    "featureMarkerGrades": 3
+  },
+  "passedChecks": {
+    "EditMode": 3,
+    "PlayMode": 2,
+    "ShaderReview": 1,
+    "ParkReview": 1
+  },
+  "connectedDescent": {
+    "maximumZ": 1382,
+    "areas": 5
+  },
+  "protectedTerrainAndPathFiles": {
+    "checked": 20,
+    "unchanged": 20
+  },
+  "jumpCollisionFingerprints": {
+    "checked": 12,
+    "matching": 12,
+    "coordinatePrecisionMeters": 0.0001
+  },
+  "ridingTuningUnchanged": true,
+  "reviewCaptures": {
+    "count": 18,
+    "presets": [
+      "Day",
+      "Sunset"
+    ],
+    "resolution": [
+      1920,
+      1080
+    ]
+  },
+  "frameRateCap": 144,
+  "routinePerformanceBenchmarks": false,
+  "cappedGameplay": {
+    "area": 1,
+    "day": false,
+    "initialSpeed": 0.0,
+    "runSeconds": 12.0,
+    "startX": 0.0,
+    "startZ": 360.0,
+    "runStartZ": 363.39,
+    "frameRateCap": 144,
+    "vSyncCount": 0,
+    "width": 1920,
+    "height": 1080,
+    "quality": 2,
+    "maxSpeed": 17.1,
+    "distance": 92.33,
+    "exitCode": 0
+  },
+  "gameplayValidationScope": "Native gameplay was checked before the final visual lodge gables; final import, visual review, build and extracted-package launch include the gable correction.",
+  "buildBytes": 191206045,
+  "package": {
+    "path": "Builds/Packages/PowderFlow-Linux.tar.gz",
+    "bytes": 71128613,
+    "sha256": "80ed6eac2ff0910c9c0ae98c7e6f4e4c82fbfdccd34010dd400cef170a98bda8",
+    "extractedDirectory": "Builds/ParkPackageValidation/Linux",
+    "extractedLaunchExitCode": 0,
+    "menuCaptureSize": [
+      1920,
+      1080
+    ],
+    "fontNoticeIncluded": true,
+    "diagnosticFilesExcluded": true
+  },
+  "remainingIssues": [
+    "Existing camera/jump overlap at top of native Park capture; assigned to VP6 camera obstruction review.",
+    "Lift chairs and flags are static scenery.",
+    "Visual jump banks do not extend the preserved collision width."
+  ],
+  "nextPhase": "VP5 \u2014 snow interaction and motion effects"
+}
