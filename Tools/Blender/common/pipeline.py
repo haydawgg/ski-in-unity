@@ -58,7 +58,7 @@ def validate(objects):
 def preview(path,objects):
     # Preview rig is excluded from FBX export.
     coords=[o.matrix_world@Vector(p) for o in objects if o.type=='MESH' for p in o.bound_box];center=sum(coords,Vector())/len(coords);extent=max((p-center).length for p in coords)
-    bpy.ops.object.camera_add(location=center+Vector((extent*1.7,-extent*2.2,extent*.9)));camera=bpy.context.object;camera.rotation_euler=(center-camera.location).to_track_quat('-Z','Y').to_euler();bpy.context.scene.camera=camera
+    bpy.ops.object.camera_add(location=center+Vector((extent*1.7,-extent*2.2,extent*.9)));camera=bpy.context.object;camera.rotation_euler=(center-camera.location).to_track_quat('-Z','Y').to_euler();camera.data.clip_end=max(1000,extent*10);bpy.context.scene.camera=camera
     bpy.ops.object.light_add(type='AREA',location=center+Vector((extent,-extent,extent*2)));light=bpy.context.object;light.data.energy=max(600,extent*extent*500);light.data.shape='DISK';light.data.size=max(1,extent)
     hidden=[]
     for obj in objects:
@@ -75,6 +75,6 @@ def export(name,kind,parameters,preview_image=False,metadata=None):
     fbx=folder/(name+'.fbx');bpy.ops.export_scene.fbx(filepath=str(fbx),use_selection=True,axis_forward='-Z',axis_up='Y',apply_scale_options='FBX_SCALE_ALL',add_leaf_bones=False,bake_anim=False,use_mesh_modifiers=True)
     image=folder/(name+'.png')
     if preview_image:preview(image,objects)
-    record={'name':name,'type':kind,'generator':'Tools/Blender/build_all_assets.py','parameters':parameters,'blenderVersion':bpy.app.version_string,'fbxPath':str(fbx.relative_to(ROOT)),'previewPath':str(image.relative_to(ROOT)) if preview_image else '', 'triangleCount':tris,'bounds':bounds,'lodCount':parameters.get('lodCount',1),'collisionAsset':str(fbx.relative_to(ROOT)) if kind not in ('Character','Skis','EnvironmentDistant') else '', 'timestamp':datetime.datetime.now(datetime.timezone.utc).isoformat()}
+    record={'name':name,'type':kind,'generator':'Tools/Blender/build_all_assets.py','parameters':parameters,'blenderVersion':bpy.app.version_string,'fbxPath':str(fbx.relative_to(ROOT)),'previewPath':str(image.relative_to(ROOT)) if preview_image else '', 'triangleCount':tris,'bounds':bounds,'lodCount':parameters.get('lodCount',1),'collisionAsset':str(fbx.relative_to(ROOT)) if kind not in ('Character','Skis','EnvironmentDistant','EnvironmentAccent') else '', 'timestamp':datetime.datetime.now(datetime.timezone.utc).isoformat()}
     if metadata:(folder/(name+'.json')).write_text(json.dumps(metadata,indent=2));record['metadata']=metadata
     return record

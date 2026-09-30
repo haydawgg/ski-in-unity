@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="3" result="Passed" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-09-30 00:51:55Z" end-time="2026-09-30 00:52:11Z" duration="15.602158">
+  <test-suite type="TestSuite" id="1033" name="PowderFlow" fullname="PowderFlow" runstate="Runnable" testcasecount="14" result="Passed" start-time="2026-09-30 00:51:55Z" end-time="2026-09-30 00:52:11Z" duration="15.602158" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="PlayMode" />
+    </properties>
+    <test-suite type="Assembly" id="1027" name="PowderFlow.PlayTests.dll" fullname="/home/haydend/Documents/ChatGPT/ski-in-unity/Library/ScriptAssemblies/PowderFlow.PlayTests.dll" runstate="Runnable" testcasecount="14" result="Passed" start-time="2026-09-30 00:51:55Z" end-time="2026-09-30 00:52:11Z" duration="15.598120" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="121089" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="PlayMode" />
+        <property name="EditorOnly" value="False" />
+      </properties>
+      <test-suite type="TestSuite" id="1028" name="PowderFlow" fullname="PowderFlow" runstate="Runnable" testcasecount="14" result="Passed" start-time="2026-09-30 00:51:55Z" end-time="2026-09-30 00:52:11Z" duration="15.597778" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="SetUpFixture" id="1018" name="Tests" fullname="PowderFlow.Tests.PlayTestIsolation" classname="PowderFlow.Tests.PlayTestIsolation" runstate="Runnable" testcasecount="14" result="Passed" start-time="2026-09-30 00:51:55Z" end-time="2026-09-30 00:52:11Z" duration="15.597314" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestFixture" id="1007" name="EnvironmentPolishTests" fullname="PowderFlow.Tests.EnvironmentPolishTests" classname="PowderFlow.Tests.EnvironmentPolishTests" runstate="Runnable" testcasecount="1" result="Passed" start-time="2026-09-30 00:51:55Z" end-time="2026-09-30 00:52:03Z" duration="8.372167" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1008" name="RegionCompositionClearanceAndMovingLods" fullname="PowderFlow.Tests.EnvironmentPolishTests.RegionCompositionClearanceAndMovingLods" methodname="RegionCompositionClearanceAndMovingLods" classname="PowderFlow.Tests.EnvironmentPolishTests" runstate="Runnable" seed="1097793204" result="Passed" start-time="2026-09-30 00:51:55Z" end-time="2026-09-30 00:52:03Z" duration="8.367715" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[VP3 COMPOSITION [Easy, 37], [Park, 116], [BigAir, 24], [Freeride, 95], [Lower, 48]; 70 rocks; 160 shrubs; protected corridors clear
+]]></output>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1014" name="GraphicsPlayTests" fullname="PowderFlow.Tests.GraphicsPlayTests" classname="PowderFlow.Tests.GraphicsPlayTests" runstate="Runnable" testcasecount="1" result="Passed" start-time="2026-09-30 00:52:03Z" end-time="2026-09-30 00:52:05Z" duration="1.113391" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1015" name="SunsetDayPortraitAndPerformanceRender" fullname="PowderFlow.Tests.GraphicsPlayTests.SunsetDayPortraitAndPerformanceRender" methodname="SunsetDayPortraitAndPerformanceRender" classname="PowderFlow.Tests.GraphicsPlayTests" runstate="Runnable" seed="879998421" result="Passed" start-time="2026-09-30 00:52:03Z" end-time="2026-09-30 00:52:05Z" duration="1.112419" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[M9 SYNCHRONOUS 1080P RENDER FPS 433.3
+]]></output>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1016" name="MountainPlayTests" fullname="PowderFlow.Tests.MountainPlayTests" classname="PowderFlow.Tests.MountainPlayTests" runstate="Runnable" testcasecount="1" result="Passed" start-time="2026-09-30 00:52:05Z" end-time="2026-09-30 00:52:11Z" duration="6.109312" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1017" name="TopToBottomRunTraversesConnectedMountain" fullname="PowderFlow.Tests.MountainPlayTests.TopToBottomRunTraversesConnectedMountain" methodname="TopToBottomRunTraversesConnectedMountain" classname="PowderFlow.Tests.MountainPlayTests" runstate="Runnable" seed="476364609" result="Passed" start-time="2026-09-30 00:52:05Z" end-time="2026-09-30 00:52:11Z" duration="6.108695" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[RUN t=0 z=13 speed=1.5 bail=False pos=(-0.02, 353.21, 12.67) ground=True reach=1.05 L=True
+RUN t=20 z=188 speed=16.0 bail=False pos=(-0.88, 312.29, 187.75) ground=True reach=1.05 L=True
+RUN t=40 z=641 speed=21.0 bail=False pos=(-6.46, 223.18, 640.79) ground=False reach=1.05 L=False
+RUN t=60 z=1074 speed=27.4 bail=False pos=(-12.02, 108.31, 1073.62) ground=True reach=1.05 L=True
+MOUNTAIN RUN maximum 1405m; areas 5
+Saving results to: /home/haydend/.config/unity3d/PowderFlow Studio/PowderFlow/TestResults.xml
+]]></output>
+            </test-case>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

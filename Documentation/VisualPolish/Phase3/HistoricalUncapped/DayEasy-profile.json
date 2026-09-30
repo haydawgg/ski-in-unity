@@ -1,0 +1,20 @@
+{
+  "area": 0,
+  "day": true,
+  "initialSpeed": 0.0,
+  "profileSeconds": 12.0,
+  "startX": 0.0,
+  "startZ": 12.0,
+  "profileStartZ": 15.29,
+  "averageFps": 588.32,
+  "averageFrameMs": 1.7,
+  "p95FrameMs": 2.45,
+  "p99FrameMs": 2.7,
+  "width": 1920,
+  "height": 1080,
+  "quality": 2,
+  "maxSpeed": 17.48,
+  "distance": 101.95,
+  "gpu": "AMD Radeon RX 6600 XT (radeonsi, navi23, ACO, DRM 3.64, 7.2.8-1-cachyos)",
+  "exitCode": 0
+}

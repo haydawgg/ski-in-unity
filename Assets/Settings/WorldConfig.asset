@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: WorldConfig
   m_EditorClassIdentifier: PowderFlow::PowderFlow.WorldConfig
   seed: 42
-  treeCount: 240
+  treeCount: 320
   rockCount: 70
   length: 1500
   width: 400
@@ -30,3 +30,68 @@ MonoBehaviour:
   - 440
   - 590
   - 900
+  shrubCount: 160
+  treeSpacing: 5.5
+  sceneryEdge: 174
+  sceneryRegions:
+  - name: Easy
+    from: 40
+    to: 240
+    treeWeight: 0.55
+    clearance: 54
+    minScale: 0.75
+    maxScale: 1.05
+    clusterSpread: 18
+  - name: Park
+    from: 240
+    to: 800
+    treeWeight: 1.7
+    clearance: 32
+    minScale: 0.9
+    maxScale: 1.3
+    clusterSpread: 13
+  - name: BigAir
+    from: 800
+    to: 1030
+    treeWeight: 0.35
+    clearance: 62
+    minScale: 0.75
+    maxScale: 1.05
+    clusterSpread: 24
+  - name: Freeride
+    from: 1030
+    to: 1320
+    treeWeight: 1.4
+    clearance: 34
+    minScale: 0.95
+    maxScale: 1.4
+    clusterSpread: 17
+  - name: Lower
+    from: 1320
+    to: 1450
+    treeWeight: 0.7
+    clearance: 45
+    minScale: 0.65
+    maxScale: 1
+    clusterSpread: 22
+  ridgeLayers:
+  - variant: 0
+    position: {x: -780, y: 55, z: 650}
+    scale: {x: 1, y: 1, z: 1}
+    yaw: 90
+  - variant: 1
+    position: {x: 780, y: 25, z: 700}
+    scale: {x: 1, y: 1, z: 1}
+    yaw: -90
+  - variant: 2
+    position: {x: 0, y: -35, z: 1570}
+    scale: {x: 1, y: 1, z: 1}
+    yaw: 0
+  - variant: 3
+    position: {x: -350, y: -45, z: 2070}
+    scale: {x: 1.3, y: 0.9, z: 1.15}
+    yaw: 7
+  - variant: 4
+    position: {x: 400, y: -55, z: 2520}
+    scale: {x: 1.6, y: 1.25, z: 1.2}
+    yaw: -8

@@ -88,3 +88,12 @@
 - Checks: EditMode **24/24**, PlayMode **13/13**, final targeted character review **1/1**, manifest **48/48**. All nine grab states captured from three views; active-wrist error is at most **11.2 cm** after settling. Connected descent: **1,405 m**, five regions. Core force/collider/trick/rail tuning unchanged.
 - Linux build: **183,705,372 bytes**. Visible High-quality 1080p short profiles: Sunset **639.73 FPS**, p95 **2.00 ms**, p99 **2.25 ms**; Day **675.11 FPS**, p95 **1.80 ms**, p99 **2.28 ms**. Native menu/gameplay exit 0 with no runtime/shader errors. Evidence, reproduction, archive checksum and review limitations are in `VisualPolish/Phase2/REPORT.md`.
 - Grabs remain stylized procedural approximations; dynamic action sequences and dense-region performance are reviewed in VP7. Next: VP3 vegetation/mountain composition.
+
+## VP3 — Mountain and vegetation composition: passed
+
+- Replaced cone stacks with four asymmetric snow-covered pine variants, consolidated branch meshes and three crossfaded LODs. Added two noncolliding shrub variants, clustered rocks, five distinct ridge layers and a rolling valley backdrop. The manifest now has **52 assets**.
+- WorldConfig controls regional composition and protected approaches. The seeded world places **320 trees, 70 rocks and 160 shrubs**, with 5.5 m minimum tree spacing. Distant ranges stop casting shadows across the riding mountain. All ten riding-terrain FBX hashes and skiing force/air/rail tuning are preserved.
+- Checks: EditMode **25/25**, targeted PlayMode **3/3**; final scenery and graphics capture reviews **1/1 each**. Connected descent reaches **1,405 m**, five regions. Both lighting presets, variants/LODs and a moving tree sequence were inspected.
+- All runtime sessions now use a **144 FPS cap**. Removed automatic timed render benchmarks, frame-time collection and FPS success gates at the user's request. Targeted behavior/visual checks replace frequent performance runs.
+- Linux build **188,154,425 bytes**; one capped 1080p gameplay launch and extracted-package menu launch exit 0. Report, archive checksum, captures and limits: `VisualPolish/Phase3/REPORT.md`.
+- Existing Park camera/jump overlap is recorded for VP6 obstruction review. Next: **VP4 park features and mountain props**.

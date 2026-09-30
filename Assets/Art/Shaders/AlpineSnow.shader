@@ -22,8 +22,10 @@ Shader "PowderFlow/Alpine Snow"
    #pragma multi_compile_fragment _ _SCREEN_SPACE_OCCLUSION
    #pragma multi_compile_fog
    #pragma multi_compile_instancing
+   #pragma multi_compile _ LOD_FADE_CROSSFADE
    #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Core.hlsl"
    #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Lighting.hlsl"
+   #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/LODCrossFade.hlsl"
    CBUFFER_START(UnityPerMaterial)
    half4 _BaseColor,_RockColor;float _RippleStrength,_RippleScale,_Variation,_Glitter,_DetailDistance,_Wrap,_RimStrength,_SlopeBlend,_Cull;
    CBUFFER_END
@@ -39,6 +41,9 @@ Shader "PowderFlow/Alpine Snow"
    half4 frag(V i):SV_Target
    {
     UNITY_SETUP_INSTANCE_ID(i);
+    #ifdef LOD_FADE_CROSSFADE
+    LODFadeCrossFade(i.vertex);
+    #endif
     float3 n=normalize(i.normal);float3 view=normalize(_WorldSpaceCameraPos-i.world);
     float distance=length(_WorldSpaceCameraPos-i.world);float detail=1-smoothstep(_DetailDistance*.25,_DetailDistance,distance);
     float2 p=i.world.xz*_RippleScale;float warp=(noise21(i.world.xz*.25)-.5)*1.8;

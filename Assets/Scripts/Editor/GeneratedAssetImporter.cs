@@ -32,6 +32,7 @@ namespace PowderFlow
                 var anim=instance.GetComponentInChildren<Animator>();if(anim)anim.enabled=false;
                 foreach(var renderer in instance.GetComponentsInChildren<Renderer>())
                 {
+                    if(asset.type=="EnvironmentDistant")renderer.shadowCastingMode=UnityEngine.Rendering.ShadowCastingMode.Off;
                     if(asset.type=="Character"&&renderer is SkinnedMeshRenderer skinned){skinned.updateWhenOffscreen=true;skinned.localBounds=new Bounds(Vector3.zero,Vector3.one*4);}
                     var list=renderer.sharedMaterials;
                     for(int i=0;i<list.Length;i++)
@@ -46,7 +47,7 @@ namespace PowderFlow
                     renderer.sharedMaterials=list;
                 }
                 string metadataPath=Path.ChangeExtension(asset.fbxPath,".json"),metadata=File.Exists(metadataPath)?File.ReadAllText(metadataPath):"";
-                if(asset.type!="Character" && asset.type!="Skis" && asset.type!="EnvironmentDistant")
+                if(asset.type!="Character" && asset.type!="Skis" && asset.type!="EnvironmentDistant" && asset.type!="EnvironmentAccent")
                 {
                     if(asset.type=="Trees")
                     {
@@ -67,13 +68,13 @@ namespace PowderFlow
                 foreach(var previousLod in instance.GetComponentsInChildren<LODGroup>())UnityEngine.Object.DestroyImmediate(previousLod);
                 var lodRenderers=new List<Renderer[]>();
                 for(int lod=0;lod<3;lod++){var collection=new List<Renderer>();foreach(var renderer in instance.GetComponentsInChildren<Renderer>())if(renderer.name.Contains("LOD"+lod))collection.Add(renderer);lodRenderers.Add(collection.ToArray());}
-                if(lodRenderers[0].Length>0){var group=instance.GetComponent<LODGroup>();if(!group)group=instance.AddComponent<LODGroup>();group.SetLODs(new[]{new LOD(.2f,lodRenderers[0]),new LOD(.08f,lodRenderers[1]),new LOD(.015f,lodRenderers[2])});group.RecalculateBounds();}
+                if(lodRenderers[0].Length>0){var group=instance.GetComponent<LODGroup>();if(!group)group=instance.AddComponent<LODGroup>();bool accent=asset.type=="EnvironmentAccent";group.SetLODs(new[]{new LOD(accent?.08f:.16f,lodRenderers[0]),new LOD(accent?.025f:.06f,lodRenderers[1]),new LOD(.008f,lodRenderers[2])});group.fadeMode=LODFadeMode.CrossFade;group.animateCrossFading=true;group.RecalculateBounds();}
                 var prefab=PrefabUtility.SaveAsPrefabAsset(instance,"Assets/Prefabs/Generated/"+asset.name+".prefab");UnityEngine.Object.DestroyImmediate(instance);
                 records.Add(new GeneratedAsset{name=asset.name,type=asset.type,prefab=prefab,metadata=metadata});
             }
             var catalog=Config<AssetCatalog>("AssetCatalog");catalog.assets=records.ToArray();EditorUtility.SetDirty(catalog);
             var scene=EditorSceneManager.OpenScene("Assets/Scenes/PhysicsTest.unity");var world=UnityEngine.Object.FindFirstObjectByType<PhysicsTestWorld>();world.catalog=catalog;EditorSceneManager.SaveScene(scene);
-            CreateAssetPreview(catalog);ConfigureCharacterGraphics();AssetDatabase.SaveAssets();if(File.Exists("Assets/Settings/GraphicsConfig.asset")&&File.Exists("Assets/Scenes/Mountain.unity"))ConfigureGraphics();Debug.Log("GENERATED IMPORT PASS "+records.Count);
+            CreateAssetPreview(catalog);ConfigureCharacterGraphics();ConfigureEnvironmentGraphics();AssetDatabase.SaveAssets();if(File.Exists("Assets/Settings/GraphicsConfig.asset")&&File.Exists("Assets/Scenes/Mountain.unity"))ConfigureGraphics();Debug.Log("GENERATED IMPORT PASS "+records.Count);
         }
         public static void CreateAssetPreview(AssetCatalog catalog)
         {

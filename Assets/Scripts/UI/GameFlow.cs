@@ -19,7 +19,8 @@ namespace PowderFlow
         {
             world=GetComponent<MountainWorld>();Remaining=config.sessionDuration;menu=startInMenu;Time.timeScale=menu?0:1;
             world.player.ResetTo(world.player.startPosition,world.player.startRotation);
-            if(System.Array.Exists(System.Environment.GetCommandLineArgs(),a=>a=="--visual-day"))SaveStore.Current.day=true;
+            var args=System.Environment.GetCommandLineArgs();bool diagnostic=System.Array.Exists(args,a=>a=="--smoke-test");
+            if(diagnostic||System.Array.Exists(args,a=>a=="--visual-day"))SaveStore.Current.day=System.Array.Exists(args,a=>a=="--visual-day");
             ApplySettings();
             if(System.Array.Exists(System.Environment.GetCommandLineArgs(),a=>a=="--smoke-test")){menu=false;Time.timeScale=1;gameObject.AddComponent<StandaloneSmokeTest>().flow=this;}
             else if(System.Array.Exists(System.Environment.GetCommandLineArgs(),a=>a=="--menu-capture"))gameObject.AddComponent<StandaloneSmokeTest>().flow=this;

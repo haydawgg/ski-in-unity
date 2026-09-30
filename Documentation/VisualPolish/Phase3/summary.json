@@ -1,0 +1,61 @@
+{
+  "phase": "VP3",
+  "status": "complete",
+  "assetCount": 52,
+  "scenery": {
+    "trees": 320,
+    "rocks": 70,
+    "shrubs": 160,
+    "ridgeLayers": 5,
+    "minimumTreeSpacingMeters": 5.5,
+    "treeCountsByRegion": {
+      "Easy": 37,
+      "Park": 116,
+      "BigAir": 24,
+      "Freeride": 95,
+      "Lower": 48
+    }
+  },
+  "passedChecks": {
+    "EditMode": 25,
+    "PlayMode": 3,
+    "EnvironmentReview": 1,
+    "GraphicsReview": 1
+  },
+  "connectedDescent": {
+    "maximumZ": 1405,
+    "areas": 5
+  },
+  "ridingTerrainUnchanged": true,
+  "frameRateCap": 144,
+  "routinePerformanceBenchmarks": false,
+  "cappedGameplay": {
+    "area": 0,
+    "day": false,
+    "initialSpeed": 0.0,
+    "runSeconds": 12.0,
+    "startX": 0.0,
+    "startZ": 12.0,
+    "runStartZ": 15.29,
+    "frameRateCap": 144,
+    "vSyncCount": 0,
+    "width": 1920,
+    "height": 1080,
+    "quality": 2,
+    "maxSpeed": 17.48,
+    "distance": 101.99,
+    "exitCode": 0
+  },
+  "buildBytes": 188154425,
+  "package": {
+    "path": "Builds/Packages/PowderFlow-Linux.tar.gz",
+    "bytes": 70320512,
+    "sha256": "44586ced1361ea5d2854eef405811e478b5bb7068b3b27906201a0ded2bff1d5",
+    "extractedLaunchExitCode": 0,
+    "menuCaptureSize": [
+      1920,
+      1080
+    ]
+  },
+  "remainingIssue": "Existing camera/jump overlap visible at the top of the native Park capture; review obstruction handling in VP6."
+}

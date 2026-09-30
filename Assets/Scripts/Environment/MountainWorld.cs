@@ -22,7 +22,6 @@ namespace PowderFlow
         {
             Place("ValleyFloor",Vector3.zero,Quaternion.identity);
             for(int i=0;i<10;i++)Place($"Mountain{i:00}",Vector3.zero,Quaternion.identity);
-            for(int i=0;i<3;i++){Place("Ridge"+i,new Vector3(i==0?-650:i==1?650:0,i==2?-30:100,i==2?1800:600),Quaternion.Euler(0,i==0?90:i==1?-90:0,0));}
             for(int i=0;i<worldConfig.jumpLocations.Length;i++)
             {
                 float z=worldConfig.jumpLocations[i];string model=i==0?"JumpSmall":i==3?"Tabletop":i==4?"JumpLarge":"JumpMedium";Place(model,OnSnow(0,z,.02f),Quaternion.identity);
@@ -37,14 +36,7 @@ namespace PowderFlow
                 Place("JumpSmall",OnSnow(i%2==0?-17:17,z-23),Quaternion.identity);
             }
             Place("QuarterPipe",OnSnow(-45,690),Quaternion.Euler(0,30,0));Place("Hip",OnSnow(45,760),Quaternion.Euler(0,-15,0));
-            var random=new System.Random(worldConfig.seed);
-            for(int i=0;i<worldConfig.treeCount;i++)
-            {
-                float z=40+(float)random.NextDouble()*1400,x=(float)random.NextDouble()*360-180;
-                if(Mathf.Abs(x)<worldConfig.treeExclusion || (x>55&&x<100&&z>950&&z<1280))continue;
-                var tree=Place("Pine"+random.Next(4),OnSnow(x,z),Quaternion.Euler(0,(float)random.NextDouble()*360,0));float scale=.8f+(float)random.NextDouble()*.5f;tree.transform.localScale=Vector3.one*scale;
-            }
-            for(int i=0;i<worldConfig.rockCount;i++){float z=80+(float)random.NextDouble()*1350,x=(float)random.NextDouble()*360-180;if(Mathf.Abs(x)<45)continue;Place("Rock"+random.Next(6),OnSnow(x,z,-.3f),Quaternion.Euler(0,(float)random.NextDouble()*360,0));}
+            gameObject.AddComponent<MountainScenery>().Build(this);
             Place("Hut",OnSnow(-70,30),Quaternion.Euler(0,20,0));
             for(int i=0;i<14;i++)
             {

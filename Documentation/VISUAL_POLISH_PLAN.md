@@ -24,7 +24,7 @@ Reviewed the delivered Day, Sunset, portrait, gameplay and main-menu captures an
 | Tracks/spray and air posing need dedicated review shots | Existing wide screenshots do not prove motion quality | Medium |
 | Menus use the default Unity button skin | Functional but visually disconnected from the game | Medium |
 
-Before images are preserved in `Documentation/VisualPolish/Before/`. New review images and measurements will be stored by phase. Previous M10 validation remains historical evidence, not the performance result for the polished build.
+Before images are preserved in `Documentation/VisualPolish/Before/`. New review images and validation will be stored by phase. Earlier uncapped measurements remain historical evidence. As requested on 2026-09-29, all runs now use a 144 FPS cap and routine performance benchmarks are removed.
 
 ## Sequence
 
@@ -38,11 +38,11 @@ Before images are preserved in `Documentation/VisualPolish/Before/`. New review 
 4. Balance Day/Sunset light, ambient and fog colors. Day snow should retain detail; sunset should have neutral/cool snow with warm highlights and violet shade.
 5. Improve snow with two wind-ripple scales, restrained albedo variation, distance-faded glitter and more varied rock shading. Keep detail stable at speed and across chunk seams.
 6. Improve procedural cloud shapes, sky gradient, sun disk and halo. Reduce broad featureless cloud stripes.
-7. Capture matched wide views, park detail and character framing in both presets. Rebuild and profile the visible native player.
+7. Capture matched wide views, park detail and character framing in both presets. Rebuild and inspect the visible native player.
 
 **Primary files:** GraphicsConfig, AlpineLighting, GraphicsTools, AlpineSnow/AlpineSky shaders, graphics materials/settings, build scene render settings, graphics validation/capture tooling.
 
-**Done when:** post components survive reload; fog/soft shadows appear in the native player; no pink/error materials or shader errors; snow has visible shape/detail without noisy sparkle; nearby obstacles retain contrast; Day/Sunset/portrait captures are inspected; measured 1080p gameplay remains above 60 FPS.
+**Done when:** post components survive reload; fog/soft shadows appear in the native player; no pink/error materials or shader errors; snow has visible shape/detail without noisy sparkle; nearby obstacles retain contrast; Day/Sunset/portrait captures are inspected; the capped native launch and visual inspection pass.
 
 ### VP2 — Skier, clothing, skis and pose readability
 
@@ -67,7 +67,7 @@ Before images are preserved in `Documentation/VisualPolish/Before/`. New review 
 
 **Primary files:** create_environment.py and generator helpers, WorldConfig/MountainWorld, environment material/import settings, generated source/FBX and wide captures.
 
-**Done when:** regions are recognizable in wide shots; silhouettes vary; distant geometry layers into the sky; no new riding seams/obstructions; a top-to-bottom physics run still passes; vegetation stays inside the frame budget.
+**Done when:** regions are recognizable in wide shots; silhouettes vary; distant geometry layers into the sky; no new riding seams/obstructions; a top-to-bottom physics run still passes; LOD counts remain bounded and moving footage has no disruptive transitions.
 
 ### VP4 — Park features and mountain props
 
@@ -107,10 +107,10 @@ Before images are preserved in `Documentation/VisualPolish/Before/`. New review 
 1. Compare matched before/after images and inspect short captured action sequences: carve, brake, jump/spin/grab, rail exit, landing, bail and reset.
 2. Review both presets, all regions, several outfits and landscape/portrait. Fix material, scale, LOD, shadow and fog inconsistencies.
 3. Run meaningful regression gates: asset/rig/terrain checks, physics/trick/rail checks when affected, menu/save checks when affected, clean build and extracted-package launch.
-4. Profile a representative native run, including dense park/trees and effects. Record average FPS and frame-time percentiles, resolution, quality, hardware and method. Target 60 FPS at 1080p; compare with the VP1 baseline instead of offscreen-only figures.
+4. Launch a representative native run at the 144 FPS cap and inspect gameplay/action captures. Run a performance profile only when a concrete issue needs investigation or the user asks; machine FPS is not a routine completion gate.
 5. Update README/report, capture evidence, package the polished build and commit the phase.
 
-**Done when:** the complete visual pass is coherent and inspected, relevant regressions pass, native performance meets the target, the extracted archive runs, and remaining limitations are stated explicitly.
+**Done when:** the complete visual pass is coherent and inspected, relevant regressions pass, the capped native run succeeds, the extracted archive runs, and remaining limitations are stated explicitly.
 
 ## Review and implementation rules
 
@@ -118,7 +118,7 @@ Before images are preserved in `Documentation/VisualPolish/Before/`. New review 
 - Use fixed camera positions, preset, FOV, resolution and exposure for comparisons. Include gameplay-distance shots as well as close-ups.
 - Tune render/pose/world values through config assets or generator parameters. Regeneration must retain art assignments and post settings.
 - Run targeted checks for the systems changed. A full rebuild is required before reporting player-only fog/shader behavior as fixed.
-- Inspect generated images directly; tests alone cannot certify art quality. Keep before images and separate editor-render measurements from visible player FPS.
+- Inspect generated images directly; tests alone cannot certify art quality. Keep before images and record capture conditions. Avoid repeated benchmarks or region launch matrices when existing evidence already covers the changed system.
 - Do not change gravity, carving, air or rail tuning during a visual phase unless a visible defect proves that change is necessary; document any such change and rerun its tests.
 - No reference video is present. Follow the written original art direction; do not claim literal visual matching or subjective approval.
 
@@ -127,4 +127,5 @@ Before images are preserved in `Documentation/VisualPolish/Before/`. New review 
 - Baseline review: complete.
 - VP1: complete. Persistent post/fog/shadows and terrain snow assignments repaired; Day/Sunset/cloud/snow refinement inspected in editor and native captures. 23 EditMode + 12 PlayMode checks passed; final render capture check repeated. Short visible 1080p native averages: Sunset 652.48 FPS / Day 737.68 FPS. Evidence and limits: `VisualPolish/Phase1/REPORT.md`.
 - VP2: complete. Continuous clothing, detailed equipment, five skinned renderers, 10,846 triangles, coordinated palettes, character shader/config and improved grab/pose handling. 24 EditMode + 13 PlayMode checks passed; final character review repeated. Native short 1080p averages: Sunset 639.73 FPS / Day 675.11 FPS. Evidence: `VisualPolish/Phase2/REPORT.md`.
-- VP3–VP7: planned. Next: mountain and vegetation composition.
+- VP3: complete. 25 EditMode checks and three targeted PlayMode checks pass; final scenery/graphics reviews pass, riding-terrain hashes match and the connected descent reaches 1,405 m through five regions. The 144 FPS native launch and extracted package pass. Asymmetric pines with crossfaded LODs, rock/shrub clusters, protected regional composition and layered noncolliding ranges. Evidence: `VisualPolish/Phase3/REPORT.md`.
+- VP4–VP7: planned. Next: park features and mountain props.

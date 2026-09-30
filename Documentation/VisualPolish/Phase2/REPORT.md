@@ -2,6 +2,8 @@
 
 2026-09-29 · Unity 6000.3.25f1 / Blender 5.2.2 · Linux x86_64
 
+Historical VP2 evidence. Its archive is preserved locally as `Builds/Packages/PowderFlow-VP2-Linux.tar.gz`; the usual package path now follows VP3. Current scenery results are in `../Phase3/REPORT.md`.
+
 ## Changes
 
 - Replaced the oval torso and separate limb shapes with a tapered padded jacket, shoulder transitions, collar/hood, hem, zipper, pockets and an original mountain badge. Sleeves and pant legs use continuous lofted meshes with blended elbow/knee weights. Waist and torso remain overlapping garments rather than exposed limb joints.

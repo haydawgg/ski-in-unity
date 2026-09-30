@@ -43,7 +43,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8cad4ed5b146b836b9f6d6ca15ab856d, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: PowderFlow::PowderFlow.SnowSurface
   type: 0
   depth: 1
@@ -75,7 +75,7 @@ Transform:
   m_GameObject: {fileID: 5381498415795015448}
   serializedVersion: 2
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: -0, y: 0.8, z: 0}
+  m_LocalPosition: {x: -0, y: 0.55, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -114,8 +114,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 436814fea60cbcdb984a35320766b2b9, type: 2}
   - {fileID: 2100000, guid: bebf07f367d64154eb7e3b0929830abf, type: 2}
+  - {fileID: 2100000, guid: 436814fea60cbcdb984a35320766b2b9, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

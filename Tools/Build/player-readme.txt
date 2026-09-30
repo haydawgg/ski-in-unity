@@ -5,6 +5,8 @@ and PowderFlow_Data together. Unity/Blender are not required to play.
 The launcher selects native Wayland in a Wayland desktop session.
 POWDERFLOW_X11=1 ./Play.sh uses Unity's default X11 backend instead.
 
+All runs are capped at 144 FPS.
+
 Choose FREE RIDE or the 150 second SCORE SESSION.
 
 A/D: carve, or spin in air. W: tuck. S: brake.

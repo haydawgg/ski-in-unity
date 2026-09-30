@@ -1,6 +1,6 @@
 # PowderFlow delivery report
 
-**Historical M10 report.** Visual polish now has a separate plan in `VISUAL_POLISH_PLAN.md` and current results in `VisualPolish/Phase2/REPORT.md`. VP1 found and repaired empty saved post components, missing renderer post resources, stripped player fog and incomplete snow material assignment; VP2 improves the character, equipment, outfits and posing. The M9/M10 rendering descriptions below recorded the intended configuration; those specific effects were not fully active in the delivered M10 player. The original package is preserved locally as `Builds/Packages/PowderFlow-M10-Linux.tar.gz`; the usual `PowderFlow-Linux.tar.gz` path contains the latest build and uses the VP2 checksum.
+**Historical M10 report.** Visual polish now has a separate plan in `VISUAL_POLISH_PLAN.md` and current results in `VisualPolish/Phase3/REPORT.md`. VP1 repaired the saved render configuration; VP2 improves the character, equipment, outfits and posing; VP3 replaces repeated vegetation/ridges and adds shrub/rock clusters and regional composition. Current runs are capped at 144 FPS and routine performance benchmarks have been removed at the user's request. The M9/M10 rendering descriptions below recorded the intended configuration; those specific effects were not fully active in the delivered M10 player. The original package is preserved locally as `Builds/Packages/PowderFlow-M10-Linux.tar.gz`; the usual `PowderFlow-Linux.tar.gz` path contains the latest build and uses the VP3 checksum.
 
 ## Delivered
 
