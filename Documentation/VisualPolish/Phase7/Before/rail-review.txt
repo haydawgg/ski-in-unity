@@ -1,0 +1,10 @@
+Flat: leftAxis=0.786, rightAxis=0.786, leftGap=-0.051, rightGap=-0.051, stance=0.376, footSki=0.085, skiForwardNormal=0.788
+Down: leftAxis=0.786, rightAxis=0.786, leftGap=-0.069, rightGap=-0.069, stance=0.376, footSki=0.085, skiForwardNormal=0.788
+Kink: leftAxis=0.786, rightAxis=0.786, leftGap=-0.079, rightGap=-0.079, stance=0.376, footSki=0.085, skiForwardNormal=0.788
+Rainbow: leftAxis=0.866, rightAxis=0.866, leftGap=-0.067, rightGap=-0.067, stance=0.376, footSki=0.085, skiForwardNormal=0.868
+Wide: leftAxis=0.786, rightAxis=0.786, leftGap=-0.111, rightGap=-0.111, stance=0.376, footSki=0.085, skiForwardNormal=0.788
+BoxFlat: leftAxis=0.786, rightAxis=0.786, leftGap=0.019, rightGap=0.019, stance=0.376, footSki=0.085, skiForwardNormal=0.788
+BoxDown: leftAxis=0.786, rightAxis=0.786, leftGap=0.000, rightGap=0.000, stance=0.376, footSki=0.085, skiForwardNormal=0.788
+BoxKink: leftAxis=0.786, rightAxis=0.786, leftGap=0.019, rightGap=0.019, stance=0.376, footSki=0.085, skiForwardNormal=0.788
+Switch: leftAxis=0.786, rightAxis=0.786, leftGap=-0.051, rightGap=-0.051, stance=0.376, footSki=0.085, skiForwardNormal=0.788
+Sideways: leftAxis=0.786, rightAxis=0.786, leftGap=-0.051, rightGap=-0.051, stance=0.376, footSki=0.085, skiForwardNormal=0.788

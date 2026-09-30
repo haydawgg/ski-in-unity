@@ -1,0 +1,19 @@
+{
+  "SunsetPark": {
+    "area": 1,
+    "day": false,
+    "initialSpeed": 0.0,
+    "runSeconds": 12.0,
+    "startX": 0.0,
+    "startZ": 360.0,
+    "runStartZ": 363.39,
+    "frameRateCap": 144,
+    "vSyncCount": 0,
+    "width": 1920,
+    "height": 1080,
+    "quality": 2,
+    "maxSpeed": 17.1,
+    "distance": 92.28,
+    "exitCode": 0
+  }
+}

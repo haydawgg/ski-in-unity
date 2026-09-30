@@ -21,7 +21,7 @@ namespace PowderFlow
         public void ApplyPose(bool immediate=false)
         {
             if(!root||!leftSki||!skier)return;
-            var c=Visuals;bool grabbing=grab&&grab.Current!=GrabType.None;bool ridingRail=TryGetComponent<RailSystem>(out var rail)&&rail.Riding;
+            var c=Visuals;bool ridingRail=TryGetComponent<RailSystem>(out var rail)&&rail.Riding;bool grabbing=!ridingRail&&grab&&grab.Current!=GrabType.None;
             float wanted=skier.Input.crouch?1:skier.Input.tuck?c.tuckBend:ridingRail?c.railBend:skier.Grounded?c.neutralBend:c.airBend;
             wanted=Mathf.Max(wanted,skier.Compression);if(grabbing)wanted=1;
             displayedBend=immediate?wanted:Mathf.Lerp(displayedBend,wanted,1-Mathf.Exp(-c.poseResponse*Time.deltaTime));float bend=displayedBend;
@@ -36,20 +36,27 @@ namespace PowderFlow
             root.localRotation=Quaternion.Euler(0,0,-skier.Edge*skier.config.maximumLean*(skier.Grounded?1:.25f));
             Pose(leftArm,new Vector3(c.armNeutral-bend*c.armBend,0,-c.armSpread));Pose(rightArm,new Vector3(c.armNeutral-bend*c.armBend,0,c.armSpread));Pose(leftElbow,new Vector3(c.elbowBend,0,0));Pose(rightElbow,new Vector3(c.elbowBend,0,0));
             Pose(leftSki,Vector3.zero);Pose(rightSki,Vector3.zero);
-            if(skier.Grounded)
+            if(ridingRail)AlignRailFeet(rail);
+            else if(skier.Grounded)
             {
                 AlignFoot(leftThigh,leftShin,leftFoot,leftSki,skier.Contacts.left);
                 AlignFoot(rightThigh,rightShin,rightFoot,rightSki,skier.Contacts.right);
             }
-            bool crossed=!skier.Grounded&&(skier.Input.modifierLeft || (grab&&grab.Current==GrabType.CrissCross));
+            else if(!grabbing)
+            {
+                // Knees compress independently while the bindings keep the skis along the rider's heading.
+                var forward=Quaternion.AngleAxis(-bend*c.footBend*.2f,skier.transform.right)*skier.transform.forward;
+                AlignAirSki(leftFoot,leftSki,forward);AlignAirSki(rightFoot,rightSki,forward);
+            }
+            bool crossed=!skier.Grounded&&!ridingRail&&(skier.Input.modifierLeft || (grab&&grab.Current==GrabType.CrissCross));
             if(crossed){leftSki.rotation=Quaternion.AngleAxis(c.crossYaw,skier.transform.up)*leftSki.rotation;rightSki.rotation=Quaternion.AngleAxis(-c.crossYaw,skier.transform.up)*rightSki.rotation;}
             if(grabbing)
             {
                 Vector3 target=grab.Target(leftSki,rightSki);
-                SolveArm(grab.LeftHand?leftArm:rightArm,grab.LeftHand?leftElbow:rightElbow,grab.LeftHand?leftHand:rightHand,target);
-                if(grab.Current==GrabType.CrissCross)SolveArm(grab.LeftHand?rightArm:leftArm,grab.LeftHand?rightElbow:leftElbow,grab.LeftHand?rightHand:leftHand,(grab.LeftHand?rightSki:leftSki).position);
+                SolveArm(grab.LeftHand?leftArm:rightArm,grab.LeftHand?leftElbow:rightElbow,grab.LeftHand?leftHand:rightHand,target,skier.transform.forward);
+                if(grab.Current==GrabType.CrissCross)SolveArm(grab.LeftHand?rightArm:leftArm,grab.LeftHand?rightElbow:leftElbow,grab.LeftHand?rightHand:leftHand,(grab.LeftHand?rightSki:leftSki).position,skier.transform.forward);
             }
-            float swing=skier.Grounded?0:Mathf.Sin(Time.time*c.poleFrequency)*c.poleSway;
+            float swing=skier.Grounded||ridingRail?0:Mathf.Sin(Time.time*c.poleFrequency)*c.poleSway;
             TrailPole(leftPole,-1,swing);TrailPole(rightPole,1,-swing);
         }
         void TrailPole(Transform pole,float side,float swing)
@@ -64,18 +71,35 @@ namespace PowderFlow
         {
             if(!contact.hit)return;
             var forward=Vector3.ProjectOnPlane(skier.Body.rotation*Vector3.forward,contact.normal).normalized;
-            SolveArm(thigh,shin,foot,contact.point+contact.normal*.12f+forward*.03f);
+            SolveArm(thigh,shin,foot,contact.point+contact.normal*.12f+forward*.03f,forward);
             foot.rotation=Quaternion.FromToRotation(foot.up,forward)*foot.rotation;
             ski.rotation=Quaternion.FromToRotation(ski.up,forward)*ski.rotation;
             ski.position=contact.point+contact.normal*.03f;
         }
-        public static void SolveArm(Transform upper,Transform lower,Transform hand,Vector3 target)
+        void AlignRailFeet(RailSystem rail)
+        {
+            // Rail physics follows its centerline; visual bindings sit on the actual riding surface.
+            rail.Current.Closest(skier.transform.position-Vector3.up*skier.config.rideHeight,out var center,out var tangent);
+            var normal=Vector3.ProjectOnPlane(Vector3.up,tangent).normalized;
+            var heading=Vector3.ProjectOnPlane(skier.Body.rotation*Vector3.forward,normal).normalized;var side=Vector3.Cross(normal,heading);
+            if(Physics.Raycast(center+normal*.5f,-normal,out var hit,1,~(1<<8),QueryTriggerInteraction.Ignore)&&hit.collider.transform.IsChildOf(rail.Current.transform))center=hit.point;
+            float narrow=Mathf.Min(skier.config.skiSeparation,Mathf.Max(.22f,rail.Current.width+.1f));
+            float stance=Mathf.Lerp(skier.config.skiSeparation,narrow,Mathf.Abs(Vector3.Dot(heading,tangent)));
+            var contact=new SkiContact{hit=true,point=center-side*stance*.5f,normal=normal,surface=SurfaceType.Rail};
+            AlignFoot(leftThigh,leftShin,leftFoot,leftSki,contact);contact.point=center+side*stance*.5f;AlignFoot(rightThigh,rightShin,rightFoot,rightSki,contact);
+        }
+        void AlignAirSki(Transform foot,Transform ski,Vector3 forward)
+        {
+            foot.rotation=Quaternion.FromToRotation(foot.up,forward)*foot.rotation;
+            ski.rotation=Quaternion.FromToRotation(ski.up,forward)*ski.rotation;
+        }
+        public static void SolveArm(Transform upper,Transform lower,Transform hand,Vector3 target,Vector3 bendHint=default)
         {
             if(!upper||!lower||!hand)return;
             float a=Vector3.Distance(upper.position,lower.position),b=Vector3.Distance(lower.position,hand.position);
             Vector3 dir=(target-upper.position).normalized;float d=Mathf.Clamp(Vector3.Distance(upper.position,target),.05f,a+b-.001f);
             float x=(a*a-b*b+d*d)/(2*d),y=Mathf.Sqrt(Mathf.Max(0,a*a-x*x));
-            Vector3 bend=Vector3.ProjectOnPlane(upper.root.forward,dir).normalized;
+            Vector3 bend=Vector3.ProjectOnPlane(bendHint.sqrMagnitude>.01f?bendHint:upper.root.forward,dir).normalized;
             Vector3 elbow=upper.position+dir*x+bend*y;
             upper.rotation=Quaternion.FromToRotation(lower.position-upper.position,elbow-upper.position)*upper.rotation;
             lower.rotation=Quaternion.FromToRotation(hand.position-lower.position,target-lower.position)*lower.rotation;

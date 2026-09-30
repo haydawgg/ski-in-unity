@@ -124,3 +124,12 @@
 - Checks: EditMode **2/2**, PlayMode **6/6**, final results-Back regression **1/1**. Ten paired landscape/portrait camera states pass viewport/horizon/obstruction checks. Twenty-seven actual native UI captures cover 1280×720, 1920×1080 and 1080×1920, including actual IMGUI pointer adjustment/save. Twenty-six protected terrain/path/non-camera tuning hashes match VP5.
 - Linux build **192,798,869 bytes**; archive **71,931,250 bytes**. One High-quality 1080p Sunset Park run retains the **144 FPS cap**, travels **92.28 m** and exits 0. The independently extracted package launch passes with no runtime/shader errors. No performance benchmark or regional launch matrix. Details/checksum/limits: `VisualPolish/Phase6/REPORT.md`.
 - Next: **VP7 final consistency and packaged review**, including the existing vertical ski pose exposed by actual rail capture in VP5.
+
+## VP7 — Final consistency and packaged review: passed
+
+- Fixed pitched/upright rail skis with actual surface placement, attached boots, a narrow tube stance and preserved switch/sideways yaw. Held grab/style inputs stay in a rail pose; normal grabs resume after pop. IK follows the rider, and ungrabbed air skis stay aligned through tuck/rotation.
+- Reviewed 12 actual rail cases, six plain air poses and nine grabs at three orientations (27 reach checks, maximum 0.112 m). Inspected two 12-second Day/Sunset action clips and 18 action views using actual takeoff, rotation/grab, rail/pop, landing, bail, reset and powder transitions.
+- Reviewed all five regions in both presets with four outfits. Lowered decorative jump-bank shoulders that obscured the skier. Regenerated only six jump assets; all 12 original collision fingerprints and 27 terrain/path/tuning hashes remain unchanged from their baselines.
+- Desktop-only scope: 1280×720 and 1920×1080. EditMode **10/10**; eight distinct PlayMode checks across passing **7/7** and affected final **5/5** runs. Eighteen native UI captures and pointer adjustment/save pass. No vertical validation or performance benchmarks.
+- One High-quality 1080p native launch captures an aligned tucked rail ride, 9.98 m/s pop and successful landing, then travels **92.28 m** in Park. Cap **144**, VSync 0, exit 0. Build **192,796,536 bytes** reported; archive **71,930,639 bytes**. Fresh extracted-package launch passes without runtime/shader errors. The VP6 archive is preserved.
+- All seven visual phases are complete. Package checksum, evidence and remaining human play/content/platform limits: `VisualPolish/Phase7/REPORT.md`.

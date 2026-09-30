@@ -1975,210 +1975,6 @@
       }
     },
     {
-      "name": "JumpSmall",
-      "type": "Jumps",
-      "generator": "Tools/Blender/build_all_assets.py",
-      "parameters": {
-        "width": 6,
-        "length": 10,
-        "height": 1.8,
-        "deck": 0,
-        "continuousCollision": true,
-        "sculptedSides": true,
-        "explicitCollision": true,
-        "frontPreview": true
-      },
-      "blenderVersion": "5.2.2 LTS",
-      "fbxPath": "Assets/Art/Generated/Jumps/JumpSmall.fbx",
-      "previewPath": "",
-      "triangleCount": 1538,
-      "bounds": [
-        [
-          -3.9719998836517334,
-          -10.0,
-          -2.4000000953674316
-        ],
-        [
-          3.9719998836517334,
-          4.0,
-          0.9319999814033508
-        ]
-      ],
-      "lodCount": 1,
-      "collisionAsset": "Assets/Art/Generated/Jumps/JumpSmall.fbx",
-      "timestamp": "2026-09-30T02:00:51.291707+00:00"
-    },
-    {
-      "name": "JumpMedium",
-      "type": "Jumps",
-      "generator": "Tools/Blender/build_all_assets.py",
-      "parameters": {
-        "width": 10,
-        "length": 16,
-        "height": 4.5,
-        "deck": 0,
-        "continuousCollision": true,
-        "sculptedSides": true,
-        "explicitCollision": true,
-        "frontPreview": true
-      },
-      "blenderVersion": "5.2.2 LTS",
-      "fbxPath": "Assets/Art/Generated/Jumps/JumpMedium.fbx",
-      "previewPath": "Assets/Art/Generated/Jumps/JumpMedium.png",
-      "triangleCount": 1538,
-      "bounds": [
-        [
-          -6.998000144958496,
-          -16.0,
-          -3.7799999713897705
-        ],
-        [
-          6.998000144958496,
-          4.0,
-          0.9319999814033508
-        ]
-      ],
-      "lodCount": 1,
-      "collisionAsset": "Assets/Art/Generated/Jumps/JumpMedium.fbx",
-      "timestamp": "2026-09-30T02:00:51.743570+00:00"
-    },
-    {
-      "name": "JumpLarge",
-      "type": "Jumps",
-      "generator": "Tools/Blender/build_all_assets.py",
-      "parameters": {
-        "width": 18,
-        "length": 24,
-        "height": 8,
-        "deck": 0,
-        "continuousCollision": true,
-        "sculptedSides": true,
-        "explicitCollision": true,
-        "frontPreview": true
-      },
-      "blenderVersion": "5.2.2 LTS",
-      "fbxPath": "Assets/Art/Generated/Jumps/JumpLarge.fbx",
-      "previewPath": "",
-      "triangleCount": 1538,
-      "bounds": [
-        [
-          -11.050000190734863,
-          -24.0,
-          -5.619999885559082
-        ],
-        [
-          11.050000190734863,
-          4.0,
-          2.4800000190734863
-        ]
-      ],
-      "lodCount": 1,
-      "collisionAsset": "Assets/Art/Generated/Jumps/JumpLarge.fbx",
-      "timestamp": "2026-09-30T02:00:51.763800+00:00"
-    },
-    {
-      "name": "Tabletop",
-      "type": "Jumps",
-      "generator": "Tools/Blender/build_all_assets.py",
-      "parameters": {
-        "width": 18,
-        "length": 18,
-        "height": 5,
-        "deck": 12,
-        "continuousCollision": true,
-        "sculptedSides": true,
-        "explicitCollision": true,
-        "frontPreview": true
-      },
-      "blenderVersion": "5.2.2 LTS",
-      "fbxPath": "Assets/Art/Generated/Jumps/Tabletop.fbx",
-      "previewPath": "",
-      "triangleCount": 1538,
-      "bounds": [
-        [
-          -11.050000190734863,
-          -57.0,
-          -13.210000038146973
-        ],
-        [
-          11.050000190734863,
-          4.0,
-          0.9319999814033508
-        ]
-      ],
-      "lodCount": 1,
-      "collisionAsset": "Assets/Art/Generated/Jumps/Tabletop.fbx",
-      "timestamp": "2026-09-30T02:00:51.783204+00:00"
-    },
-    {
-      "name": "Hip",
-      "type": "Jumps",
-      "generator": "Tools/Blender/build_all_assets.py",
-      "parameters": {
-        "width": 12,
-        "length": 15,
-        "height": 4,
-        "deck": 0,
-        "continuousCollision": true,
-        "sculptedSides": true,
-        "explicitCollision": true,
-        "frontPreview": true
-      },
-      "blenderVersion": "5.2.2 LTS",
-      "fbxPath": "Assets/Art/Generated/Jumps/Hip.fbx",
-      "previewPath": "",
-      "triangleCount": 1538,
-      "bounds": [
-        [
-          -7.808000087738037,
-          -15.0,
-          -3.549999952316284
-        ],
-        [
-          7.808000087738037,
-          4.0,
-          0.9319999814033508
-        ]
-      ],
-      "lodCount": 1,
-      "collisionAsset": "Assets/Art/Generated/Jumps/Hip.fbx",
-      "timestamp": "2026-09-30T02:00:51.803226+00:00"
-    },
-    {
-      "name": "QuarterPipe",
-      "type": "Jumps",
-      "generator": "Tools/Blender/build_all_assets.py",
-      "parameters": {
-        "width": 16,
-        "length": 7,
-        "height": 6,
-        "deck": 0,
-        "continuousCollision": true,
-        "sculptedSides": true,
-        "explicitCollision": true,
-        "frontPreview": true
-      },
-      "blenderVersion": "5.2.2 LTS",
-      "fbxPath": "Assets/Art/Generated/Jumps/QuarterPipe.fbx",
-      "previewPath": "",
-      "triangleCount": 1538,
-      "bounds": [
-        [
-          -10.050000190734863,
-          -7.0,
-          -1.7100000381469727
-        ],
-        [
-          10.050000190734863,
-          4.0,
-          4.389999866485596
-        ]
-      ],
-      "lodCount": 1,
-      "collisionAsset": "Assets/Art/Generated/Jumps/QuarterPipe.fbx",
-      "timestamp": "2026-09-30T02:00:51.823017+00:00"
-    },
-    {
       "name": "Hut",
       "type": "Environment",
       "generator": "Tools/Blender/build_all_assets.py",
@@ -2725,6 +2521,216 @@
       "lodCount": 1,
       "collisionAsset": "Assets/Art/Generated/Environment/SignLower.fbx",
       "timestamp": "2026-09-30T02:12:56.859131+00:00"
+    },
+    {
+      "name": "JumpSmall",
+      "type": "Jumps",
+      "generator": "Tools/Blender/build_all_assets.py",
+      "parameters": {
+        "width": 6,
+        "length": 10,
+        "height": 1.8,
+        "deck": 0,
+        "continuousCollision": true,
+        "sculptedSides": true,
+        "raisedBankClearance": 0.2,
+        "explicitCollision": true,
+        "frontPreview": true
+      },
+      "blenderVersion": "5.2.2 LTS",
+      "fbxPath": "Assets/Art/Generated/Jumps/JumpSmall.fbx",
+      "previewPath": "",
+      "triangleCount": 1538,
+      "bounds": [
+        [
+          -3.9719998836517334,
+          -10.0,
+          -2.4000000953674316
+        ],
+        [
+          3.9719998836517334,
+          4.0,
+          0.9319999814033508
+        ]
+      ],
+      "lodCount": 1,
+      "collisionAsset": "Assets/Art/Generated/Jumps/JumpSmall.fbx",
+      "timestamp": "2026-09-30T17:54:31.290743+00:00"
+    },
+    {
+      "name": "JumpMedium",
+      "type": "Jumps",
+      "generator": "Tools/Blender/build_all_assets.py",
+      "parameters": {
+        "width": 10,
+        "length": 16,
+        "height": 4.5,
+        "deck": 0,
+        "continuousCollision": true,
+        "sculptedSides": true,
+        "raisedBankClearance": 0.2,
+        "explicitCollision": true,
+        "frontPreview": true
+      },
+      "blenderVersion": "5.2.2 LTS",
+      "fbxPath": "Assets/Art/Generated/Jumps/JumpMedium.fbx",
+      "previewPath": "Assets/Art/Generated/Jumps/JumpMedium.png",
+      "triangleCount": 1538,
+      "bounds": [
+        [
+          -6.998000144958496,
+          -16.0,
+          -3.7799999713897705
+        ],
+        [
+          6.998000144958496,
+          4.0,
+          0.9319999814033508
+        ]
+      ],
+      "lodCount": 1,
+      "collisionAsset": "Assets/Art/Generated/Jumps/JumpMedium.fbx",
+      "timestamp": "2026-09-30T17:54:31.769058+00:00"
+    },
+    {
+      "name": "JumpLarge",
+      "type": "Jumps",
+      "generator": "Tools/Blender/build_all_assets.py",
+      "parameters": {
+        "width": 18,
+        "length": 24,
+        "height": 8,
+        "deck": 0,
+        "continuousCollision": true,
+        "sculptedSides": true,
+        "raisedBankClearance": 0.2,
+        "explicitCollision": true,
+        "frontPreview": true
+      },
+      "blenderVersion": "5.2.2 LTS",
+      "fbxPath": "Assets/Art/Generated/Jumps/JumpLarge.fbx",
+      "previewPath": "",
+      "triangleCount": 1538,
+      "bounds": [
+        [
+          -11.050000190734863,
+          -24.0,
+          -5.619999885559082
+        ],
+        [
+          11.050000190734863,
+          4.0,
+          2.4800000190734863
+        ]
+      ],
+      "lodCount": 1,
+      "collisionAsset": "Assets/Art/Generated/Jumps/JumpLarge.fbx",
+      "timestamp": "2026-09-30T17:54:31.792363+00:00"
+    },
+    {
+      "name": "Tabletop",
+      "type": "Jumps",
+      "generator": "Tools/Blender/build_all_assets.py",
+      "parameters": {
+        "width": 18,
+        "length": 18,
+        "height": 5,
+        "deck": 12,
+        "continuousCollision": true,
+        "sculptedSides": true,
+        "raisedBankClearance": 0.2,
+        "explicitCollision": true,
+        "frontPreview": true
+      },
+      "blenderVersion": "5.2.2 LTS",
+      "fbxPath": "Assets/Art/Generated/Jumps/Tabletop.fbx",
+      "previewPath": "",
+      "triangleCount": 1538,
+      "bounds": [
+        [
+          -11.050000190734863,
+          -57.0,
+          -13.210000038146973
+        ],
+        [
+          11.050000190734863,
+          4.0,
+          0.9319999814033508
+        ]
+      ],
+      "lodCount": 1,
+      "collisionAsset": "Assets/Art/Generated/Jumps/Tabletop.fbx",
+      "timestamp": "2026-09-30T17:54:31.818326+00:00"
+    },
+    {
+      "name": "Hip",
+      "type": "Jumps",
+      "generator": "Tools/Blender/build_all_assets.py",
+      "parameters": {
+        "width": 12,
+        "length": 15,
+        "height": 4,
+        "deck": 0,
+        "continuousCollision": true,
+        "sculptedSides": true,
+        "raisedBankClearance": 0.2,
+        "explicitCollision": true,
+        "frontPreview": true
+      },
+      "blenderVersion": "5.2.2 LTS",
+      "fbxPath": "Assets/Art/Generated/Jumps/Hip.fbx",
+      "previewPath": "",
+      "triangleCount": 1538,
+      "bounds": [
+        [
+          -7.808000087738037,
+          -15.0,
+          -3.549999952316284
+        ],
+        [
+          7.808000087738037,
+          4.0,
+          0.9319999814033508
+        ]
+      ],
+      "lodCount": 1,
+      "collisionAsset": "Assets/Art/Generated/Jumps/Hip.fbx",
+      "timestamp": "2026-09-30T17:54:31.844740+00:00"
+    },
+    {
+      "name": "QuarterPipe",
+      "type": "Jumps",
+      "generator": "Tools/Blender/build_all_assets.py",
+      "parameters": {
+        "width": 16,
+        "length": 7,
+        "height": 6,
+        "deck": 0,
+        "continuousCollision": true,
+        "sculptedSides": true,
+        "raisedBankClearance": 0.2,
+        "explicitCollision": true,
+        "frontPreview": true
+      },
+      "blenderVersion": "5.2.2 LTS",
+      "fbxPath": "Assets/Art/Generated/Jumps/QuarterPipe.fbx",
+      "previewPath": "",
+      "triangleCount": 1538,
+      "bounds": [
+        [
+          -10.050000190734863,
+          -7.0,
+          -1.7100000381469727
+        ],
+        [
+          10.050000190734863,
+          4.0,
+          4.389999866485596
+        ]
+      ],
+      "lodCount": 1,
+      "collisionAsset": "Assets/Art/Generated/Jumps/QuarterPipe.fbx",
+      "timestamp": "2026-09-30T17:54:31.863976+00:00"
     }
   ]
 }

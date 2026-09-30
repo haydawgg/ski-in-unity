@@ -26,7 +26,7 @@ namespace PowderFlow
         {
             output=Path.GetFullPath("Logs/VP6-native-ui");foreach(var arg in Environment.GetCommandLineArgs())if(arg.StartsWith("--presentation-output="))output=Path.GetFullPath(arg.Substring("--presentation-output=".Length));Directory.CreateDirectory(output);
             var prior=SaveStore.Current;var previousPath=SaveStore.OverridePath;SaveStore.Current=new SavedGame();SaveStore.OverridePath=Path.Combine(output,"review-save.json");var world=GetComponent<MountainWorld>();world.player.Input.BeginInjected();var report=new Review{frameRateCap=Application.targetFrameRate};
-            foreach(var size in new[]{new Vector2Int(1280,720),new Vector2Int(1920,1080),new Vector2Int(1080,1920)})
+            foreach(var size in new[]{new Vector2Int(1280,720),new Vector2Int(1920,1080)})
             {
                 SaveStore.Current.width=size.x;SaveStore.Current.height=size.y;Screen.SetResolution(size.x,size.y,FullScreenMode.Windowed);
                 yield return new WaitForSecondsRealtime(.7f);

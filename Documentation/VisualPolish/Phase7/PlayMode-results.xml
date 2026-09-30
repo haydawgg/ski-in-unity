@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="7" result="Passed" total="7" passed="7" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-09-30 17:43:25Z" end-time="2026-09-30 17:44:01Z" duration="36.4574017">
+  <test-suite type="TestSuite" id="1047" name="PowderFlow" fullname="PowderFlow" runstate="Runnable" testcasecount="24" result="Passed" start-time="2026-09-30 17:43:25Z" end-time="2026-09-30 17:44:01Z" duration="36.457402" total="7" passed="7" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="PlayMode" />
+    </properties>
+    <test-suite type="Assembly" id="1041" name="PowderFlow.PlayTests.dll" fullname="/home/haydend/Documents/ChatGPT/ski-in-unity/Library/ScriptAssemblies/PowderFlow.PlayTests.dll" runstate="Runnable" testcasecount="24" result="Passed" start-time="2026-09-30 17:43:25Z" end-time="2026-09-30 17:44:01Z" duration="36.453375" total="7" passed="7" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="237616" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="PlayMode" />
+        <property name="EditorOnly" value="False" />
+      </properties>
+      <test-suite type="TestSuite" id="1042" name="PowderFlow" fullname="PowderFlow" runstate="Runnable" testcasecount="24" result="Passed" start-time="2026-09-30 17:43:25Z" end-time="2026-09-30 17:44:01Z" duration="36.448792" total="7" passed="7" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="SetUpFixture" id="1026" name="Tests" fullname="PowderFlow.Tests.PlayTestIsolation" classname="PowderFlow.Tests.PlayTestIsolation" runstate="Runnable" testcasecount="24" result="Passed" start-time="2026-09-30 17:43:25Z" end-time="2026-09-30 17:44:01Z" duration="36.441548" total="7" passed="7" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestFixture" id="1001" name="AirPlayTests" fullname="PowderFlow.Tests.AirPlayTests" classname="PowderFlow.Tests.AirPlayTests" runstate="Runnable" testcasecount="1" result="Passed" start-time="2026-09-30 17:43:25Z" end-time="2026-09-30 17:43:26Z" duration="1.431174" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1002" name="FullSpinCanLandWithForwardMomentum" fullname="PowderFlow.Tests.AirPlayTests.FullSpinCanLandWithForwardMomentum" methodname="FullSpinCanLandWithForwardMomentum" classname="PowderFlow.Tests.AirPlayTests" runstate="Runnable" seed="1367520715" result="Passed" start-time="2026-09-30 17:43:25Z" end-time="2026-09-30 17:43:26Z" duration="1.422773" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1009" name="FinalPolishTests" fullname="PowderFlow.Tests.FinalPolishTests" classname="PowderFlow.Tests.FinalPolishTests" runstate="Runnable" testcasecount="4" result="Passed" start-time="2026-09-30 17:43:26Z" end-time="2026-09-30 17:43:55Z" duration="28.903032" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1013" name="DesktopActionSequencesUseActualTransitions" fullname="PowderFlow.Tests.FinalPolishTests.DesktopActionSequencesUseActualTransitions" methodname="DesktopActionSequencesUseActualTransitions" classname="PowderFlow.Tests.FinalPolishTests" runstate="Runnable" seed="1716336758" result="Passed" start-time="2026-09-30 17:43:26Z" end-time="2026-09-30 17:43:48Z" duration="21.922613" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[FINAL ACTION REVIEW: Day/Sunset actual takeoff, spin/grab, rail/pop, landing, bail, reset and powder; desktop landscape
+]]></output>
+            </test-case>
+            <test-case id="1012" name="DesktopRegionsLightingAndOutfitsRemainCoherent" fullname="PowderFlow.Tests.FinalPolishTests.DesktopRegionsLightingAndOutfitsRemainCoherent" methodname="DesktopRegionsLightingAndOutfitsRemainCoherent" classname="PowderFlow.Tests.FinalPolishTests" runstate="Runnable" seed="1987640695" result="Passed" start-time="2026-09-30 17:43:48Z" end-time="2026-09-30 17:43:51Z" duration="3.126178" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[FINAL REGION REVIEW: five areas, Day/Sunset, four coordinated outfits, 1920x1080 landscape
+]]></output>
+            </test-case>
+            <test-case id="1010" name="RailSkiContactYawAndExitStayConsistent" fullname="PowderFlow.Tests.FinalPolishTests.RailSkiContactYawAndExitStayConsistent" methodname="RailSkiContactYawAndExitStayConsistent" classname="PowderFlow.Tests.FinalPolishTests" runstate="Runnable" seed="1196429709" result="Passed" start-time="2026-09-30 17:43:51Z" end-time="2026-09-30 17:43:54Z" duration="3.156297" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[FINAL RAIL POSE REVIEW: ten actual captured slides, yaw/contact and pop/ground transitions
+]]></output>
+            </test-case>
+            <test-case id="1011" name="RotatingGrabsKeepReachAndIndependentEquipment" fullname="PowderFlow.Tests.FinalPolishTests.RotatingGrabsKeepReachAndIndependentEquipment" methodname="RotatingGrabsKeepReachAndIndependentEquipment" classname="PowderFlow.Tests.FinalPolishTests" runstate="Runnable" seed="407649893" result="Passed" start-time="2026-09-30 17:43:54Z" end-time="2026-09-30 17:43:55Z" duration="0.692145" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[FINAL GRAB REVIEW: nine selections at three body orientations, including off-axis rotation
+]]></output>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1014" name="GameFlowTests" fullname="PowderFlow.Tests.GameFlowTests" classname="PowderFlow.Tests.GameFlowTests" runstate="Runnable" testcasecount="5" result="Passed" start-time="2026-09-30 17:43:55Z" end-time="2026-09-30 17:43:55Z" duration="0.307334" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1018" name="GamepadSettingsCanSaveDesktopResolution" fullname="PowderFlow.Tests.GameFlowTests.GamepadSettingsCanSaveDesktopResolution" methodname="GamepadSettingsCanSaveDesktopResolution" classname="PowderFlow.Tests.GameFlowTests" runstate="Runnable" seed="2075694998" result="Passed" start-time="2026-09-30 17:43:55Z" end-time="2026-09-30 17:43:55Z" duration="0.305827" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1029" name="RailPlayTests" fullname="PowderFlow.Tests.RailPlayTests" classname="PowderFlow.Tests.RailPlayTests" runstate="Runnable" testcasecount="1" result="Passed" start-time="2026-09-30 17:43:55Z" end-time="2026-09-30 17:44:01Z" duration="5.792175" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1030" name="FlatDownAndKinkRailsCaptureAndExitWithMomentum" fullname="PowderFlow.Tests.RailPlayTests.FlatDownAndKinkRailsCaptureAndExitWithMomentum" methodname="FlatDownAndKinkRailsCaptureAndExitWithMomentum" classname="PowderFlow.Tests.RailPlayTests" runstate="Runnable" seed="1007686246" result="Passed" start-time="2026-09-30 17:43:55Z" end-time="2026-09-30 17:44:01Z" duration="5.791379" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[Saving results to: /home/haydend/.config/unity3d/PowderFlow Studio/PowderFlow/TestResults.xml
+]]></output>
+            </test-case>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

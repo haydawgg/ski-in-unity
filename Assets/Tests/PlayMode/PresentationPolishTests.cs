@@ -30,16 +30,16 @@ namespace PowderFlow.Tests
             var image=new Texture2D(width,height,TextureFormat.RGB24,false);image.ReadPixels(new Rect(0,0,width,height),0,0);image.Apply();File.WriteAllBytes(path,image.EncodeToPNG());camera.targetTexture=old;RenderTexture.active=active;Object.Destroy(image);Object.Destroy(rt);
         }
 #endif
-        [UnityTest]public IEnumerator CameraStatesInLandscapeAndPortrait()
+        [UnityTest]public IEnumerator CameraStatesAtDesktopSizes()
         {
 #if UNITY_EDITOR
             bool baseline=System.Environment.GetEnvironmentVariable("POWDERFLOW_PRESENTATION_BASELINE")=="1";
-            string output="Documentation/VisualPolish/Phase6"+(baseline?"/Before":"");Directory.CreateDirectory(output);
+            string output="Documentation/VisualPolish/Phase7/Camera"+(baseline?"/Before":"");Directory.CreateDirectory(output);
             bool async=ShaderUtil.allowAsyncCompilation;ShaderUtil.allowAsyncCompilation=false;
             var w=CreateWorld();yield return null;var p=w.player;p.Input.BeginInjected();var camera=w.GetComponentInChildren<SkiCameraController>().GetComponent<Camera>();var stats=new List<string>();
-            foreach(bool portrait in new[]{false,true})
+            foreach(int width in new[]{1280,1920})
             {
-                int width=portrait?1080:1920,height=portrait?1920:1080;camera.aspect=(float)width/height;string suffix=portrait?"Portrait":"Landscape";
+                int height=width*9/16;camera.aspect=(float)width/height;string suffix=width==1280?"Desktop720":"Desktop1080";
                 void Shot(string name)
                 {
                     Capture(camera,output+"/"+name+suffix+".png",width,height);var v=camera.WorldToViewportPoint(p.Body.position);
@@ -52,7 +52,7 @@ namespace PowderFlow.Tests
                 Spawn(w,8,855,22,7);p.Input.grabLeft=true;p.Body.angularVelocity=new Vector3(1.5f,3,0);yield return new WaitForSeconds(.25f);Assert.That(p.Grounded,Is.False);Shot("BigAir");
                 Spawn(w,10,395,12);yield return new WaitForSeconds(.2f);p.GetComponent<BailSystem>().Crash();yield return new WaitForSeconds(.2f);Shot("Bail");
             }
-            File.WriteAllLines(output+"/camera-review.txt",stats);ShaderUtil.allowAsyncCompilation=async;Object.Destroy(w.cameraConfig);Object.Destroy(w.gameObject);Debug.Log("PRESENTATION CAMERA REVIEW: five actual states / landscape and portrait");
+            File.WriteAllLines(output+"/camera-review.txt",stats);ShaderUtil.allowAsyncCompilation=async;Object.Destroy(w.cameraConfig);Object.Destroy(w.gameObject);Debug.Log("PRESENTATION CAMERA REVIEW: five actual states / desktop landscape 720p and 1080p");
 #else
             yield break;
 #endif

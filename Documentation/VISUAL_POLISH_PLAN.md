@@ -2,6 +2,8 @@
 
 ## Direction
 
+**Current validation scope (2026-09-30):** desktop landscape at 1280×720 and 1920×1080, capped at 144 FPS. Earlier portrait captures remain historical evidence.
+
 Keep the original stylized alpine identity: clean silhouettes, readable terrain, cool snow, warm sunset highlights, violet shadows, and a saturated blue daytime sky. The skier, skis and next landing must remain easy to read at speed. All new geometry, textures and effects continue to be generated locally with Blender/Python or project shaders.
 
 The existing master plan supplies the art direction. This document turns it into staged implementation work with review shots, dependencies and completion criteria.
@@ -105,7 +107,7 @@ Before images are preserved in `Documentation/VisualPolish/Before/`. New review 
 ### VP7 — Final consistency and packaged review
 
 1. Compare matched before/after images and inspect short captured action sequences: carve, brake, jump/spin/grab, rail exit, landing, bail and reset.
-2. Review both presets, all regions, several outfits and landscape/portrait. Fix material, scale, LOD, shadow and fog inconsistencies.
+2. Review both presets, all regions and several outfits in desktop landscape at 1280×720 and 1920×1080. Fix material, scale, LOD, shadow and fog inconsistencies. The user confirmed desktop-only validation on 2026-09-30.
 3. Run meaningful regression gates: asset/rig/terrain checks, physics/trick/rail checks when affected, menu/save checks when affected, clean build and extracted-package launch.
 4. Launch a representative native run at the 144 FPS cap and inspect gameplay/action captures. Run a performance profile only when a concrete issue needs investigation or the user asks; machine FPS is not a routine completion gate.
 5. Update README/report, capture evidence, package the polished build and commit the phase.
@@ -131,4 +133,4 @@ Before images are preserved in `Documentation/VisualPolish/Before/`. New review 
 - VP4: complete. Rails/boxes have joined supports, closed panels and entry trim; jump snow banks preserve all six riding surfaces. Detailed lodge/lift/lights, 14 towers/26 connected spans/52 static chairs, original region boards, entry grades, gate and boundary markers are reviewed in both presets. Targeted EditMode 3/3, PlayMode 2/2 and final park review 1/1 pass; the descent reaches 1,382 m through five regions. Twenty protected terrain/path files match. The capped native run and extracted package pass. Evidence: `VisualPolish/Phase4/REPORT.md`.
 - VP5: complete. Soft terrain-projected grooves, layered flake/puff/rail pools, fractional emission, contact-centered landing accents and clean retry/air transitions are reviewed in 20 matched action views and two short Day/Sunset sequences. Targeted EditMode 2/2 and PlayMode 3/3 pass; expiry/disposal and a reduced combined particle cap are checked. Twenty-five terrain/path/tuning hashes match VP4. The capped native run travels 101.95 m; final build and extracted-package launch pass. Evidence: `VisualPolish/Phase5/REPORT.md`.
 - VP6: complete. Travel/slope/state framing, an upright horizon and obstruction clearance after smoothing are reviewed in ten paired camera states; the native Park jump overlap is resolved. Responsive menus, grouped settings and a live outfit preview pass focused input/save checks. Gameplay follows the user’s correction: plain text in the top corners, no panels/hints, Free Ride speed only between brief trick messages. EditMode 2/2, PlayMode 6/6 and a final results-back regression pass. Twenty-seven actual native UI captures cover all three supported sizes; the capped Park run and extracted package launch pass. Twenty-six protected terrain/path/tuning hashes match VP5. Evidence: `VisualPolish/Phase6/REPORT.md`.
-- VP7: planned. Final consistency review includes the existing vertical ski pose seen during real rail capture in both VP5 baseline and final shots.
+- VP7: complete. Rail bindings follow actual surfaces with switch/sideways/tuck intact; ungrabbed air skis stay aligned and IK follows the rider. Decorative jump banks clear the skier while all 12 original collision fingerprints remain unchanged. Twelve rail cases, six air poses, nine grabs at three orientations, two action clips and five regions in both presets are inspected. EditMode 10/10, eight distinct PlayMode checks across passing 7/7 and final 5/5 runs, 18 native desktop UI captures, one capped rail/Park run and independent extracted-package launch pass. Twenty-seven protected terrain/path/tuning hashes match VP6. All seven visual phases are complete. Evidence: `VisualPolish/Phase7/REPORT.md`.

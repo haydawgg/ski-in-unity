@@ -17,6 +17,9 @@ if stage=='scenery':
 if stage=='park':
     from create_park import build_park
     new.extend(build_park())
+if stage=='jumps':
+    from create_park import build_jumps
+    new.extend(build_jumps())
 names={r['name'] for r in new};records=[r for r in records if r['name'] not in names]+new
 manifest.write_text(json.dumps({'seed':42,'assets':records},indent=2))
 print('ASSET BUILD PASS',len(new),'assets',sum(r['triangleCount'] for r in new),'triangles')

@@ -124,8 +124,11 @@ def jump(name,width,length,height,deck=0):
         start=len(sideverts);start_s=len(sculpt);direction=-1 if side==0 else 1
         for i in range(sections+1):
             x,y,z=vertices[i*2+side];base=-.23*z-.1;sideverts.extend([(x,y,z),(x,base,z)])
-            spread=.25+min(1.8,max(0,y-base)*.38);shoulder=max(base,y-.35)
-            sculpt.extend([(x,y,z),(x+direction*spread*.35,shoulder,z),(x+direction*spread,base,z)])
+            spread=.25+min(1.8,max(0,y-base)*.38)
+            # Keep raised snow inside the body's clearance from the existing side collider.
+            # The broad toe remains low on the grade, rather than burying riders beside a jump.
+            inner=min(.20,spread*.35);shoulder=base+min(.08,max(0,y-base)*.2)
+            sculpt.extend([(x,y,z),(x+direction*inner,shoulder,z),(x+direction*spread,base,z)])
         for i in range(sections):
             a=start+i*2;sidefaces.append((a,a+1,a+3,a+2))
             a=start_s+i*3;sculptfaces.extend([(a,a+1,a+4,a+3),(a+1,a+2,a+5,a+4)])
@@ -133,7 +136,7 @@ def jump(name,width,length,height,deck=0):
     # Packed apron follows the existing grade; it introduces no additional collider.
     apron=[(-width*.5-.25,.23*4+.012,-4),(width*.5+.25,.23*4+.012,-4),(-width*.5,.012,0),(width*.5,.012,0)]
     mesh('PackedApproach',apron,[(0,2,3,1)],p['snow'])
-    return finish(name,'Jumps',{'width':width,'length':length,'height':height,'deck':deck,'continuousCollision':True,'sculptedSides':True},name=='JumpMedium')
+    return finish(name,'Jumps',{'width':width,'length':length,'height':height,'deck':deck,'continuousCollision':True,'sculptedSides':True,'raisedBankClearance':.20},name=='JumpMedium')
 
 REGIONS=[('Easy','RIDGE / EASY','FLOW LINE 01',0),('Park','TERRAIN PARK','PARK LINE 02',1),('BigAir','BIG AIR','EXPERT LINE 03',2),('Freeride','FREERIDE','TREE GAPS 04',2),('Lower','LOWER RUN','HOMEWARD 05',0)]
 
@@ -251,10 +254,13 @@ def prop(kind):
     else:raise ValueError(kind)
     return finish(kind,'EnvironmentAccent' if accent else 'Environment',{'seed':42,'parkPolish':True},kind in ['Hut','SignPark','LiftTower','LiftChair'])
 
+def build_jumps():
+    return [jump(*args) for args in [('JumpSmall',6,10,1.8,0),('JumpMedium',10,16,4.5,0),('JumpLarge',18,24,8,0),('Tabletop',18,18,5,12),('Hip',12,15,4,0),('QuarterPipe',16,7,6,0)]]
+
 def build_park():
     records=[rail(k) for k in ['flat','down','kink','rainbow','wide']]
     records.extend(grind_box(k) for k in ['flat','down','wide','narrow','kink'])
-    for args in [('JumpSmall',6,10,1.8,0),('JumpMedium',10,16,4.5,0),('JumpLarge',18,24,8,0),('Tabletop',18,18,5,12),('Hip',12,15,4,0),('QuarterPipe',16,7,6,0)]:records.append(jump(*args))
+    records.extend(build_jumps())
     records.extend(prop(k) for k in ['Hut','LiftTower','Floodlight','Fence','Sign','Flag','LiftCable','LiftChair','StartGate','BoundaryMarker','FeatureEasy','FeatureMedium','FeatureExpert'])
     records.extend(prop('Sign'+r[0]) for r in REGIONS)
     return records

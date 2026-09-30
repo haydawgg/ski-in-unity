@@ -1,0 +1,18 @@
+{
+    "master": 0.8500000238418579,
+    "sfx": 0.800000011920929,
+    "music": 0.5,
+    "keyboardSensitivity": 1.0,
+    "gamepadSensitivity": 1.0,
+    "cameraSensitivity": 1.0,
+    "fov": 73.0,
+    "invertCamera": false,
+    "day": false,
+    "mph": false,
+    "fullscreen": false,
+    "quality": 2,
+    "width": 1280,
+    "height": 720,
+    "outfit": 0,
+    "highScore": 0
+}

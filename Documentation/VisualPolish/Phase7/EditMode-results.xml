@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="10" result="Passed" total="10" passed="10" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-09-30 18:07:04Z" end-time="2026-09-30 18:07:04Z" duration="0.0934558">
+  <test-suite type="TestSuite" id="1000" name="PowderFlow" fullname="PowderFlow" runstate="Runnable" testcasecount="30" result="Passed" start-time="2026-09-30 18:07:04Z" end-time="2026-09-30 18:07:04Z" duration="0.093456" total="10" passed="10" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="EditMode" />
+    </properties>
+    <test-suite type="Assembly" id="1045" name="PowderFlow.EditTests.dll" fullname="/home/haydend/Documents/ChatGPT/ski-in-unity/Library/ScriptAssemblies/PowderFlow.EditTests.dll" runstate="Runnable" testcasecount="30" result="Passed" start-time="2026-09-30 18:07:04Z" end-time="2026-09-30 18:07:04Z" duration="0.090007" total="10" passed="10" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="244620" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="EditMode" />
+        <property name="EditorOnly" value="True" />
+      </properties>
+      <test-suite type="TestSuite" id="1046" name="PowderFlow" fullname="PowderFlow" runstate="Runnable" testcasecount="30" result="Passed" start-time="2026-09-30 18:07:04Z" end-time="2026-09-30 18:07:04Z" duration="0.089793" total="10" passed="10" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="TestSuite" id="1047" name="Tests" fullname="PowderFlow.Tests" runstate="Runnable" testcasecount="30" result="Passed" start-time="2026-09-30 18:07:04Z" end-time="2026-09-30 18:07:04Z" duration="0.089488" total="10" passed="10" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestFixture" id="1005" name="CharacterTests" fullname="PowderFlow.Tests.CharacterTests" classname="PowderFlow.Tests.CharacterTests" runstate="Runnable" testcasecount="2" result="Passed" start-time="2026-09-30 18:07:04Z" end-time="2026-09-30 18:07:04Z" duration="0.021911" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1006" name="GeneratedCharacterHasRequiredBonesAndSeparateSkis" fullname="PowderFlow.Tests.CharacterTests.GeneratedCharacterHasRequiredBonesAndSeparateSkis" methodname="GeneratedCharacterHasRequiredBonesAndSeparateSkis" classname="PowderFlow.Tests.CharacterTests" runstate="Runnable" seed="277088986" result="Passed" start-time="2026-09-30 18:07:04Z" end-time="2026-09-30 18:07:04Z" duration="0.011352" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1007" name="PolishedGarmentsHaveBlendedWeightsAndBoundedGeometry" fullname="PowderFlow.Tests.CharacterTests.PolishedGarmentsHaveBlendedWeightsAndBoundedGeometry" methodname="PolishedGarmentsHaveBlendedWeightsAndBoundedGeometry" classname="PowderFlow.Tests.CharacterTests" runstate="Runnable" seed="842985305" result="Passed" start-time="2026-09-30 18:07:04Z" end-time="2026-09-30 18:07:04Z" duration="0.005067" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1008" name="EnvironmentAssetTests" fullname="PowderFlow.Tests.EnvironmentAssetTests" classname="PowderFlow.Tests.EnvironmentAssetTests" runstate="Runnable" testcasecount="2" result="Passed" start-time="2026-09-30 18:07:04Z" end-time="2026-09-30 18:07:04Z" duration="0.020715" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1009" name="GeneratedCatalogHasLodsPathsAndSeamlessTerrain" fullname="PowderFlow.Tests.EnvironmentAssetTests.GeneratedCatalogHasLodsPathsAndSeamlessTerrain" methodname="GeneratedCatalogHasLodsPathsAndSeamlessTerrain" classname="PowderFlow.Tests.EnvironmentAssetTests" runstate="Runnable" seed="230043118" result="Passed" start-time="2026-09-30 18:07:04Z" end-time="2026-09-30 18:07:04Z" duration="0.017191" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1010" name="SceneryLodsAreBoundedAndAccentsAreNonColliding" fullname="PowderFlow.Tests.EnvironmentAssetTests.SceneryLodsAreBoundedAndAccentsAreNonColliding" methodname="SceneryLodsAreBoundedAndAccentsAreNonColliding" classname="PowderFlow.Tests.EnvironmentAssetTests" runstate="Runnable" seed="396695044" result="Passed" start-time="2026-09-30 18:07:04Z" end-time="2026-09-30 18:07:04Z" duration="0.002719" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1011" name="GraphicsFoundationTests" fullname="PowderFlow.Tests.GraphicsFoundationTests" classname="PowderFlow.Tests.GraphicsFoundationTests" runstate="Runnable" testcasecount="2" result="Passed" start-time="2026-09-30 18:07:04Z" end-time="2026-09-30 18:07:04Z" duration="0.004100" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1012" name="PostEffectsArePersistentSubassetsAndRendererHasResources" fullname="PowderFlow.Tests.GraphicsFoundationTests.PostEffectsArePersistentSubassetsAndRendererHasResources" methodname="PostEffectsArePersistentSubassetsAndRendererHasResources" classname="PowderFlow.Tests.GraphicsFoundationTests" runstate="Runnable" seed="969539770" result="Passed" start-time="2026-09-30 18:07:04Z" end-time="2026-09-30 18:07:04Z" duration="0.002001" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1013" name="SoftShadowsDepthAndRuntimeFogAreRetained" fullname="PowderFlow.Tests.GraphicsFoundationTests.SoftShadowsDepthAndRuntimeFogAreRetained" methodname="SoftShadowsDepthAndRuntimeFogAreRetained" classname="PowderFlow.Tests.GraphicsFoundationTests" runstate="Runnable" seed="1301755494" result="Passed" start-time="2026-09-30 18:07:04Z" end-time="2026-09-30 18:07:04Z" duration="0.001225" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1022" name="ParkAssetTests" fullname="PowderFlow.Tests.ParkAssetTests" classname="PowderFlow.Tests.ParkAssetTests" runstate="Runnable" testcasecount="1" result="Passed" start-time="2026-09-30 18:07:04Z" end-time="2026-09-30 18:07:04Z" duration="0.025394" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1023" name="ImportedParkRetainsSurfacesAndUsesOnlyExplicitCollision" fullname="PowderFlow.Tests.ParkAssetTests.ImportedParkRetainsSurfacesAndUsesOnlyExplicitCollision" methodname="ImportedParkRetainsSurfacesAndUsesOnlyExplicitCollision" classname="PowderFlow.Tests.ParkAssetTests" runstate="Runnable" seed="994782249" result="Passed" start-time="2026-09-30 18:07:04Z" end-time="2026-09-30 18:07:04Z" duration="0.024947" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1024" name="PresentationTests" fullname="PowderFlow.Tests.PresentationTests" classname="PowderFlow.Tests.PresentationTests" runstate="Runnable" testcasecount="2" result="Passed" start-time="2026-09-30 18:07:04Z" end-time="2026-09-30 18:07:04Z" duration="0.007683" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1025" name="SettingsAndFeedbackStayInsideSupportedSafeAreas" fullname="PowderFlow.Tests.PresentationTests.SettingsAndFeedbackStayInsideSupportedSafeAreas" methodname="SettingsAndFeedbackStayInsideSupportedSafeAreas" classname="PowderFlow.Tests.PresentationTests" runstate="Runnable" seed="653429219" result="Passed" start-time="2026-09-30 18:07:04Z" end-time="2026-09-30 18:07:04Z" duration="0.005743" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1026" name="ThemeHasFontsAndFeedbackFadesWithDistinctLandingTiers" fullname="PowderFlow.Tests.PresentationTests.ThemeHasFontsAndFeedbackFadesWithDistinctLandingTiers" methodname="ThemeHasFontsAndFeedbackFadesWithDistinctLandingTiers" classname="PowderFlow.Tests.PresentationTests" runstate="Runnable" seed="2112362188" result="Passed" start-time="2026-09-30 18:07:04Z" end-time="2026-09-30 18:07:04Z" duration="0.000784" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1029" name="SaveTests" fullname="PowderFlow.Tests.SaveTests" classname="PowderFlow.Tests.SaveTests" runstate="Runnable" testcasecount="1" result="Passed" start-time="2026-09-30 18:07:04Z" end-time="2026-09-30 18:07:04Z" duration="0.006963" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1030" name="SettingsAndHighScoreRoundTripAndReplaceAtomically" fullname="PowderFlow.Tests.SaveTests.SettingsAndHighScoreRoundTripAndReplaceAtomically" methodname="SettingsAndHighScoreRoundTripAndReplaceAtomically" classname="PowderFlow.Tests.SaveTests" runstate="Runnable" seed="1719995541" result="Passed" start-time="2026-09-30 18:07:04Z" end-time="2026-09-30 18:07:04Z" duration="0.002661" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[Saving results to: /home/haydend/.config/unity3d/PowderFlow Studio/PowderFlow/TestResults.xml
+]]></output>
+            </test-case>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

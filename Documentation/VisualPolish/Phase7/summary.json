@@ -1,0 +1,226 @@
+{
+  "phase": "VP7",
+  "status": "complete",
+  "date": "2026-09-30",
+  "desktopSizes": [
+    [
+      1280,
+      720
+    ],
+    [
+      1920,
+      1080
+    ]
+  ],
+  "frameRateCap": 144,
+  "performanceBenchmarks": false,
+  "editMode": {
+    "passed": 10,
+    "total": 10
+  },
+  "playModeRuns": [
+    {
+      "file": "PlayMode-results.xml",
+      "passed": 7,
+      "total": 7
+    },
+    {
+      "file": "Final-pose-results.xml",
+      "passed": 5,
+      "total": 5
+    }
+  ],
+  "distinctPassingPlayModeChecks": 8,
+  "rails": {
+    "actualCapturedCases": 12,
+    "contactOffsetMeters": 0.03,
+    "minimumAxisAlignment": 1.0
+  },
+  "plainAir": {
+    "poses": 6,
+    "glideHeadingAlignment": 0.999,
+    "tuckHeadingAlignment": 0.993,
+    "bindingSpacingMeters": 0.085
+  },
+  "grabs": {
+    "types": 9,
+    "orientations": 3,
+    "checks": 27,
+    "maximumWristTargetErrorMeters": 0.112
+  },
+  "regions": 5,
+  "lightingPresets": 2,
+  "outfits": [
+    "Evergreen",
+    "Violet",
+    "Signal",
+    "Alpine"
+  ],
+  "regionCaptures": 10,
+  "actionSequences": {
+    "clips": 2,
+    "simulatedSecondsPerClip": 12,
+    "samplesPerClip": 288,
+    "samplesPerSimulatedSecond": 24,
+    "actualTakeoffsPerClip": 1,
+    "successfulLandingsPerClip": 2,
+    "crashesPerClip": 1,
+    "maxAirYawDegrees": {
+      "Day": 172.5,
+      "Sunset": 169.8
+    }
+  },
+  "originalJumpCollisionFingerprintsMatched": 12,
+  "protectedFilesMatched": 27,
+  "nativeUI": {
+    "frameRateCap": 144,
+    "pointerAdjustment": true,
+    "pointerSave": true,
+    "captures": [
+      {
+        "name": "main1280x720",
+        "width": 1280,
+        "height": 720
+      },
+      {
+        "name": "settings1280x720",
+        "width": 1280,
+        "height": 720
+      },
+      {
+        "name": "controls1280x720",
+        "width": 1280,
+        "height": 720
+      },
+      {
+        "name": "outfit1280x720",
+        "width": 1280,
+        "height": 720
+      },
+      {
+        "name": "results1280x720",
+        "width": 1280,
+        "height": 720
+      },
+      {
+        "name": "DayMain1280x720",
+        "width": 1280,
+        "height": 720
+      },
+      {
+        "name": "DayOutfit1280x720",
+        "width": 1280,
+        "height": 720
+      },
+      {
+        "name": "RideHUD1280x720",
+        "width": 1280,
+        "height": 720
+      },
+      {
+        "name": "Pause1280x720",
+        "width": 1280,
+        "height": 720
+      },
+      {
+        "name": "main1920x1080",
+        "width": 1920,
+        "height": 1080
+      },
+      {
+        "name": "settings1920x1080",
+        "width": 1920,
+        "height": 1080
+      },
+      {
+        "name": "controls1920x1080",
+        "width": 1920,
+        "height": 1080
+      },
+      {
+        "name": "outfit1920x1080",
+        "width": 1920,
+        "height": 1080
+      },
+      {
+        "name": "results1920x1080",
+        "width": 1920,
+        "height": 1080
+      },
+      {
+        "name": "DayMain1920x1080",
+        "width": 1920,
+        "height": 1080
+      },
+      {
+        "name": "DayOutfit1920x1080",
+        "width": 1920,
+        "height": 1080
+      },
+      {
+        "name": "RideHUD1920x1080",
+        "width": 1920,
+        "height": 1080
+      },
+      {
+        "name": "Pause1920x1080",
+        "width": 1920,
+        "height": 1080
+      }
+    ],
+    "exitCode": 0
+  },
+  "nativeRail": {
+    "captured": true,
+    "landed": true,
+    "leftAxis": 1.000000238418579,
+    "rightAxis": 1.000000238418579,
+    "popSpeed": 9.981110572814941,
+    "displaySpeed": 9.85565185546875
+  },
+  "nativeGameplay": {
+    "SunsetPark": {
+      "area": 1,
+      "day": false,
+      "initialSpeed": 0.0,
+      "runSeconds": 12.0,
+      "startX": 0.0,
+      "startZ": 360.0,
+      "runStartZ": 363.39,
+      "frameRateCap": 144,
+      "vSyncCount": 0,
+      "width": 1920,
+      "height": 1080,
+      "quality": 2,
+      "maxSpeed": 17.1,
+      "distance": 92.28,
+      "exitCode": 0
+    }
+  },
+  "package": {
+    "archive": "Builds/Packages/PowderFlow-Linux.tar.gz",
+    "bytes": 71930639,
+    "sha256": "f22db69956304e0a70469b8571a9d9c8a63adae1a7773f841afa0c213ae2286b",
+    "buildReportedBytes": 192796536,
+    "extractedTo": "Builds/FinalPackageValidation",
+    "licenseIncluded": true,
+    "smokeOutputsExcluded": true,
+    "preservedVP6Sha256": "0104c67b67e033957cf8721f8ec145639bb0e531ac2da54654014c5de74cd3f0",
+    "exitCode": 0,
+    "freshMenuCapture": true,
+    "dimensions": [
+      1920,
+      1080
+    ],
+    "runtimeErrors": false,
+    "shaderErrors": false
+  },
+  "changedManifestRecords": [
+    "JumpSmall",
+    "JumpMedium",
+    "JumpLarge",
+    "Tabletop",
+    "Hip",
+    "QuarterPipe"
+  ]
+}

@@ -303,30 +303,6 @@ MonoBehaviour:
       {\n      \"x\": 0,\n      \"y\": -0.5499999999999998,\n      \"z\": 9.5\n
       },\n    {\n      \"x\": 0,\n      \"y\": -0.7,\n      \"z\": 10.0\n    }\n
       ]\n}"
-  - name: JumpSmall
-    type: Jumps
-    prefab: {fileID: 8808672661883465373, guid: 9e0ed22c8f6d811ea8f3c8f09e85c9ed, type: 3}
-    metadata:
-  - name: JumpMedium
-    type: Jumps
-    prefab: {fileID: 7960753791917465126, guid: d6025237bd54ee772bebde37d3682cdf, type: 3}
-    metadata:
-  - name: JumpLarge
-    type: Jumps
-    prefab: {fileID: 6402311338215440160, guid: 35fc208b8fe887c7daa3bb7765b83054, type: 3}
-    metadata:
-  - name: Tabletop
-    type: Jumps
-    prefab: {fileID: 5444935759635492728, guid: bd9a0cb1d051b51759ed4ae9afb03d4a, type: 3}
-    metadata:
-  - name: Hip
-    type: Jumps
-    prefab: {fileID: 2614698214704163563, guid: 0a4c558eb8aefce87bae315682d1d8de, type: 3}
-    metadata:
-  - name: QuarterPipe
-    type: Jumps
-    prefab: {fileID: 2656638885383307148, guid: ab20537471eb9ac3eb9ecb5610da14f1, type: 3}
-    metadata:
   - name: Hut
     type: Environment
     prefab: {fileID: 8534013679285753160, guid: a46129b6c9d552cc4a4ef45d9fed17cf, type: 3}
@@ -398,5 +374,29 @@ MonoBehaviour:
   - name: SignLower
     type: Environment
     prefab: {fileID: 8666491348663467951, guid: 13c0bcba18013e54b8c8ded60a272e5d, type: 3}
+    metadata:
+  - name: JumpSmall
+    type: Jumps
+    prefab: {fileID: 8808672661883465373, guid: 9e0ed22c8f6d811ea8f3c8f09e85c9ed, type: 3}
+    metadata:
+  - name: JumpMedium
+    type: Jumps
+    prefab: {fileID: 7960753791917465126, guid: d6025237bd54ee772bebde37d3682cdf, type: 3}
+    metadata:
+  - name: JumpLarge
+    type: Jumps
+    prefab: {fileID: 6402311338215440160, guid: 35fc208b8fe887c7daa3bb7765b83054, type: 3}
+    metadata:
+  - name: Tabletop
+    type: Jumps
+    prefab: {fileID: 5444935759635492728, guid: bd9a0cb1d051b51759ed4ae9afb03d4a, type: 3}
+    metadata:
+  - name: Hip
+    type: Jumps
+    prefab: {fileID: 2614698214704163563, guid: 0a4c558eb8aefce87bae315682d1d8de, type: 3}
+    metadata:
+  - name: QuarterPipe
+    type: Jumps
+    prefab: {fileID: 2656638885383307148, guid: ab20537471eb9ac3eb9ecb5610da14f1, type: 3}
     metadata:
   characterVisuals: {fileID: 11400000, guid: 8da08260566aeed7e89ee2470cdd2fd5, type: 2}

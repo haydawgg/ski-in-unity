@@ -73,16 +73,16 @@ namespace PowderFlow.Tests
             }
             finally{InputSystem.RemoveDevice(pad);Object.Destroy(obj);}
         }
-        [UnityTest]public IEnumerator GamepadSettingsCanSavePortraitResolution()
+        [UnityTest]public IEnumerator GamepadSettingsCanSaveDesktopResolution()
         {
-            var prior=SaveStore.Current;string folder=Path.Combine(Path.GetTempPath(),"powderflow-settings-"+System.Guid.NewGuid());SaveStore.OverridePath=Path.Combine(folder,"save.json");SaveStore.Current=new SavedGame();var pad=CreatePad();
+            var prior=SaveStore.Current;string folder=Path.Combine(Path.GetTempPath(),"powderflow-settings-"+System.Guid.NewGuid());SaveStore.OverridePath=Path.Combine(folder,"save.json");SaveStore.Current=new SavedGame{width=1280,height=720};var pad=CreatePad();
             try
             {
                 Create(true);yield return null;yield return Press(pad,GamepadButton.DpadDown);yield return Press(pad,GamepadButton.DpadDown);yield return Press(pad,GamepadButton.South);
                 for(int i=0;i<11;i++)yield return Press(pad,GamepadButton.DpadDown);
-                yield return Press(pad,GamepadButton.DpadRight);Assert.That(SaveStore.Current.width,Is.EqualTo(1080));Assert.That(SaveStore.Current.height,Is.EqualTo(1920));
+                yield return Press(pad,GamepadButton.DpadRight);Assert.That(SaveStore.Current.width,Is.EqualTo(1920));Assert.That(SaveStore.Current.height,Is.EqualTo(1080));
                 for(int i=0;i<3;i++)yield return Press(pad,GamepadButton.DpadDown);yield return Press(pad,GamepadButton.South);
-                Assert.That(File.Exists(SaveStore.OverridePath),Is.True);Assert.That(SaveStore.Load().width,Is.EqualTo(1080));
+                Assert.That(File.Exists(SaveStore.OverridePath),Is.True);Assert.That(SaveStore.Load().width,Is.EqualTo(1920));Assert.That(SaveStore.Load().height,Is.EqualTo(1080));
             }
             finally {InputSystem.RemoveDevice(pad);SaveStore.OverridePath=null;SaveStore.Current=prior;if(Directory.Exists(folder))Directory.Delete(folder,true);Time.timeScale=1;}
         }

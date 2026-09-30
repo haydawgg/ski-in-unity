@@ -1,0 +1,18 @@
+{
+  "archive": "Builds/Packages/PowderFlow-Linux.tar.gz",
+  "bytes": 71930639,
+  "sha256": "f22db69956304e0a70469b8571a9d9c8a63adae1a7773f841afa0c213ae2286b",
+  "buildReportedBytes": 192796536,
+  "extractedTo": "Builds/FinalPackageValidation",
+  "licenseIncluded": true,
+  "smokeOutputsExcluded": true,
+  "preservedVP6Sha256": "0104c67b67e033957cf8721f8ec145639bb0e531ac2da54654014c5de74cd3f0",
+  "exitCode": 0,
+  "freshMenuCapture": true,
+  "dimensions": [
+    1920,
+    1080
+  ],
+  "runtimeErrors": false,
+  "shaderErrors": false
+}

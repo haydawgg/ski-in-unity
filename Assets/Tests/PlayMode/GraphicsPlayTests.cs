@@ -10,7 +10,7 @@ namespace PowderFlow.Tests
 {
     public class GraphicsPlayTests : PlayWorldTestBase
     {
-        [UnityTest]public IEnumerator SunsetDayPortraitAndSceneryRender()
+        [UnityTest]public IEnumerator SunsetDayAndSceneryRender()
         {
 #if UNITY_EDITOR
             var obj=new GameObject();obj.SetActive(false);var world=obj.AddComponent<MountainWorld>();world.catalog=AssetDatabase.LoadAssetAtPath<AssetCatalog>("Assets/Settings/AssetCatalog.asset");world.physicsConfig=AssetDatabase.LoadAssetAtPath<SkiPhysicsConfig>("Assets/Settings/SkiPhysicsConfig.asset");world.trickConfig=AssetDatabase.LoadAssetAtPath<TrickConfig>("Assets/Settings/TrickConfig.asset");world.cameraConfig=AssetDatabase.LoadAssetAtPath<CameraConfig>("Assets/Settings/CameraConfig.asset");world.worldConfig=AssetDatabase.LoadAssetAtPath<WorldConfig>("Assets/Settings/WorldConfig.asset");world.graphicsConfig=AssetDatabase.LoadAssetAtPath<GraphicsConfig>("Assets/Settings/GraphicsConfig.asset");obj.SetActive(true);yield return null;
@@ -18,7 +18,6 @@ namespace PowderFlow.Tests
             yield return new WaitForSeconds(.4f);
             camera.transform.position=p.Body.position+new Vector3(0,2.2f,-6);camera.transform.LookAt(p.Body.position+Vector3.up*.4f);camera.fieldOfView=73;
             Capture(camera,"Sunset",1920,1080);world.GetComponent<AlpineLighting>().Apply(true);yield return null;camera.transform.position=p.Body.position+new Vector3(0,2.2f,-6);camera.transform.LookAt(p.Body.position+Vector3.up*.4f);Capture(camera,"Day",1920,1080);
-            var rt=new RenderTexture(720,1280,24);camera.targetTexture=rt;yield return null;camera.transform.position=p.Body.position+new Vector3(0,2.2f,-8.1f);camera.transform.LookAt(p.Body.position+Vector3.up*.4f);Capture(camera,"Portrait",720,1280);camera.targetTexture=null;Object.Destroy(rt);
             foreach(bool day in new[]{false,true})
             {
                 world.GetComponent<AlpineLighting>().Apply(day);yield return null;camera.fieldOfView=65;

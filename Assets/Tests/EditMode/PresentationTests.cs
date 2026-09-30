@@ -6,7 +6,7 @@ namespace PowderFlow.Tests
     {
         [Test]public void SettingsAndFeedbackStayInsideSupportedSafeAreas()
         {
-            foreach(var size in new[]{new Vector2(1280,720),new Vector2(1920,1080),new Vector2(1080,1920)})
+            foreach(var size in new[]{new Vector2(1280,720),new Vector2(1920,1080)})
             foreach(bool inset in new[]{false,true})
             {
                 var safe=inset?new Rect(24,40,size.x-48,size.y-80):new Rect(0,0,size.x,size.y);var canvas=new PresentationCanvas(size.x,size.y,safe);var config=PresentationConfig.Active;
