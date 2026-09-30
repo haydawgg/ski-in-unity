@@ -16,6 +16,7 @@ MonoBehaviour:
   propSnowMaterial: {fileID: 2100000, guid: 436814fea60cbcdb984a35320766b2b9, type: 2}
   skyMaterial: {fileID: 2100000, guid: 31a1d2130a77c57c180f7d363c9514a6, type: 2}
   particleMaterial: {fileID: 2100000, guid: 831255858a24ecddba081cf7ee58cbf3, type: 2}
+  powderMaterial: {fileID: 2100000, guid: 28a7628f60279fdd9b31ca7ac1ed4cfc, type: 2}
   trackMaterial: {fileID: 2100000, guid: ee9bba0b95d164fa7bc4438fc9337bc7, type: 2}
   postProfile: {fileID: 11400000, guid: 097a8668e5f85ceaf895afe53d6d2775, type: 2}
   sunsetTop: {r: 0.16, g: 0.2, b: 0.36, a: 1}
@@ -32,9 +33,9 @@ MonoBehaviour:
   sunIntensity: 1.25
   fogDensity: 0.00065
   shadowDistance: 150
-  trackSpacing: 0.22
-  trackWidth: 0.07
-  trackLift: 0.015
+  trackSpacing: 0.18
+  trackWidth: 0.11
+  trackLift: 0.008
   trackLifetime: 100
   trackSamples: 1100
   maxParticles: 1000
@@ -42,6 +43,22 @@ MonoBehaviour:
   sprayLift: 1.6
   landingBurst: 80
   crashBurst: 180
+  trackUpdateInterval: 0.025
+  trackMaximumGap: 2.5
+  trackMaximumInterval: 0.2
+  powderTrackWidth: 1.5
+  powderTrackDepth: 1.35
+  grooveColor: {r: 0.28, g: 0.36, b: 0.48, a: 0.4}
+  grooveRidgeColor: {r: 0.85, g: 0.92, b: 1, a: 0.18}
+  grooveSoftness: 0.22
+  powderSprayMultiplier: 2.2
+  brakeCloudRate: 22
+  railShavingRate: 18
+  particleSoftDistance: 0.3
+  flakeSize: 0.07
+  puffSize: 0.42
+  puffOpacity: 0.25
+  contactAccent: 14
   sunsetFog: {r: 0.49, g: 0.51, b: 0.66, a: 1}
   dayFog: {r: 0.58, g: 0.73, b: 0.86, a: 1}
   sunsetCloud: {r: 0.73, g: 0.66, b: 0.77, a: 1}

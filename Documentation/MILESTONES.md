@@ -106,3 +106,12 @@
 - Checks: targeted EditMode **3/3**, PlayMode **2/2**, shader check **1/1** and final park visual review **1/1**. The connected descent reaches **1,382 m** through five regions. Inspected eighteen Day/Sunset park/prop views; corrected underexposed sign/lodge shade, missing chevron faces, hidden entry bands and an open lodge gable.
 - One High-quality 1080p Sunset Park run uses the **144 FPS cap**, travels **92.33 m** and exits 0. The Linux build and extracted-package menu launch pass; no runtime/shader errors. No performance benchmark or regional launch matrix was used. Build size, archive checksum, captures and limits are in `VisualPolish/Phase4/REPORT.md` and its summary.
 - Static lift chairs and the existing Park camera/jump overlap remain documented. Next: **VP5 snow interaction and motion effects**.
+
+## VP5 — Snow interaction and motion effects: passed
+
+- Added soft cavity/lip grooves, wider/deeper powder marks, age fade and visual terrain projection. Flight/rail/bail/retry break connections; expired trails clear their meshes and runtime resources are disposed with the run. Fixed a powder groove intersecting uneven snow during final review.
+- Fractional spray emission survives short render steps. Three reusable world-space pools separate fine flakes, translucent brake/powder puffs and rail frost with a combined **1,000-particle cap**. Landing bursts/rings follow ski contacts; ground spray stops in flight and retry clears live effects.
+- Checks: targeted EditMode **2/2**, PlayMode **3/3**, with the final three repeated after the terrain-placement correction. Twenty-five protected terrain/path/tuning hashes match VP4. The lifecycle test verifies ski separation, no retry bridges, expiry/disposal and a reduced **120-particle** combined cap under repeated bursts.
+- Inspected **20 matched Day/Sunset action views** and **two eight-second motion sequences** containing real takeoffs/landings, carving, brake, crash and reset. Real rail capture uses its own frost pool; the existing vertical ski pose is recorded for VP7.
+- Linux build **191,286,457 bytes**. One High-quality 1080p Sunset Easy run retains the **144 FPS cap**, travels **101.95 m** and exits 0. The extracted package menu launch passes with no runtime/shader errors. No performance benchmark or regional launch matrix. Archive checksum, captures and limits: `VisualPolish/Phase5/REPORT.md`.
+- Next: **VP6 camera, HUD and menu presentation**.

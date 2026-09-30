@@ -1,0 +1,13 @@
+{
+  "path": "Builds/Packages/PowderFlow-Linux.tar.gz",
+  "bytes": 71178305,
+  "sha256": "87909a3d3563dc7403ad9ca3f6ecaa6158159ade7bcf2da41eedb93e561df1f9",
+  "extractedDirectory": "Builds/SnowPackageValidation/Linux",
+  "extractedLaunchExitCode": 0,
+  "menuCaptureSize": [
+    1920,
+    1080
+  ],
+  "fontNoticeIncluded": true,
+  "diagnosticFilesExcluded": true
+}

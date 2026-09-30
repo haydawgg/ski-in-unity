@@ -1,0 +1,87 @@
+{
+  "phase": "VP5",
+  "status": "complete",
+  "baselineCommit": "0a0f2bf",
+  "passedChecks": {
+    "EditMode": 2,
+    "PlayMode": 3
+  },
+  "protectedFiles": {
+    "terrainAndPaths": 20,
+    "tuning": 5,
+    "unchanged": 25
+  },
+  "ridingAndCameraTuningUnchanged": true,
+  "reviewCaptures": {
+    "actionCount": 20,
+    "baselineActionCount": 20,
+    "presets": [
+      "Day",
+      "Sunset"
+    ],
+    "resolution": [
+      1920,
+      1080
+    ],
+    "motionSequences": 2,
+    "sequenceSeconds": 8,
+    "sequenceResolution": [
+      1280,
+      720
+    ],
+    "samplesPerSimulatedSecond": 10,
+    "actualSequenceTakeoffs": 2,
+    "actualSequenceLandings": 2
+  },
+  "snowBudget": {
+    "combinedMaximum": 1000,
+    "poolMaximums": {
+      "flakes": 550,
+      "powder": 350,
+      "railFrost": 100
+    },
+    "stressTestMaximum": 120,
+    "retryLiveParticles": 0,
+    "trackSamplesPerSki": 1100,
+    "trackLifetimeSeconds": 100
+  },
+  "frameRateCap": 144,
+  "routinePerformanceBenchmarks": false,
+  "cappedGameplay": {
+    "area": 0,
+    "day": false,
+    "initialSpeed": 0.0,
+    "runSeconds": 12.0,
+    "startX": 0.0,
+    "startZ": 12.0,
+    "runStartZ": 15.29,
+    "frameRateCap": 144,
+    "vSyncCount": 0,
+    "width": 1920,
+    "height": 1080,
+    "quality": 2,
+    "maxSpeed": 17.48,
+    "distance": 101.95,
+    "exitCode": 0
+  },
+  "buildBytes": 191286457,
+  "package": {
+    "path": "Builds/Packages/PowderFlow-Linux.tar.gz",
+    "bytes": 71178305,
+    "sha256": "87909a3d3563dc7403ad9ca3f6ecaa6158159ade7bcf2da41eedb93e561df1f9",
+    "extractedDirectory": "Builds/SnowPackageValidation/Linux",
+    "extractedLaunchExitCode": 0,
+    "menuCaptureSize": [
+      1920,
+      1080
+    ],
+    "fontNoticeIncluded": true,
+    "diagnosticFilesExcluded": true
+  },
+  "remainingIssues": [
+    "Grooves are visual overlays and puffs are billboards; there is no physical snow deformation or volumetric simulation.",
+    "Existing vertical ski pose during real rail capture appears in both baseline and final views; assigned to VP7 consistency review.",
+    "Existing Park camera/jump overlap and busy menu gate backdrop are assigned to VP6 camera/menu review."
+  ],
+  "nextPhase": "VP6 — camera, HUD and menu presentation"
+}

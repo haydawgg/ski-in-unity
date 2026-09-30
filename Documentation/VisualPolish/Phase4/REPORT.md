@@ -2,6 +2,8 @@
 
 Completed 2026-09-29. Park hardware, snow banks and mountain props now share a slate/teal palette with cream lettering and orange entry accents. Runs retain the **144 FPS cap**; this phase used targeted collision, placement and visual checks without performance benchmarks.
 
+**Historical VP4 package record:** this phase's archive is preserved locally as `Builds/Packages/PowderFlow-VP4-Linux.tar.gz`. The usual `PowderFlow-Linux.tar.gz` path now contains VP5; its current checksum is recorded in `../Phase5/REPORT.md`.
+
 ## What changed
 
 - All five rails now have closed tube ends, supports joined to their actual profiles, saddles, braces, footplates and anchor bolts. Entry sleeves and restrained wear distinguish the riding tube from its supports.

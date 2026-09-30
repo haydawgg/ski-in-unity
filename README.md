@@ -4,9 +4,9 @@ An original, playable freestyle skiing game made with Unity URP and Blender. Gra
 
 ## Visual polish
 
-The detailed seven-phase plan is in `Documentation/VISUAL_POLISH_PLAN.md`. VP1 repairs persistent post-processing, native-player fog, soft shadows and snow assignments. VP2 adds a tailored 10,846-triangle skier, continuous garments, equipment details, coordinated outfits, readable materials and improved grab/pose handling. VP3 adds asymmetric pines, crossfaded LODs, rock/shrub clusters, region composition and layered ridges. VP4 finishes park hardware, jump side banks, lodge/lift/light detail and original wayfinding. Motion effects and UI follow in later phases.
+The detailed seven-phase plan is in `Documentation/VISUAL_POLISH_PLAN.md`. VP1 repairs persistent post-processing, native-player fog, soft shadows and snow assignments. VP2 adds a tailored 10,846-triangle skier, continuous garments, equipment details, coordinated outfits, readable materials and improved grab/pose handling. VP3 adds asymmetric pines, crossfaded LODs, rock/shrub clusters, region composition and layered ridges. VP4 finishes park hardware, jump side banks, lodge/lift/light detail and original wayfinding. VP5 adds soft terrain-following grooves, layered carve/brake snow, landing accents and rail frost with clean flight/retry transitions. Camera and UI presentation follows in VP6.
 
-Current captures and validation are in `Documentation/VisualPolish/Phase4/REPORT.md`; earlier evidence remains in its phase folders. `Documentation/FINAL_REPORT.md` and `Documentation/Validation/` preserve the earlier M10 delivery results. The latest archive remains `Builds/Packages/PowderFlow-Linux.tar.gz`.
+Current captures and validation are in `Documentation/VisualPolish/Phase5/REPORT.md`; earlier evidence remains in its phase folders. `Documentation/FINAL_REPORT.md` and `Documentation/Validation/` preserve the earlier M10 delivery results. The latest archive remains `Builds/Packages/PowderFlow-Linux.tar.gz`.
 
 ## Play the Linux build
 
@@ -67,6 +67,7 @@ Tools/Build/generate-assets.sh all
 Tools/Build/polish-graphics.sh
 Tools/Build/polish-character.sh
 Tools/Build/polish-environment.sh
+Tools/Build/polish-snow.sh
 Tools/Build/test.sh EditMode
 Tools/Build/test.sh PlayMode
 Tools/Build/build-linux.sh
@@ -81,6 +82,8 @@ EditMode runs without graphics. PlayMode and the standalone build require a grap
 `polish-graphics.sh` reapplies the VP1 palette and render foundation. In Unity use **PowderFlow → Apply Visual Polish Foundation**. GraphicsConfig and the snow/sky materials contain editable parameters; normal asset regeneration reapplies graphics and preserves these assignments.
 
 `polish-character.sh` applies the character material response from `Assets/Settings/CharacterVisualConfig.asset`. The same config contains pose values, grab angles, pole motion and six outfit palettes. Character regeneration reapplies these materials automatically. **PowderFlow → Configure Character Visuals** is the matching editor command.
+
+`polish-snow.sh` regenerates soft flake/puff textures and applies the groove/particle materials from GraphicsConfig. **PowderFlow → Configure Snow Interaction Visuals** is the matching editor command. Tune trail spacing/lifetime/width, spray rates, puff size/opacity and the combined particle cap in `Assets/Settings/GraphicsConfig.asset`. Trails are visual overlays; particles are depth-softened billboards. The focused review is `Tools/Build/test.sh PlayMode PowderFlow.Tests.SnowPolishTests`.
 
 `Assets/Settings/WorldConfig.asset` controls regional tree density/scale/spacing, ridge layers, lift layout, sign offset and outer marker placement. MountainScenery keeps the central route, freeride corridor and side-feature approaches clear. Shrubs are visual accents; trees retain simple trunk capsules. `polish-environment.sh` reapplies scenery materials, disables distant-backdrop shadow casting and configures the Alpine Prop shader for readable shaded hardware/lettering; regeneration applies it automatically. `python Tools/Validation/capture_regions.py` captures one capped Sunset/Easy run by default. Its optional `--only SunsetPark DayFreeride` selects specific views when visual review needs them. It checks launch, travel, resolution and the 144 FPS setting without measuring performance; it is not a routine phase gate.
 

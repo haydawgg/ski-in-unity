@@ -1,0 +1,19 @@
+{
+  "SunsetEasy": {
+    "area": 0,
+    "day": false,
+    "initialSpeed": 0.0,
+    "runSeconds": 12.0,
+    "startX": 0.0,
+    "startZ": 12.0,
+    "runStartZ": 15.29,
+    "frameRateCap": 144,
+    "vSyncCount": 0,
+    "width": 1920,
+    "height": 1080,
+    "quality": 2,
+    "maxSpeed": 17.48,
+    "distance": 101.95,
+    "exitCode": 0
+  }
+}

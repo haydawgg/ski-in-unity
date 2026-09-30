@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="3" result="Passed" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-09-30 03:23:34Z" end-time="2026-09-30 03:23:53Z" duration="18.4579409">
+  <test-suite type="TestSuite" id="1039" name="PowderFlow" fullname="PowderFlow" runstate="Runnable" testcasecount="18" result="Passed" start-time="2026-09-30 03:23:34Z" end-time="2026-09-30 03:23:53Z" duration="18.457941" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="PlayMode" />
+    </properties>
+    <test-suite type="Assembly" id="1033" name="PowderFlow.PlayTests.dll" fullname="/home/haydend/Documents/ChatGPT/ski-in-unity/Library/ScriptAssemblies/PowderFlow.PlayTests.dll" runstate="Runnable" testcasecount="18" result="Passed" start-time="2026-09-30 03:23:34Z" end-time="2026-09-30 03:23:53Z" duration="18.453977" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="167158" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="PlayMode" />
+        <property name="EditorOnly" value="False" />
+      </properties>
+      <test-suite type="TestSuite" id="1034" name="PowderFlow" fullname="PowderFlow" runstate="Runnable" testcasecount="18" result="Passed" start-time="2026-09-30 03:23:34Z" end-time="2026-09-30 03:23:53Z" duration="18.449340" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="SetUpFixture" id="1020" name="Tests" fullname="PowderFlow.Tests.PlayTestIsolation" classname="PowderFlow.Tests.PlayTestIsolation" runstate="Runnable" testcasecount="18" result="Passed" start-time="2026-09-30 03:23:34Z" end-time="2026-09-30 03:23:53Z" duration="18.442130" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestFixture" id="1025" name="SnowPolishTests" fullname="PowderFlow.Tests.SnowPolishTests" classname="PowderFlow.Tests.SnowPolishTests" runstate="Runnable" testcasecount="3" result="Passed" start-time="2026-09-30 03:23:35Z" end-time="2026-09-30 03:23:53Z" duration="18.434437" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1026" name="ActionViewsAndTransitions" fullname="PowderFlow.Tests.SnowPolishTests.ActionViewsAndTransitions" methodname="ActionViewsAndTransitions" classname="PowderFlow.Tests.SnowPolishTests" runstate="Runnable" seed="746262087" result="Passed" start-time="2026-09-30 03:23:35Z" end-time="2026-09-30 03:23:46Z" duration="11.450293" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[SNOW ACTION REVIEW: straight/carve/brake/switch/powder/flight/landing/rail/crash/reset; both presets; 2 actual landings
+]]></output>
+            </test-case>
+            <test-case id="1028" name="MotionSequences" fullname="PowderFlow.Tests.SnowPolishTests.MotionSequences" methodname="MotionSequences" classname="PowderFlow.Tests.SnowPolishTests" runstate="Runnable" seed="902343870" result="Passed" start-time="2026-09-30 03:23:46Z" end-time="2026-09-30 03:23:52Z" duration="5.696340" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[SNOW MOTION REVIEW: two 8-second sequences, 10 samples per simulated second; 2 takeoffs / 2 landings; capped runtime setting retained
+]]></output>
+            </test-case>
+            <test-case id="1027" name="RetryExpiryAndCombinedPoolCap" fullname="PowderFlow.Tests.SnowPolishTests.RetryExpiryAndCombinedPoolCap" methodname="RetryExpiryAndCombinedPoolCap" classname="PowderFlow.Tests.SnowPolishTests" runstate="Runnable" seed="156100760" result="Passed" start-time="2026-09-30 03:23:52Z" end-time="2026-09-30 03:23:53Z" duration="1.278717" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[SNOW LIFECYCLE PASS / ski separation, no retry bridges, combined cap 120, reset clear, expiry and mesh disposal
+Saving results to: /home/haydend/.config/unity3d/PowderFlow Studio/PowderFlow/TestResults.xml
+]]></output>
+            </test-case>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>
