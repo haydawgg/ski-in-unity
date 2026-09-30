@@ -1,0 +1,14 @@
+{
+  "archive": "Builds/Packages/PowderFlow-Linux.tar.gz",
+  "bytes": 71931250,
+  "sha256": "0104c67b67e033957cf8721f8ec145639bb0e531ac2da54654014c5de74cd3f0",
+  "preservedVP5Sha256": "87909a3d3563dc7403ad9ca3f6ecaa6158159ade7bcf2da41eedb93e561df1f9",
+  "extractedTo": "Builds/PresentationPackageValidation",
+  "launcher": "Linux/Play.sh",
+  "captureWidth": 1920,
+  "captureHeight": 1080,
+  "exitCode": 0,
+  "runtimeErrors": false,
+  "fontLicenseIncluded": true,
+  "smokeFilesIncluded": false
+}

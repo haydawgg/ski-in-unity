@@ -1,0 +1,107 @@
+{
+  "phase": "VP6",
+  "completedDate": "2026-09-30",
+  "status": "complete",
+  "baselineCommit": "6d6d4e2",
+  "passedChecks": {
+    "EditMode": 2,
+    "PlayMode": 6,
+    "SessionBack": 1
+  },
+  "protectedFiles": {
+    "terrainAndPaths": 20,
+    "nonCameraTuning": 6,
+    "unchanged": 26
+  },
+  "ridingTuningUnchanged": true,
+  "cameraTuningChanged": true,
+  "hud": {
+    "panels": false,
+    "persistentHints": false,
+    "speed": "top left",
+    "timedScoreAndTime": "top right",
+    "freeRidePersistentScore": false,
+    "trickFeedback": "top right",
+    "feedbackSeconds": 1.8,
+    "fadeSeconds": 0.5
+  },
+  "cameraReview": {
+    "matchedStates": 10,
+    "orientations": [
+      "Landscape",
+      "Portrait"
+    ],
+    "states": [
+      "ParkCruise",
+      "SlowCarve",
+      "RailEntry",
+      "BigAir",
+      "Bail"
+    ],
+    "horizonAndViewportChecksPassed": true,
+    "finalObstructionChecksPassed": true
+  },
+  "nativeUI": {
+    "captures": 27,
+    "resolutions": [
+      [
+        1280,
+        720
+      ],
+      [
+        1920,
+        1080
+      ],
+      [
+        1080,
+        1920
+      ]
+    ],
+    "injectedIMGUIPointerAdjustment": true,
+    "injectedIMGUIPointerSave": true,
+    "syntheticTrickFeedbackFixture": true,
+    "exitCode": 0
+  },
+  "frameRateCap": 144,
+  "routinePerformanceBenchmarks": false,
+  "cappedGameplay": {
+    "area": 1,
+    "day": false,
+    "initialSpeed": 0.0,
+    "runSeconds": 12.0,
+    "startX": 0.0,
+    "startZ": 360.0,
+    "runStartZ": 363.39,
+    "frameRateCap": 144,
+    "vSyncCount": 0,
+    "width": 1920,
+    "height": 1080,
+    "quality": 2,
+    "maxSpeed": 17.1,
+    "distance": 92.28,
+    "exitCode": 0
+  },
+  "nativeReviewedBuildBytes": 192798853,
+  "finalBuildBytes": 192798869,
+  "finalBuildChangeAfterNativeArtReview": "Results Back clears timed mode; art and HUD unchanged; targeted regression and extracted-package launch pass.",
+  "package": {
+    "archive": "Builds/Packages/PowderFlow-Linux.tar.gz",
+    "bytes": 71931250,
+    "sha256": "0104c67b67e033957cf8721f8ec145639bb0e531ac2da54654014c5de74cd3f0",
+    "preservedVP5Sha256": "87909a3d3563dc7403ad9ca3f6ecaa6158159ade7bcf2da41eedb93e561df1f9",
+    "extractedTo": "Builds/PresentationPackageValidation",
+    "launcher": "Linux/Play.sh",
+    "captureWidth": 1920,
+    "captureHeight": 1080,
+    "exitCode": 0,
+    "runtimeErrors": false,
+    "fontLicenseIncluded": true,
+    "smokeFilesIncluded": false
+  },
+  "remainingIssues": [
+    "Existing vertical ski pose during actual VP5 rail capture is assigned to VP7 consistency review.",
+    "Outfits remain coordinated presets; grabs remain stylized procedural approximations.",
+    "Representative short reviews do not certify every trick/obstacle, human feel or hours-long stability."
+  ],
+  "nextPhase": "VP7 \u2014 final consistency and packaged review"
+}

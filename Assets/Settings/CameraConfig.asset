@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10322f08289ffb328ae3dba2c17f2aa1, type: 3}
   m_Name: CameraConfig
   m_EditorClassIdentifier: PowderFlow::PowderFlow.CameraConfig
-  distance: 6
+  distance: 6.8
   height: 2.2
-  airHeight: 1.2
-  followDamping: 0.18
-  lookAhead: 3
-  lookHeight: 0.55
+  airHeight: 1.8
+  followDamping: 0.14
+  lookAhead: 1.8
+  lookHeight: 0.35
   normalFov: 73
   speedFov: 82
   speedReference: 35
@@ -27,3 +27,20 @@ MonoBehaviour:
   cameraSensitivity: 1
   portraitPullback: 1.35
   landingShake: 0.07
+  airPullback: 1.4
+  airLookAhead: 1.5
+  railPullback: 0.5
+  railHeight: 2.1
+  railLookAhead: 1.8
+  bailPullback: 3
+  bailHeight: 3.2
+  bailOrbit: 10
+  nearClip: 0.08
+  obstructionPadding: 0.12
+  landingLookSeconds: 0.5
+  landingAnticipation: 0.25
+  fovResponse: 4
+  shakeRecovery: 0.28
+  menuOffset: {x: 32, y: 12, z: 58}
+  menuLook: {x: 0, y: -22, z: 180}
+  menuFov: 58

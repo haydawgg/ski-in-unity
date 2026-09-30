@@ -1,0 +1,10 @@
+ParkCruise Landscape: player viewport=(0.50, 0.46, 11.48), camera=(0.02, 276.02, 360.31), horizon roll=0.00, grounded=True, fov=76.15
+SlowCarve Landscape: player viewport=(0.50, 0.47, 8.76), camera=(9.96, 269.23, 389.70), horizon roll=0.00, grounded=True, fov=74.78
+RailEntry Landscape: player viewport=(0.50, 0.47, 9.07), camera=(-17.37, 311.24, 201.60), horizon roll=0.00, grounded=False, fov=75.24
+BigAir Landscape: player viewport=(0.50, 0.50, 12.46), camera=(7.92, 167.43, 850.05), horizon roll=0.00, grounded=False, fov=77.48
+Bail Landscape: player viewport=(0.49, 0.43, 10.39), camera=(8.73, 268.90, 388.02), horizon roll=0.00, grounded=False, fov=74.67
+ParkCruise Portrait: player viewport=(0.50, 0.47, 14.31), camera=(0.02, 276.59, 357.67), horizon roll=0.00, grounded=True, fov=77.38
+SlowCarve Portrait: player viewport=(0.50, 0.47, 11.31), camera=(9.99, 269.92, 387.17), horizon roll=0.00, grounded=True, fov=75.00
+RailEntry Portrait: player viewport=(0.50, 0.47, 10.78), camera=(-17.47, 311.66, 199.91), horizon roll=0.00, grounded=False, fov=75.34
+BigAir Portrait: player viewport=(0.50, 0.50, 15.59), camera=(7.94, 167.42, 847.08), horizon roll=0.00, grounded=False, fov=77.52
+Bail Portrait: player viewport=(0.48, 0.47, 13.54), camera=(8.19, 268.87, 384.74), horizon roll=0.00, grounded=False, fov=74.68

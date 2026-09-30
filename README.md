@@ -4,9 +4,9 @@ An original, playable freestyle skiing game made with Unity URP and Blender. Gra
 
 ## Visual polish
 
-The detailed seven-phase plan is in `Documentation/VISUAL_POLISH_PLAN.md`. VP1 repairs persistent post-processing, native-player fog, soft shadows and snow assignments. VP2 adds a tailored 10,846-triangle skier, continuous garments, equipment details, coordinated outfits, readable materials and improved grab/pose handling. VP3 adds asymmetric pines, crossfaded LODs, rock/shrub clusters, region composition and layered ridges. VP4 finishes park hardware, jump side banks, lodge/lift/light detail and original wayfinding. VP5 adds soft terrain-following grooves, layered carve/brake snow, landing accents and rail frost with clean flight/retry transitions. Camera and UI presentation follows in VP6.
+The detailed seven-phase plan is in `Documentation/VISUAL_POLISH_PLAN.md`. VP1 repairs persistent post-processing, native-player fog, soft shadows and snow assignments. VP2 adds a tailored 10,846-triangle skier, continuous garments, equipment details, coordinated outfits, readable materials and improved grab/pose handling. VP3 adds asymmetric pines, crossfaded LODs, rock/shrub clusters, region composition and layered ridges. VP4 finishes park hardware, jump side banks, lodge/lift/light detail and original wayfinding. VP5 adds soft terrain-following grooves, layered carve/brake snow, landing accents and rail frost with clean flight/retry transitions. VP6 adds travel/state camera framing, a minimal text-only corner HUD, grouped responsive menus and a live outfit preview. Final consistency review follows in VP7.
 
-Current captures and validation are in `Documentation/VisualPolish/Phase5/REPORT.md`; earlier evidence remains in its phase folders. `Documentation/FINAL_REPORT.md` and `Documentation/Validation/` preserve the earlier M10 delivery results. The latest archive remains `Builds/Packages/PowderFlow-Linux.tar.gz`.
+Current captures and validation are in `Documentation/VisualPolish/Phase6/REPORT.md`; earlier evidence remains in its phase folders. `Documentation/FINAL_REPORT.md` and `Documentation/Validation/` preserve the earlier M10 delivery results. The latest archive remains `Builds/Packages/PowderFlow-Linux.tar.gz`.
 
 ## Play the Linux build
 
@@ -68,6 +68,7 @@ Tools/Build/polish-graphics.sh
 Tools/Build/polish-character.sh
 Tools/Build/polish-environment.sh
 Tools/Build/polish-snow.sh
+Tools/Build/polish-presentation.sh
 Tools/Build/test.sh EditMode
 Tools/Build/test.sh PlayMode
 Tools/Build/build-linux.sh
@@ -84,6 +85,8 @@ EditMode runs without graphics. PlayMode and the standalone build require a grap
 `polish-character.sh` applies the character material response from `Assets/Settings/CharacterVisualConfig.asset`. The same config contains pose values, grab angles, pole motion and six outfit palettes. Character regeneration reapplies these materials automatically. **PowderFlow → Configure Character Visuals** is the matching editor command.
 
 `polish-snow.sh` regenerates soft flake/puff textures and applies the groove/particle materials from GraphicsConfig. **PowderFlow → Configure Snow Interaction Visuals** is the matching editor command. Tune trail spacing/lifetime/width, spray rates, puff size/opacity and the combined particle cap in `Assets/Settings/GraphicsConfig.asset`. Trails are visual overlays; particles are depth-softened billboards. The focused review is `Tools/Build/test.sh PlayMode PowderFlow.Tests.SnowPolishTests`.
+
+`polish-presentation.sh` assigns the installed DejaVu fonts and creates the presentation theme when missing. **PowderFlow → Configure Presentation** is the matching editor command; re-running it preserves camera tuning. Edit colors/type/spacing in `Assets/Resources/PowderFlowPresentation.asset` and camera framing in `Assets/Settings/CameraConfig.asset`. Gameplay uses plain speed text in the top left; Score Session adds score/time in the top right. Trick feedback appears there for 1.8 seconds. There are no gameplay boxes or persistent hints. `python Tools/Validation/capture_presentation.py` reviews native menu/HUD pages at the three supported sizes without performance measurements.
 
 `Assets/Settings/WorldConfig.asset` controls regional tree density/scale/spacing, ridge layers, lift layout, sign offset and outer marker placement. MountainScenery keeps the central route, freeride corridor and side-feature approaches clear. Shrubs are visual accents; trees retain simple trunk capsules. `polish-environment.sh` reapplies scenery materials, disables distant-backdrop shadow casting and configures the Alpine Prop shader for readable shaded hardware/lettering; regeneration applies it automatically. `python Tools/Validation/capture_regions.py` captures one capped Sunset/Easy run by default. Its optional `--only SunsetPark DayFreeride` selects specific views when visual review needs them. It checks launch, travel, resolution and the 144 FPS setting without measuring performance; it is not a routine phase gate.
 
@@ -115,7 +118,8 @@ The smoke test warms up for two seconds, then performs an automatic tuck descent
 | Set grounded session marker | T | D-pad Up |
 | Retry marker | Y | D-pad Down |
 | Pause / menu | Escape | Start |
-| Menu navigation / select | Arrows / Enter, or mouse | D-pad / A |
+| Menu navigation / select | Arrows / Enter, or mouse | D-pad or left stick / A |
+| Menu back / outfit preview from settings | Escape / O | B / Y |
 | Look around | Hold right mouse and move | — |
 | Day / Sunset | L, or settings | Settings |
 | Telemetry / editor gizmos | F1 / F2 | — |
@@ -124,13 +128,14 @@ Use Q for Safety and E for Mute. Shift changes them to Tail/Nose; Ctrl to Stale/
 
 For repeated attempts, stop or ride safely before a feature, press **T**, ski the line, then press **Y** to return immediately. **R** returns to the most recent safe position. Bails recover automatically after roughly two seconds; R retries immediately. Pause has restart buttons for the top and park.
 
-Settings include volumes, sensitivities, FOV, quality, Day/Sunset, six outfits, fullscreen, landscape/portrait resolutions, speed units and inverted mouse camera. Navigate every settings row with D-pad/arrows, adjust with Left/Right, and choose **SAVE & BACK**. Saves and the local high score live under `~/.config/unity3d/PowderFlow Studio/PowderFlow/powderflow.json` on this workstation.
+Settings include volumes, sensitivities, FOV, quality, Day/Sunset, six outfits, fullscreen, landscape/portrait resolutions, speed units and inverted mouse camera. Navigate every settings row with D-pad/arrows, adjust with Left/Right, and choose **SAVE & BACK**. Press **O / Y** in settings for a live outfit preview, use Left/Right or D-pad to choose a kit, and drag the preview to rotate it. **Escape / B** goes back. Saves and the local high score live under `~/.config/unity3d/PowderFlow Studio/PowderFlow/powderflow.json` on this workstation.
 
 ## Architecture
 
 - **Physics:** Rigidbody at 100 Hz; two contacts per ski; spring/damper support; slope gravity; low forward drag and edge-dependent lateral grip. Air rotation maintains angular momentum with torque, inertia changes and limited near-landing assistance. Landing evaluation selects perfect/clean/sketchy/bail.
 - **Tricks and rails:** cumulative quaternion rotation tracking, grab hand IK, composed names, repeat penalties, combos, rail projection/capture/balance and momentum-preserving pop exits. Bails use a jointed ragdoll.
-- **Camera:** travel-following spring camera with speed FOV, obstruction casts, portrait framing, landing shake and an upright horizon during rotations.
+- **Camera:** slope-aware travel following with speed/state framing, landing anticipation, restrained shake, final obstruction clearance, portrait pullback and an upright horizon during rotations. Title menus use a fixed mountain vista; pause holds the riding camera.
+- **UI:** safe-area-scaled menus, grouped settings, controller focus, a live outfit preview and small text-only HUD corners. Free Ride keeps only speed visible between tricks; timed sessions add score/time.
 - **World:** ten Blender terrain chunks, approximately 345 m drop, designed jump/rail lines, ridge/easy area, park, big air, freeride powder and lower run. A seeded generator places vegetation and props away from central approaches.
 - **Art:** `Tools/Blender` creates all 63 asset entries. The skier uses five skinned renderers with continuous joint weights and separate equipment bones. `ArtSource/Blender` stores editable source files; `Assets/Art/Generated` stores FBX, previews and metadata. `GeneratedAssetImporter` builds prefabs, colliders, LODs, materials and `AssetCatalog` automatically.
 - **Rendering/audio:** original URP snow/rock and sky shaders, ACES/bloom/SSAO, two lighting presets, fading per-ski grooves, capped snow particles, and generated WAV loops/impacts. Mesh-lettered signs use installed DejaVu Sans Bold; its notice is in `Documentation/DEJAVU_FONT_LICENSE.txt` and the package. No downloaded art or music.

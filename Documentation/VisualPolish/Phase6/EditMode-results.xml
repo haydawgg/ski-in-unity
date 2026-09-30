@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="2" result="Passed" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-09-30 16:51:58Z" end-time="2026-09-30 16:51:58Z" duration="0.0236856">
+  <test-suite type="TestSuite" id="1000" name="PowderFlow" fullname="PowderFlow" runstate="Runnable" testcasecount="30" result="Passed" start-time="2026-09-30 16:51:58Z" end-time="2026-09-30 16:51:58Z" duration="0.023686" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="EditMode" />
+    </properties>
+    <test-suite type="Assembly" id="1045" name="PowderFlow.EditTests.dll" fullname="/home/haydend/Documents/ChatGPT/ski-in-unity/Library/ScriptAssemblies/PowderFlow.EditTests.dll" runstate="Runnable" testcasecount="30" result="Passed" start-time="2026-09-30 16:51:58Z" end-time="2026-09-30 16:51:58Z" duration="0.020232" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="222125" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="EditMode" />
+        <property name="EditorOnly" value="True" />
+      </properties>
+      <test-suite type="TestSuite" id="1046" name="PowderFlow" fullname="PowderFlow" runstate="Runnable" testcasecount="30" result="Passed" start-time="2026-09-30 16:51:58Z" end-time="2026-09-30 16:51:58Z" duration="0.019967" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="TestSuite" id="1047" name="Tests" fullname="PowderFlow.Tests" runstate="Runnable" testcasecount="30" result="Passed" start-time="2026-09-30 16:51:58Z" end-time="2026-09-30 16:51:58Z" duration="0.019779" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestFixture" id="1024" name="PresentationTests" fullname="PowderFlow.Tests.PresentationTests" classname="PowderFlow.Tests.PresentationTests" runstate="Runnable" testcasecount="2" result="Passed" start-time="2026-09-30 16:51:58Z" end-time="2026-09-30 16:51:58Z" duration="0.019004" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1025" name="SettingsAndFeedbackStayInsideSupportedSafeAreas" fullname="PowderFlow.Tests.PresentationTests.SettingsAndFeedbackStayInsideSupportedSafeAreas" methodname="SettingsAndFeedbackStayInsideSupportedSafeAreas" classname="PowderFlow.Tests.PresentationTests" runstate="Runnable" seed="1198942421" result="Passed" start-time="2026-09-30 16:51:58Z" end-time="2026-09-30 16:51:58Z" duration="0.012130" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1026" name="ThemeHasFontsAndFeedbackFadesWithDistinctLandingTiers" fullname="PowderFlow.Tests.PresentationTests.ThemeHasFontsAndFeedbackFadesWithDistinctLandingTiers" methodname="ThemeHasFontsAndFeedbackFadesWithDistinctLandingTiers" classname="PowderFlow.Tests.PresentationTests" runstate="Runnable" seed="111584004" result="Passed" start-time="2026-09-30 16:51:58Z" end-time="2026-09-30 16:51:58Z" duration="0.001711" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[Saving results to: /home/haydend/.config/unity3d/PowderFlow Studio/PowderFlow/TestResults.xml
+]]></output>
+            </test-case>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

@@ -53,6 +53,8 @@ namespace PowderFlow.Tests
             var prior=SaveStore.Current;string folder=Path.Combine(Path.GetTempPath(),"powderflow-session-"+System.Guid.NewGuid());SaveStore.OverridePath=Path.Combine(folder,"save.json");SaveStore.Current=new SavedGame{highScore=1234};GameFlow.ScoreSession=true;
             var flow=Create(false,.5f);yield return new WaitForSecondsRealtime(1);
             Assert.That(flow.menu,Is.True);Assert.That(flow.Remaining,Is.LessThanOrEqualTo(0));Assert.That(SaveStore.Load().highScore,Is.EqualTo(1234));Assert.That(File.Exists(SaveStore.OverridePath),Is.True);
+            var pad=CreatePad();yield return Press(pad,GamepadButton.East);Assert.That(flow.Page,Is.EqualTo("main"));Assert.That(GameFlow.ScoreSession,Is.False);
+            yield return Press(pad,GamepadButton.East);yield return null;Assert.That(flow.menu,Is.False,"Back from completed results must allow untimed riding without reopening results");
             SaveStore.OverridePath=null;SaveStore.Current=prior;GameFlow.ScoreSession=false;Directory.Delete(folder,true);Time.timeScale=1;
         }
         IEnumerator Press(Gamepad pad,GamepadButton button)
@@ -83,6 +85,24 @@ namespace PowderFlow.Tests
                 Assert.That(File.Exists(SaveStore.OverridePath),Is.True);Assert.That(SaveStore.Load().width,Is.EqualTo(1080));
             }
             finally {InputSystem.RemoveDevice(pad);SaveStore.OverridePath=null;SaveStore.Current=prior;if(Directory.Exists(folder))Directory.Delete(folder,true);Time.timeScale=1;}
+        }
+        IEnumerator PressKey(Key key)
+        {
+            InputSystem.QueueStateEvent(testKeyboard,new KeyboardState(key));InputSystem.Update();yield return null;
+            InputSystem.QueueStateEvent(testKeyboard,new KeyboardState());InputSystem.Update();yield return null;
+        }
+        [UnityTest]public IEnumerator KeyboardOutfitPreviewBackAndSaveRemainUsable()
+        {
+            var prior=SaveStore.Current;var previousPath=SaveStore.OverridePath;string folder=Path.Combine(Path.GetTempPath(),"powderflow-outfit-"+System.Guid.NewGuid());SaveStore.OverridePath=Path.Combine(folder,"save.json");SaveStore.Current=new SavedGame();
+            try
+            {
+                var flow=Create(true);yield return null;yield return PressKey(Key.DownArrow);yield return PressKey(Key.DownArrow);yield return PressKey(Key.Enter);Assert.That(flow.Page,Is.EqualTo("settings"));
+                yield return PressKey(Key.O);Assert.That(flow.Page,Is.EqualTo("outfit"));yield return PressKey(Key.RightArrow);Assert.That(SaveStore.Current.outfit,Is.EqualTo(1));
+                yield return PressKey(Key.Escape);Assert.That(flow.Page,Is.EqualTo("settings"));Assert.That(flow.Selected,Is.EqualTo(9));
+                for(int i=0;i<5;i++)yield return PressKey(Key.DownArrow);yield return PressKey(Key.Enter);Assert.That(flow.Page,Is.EqualTo("main"));Assert.That(SaveStore.Load().outfit,Is.EqualTo(1));
+                yield return PressKey(Key.Escape);Assert.That(flow.menu,Is.True,"Back must not unpause the title scene");
+            }
+            finally{SaveStore.Current=prior;SaveStore.OverridePath=previousPath;if(Directory.Exists(folder))Directory.Delete(folder,true);Time.timeScale=1;}
         }
 #endif
     }

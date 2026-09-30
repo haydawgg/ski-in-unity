@@ -1,0 +1,143 @@
+{
+  "frameRateCap": 144,
+  "pointerAdjustment": true,
+  "pointerSave": true,
+  "captures": [
+    {
+      "name": "main1280x720",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "name": "settings1280x720",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "name": "controls1280x720",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "name": "outfit1280x720",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "name": "results1280x720",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "name": "DayMain1280x720",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "name": "DayOutfit1280x720",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "name": "RideHUD1280x720",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "name": "Pause1280x720",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "name": "main1920x1080",
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "name": "settings1920x1080",
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "name": "controls1920x1080",
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "name": "outfit1920x1080",
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "name": "results1920x1080",
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "name": "DayMain1920x1080",
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "name": "DayOutfit1920x1080",
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "name": "RideHUD1920x1080",
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "name": "Pause1920x1080",
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "name": "main1080x1920",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "name": "settings1080x1920",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "name": "controls1080x1920",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "name": "outfit1080x1920",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "name": "results1080x1920",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "name": "DayMain1080x1920",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "name": "DayOutfit1080x1920",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "name": "RideHUD1080x1920",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "name": "Pause1080x1920",
+      "width": 1080,
+      "height": 1920
+    }
+  ],
+  "exitCode": 0
+}

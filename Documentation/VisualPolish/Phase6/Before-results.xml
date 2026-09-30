@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="1" result="Passed" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-09-30 16:17:58Z" end-time="2026-09-30 16:18:01Z" duration="3.8432437">
+  <test-suite type="TestSuite" id="1041" name="PowderFlow" fullname="PowderFlow" runstate="Runnable" testcasecount="19" result="Passed" start-time="2026-09-30 16:17:58Z" end-time="2026-09-30 16:18:01Z" duration="3.843244" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="PlayMode" />
+    </properties>
+    <test-suite type="Assembly" id="1035" name="PowderFlow.PlayTests.dll" fullname="/home/haydend/Documents/ChatGPT/ski-in-unity/Library/ScriptAssemblies/PowderFlow.PlayTests.dll" runstate="Runnable" testcasecount="19" result="Passed" start-time="2026-09-30 16:17:58Z" end-time="2026-09-30 16:18:01Z" duration="3.839217" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="212225" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="PlayMode" />
+        <property name="EditorOnly" value="False" />
+      </properties>
+      <test-suite type="TestSuite" id="1036" name="PowderFlow" fullname="PowderFlow" runstate="Runnable" testcasecount="19" result="Passed" start-time="2026-09-30 16:17:58Z" end-time="2026-09-30 16:18:01Z" duration="3.834587" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="SetUpFixture" id="1020" name="Tests" fullname="PowderFlow.Tests.PlayTestIsolation" classname="PowderFlow.Tests.PlayTestIsolation" runstate="Runnable" testcasecount="19" result="Passed" start-time="2026-09-30 16:17:58Z" end-time="2026-09-30 16:18:01Z" duration="3.827361" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestFixture" id="1021" name="PresentationPolishTests" fullname="PowderFlow.Tests.PresentationPolishTests" classname="PowderFlow.Tests.PresentationPolishTests" runstate="Runnable" testcasecount="1" result="Passed" start-time="2026-09-30 16:17:58Z" end-time="2026-09-30 16:18:01Z" duration="3.819769" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1022" name="CameraStatesInLandscapeAndPortrait" fullname="PowderFlow.Tests.PresentationPolishTests.CameraStatesInLandscapeAndPortrait" methodname="CameraStatesInLandscapeAndPortrait" classname="PowderFlow.Tests.PresentationPolishTests" runstate="Runnable" seed="1642385856" result="Passed" start-time="2026-09-30 16:17:58Z" end-time="2026-09-30 16:18:01Z" duration="3.810760" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[PRESENTATION CAMERA REVIEW: five actual states / landscape and portrait
+Saving results to: /home/haydend/.config/unity3d/PowderFlow Studio/PowderFlow/TestResults.xml
+]]></output>
+            </test-case>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

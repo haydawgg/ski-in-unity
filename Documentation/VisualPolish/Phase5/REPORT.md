@@ -1,6 +1,6 @@
 # VP5 — Snow interaction and motion effects
 
-Completed 2026-09-29. Separate ski grooves now sit on the snow, and reusable flake, powder and rail pools give the action softer contact effects. All runtime sessions retain the **144 FPS cap**. This phase used focused behavior and visual checks without machine FPS measurements or performance benchmarks.
+Completed 2026-09-29. **Historical VP5 snapshot:** its archive is now preserved as `Builds/Packages/PowderFlow-VP5-Linux.tar.gz`; the usual archive path contains VP6, described in `../Phase6/REPORT.md`. Separate ski grooves now sit on the snow, and reusable flake, powder and rail pools give the action softer contact effects. All runtime sessions retain the **144 FPS cap**. This phase used focused behavior and visual checks without machine FPS measurements or performance benchmarks.
 
 ## What changed
 

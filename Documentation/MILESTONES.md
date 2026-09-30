@@ -115,3 +115,12 @@
 - Inspected **20 matched Day/Sunset action views** and **two eight-second motion sequences** containing real takeoffs/landings, carving, brake, crash and reset. Real rail capture uses its own frost pool; the existing vertical ski pose is recorded for VP7.
 - Linux build **191,286,457 bytes**. One High-quality 1080p Sunset Easy run retains the **144 FPS cap**, travels **101.95 m** and exits 0. The extracted package menu launch passes with no runtime/shader errors. No performance benchmark or regional launch matrix. Archive checksum, captures and limits: `VisualPolish/Phase5/REPORT.md`.
 - Next: **VP6 camera, HUD and menu presentation**.
+
+## VP6 — Camera, HUD and menu presentation: passed
+
+- Added travel/slope/state framing, portrait pullback, an upright horizon, landing anticipation and restrained shake. Resolve obstructions after smoothing, exclude the skier/ragdoll/preview and follow hips during bails. The title shows a quieter valley; pause holds the riding view. The native Park camera/jump overlap is resolved.
+- Shared slate/cream/teal menus use installed DejaVu fonts, safe-area scaling, grouped settings and a live rotatable preview of all six outfits. Keyboard/gamepad/mouse actions and saved settings remain usable; Back from completed results can resume untimed riding.
+- User correction (2026-09-30): removed every gameplay box and persistent hint. Plain speed text stays top left; Score Session adds score/time top right with 1.8-second trick feedback. Free Ride shows only speed between tricks, leaving the center/bottom clear.
+- Checks: EditMode **2/2**, PlayMode **6/6**, final results-Back regression **1/1**. Ten paired landscape/portrait camera states pass viewport/horizon/obstruction checks. Twenty-seven actual native UI captures cover 1280×720, 1920×1080 and 1080×1920, including actual IMGUI pointer adjustment/save. Twenty-six protected terrain/path/non-camera tuning hashes match VP5.
+- Linux build **192,798,869 bytes**; archive **71,931,250 bytes**. One High-quality 1080p Sunset Park run retains the **144 FPS cap**, travels **92.28 m** and exits 0. The independently extracted package launch passes with no runtime/shader errors. No performance benchmark or regional launch matrix. Details/checksum/limits: `VisualPolish/Phase6/REPORT.md`.
+- Next: **VP7 final consistency and packaged review**, including the existing vertical ski pose exposed by actual rail capture in VP5.

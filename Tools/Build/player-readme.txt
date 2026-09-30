@@ -21,7 +21,11 @@ Hold right mouse to look around.
 Gamepad: left stick steers/spins, stick vertical flips, right stick
 horizontal rolls/balances, A pops on release, Y tucks, X brakes,
 LT/RT grab, LB/RB modify, B retries, D-pad Up/Down sets/retries marker,
-Start pauses. Menus: D-pad navigates, A selects, Left/Right adjusts.
+Start pauses. Menus: D-pad/left stick navigates, A selects, B goes back.
+Left/Right adjusts settings; O/Y opens the live outfit preview.
+
+Gameplay uses plain corner text: speed top left, timed-session score/time
+top right, and brief trick feedback. No gameplay boxes or persistent hints.
 
 Settings and local high score are saved in the Unity persistent data
 folder for PowderFlow Studio/PowderFlow. Linux typically stores this
@@ -31,5 +35,5 @@ Original Blender-generated content and procedural audio.
 This development build still needs human feedback on skiing feel,
 grab readability and visual polish. Photo/replay modes are not included.
 
-Sign lettering uses DejaVu Sans Bold mesh outlines.
+Menus/HUD use DejaVu Sans; signs use DejaVu Sans Bold mesh outlines.
 Font notices: ThirdPartyLicenses/DejaVu.txt.
