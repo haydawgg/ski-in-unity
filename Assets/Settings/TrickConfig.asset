@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: PowderFlow::PowderFlow.TrickConfig
   baseInertia: 18
   tuckInertiaReduction: 0.35
-  yawTorque: 60
-  pitchTorque: 48
-  rollTorque: 38
+  yawTorque: 78
+  pitchTorque: 62
+  rollTorque: 48
   angularDrag: 0.03
   maximumAngularSpeed: 12
   preloadRate: 3
@@ -26,8 +26,8 @@ MonoBehaviour:
   cleanAlignment: 35
   sketchyAlignment: 60
   uprightBailAngle: 65
-  perfectImpact: 9
-  cleanImpact: 18
+  perfectImpact: 10.5
+  cleanImpact: 21
   bailImpact: 34
   bailAngularSpeed: 13
   assistHeight: 2.4
@@ -35,9 +35,10 @@ MonoBehaviour:
   assistResponse: 3
   landingAngularDamping: 4
   compressionResponse: 8
+  terrainRecaptureImpact: 2.5
   perfectRetention: 0.99
   cleanRetention: 0.91
-  sketchyRetention: 0.67
+  sketchyRetention: 0.76
   flatImpactScrub: 0.15
   rotationTolerance: 30
   scorePerHalfTurn: 180
@@ -57,3 +58,10 @@ MonoBehaviour:
   railInstability: 0.3
   railPop: 3.5
   railScorePerSecond: 320
+  predictionHorizon: 0.8
+  predictionStep: 0.05
+  landingPrepareTime: 0.46
+  spottingTime: 0.42
+  spottingAngularDamping: 6
+  rotationReleaseThreshold: 0.08
+  railCaptureResponse: 14

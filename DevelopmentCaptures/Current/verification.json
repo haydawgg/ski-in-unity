@@ -1,0 +1,32 @@
+{
+  "buildResult": "Success",
+  "unity": "6000.3.25f1",
+  "blender": "5.2.2 LTS",
+  "target": "Linux x86_64 Mono Development",
+  "runs": [
+    {
+      "receipt": "EditMode-results.xml",
+      "total": 34,
+      "passed": 34
+    },
+    {
+      "receipt": "PlayMode-results.xml",
+      "total": 12,
+      "passed": 12
+    },
+    {
+      "receipt": "Camera-results.xml",
+      "total": 2,
+      "passed": 2
+    }
+  ],
+  "distinctChecksPassed": 47,
+  "nativeReceipt": "SunsetPark-run.json",
+  "railReceipt": "native-rail.json",
+  "archive": "Builds/Packages/PowderFlow-Linux.tar.gz",
+  "archiveBytes": 77232000,
+  "archiveSHA256": "e88a69d8867536dfe752e9432f1fee014512e3dac0cda22a35d096f0f6959b9d",
+  "player": "Builds/Linux/PowderFlow.x86_64",
+  "profileFingerprints": "All 12 original jump collision geometry fingerprints passed in EditMode ParkAssetTests",
+  "noPerformanceBenchmark": true
+}

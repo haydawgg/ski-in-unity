@@ -11,7 +11,29 @@ namespace PowderFlow
         void OnPreprocessModel()
         {
             if(!assetPath.StartsWith("Assets/Art/Generated/"))return;
-            var importer=(ModelImporter)assetImporter;importer.globalScale=1;importer.useFileUnits=true;importer.importNormals=ModelImporterNormals.Import;importer.importTangents=ModelImporterTangents.CalculateMikk;importer.materialImportMode=ModelImporterMaterialImportMode.ImportStandard;importer.animationType=assetPath.Contains("/Character/")?ModelImporterAnimationType.Generic:ModelImporterAnimationType.None;importer.importAnimation=false;
+            var importer=(ModelImporter)assetImporter;importer.globalScale=1;importer.useFileUnits=true;importer.importNormals=ModelImporterNormals.Import;importer.importTangents=ModelImporterTangents.CalculateMikk;importer.materialImportMode=ModelImporterMaterialImportMode.ImportStandard;importer.animationType=assetPath.Contains("/Character/")?ModelImporterAnimationType.Generic:ModelImporterAnimationType.None;importer.importAnimation=assetPath.Contains("/Character/");
+        }
+        void OnPostprocessModel(GameObject model)
+        {
+            if(!assetPath.StartsWith("Assets/Art/Generated/Character/"))return;
+            // FBX action baking may leave default nodes in a sampled pose. Skin bind
+            // matrices are authoritative; restore those nodes before procedural caching.
+            var worlds=new Dictionary<Transform,Matrix4x4>();
+            foreach(var renderer in model.GetComponentsInChildren<SkinnedMeshRenderer>())
+            {
+                var binds=renderer.sharedMesh.bindposes;
+                for(int i=0;i<binds.Length;i++)if(!worlds.ContainsKey(renderer.bones[i]))worlds[renderer.bones[i]]=renderer.transform.localToWorldMatrix*binds[i].inverse;
+            }
+            void Restore(Transform bone)
+            {
+                if(worlds.TryGetValue(bone,out var world))
+                {
+                    var local=bone.parent?bone.parent.worldToLocalMatrix*world:world;
+                    bone.localPosition=local.GetColumn(3);bone.localRotation=local.rotation;bone.localScale=local.lossyScale;
+                }
+                foreach(Transform child in bone)Restore(child);
+            }
+            Restore(model.transform);
         }
     }
     [Serializable]public class AssetManifest {public ManifestAsset[] assets;}
@@ -24,6 +46,7 @@ namespace PowderFlow
         {
             Directory.CreateDirectory("Assets/Prefabs/Generated");Directory.CreateDirectory("Assets/Art/Materials");
             AssetDatabase.Refresh(ImportAssetOptions.ForceSynchronousImport);
+            AssetDatabase.ImportAsset("Assets/Art/Generated/Character/Skier.fbx",ImportAssetOptions.ForceUpdate|ImportAssetOptions.ForceSynchronousImport);
             var manifest=JsonUtility.FromJson<AssetManifest>(File.ReadAllText("Assets/Art/Generated/asset_manifest.json"));var records=new List<GeneratedAsset>();
             foreach(var asset in manifest.assets)
             {

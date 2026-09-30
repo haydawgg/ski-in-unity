@@ -1,0 +1,13 @@
+Flat: leftAxis=1.000, rightAxis=1.000, leftGap=0.030, rightGap=0.030, stance=0.230, footSki=0.095, skiForwardNormal=0.987
+Down: leftAxis=1.000, rightAxis=1.000, leftGap=0.030, rightGap=0.030, stance=0.230, footSki=0.095, skiForwardNormal=0.981
+Kink: leftAxis=1.000, rightAxis=1.000, leftGap=0.030, rightGap=0.030, stance=0.230, footSki=0.095, skiForwardNormal=0.980
+Rainbow: leftAxis=1.000, rightAxis=1.000, leftGap=0.030, rightGap=0.030, stance=0.230, footSki=0.095, skiForwardNormal=0.992
+Wide: leftAxis=1.000, rightAxis=1.000, leftGap=0.030, rightGap=0.030, stance=0.230, footSki=0.095, skiForwardNormal=0.987
+BoxFlat: leftAxis=1.000, rightAxis=1.000, leftGap=0.030, rightGap=0.030, stance=0.380, footSki=0.095, skiForwardNormal=1.000
+BoxDown: leftAxis=1.000, rightAxis=1.000, leftGap=0.030, rightGap=0.030, stance=0.380, footSki=0.095, skiForwardNormal=1.000
+BoxKink: leftAxis=1.000, rightAxis=1.000, leftGap=0.030, rightGap=0.030, stance=0.380, footSki=0.095, skiForwardNormal=1.000
+Switch: leftAxis=1.000, rightAxis=1.000, leftGap=0.030, rightGap=0.030, stance=0.230, footSki=0.095, skiForwardNormal=0.987
+Sideways: leftAxis=1.000, rightAxis=1.000, leftGap=0.030, rightGap=0.030, stance=0.380, footSki=0.095, skiForwardNormal=0.997
+Tuck: leftAxis=1.000, rightAxis=1.000, leftGap=0.030, rightGap=0.030, stance=0.230, footSki=0.095, skiForwardNormal=0.984
+HeldStyle: leftAxis=1.000, rightAxis=1.000, leftGap=0.030, rightGap=0.030, stance=0.230, footSki=0.095, skiForwardNormal=0.987
+Ground transition: skiForwardNormal=1.000, footSki=0.095

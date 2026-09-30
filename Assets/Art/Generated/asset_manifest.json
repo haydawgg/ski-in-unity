@@ -320,7 +320,21 @@
         "heightMeters": 1.85,
         "skiLength": 1.7,
         "sourcePoses": 17,
-        "artRevision": "VP2",
+        "artRevision": "MotionQuality",
+        "jointWeights": "shoulder-hip-elbow-knee",
+        "foundationActions": [
+          "Ski_Neutral",
+          "Ski_Crouch",
+          "Ski_Tuck",
+          "Ski_Carve_Left",
+          "Ski_Carve_Right",
+          "Ski_Pop",
+          "Ski_Airborne",
+          "Ski_Land",
+          "Ski_Rail",
+          "Ski_Bail_Start"
+        ],
+        "exportAnimations": true,
         "continuousGarments": true,
         "skinnedRenderers": 5
       },
@@ -342,7 +356,7 @@
       ],
       "lodCount": 1,
       "collisionAsset": "",
-      "timestamp": "2026-09-30T00:11:53.663236+00:00"
+      "timestamp": "2026-09-30T18:59:59.146638+00:00"
     },
     {
       "name": "Pine0",
@@ -728,27 +742,30 @@
         "seed": 440,
         "layeredProfiles": true,
         "peakCount": 10,
-        "buriedBase": true
+        "buriedBase": true,
+        "cragDetail": true,
+        "upwardNormals": true,
+        "snowShelvesAndGullies": true
       },
       "blenderVersion": "5.2.2 LTS",
       "fbxPath": "Assets/Art/Generated/EnvironmentDistant/Ridge0.fbx",
       "previewPath": "",
-      "triangleCount": 7680,
+      "triangleCount": 13824,
       "bounds": [
         [
           -850.0,
           -720.0,
-          -86.31982421875
+          -86.70309448242188
         ],
         [
           850.0,
           0.0,
-          348.0863952636719
+          340.0973815917969
         ]
       ],
       "lodCount": 1,
       "collisionAsset": "",
-      "timestamp": "2026-09-30T00:52:34.494832+00:00"
+      "timestamp": "2026-09-30T20:57:22.595639+00:00"
     },
     {
       "name": "Ridge1",
@@ -758,27 +775,30 @@
         "seed": 441,
         "layeredProfiles": true,
         "peakCount": 11,
-        "buriedBase": true
+        "buriedBase": true,
+        "cragDetail": true,
+        "upwardNormals": true,
+        "snowShelvesAndGullies": true
       },
       "blenderVersion": "5.2.2 LTS",
       "fbxPath": "Assets/Art/Generated/EnvironmentDistant/Ridge1.fbx",
       "previewPath": "",
-      "triangleCount": 7680,
+      "triangleCount": 13824,
       "bounds": [
         [
           -850.0,
           -720.0,
-          -78.03176879882812
+          -78.01435852050781
         ],
         [
           850.0,
           0.0,
-          389.423583984375
+          397.2032775878906
         ]
       ],
       "lodCount": 1,
       "collisionAsset": "",
-      "timestamp": "2026-09-30T00:52:34.548513+00:00"
+      "timestamp": "2026-09-30T20:57:22.694396+00:00"
     },
     {
       "name": "Ridge2",
@@ -788,27 +808,30 @@
         "seed": 442,
         "layeredProfiles": true,
         "peakCount": 10,
-        "buriedBase": true
+        "buriedBase": true,
+        "cragDetail": true,
+        "upwardNormals": true,
+        "snowShelvesAndGullies": true
       },
       "blenderVersion": "5.2.2 LTS",
       "fbxPath": "Assets/Art/Generated/EnvironmentDistant/Ridge2.fbx",
       "previewPath": "Assets/Art/Generated/EnvironmentDistant/Ridge2.png",
-      "triangleCount": 7680,
+      "triangleCount": 13824,
       "bounds": [
         [
           -850.0,
           -720.0,
-          -80.08829498291016
+          -76.1227798461914
         ],
         [
           850.0,
           0.0,
-          378.6919860839844
+          375.4834289550781
         ]
       ],
       "lodCount": 1,
       "collisionAsset": "",
-      "timestamp": "2026-09-30T00:52:35.067414+00:00"
+      "timestamp": "2026-09-30T20:57:23.269364+00:00"
     },
     {
       "name": "Ridge3",
@@ -818,27 +841,30 @@
         "seed": 443,
         "layeredProfiles": true,
         "peakCount": 10,
-        "buriedBase": true
+        "buriedBase": true,
+        "cragDetail": true,
+        "upwardNormals": true,
+        "snowShelvesAndGullies": true
       },
       "blenderVersion": "5.2.2 LTS",
       "fbxPath": "Assets/Art/Generated/EnvironmentDistant/Ridge3.fbx",
       "previewPath": "",
-      "triangleCount": 7680,
+      "triangleCount": 13824,
       "bounds": [
         [
           -850.0,
           -720.0,
-          -86.14570617675781
+          -86.16859436035156
         ],
         [
           850.0,
           0.0,
-          392.6662902832031
+          386.1692810058594
         ]
       ],
       "lodCount": 1,
       "collisionAsset": "",
-      "timestamp": "2026-09-30T00:52:35.121798+00:00"
+      "timestamp": "2026-09-30T20:57:23.366338+00:00"
     },
     {
       "name": "Ridge4",
@@ -848,27 +874,30 @@
         "seed": 444,
         "layeredProfiles": true,
         "peakCount": 9,
-        "buriedBase": true
+        "buriedBase": true,
+        "cragDetail": true,
+        "upwardNormals": true,
+        "snowShelvesAndGullies": true
       },
       "blenderVersion": "5.2.2 LTS",
       "fbxPath": "Assets/Art/Generated/EnvironmentDistant/Ridge4.fbx",
       "previewPath": "",
-      "triangleCount": 7680,
+      "triangleCount": 13824,
       "bounds": [
         [
           -850.0,
           -720.0,
-          -84.11439514160156
+          -84.10382843017578
         ],
         [
           850.0,
           0.0,
-          354.3807067871094
+          350.0673828125
         ]
       ],
       "lodCount": 1,
       "collisionAsset": "",
-      "timestamp": "2026-09-30T00:52:35.174628+00:00"
+      "timestamp": "2026-09-30T20:57:23.459454+00:00"
     },
     {
       "name": "ValleyFloor",
@@ -2532,6 +2561,7 @@
         "height": 1.8,
         "deck": 0,
         "continuousCollision": true,
+        "topFacingUp": true,
         "sculptedSides": true,
         "raisedBankClearance": 0.2,
         "explicitCollision": true,
@@ -2555,7 +2585,7 @@
       ],
       "lodCount": 1,
       "collisionAsset": "Assets/Art/Generated/Jumps/JumpSmall.fbx",
-      "timestamp": "2026-09-30T17:54:31.290743+00:00"
+      "timestamp": "2026-09-30T19:19:33.103444+00:00"
     },
     {
       "name": "JumpMedium",
@@ -2567,6 +2597,7 @@
         "height": 4.5,
         "deck": 0,
         "continuousCollision": true,
+        "topFacingUp": true,
         "sculptedSides": true,
         "raisedBankClearance": 0.2,
         "explicitCollision": true,
@@ -2590,7 +2621,7 @@
       ],
       "lodCount": 1,
       "collisionAsset": "Assets/Art/Generated/Jumps/JumpMedium.fbx",
-      "timestamp": "2026-09-30T17:54:31.769058+00:00"
+      "timestamp": "2026-09-30T19:19:33.560761+00:00"
     },
     {
       "name": "JumpLarge",
@@ -2602,6 +2633,7 @@
         "height": 8,
         "deck": 0,
         "continuousCollision": true,
+        "topFacingUp": true,
         "sculptedSides": true,
         "raisedBankClearance": 0.2,
         "explicitCollision": true,
@@ -2625,7 +2657,7 @@
       ],
       "lodCount": 1,
       "collisionAsset": "Assets/Art/Generated/Jumps/JumpLarge.fbx",
-      "timestamp": "2026-09-30T17:54:31.792363+00:00"
+      "timestamp": "2026-09-30T19:19:33.576657+00:00"
     },
     {
       "name": "Tabletop",
@@ -2637,6 +2669,7 @@
         "height": 5,
         "deck": 12,
         "continuousCollision": true,
+        "topFacingUp": true,
         "sculptedSides": true,
         "raisedBankClearance": 0.2,
         "explicitCollision": true,
@@ -2660,7 +2693,7 @@
       ],
       "lodCount": 1,
       "collisionAsset": "Assets/Art/Generated/Jumps/Tabletop.fbx",
-      "timestamp": "2026-09-30T17:54:31.818326+00:00"
+      "timestamp": "2026-09-30T19:19:33.591430+00:00"
     },
     {
       "name": "Hip",
@@ -2672,6 +2705,7 @@
         "height": 4,
         "deck": 0,
         "continuousCollision": true,
+        "topFacingUp": true,
         "sculptedSides": true,
         "raisedBankClearance": 0.2,
         "explicitCollision": true,
@@ -2695,7 +2729,7 @@
       ],
       "lodCount": 1,
       "collisionAsset": "Assets/Art/Generated/Jumps/Hip.fbx",
-      "timestamp": "2026-09-30T17:54:31.844740+00:00"
+      "timestamp": "2026-09-30T19:19:33.606987+00:00"
     },
     {
       "name": "QuarterPipe",
@@ -2707,6 +2741,7 @@
         "height": 6,
         "deck": 0,
         "continuousCollision": true,
+        "topFacingUp": true,
         "sculptedSides": true,
         "raisedBankClearance": 0.2,
         "explicitCollision": true,
@@ -2730,7 +2765,7 @@
       ],
       "lodCount": 1,
       "collisionAsset": "Assets/Art/Generated/Jumps/QuarterPipe.fbx",
-      "timestamp": "2026-09-30T17:54:31.863976+00:00"
+      "timestamp": "2026-09-30T19:19:33.622670+00:00"
     }
   ]
 }

@@ -20,9 +20,9 @@ MonoBehaviour:
   trackMaterial: {fileID: 2100000, guid: ee9bba0b95d164fa7bc4438fc9337bc7, type: 2}
   postProfile: {fileID: 11400000, guid: 097a8668e5f85ceaf895afe53d6d2775, type: 2}
   sunsetTop: {r: 0.16, g: 0.2, b: 0.36, a: 1}
-  sunsetHorizon: {r: 0.76, g: 0.49, b: 0.56, a: 1}
-  sunsetAmbient: {r: 0.34, g: 0.38, b: 0.51, a: 1}
-  sunsetLight: {r: 1, g: 0.79, b: 0.65, a: 1}
+  sunsetHorizon: {r: 0.76, g: 0.6, b: 0.64, a: 1}
+  sunsetAmbient: {r: 0.37, g: 0.43, b: 0.58, a: 1}
+  sunsetLight: {r: 1, g: 0.84, b: 0.76, a: 1}
   dayTop: {r: 0.035, g: 0.21, b: 0.49, a: 1}
   dayHorizon: {r: 0.58, g: 0.76, b: 0.91, a: 1}
   dayAmbient: {r: 0.44, g: 0.52, b: 0.64, a: 1}
@@ -31,35 +31,37 @@ MonoBehaviour:
   dayElevation: 42
   sunAzimuth: 160
   sunIntensity: 1.25
-  fogDensity: 0.00065
+  fogDensity: 0.0007
   shadowDistance: 150
   trackSpacing: 0.18
-  trackWidth: 0.11
+  trackWidth: 0.095
   trackLift: 0.008
   trackLifetime: 100
   trackSamples: 1100
   maxParticles: 1000
-  sprayRate: 50
+  sprayRate: 60
   sprayLift: 1.6
-  landingBurst: 80
+  landingBurst: 95
   crashBurst: 180
+  carveLoadSpray: 0.65
+  carveFanSpeed: 2.1
   trackUpdateInterval: 0.025
   trackMaximumGap: 2.5
   trackMaximumInterval: 0.2
   powderTrackWidth: 1.5
   powderTrackDepth: 1.35
-  grooveColor: {r: 0.28, g: 0.36, b: 0.48, a: 0.4}
+  grooveColor: {r: 0.28, g: 0.36, b: 0.48, a: 0.32}
   grooveRidgeColor: {r: 0.85, g: 0.92, b: 1, a: 0.18}
   grooveSoftness: 0.22
   powderSprayMultiplier: 2.2
-  brakeCloudRate: 22
+  brakeCloudRate: 28
   railShavingRate: 18
   particleSoftDistance: 0.3
-  flakeSize: 0.07
-  puffSize: 0.42
-  puffOpacity: 0.25
-  contactAccent: 14
-  sunsetFog: {r: 0.49, g: 0.51, b: 0.66, a: 1}
+  flakeSize: 0.075
+  puffSize: 0.5
+  puffOpacity: 0.3
+  contactAccent: 18
+  sunsetFog: {r: 0.51, g: 0.56, b: 0.69, a: 1}
   dayFog: {r: 0.58, g: 0.73, b: 0.86, a: 1}
   sunsetCloud: {r: 0.73, g: 0.66, b: 0.77, a: 1}
   dayCloud: {r: 0.94, g: 0.96, b: 0.99, a: 1}
@@ -71,8 +73,8 @@ MonoBehaviour:
   sunRadius: 0.55
   snowTint: {r: 0.82, g: 0.88, b: 0.95, a: 1}
   rockTint: {r: 0.16, g: 0.19, b: 0.25, a: 1}
-  rippleStrength: 0.05
-  rippleScale: 3
+  rippleStrength: 0.022
+  rippleScale: 1.8
   snowVariation: 0.065
   glitter: 0.16
   detailDistance: 80

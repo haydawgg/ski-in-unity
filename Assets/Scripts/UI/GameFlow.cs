@@ -9,7 +9,7 @@ namespace PowderFlow
     {
         public GameSystemConfig config;public bool startInMenu;
         public static bool ScoreSession;public bool menu;public float Remaining {get;private set;}
-        string page="main";int selected;MountainWorld world;SkiCameraController follow;bool pointerMode;float nextStick;
+        string page="main";int selected;MountainWorld world;SkiCameraController follow;bool pointerMode;float nextStick,cameraSpeedFovSpan;
         void Awake()
         {
             var args=System.Environment.GetCommandLineArgs();
@@ -21,6 +21,7 @@ namespace PowderFlow
             world.player.ResetTo(world.player.startPosition,world.player.startRotation);
             var args=System.Environment.GetCommandLineArgs();bool diagnostic=System.Array.Exists(args,a=>a=="--smoke-test");
             if(diagnostic||System.Array.Exists(args,a=>a=="--visual-day"))SaveStore.Current.day=System.Array.Exists(args,a=>a=="--visual-day");
+            cameraSpeedFovSpan=world.cameraConfig.speedFov-world.cameraConfig.normalFov;
             ApplySettings();
             if(System.Array.Exists(System.Environment.GetCommandLineArgs(),a=>a=="--smoke-test")){menu=false;Time.timeScale=1;gameObject.AddComponent<StandaloneSmokeTest>().flow=this;}
             else if(System.Array.Exists(System.Environment.GetCommandLineArgs(),a=>a=="--menu-capture"))gameObject.AddComponent<StandaloneSmokeTest>().flow=this;
@@ -30,7 +31,7 @@ namespace PowderFlow
         {
             var saved=SaveStore.Current;AudioListener.volume=saved.master;
             world.GetComponent<AlpineLighting>()?.Apply(saved.day);world.player.GetComponent<OutfitSystem>().Apply(saved.outfit);
-            var camera=world.cameraConfig;camera.normalFov=saved.fov;camera.cameraSensitivity=saved.cameraSensitivity;
+            var camera=world.cameraConfig;camera.normalFov=saved.fov;camera.speedFov=saved.fov+cameraSpeedFovSpan;camera.cameraSensitivity=saved.cameraSensitivity;
             var pipeline=(UniversalRenderPipelineAsset)UnityEngine.Rendering.GraphicsSettings.defaultRenderPipeline;
             if(pipeline){pipeline.renderScale=saved.quality==0?.7f:saved.quality==1?.85f:1;pipeline.shadowDistance=saved.quality==0?50:saved.quality==1?85:world.graphicsConfig.shadowDistance;pipeline.shadowCascadeCount=saved.quality<2?2:4;}
             if(!Application.isEditor)Screen.SetResolution(saved.width,saved.height,saved.fullscreen?FullScreenMode.FullScreenWindow:FullScreenMode.Windowed);

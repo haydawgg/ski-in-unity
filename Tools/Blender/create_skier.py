@@ -54,13 +54,13 @@ def create_skier():
     torso=loft('TailoredJacket',[(0,y,z,rx,rz) for y,z,rx,rz in [
         (.055,0,.235,.17),(.075,0,.25,.18),(.12,.006,.25,.185),(.20,.006,.245,.185),
         (.29,0,.25,.185),(.36,0,.26,.18),(.43,0,.275,.18),(.49,-.004,.278,.177),
-        (.54,-.008,.25,.16),(.59,-.006,.18,.125),(.625,0,.105,.095)]],mats['jacket'],lambda y:split(y,.43,.12,'Chest','Spine'),32)
+        (.54,-.008,.25,.16),(.59,-.006,.18,.125),(.625,0,.105,.095)]],mats['jacket'],lambda y:split(y,.14,.09,'Spine','Hips') if y<.23 else split(y,.43,.12,'Chest','Spine'),32)
     torso.data.materials.append(mats['jacket_accent'])
     for p in torso.data.polygons:
         cy=sum(torso.data.vertices[i].co.z for i in p.vertices)/len(p.vertices)
         if .43<cy<.55:p.material_index=1
     loft('PantsWaist',[(0,y,0,rx,rz) for y,rx,rz in [(.08,.225,.16),(0,.225,.175),(-.09,.23,.17),(-.16,.215,.15)]],mats['pants'],lambda y:{'Hips':1},24)
-    attach(box('JacketHem',(0,.07,0),(.49,.032,.35),mats['jacket_trim'],.014),'Spine')
+    attach(box('JacketHem',(0,.07,0),(.49,.032,.35),mats['jacket_trim'],.014),'Hips')
     attach(box('FrontZipper',(0,.34,.187),(.014,.43,.008),mats['equipment_trim'],.003),'Spine')
     attach(box('ZipperPull',(0,.50,.196),(.035,.035,.012),mats['jacket_trim'],.006),'Chest')
     for side,s in [(-1,'L'),(1,'R')]:
@@ -92,7 +92,7 @@ def create_skier():
         sleeve=loft('ContinuousSleeve_'+s,[(side*x,y,z,rx,rz) for x,y,z,rx,rz in [
             (.26,.545,0,.10,.125),(.29,.49,0,.115,.13),(.305,.43,0,.115,.125),(.32,.34,0,.108,.12),
             (.335,.25,0,.105,.112),(.34,.18,0,.112,.116),(.345,.12,.005,.105,.108),(.35,.04,.015,.096,.102),
-            (.355,-.04,.023,.087,.09),(.36,-.095,.03,.083,.086)]],mats['jacket'],lambda y:split(y,.18,.075,'UpperArm_'+s,'LowerArm_'+s),20,.9)
+            (.355,-.04,.023,.087,.09),(.36,-.095,.03,.083,.086)]],mats['jacket'],lambda y:split(y,.43,.10,'Chest','UpperArm_'+s) if y>.33 else split(y,.18,.075,'UpperArm_'+s,'LowerArm_'+s),20,.9)
         sleeve.data.materials.append(mats['jacket_accent'])
         for p in sleeve.data.polygons:
             cy=sum(sleeve.data.vertices[i].co.z for i in p.vertices)/len(p.vertices)
@@ -101,9 +101,9 @@ def create_skier():
         attach(ellipsoid('Glove_'+s,(side*.36,-.16,.034),(.079,.10,.086),mats['gloves'],16,10),'Hand_'+s)
         attach(ellipsoid('GloveThumb_'+s,(side*.30,-.15,.064),(.035,.051,.037),mats['gloves'],12,8),'Hand_'+s)
         leg=loft('ContinuousPants_'+s,[(side*x,y,z,rx,rz) for x,y,z,rx,rz in [
-            (.14,-.09,0,.12,.145),(.146,-.17,0,.133,.155),(.15,-.25,0,.128,.15),(.155,-.33,0,.123,.145),
+            (.14,-.09,0,.12,.145),(.146,-.17,0,.145,.16),(.15,-.25,0,.142,.155),(.155,-.33,0,.123,.145),
             (.16,-.405,0,.126,.143),(.164,-.455,.005,.121,.137),(.17,-.51,.012,.119,.132),
-            (.179,-.58,.02,.11,.123),(.187,-.65,.027,.10,.115),(.19,-.705,.03,.096,.106)]],mats['pants'],lambda y:split(y,-.42,.075,'Thigh_'+s,'Shin_'+s),24)
+            (.179,-.58,.02,.11,.123),(.187,-.65,.027,.10,.115),(.19,-.705,.03,.096,.106)]],mats['pants'],lambda y:split(y,-.20,.13,'Hips','Thigh_'+s) if y>-.33 else split(y,-.42,.075,'Thigh_'+s,'Shin_'+s),24)
         leg.data.materials.append(mats['pants_panel'])
         for p in leg.data.polygons:
             cy=sum(leg.data.vertices[i].co.z for i in p.vertices)/len(p.vertices)
@@ -160,8 +160,39 @@ def create_skier():
         rig.pose.bones['Spine'].rotation_euler.x=bend*.4;rig.pose.bones['Hips'].rotation_euler.y=lean
         for s in ['L','R']:rig.pose.bones['Thigh_'+s].rotation_euler.x=-bend*.8;rig.pose.bones['Shin_'+s].rotation_euler.x=bend*1.4
         for bone in rig.pose.bones:bone.keyframe_insert(data_path='rotation_euler',frame=1)
-    rig.animation_data.action=None
-    for bone in rig.pose.bones:bone.rotation_euler=(0,0,0)
-    return export('Skier','Character',{'seed':42,'heightMeters':1.85,'skiLength':1.7,'sourcePoses':17,'artRevision':'VP2','continuousGarments':True,'skinnedRenderers':5},True)
+    # Temporal foundations supplement the existing source poses; runtime remains procedural.
+    foundation={
+        'Ski_Neutral':[(1,.26,0),(24,.26,0)],
+        'Ski_Crouch':[(1,.26,0),(8,.85,0),(24,1,0)],
+        'Ski_Tuck':[(1,.26,0),(10,.82,0),(24,.82,0)],
+        'Ski_Carve_Left':[(1,.26,0),(12,.45,.3),(24,.45,.3)],
+        'Ski_Carve_Right':[(1,.26,0),(12,.45,-.3),(24,.45,-.3)],
+        'Ski_Pop':[(1,.8,0),(5,1,0),(9,.08,0),(15,.4,0)],
+        'Ski_Airborne':[(1,.34,0),(12,.65,0),(24,.34,0)],
+        'Ski_Land':[(1,.24,0),(5,1,0),(10,.7,0),(24,.26,0)],
+        'Ski_Rail':[(1,.48,0),(12,.5,.08),(24,.48,0)],
+        'Ski_Bail_Start':[(1,.26,0),(5,.8,.35),(12,1,.7)]}
+    bpy.context.scene.render.fps=30
+    for name,keys in foundation.items():
+        action=bpy.data.actions.new(name);rig.animation_data.action=action;action.use_fake_user=True
+        for frame,bend,lean in keys:
+            for bone in rig.pose.bones:bone.rotation_mode='XYZ';bone.rotation_euler=(0,0,0)
+            rig.pose.bones['Spine'].rotation_euler.x=math.radians(bend*25)
+            rig.pose.bones['Hips'].rotation_euler.z=lean
+            for side in ['L','R']:
+                rig.pose.bones['Thigh_'+side].rotation_euler.x=math.radians(-bend*55)
+                rig.pose.bones['Shin_'+side].rotation_euler.x=math.radians(bend*95)
+                rig.pose.bones['Foot_'+side].rotation_euler.x=math.radians(-bend*40)
+                rig.pose.bones['UpperArm_'+side].rotation_euler.x=math.radians(-12-bend*30)
+                rig.pose.bones['LowerArm_'+side].rotation_euler.x=math.radians(-35)
+            for bone in rig.pose.bones:bone.keyframe_insert(data_path='rotation_euler',frame=frame)
+    # Keep an explicit zero pose active while the FBX exporter cycles all actions.
+    # With action=None, Blender's evaluated pose can retain the last baked action.
+    bind=bpy.data.actions.new('Rig_BindPose');rig.animation_data.action=bind;bind.use_fake_user=True
+    for bone in rig.pose.bones:
+        bone.rotation_euler=(0,0,0)
+        for frame in [1,2]:bone.keyframe_insert(data_path='rotation_euler',frame=frame)
+    bpy.context.scene.frame_set(1);bpy.context.view_layer.update()
+    return export('Skier','Character',{'seed':42,'heightMeters':1.85,'skiLength':1.7,'sourcePoses':17,'artRevision':'MotionQuality','jointWeights':'shoulder-hip-elbow-knee','foundationActions':list(foundation),'exportAnimations':True,'continuousGarments':True,'skinnedRenderers':5},True)
 
 if __name__=='__main__':create_skier()

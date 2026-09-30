@@ -1,0 +1,37 @@
+{
+  "source": "ArtSource/Blender/Skier.blend",
+  "bones": 21,
+  "renderers": 5,
+  "poses": [
+    {
+      "pose": "Crouch",
+      "triangles": 10846,
+      "largestEdgeMeters": 1.08,
+      "finite": true
+    },
+    {
+      "pose": "Carve",
+      "triangles": 10846,
+      "largestEdgeMeters": 1.08,
+      "finite": true
+    },
+    {
+      "pose": "AirTuck",
+      "triangles": 10846,
+      "largestEdgeMeters": 1.08,
+      "finite": true
+    },
+    {
+      "pose": "Grab",
+      "triangles": 10846,
+      "largestEdgeMeters": 1.08,
+      "finite": true
+    },
+    {
+      "pose": "HardLanding",
+      "triangles": 10846,
+      "largestEdgeMeters": 1.08,
+      "finite": true
+    }
+  ]
+}

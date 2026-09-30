@@ -19,7 +19,7 @@ Material:
   m_CustomRenderQueue: -1
   stringTagMap: {}
   disabledShaderPasses: []
-  m_LockedProperties: 
+  m_LockedProperties:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs: []
@@ -29,8 +29,8 @@ Material:
     - _DetailDistance: 80
     - _Glitter: 0.16
     - _RimStrength: 0.055
-    - _RippleScale: 3
-    - _RippleStrength: 0.05
+    - _RippleScale: 1.8
+    - _RippleStrength: 0.022
     - _SlopeBlend: 0
     - _Variation: 0.065
     - _Wrap: 0.16

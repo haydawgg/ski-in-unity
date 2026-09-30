@@ -1,0 +1,16 @@
+JUMP SURFACE 103 name=Mountain00(Clone) delta=0.00
+JUMP SURFACE 105 name=Mountain00(Clone) delta=0.00
+JUMP SURFACE 107 name=Mountain00(Clone) delta=0.00
+JUMP SURFACE 109 name=Mountain00(Clone) delta=0.00
+JUMP SURFACE 111 name=Mountain00(Clone) delta=0.00
+JUMP SURFACE 113 name=Mountain00(Clone) delta=0.00
+JUMP SURFACE 115 name=Mountain00(Clone) delta=0.00
+JUMP SURFACE 117 name=Mountain00(Clone) delta=0.00
+JUMP SURFACE 119 name=Mountain00(Clone) delta=0.00
+JUMP SURFACE 121 name=Mountain00(Clone) delta=0.00
+JUMP SURFACE 123 name=Mountain00(Clone) delta=0.00
+JUMP SURFACE 125 name=Mountain00(Clone) delta=0.00
+JUMP SURFACE 127 name=Mountain00(Clone) delta=0.00
+JUMP SURFACE 129 name=Mountain00(Clone) delta=0.00
+JUMP SURFACE 131 name=Mountain00(Clone) delta=0.00
+LIP REVIEW 105: z=139.40 y=323.67 speed=10.31 ground=True bail=False height=0.00 takeoffs=0 landings=0

@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ada1d09da651a1f196180c01fb6afe9, type: 3}
+  m_Name: GameSystemConfig
+  m_EditorClassIdentifier: PowderFlow::PowderFlow.GameSystemConfig
+  sessionDuration: 150
+  collisionBailSpeed: 9
+  inputSensitivity: 1
+  keyboardSensitivity: 1
+  gamepadSensitivity: 1
+  cameraSensitivity: 1
+  snow: {fileID: 8300000, guid: 31040acd588155bf7a055e8ee86243eb, type: 3}
+  wind: {fileID: 8300000, guid: 3894a406f34e883318cec21fcb4a33ee, type: 3}
+  rail: {fileID: 8300000, guid: 325cd9d53990e97dcb41003191427af6, type: 3}
+  landing: {fileID: 8300000, guid: 29042e8e6c7e0267c97c4633d56c8c8d, type: 3}
+  crash: {fileID: 8300000, guid: a557c71dea699e2d1b7aa309d28260ad, type: 3}
+  pop: {fileID: 8300000, guid: 60be4d22d462bb3518550f64ce98498d, type: 3}
+  maximumAudioSpeed: 40
+  snowVolume: 0.25
+  windVolume: 0.3
+  railVolume: 0.25
+  impactVolume: 0.55

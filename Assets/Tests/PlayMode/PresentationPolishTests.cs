@@ -34,7 +34,7 @@ namespace PowderFlow.Tests
         {
 #if UNITY_EDITOR
             bool baseline=System.Environment.GetEnvironmentVariable("POWDERFLOW_PRESENTATION_BASELINE")=="1";
-            string output="Documentation/VisualPolish/Phase7/Camera"+(baseline?"/Before":"");Directory.CreateDirectory(output);
+            string output=(System.Environment.GetEnvironmentVariable("POWDERFLOW_REVIEW_OUTPUT")??"Documentation/VisualPolish/Phase7")+"/Camera"+(baseline?"/Before":"");Directory.CreateDirectory(output);
             bool async=ShaderUtil.allowAsyncCompilation;ShaderUtil.allowAsyncCompilation=false;
             var w=CreateWorld();yield return null;var p=w.player;p.Input.BeginInjected();var camera=w.GetComponentInChildren<SkiCameraController>().GetComponent<Camera>();var stats=new List<string>();
             foreach(int width in new[]{1280,1920})

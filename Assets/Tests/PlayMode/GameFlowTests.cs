@@ -16,10 +16,13 @@ namespace PowderFlow.Tests
     {
 #if UNITY_EDITOR
         readonly List<InputDevice> suspended=new List<InputDevice>();
+        readonly List<CameraConfig> cameraConfigs=new List<CameraConfig>();
         readonly List<Gamepad> testPads=new List<Gamepad>();
+        CameraConfig sourceCamera;float priorNormalFov,priorSpeedFov,priorSensitivity;
         Keyboard testKeyboard;InputSettings.UpdateMode previousUpdateMode;InputSettings.BackgroundBehavior previousBackground;InputSettings.EditorInputBehaviorInPlayMode previousEditorInput;
         [SetUp]public void IsolateVirtualInput()
         {
+            sourceCamera=AssetDatabase.LoadAssetAtPath<CameraConfig>("Assets/Settings/CameraConfig.asset");priorNormalFov=sourceCamera.normalFov;priorSpeedFov=sourceCamera.speedFov;priorSensitivity=sourceCamera.cameraSensitivity;
             previousUpdateMode=InputSystem.settings.updateMode;
             previousBackground=InputSystem.settings.backgroundBehavior;previousEditorInput=InputSystem.settings.editorInputBehaviorInPlayMode;
             InputSystem.settings.backgroundBehavior=InputSettings.BackgroundBehavior.IgnoreFocus;
@@ -30,6 +33,8 @@ namespace PowderFlow.Tests
         }
         [TearDown]public void RestoreInputDevices()
         {
+            sourceCamera.normalFov=priorNormalFov;sourceCamera.speedFov=priorSpeedFov;sourceCamera.cameraSensitivity=priorSensitivity;
+            foreach(var camera in cameraConfigs)Object.Destroy(camera);cameraConfigs.Clear();
             foreach(var pad in testPads)if(pad.added)InputSystem.RemoveDevice(pad);testPads.Clear();
             if(testKeyboard!=null&&testKeyboard.added)InputSystem.RemoveDevice(testKeyboard);
             foreach(var device in suspended)if(device.added)InputSystem.EnableDevice(device);suspended.Clear();
@@ -39,7 +44,7 @@ namespace PowderFlow.Tests
         Gamepad CreatePad(){var pad=InputSystem.AddDevice<Gamepad>();testPads.Add(pad);pad.MakeCurrent();return pad;}
         GameFlow Create(bool menu,float duration=150)
         {
-            var obj=new GameObject();obj.SetActive(false);var world=obj.AddComponent<MountainWorld>();world.catalog=AssetDatabase.LoadAssetAtPath<AssetCatalog>("Assets/Settings/AssetCatalog.asset");world.physicsConfig=AssetDatabase.LoadAssetAtPath<SkiPhysicsConfig>("Assets/Settings/SkiPhysicsConfig.asset");world.trickConfig=AssetDatabase.LoadAssetAtPath<TrickConfig>("Assets/Settings/TrickConfig.asset");world.cameraConfig=AssetDatabase.LoadAssetAtPath<CameraConfig>("Assets/Settings/CameraConfig.asset");world.worldConfig=AssetDatabase.LoadAssetAtPath<WorldConfig>("Assets/Settings/WorldConfig.asset");world.graphicsConfig=AssetDatabase.LoadAssetAtPath<GraphicsConfig>("Assets/Settings/GraphicsConfig.asset");
+            var obj=new GameObject();obj.SetActive(false);var world=obj.AddComponent<MountainWorld>();world.catalog=AssetDatabase.LoadAssetAtPath<AssetCatalog>("Assets/Settings/AssetCatalog.asset");world.physicsConfig=AssetDatabase.LoadAssetAtPath<SkiPhysicsConfig>("Assets/Settings/SkiPhysicsConfig.asset");world.trickConfig=AssetDatabase.LoadAssetAtPath<TrickConfig>("Assets/Settings/TrickConfig.asset");world.cameraConfig=Object.Instantiate(AssetDatabase.LoadAssetAtPath<CameraConfig>("Assets/Settings/CameraConfig.asset"));cameraConfigs.Add(world.cameraConfig);world.worldConfig=AssetDatabase.LoadAssetAtPath<WorldConfig>("Assets/Settings/WorldConfig.asset");world.graphicsConfig=AssetDatabase.LoadAssetAtPath<GraphicsConfig>("Assets/Settings/GraphicsConfig.asset");
             var flow=obj.AddComponent<GameFlow>();flow.startInMenu=menu;flow.config=Object.Instantiate(AssetDatabase.LoadAssetAtPath<GameSystemConfig>("Assets/Settings/GameSystemConfig.asset"));flow.config.sessionDuration=duration;obj.SetActive(true);return flow;
         }
         [UnityTest]public IEnumerator GamepadCanLaunchFreeRideFromMainMenu()
@@ -78,7 +83,10 @@ namespace PowderFlow.Tests
             var prior=SaveStore.Current;string folder=Path.Combine(Path.GetTempPath(),"powderflow-settings-"+System.Guid.NewGuid());SaveStore.OverridePath=Path.Combine(folder,"save.json");SaveStore.Current=new SavedGame{width=1280,height=720};var pad=CreatePad();
             try
             {
-                Create(true);yield return null;yield return Press(pad,GamepadButton.DpadDown);yield return Press(pad,GamepadButton.DpadDown);yield return Press(pad,GamepadButton.South);
+                var flow=Create(true);yield return null;
+                var camera=flow.GetComponent<MountainWorld>().cameraConfig;float span=camera.speedFov-camera.normalFov;SaveStore.Current.fov=79;flow.ApplySettings();flow.ApplySettings();
+                Assert.That(camera.normalFov,Is.EqualTo(79));Assert.That(camera.speedFov-camera.normalFov,Is.EqualTo(span).Within(.001f));
+                yield return Press(pad,GamepadButton.DpadDown);yield return Press(pad,GamepadButton.DpadDown);yield return Press(pad,GamepadButton.South);
                 for(int i=0;i<11;i++)yield return Press(pad,GamepadButton.DpadDown);
                 yield return Press(pad,GamepadButton.DpadRight);Assert.That(SaveStore.Current.width,Is.EqualTo(1920));Assert.That(SaveStore.Current.height,Is.EqualTo(1080));
                 for(int i=0;i<3;i++)yield return Press(pad,GamepadButton.DpadDown);yield return Press(pad,GamepadButton.South);

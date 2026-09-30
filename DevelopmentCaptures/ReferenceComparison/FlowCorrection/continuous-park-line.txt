@@ -1,0 +1,18 @@
+launch t=1.68 z=326.69 speed=20.63
+landing t=4.22 z=376.49 quality=Clean impact=13.62 alignment=0.23 upright=18.80 contacts=True/True speed=19.99
+landing t=4.72 z=386.01 quality=Perfect impact=2.08 alignment=0.11 upright=11.10 contacts=True/True speed=19.80
+landing t=4.96 z=390.58 quality=Perfect impact=0.97 alignment=0.10 upright=14.73 contacts=True/True speed=19.81
+landing t=5.18 z=394.79 quality=Perfect impact=0.96 alignment=0.08 upright=13.93 contacts=True/True speed=19.85
+landing t=5.37 z=398.43 quality=Clean impact=0.75 alignment=2.21 upright=15.62 contacts=True/False speed=19.44
+launch t=5.40 z=399.00 speed=19.13
+landing t=5.67 z=404.07 quality=Perfect impact=1.38 alignment=0.35 upright=9.63 contacts=True/True speed=19.59
+landing t=5.89 z=408.24 quality=Perfect impact=0.97 alignment=0.30 upright=9.07 contacts=True/True speed=19.75
+landing t=6.05 z=411.30 quality=Perfect impact=0.72 alignment=0.28 upright=8.20 contacts=True/True speed=19.88
+launch t=8.29 z=456.59 speed=20.12
+landing t=10.90 z=506.12 quality=Clean impact=14.00 alignment=0.35 upright=21.49 contacts=True/True speed=19.65
+landing t=11.20 z=511.74 quality=Clean impact=1.45 alignment=0.24 upright=17.12 contacts=True/True speed=18.48
+landing t=11.45 z=516.18 quality=Clean impact=1.25 alignment=0.20 upright=16.31 contacts=True/True speed=17.59
+landing t=11.66 z=519.74 quality=Clean impact=0.99 alignment=0.16 upright=15.29 contacts=True/True speed=16.97
+landing t=11.82 z=522.38 quality=Clean impact=0.73 alignment=0.14 upright=15.09 contacts=True/True speed=16.53
+landing t=11.96 z=524.63 quality=Clean impact=0.62 alignment=0.13 upright=14.16 contacts=False/True speed=16.21
+end z=525.26 speed=16.11 launches=3 landings=14 bail=False

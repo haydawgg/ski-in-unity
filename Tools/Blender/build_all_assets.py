@@ -14,12 +14,16 @@ if stage in ('all','environment'):
 if stage=='scenery':
     from create_environment import build_scenery
     new.extend(build_scenery())
+if stage=='backdrop':
+    from create_environment import ridge
+    new.extend(ridge(i) for i in range(5))
 if stage=='park':
     from create_park import build_park
     new.extend(build_park())
 if stage=='jumps':
     from create_park import build_jumps
     new.extend(build_jumps())
-names={r['name'] for r in new};records=[r for r in records if r['name'] not in names]+new
+replacements={r['name']:r for r in new};existing={r['name'] for r in records}
+records=[replacements.get(r['name'],r) for r in records]+[r for r in new if r['name'] not in existing]
 manifest.write_text(json.dumps({'seed':42,'assets':records},indent=2))
 print('ASSET BUILD PASS',len(new),'assets',sum(r['triangleCount'] for r in new),'triangles')

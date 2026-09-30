@@ -10,6 +10,9 @@ namespace PowderFlow
         public LandingResult LastLanding { get; private set; }
         public bool PowderOverride;public SurfaceType Surface=>PowderOverride?SurfaceType.Powder:Contacts.Surface;
         public bool Bailed { get; set; } public float Compression { get; private set; }
+        public SkierMotionState Motion { get; private set; }
+        public LandingPrediction PredictedLanding { get; private set; }
+        Vector3 lastVelocity;bool hasVelocitySample;float lateralLoad,motionGrounded,popAge=100,balanceRecovery;
         float bufferedPop,sinceGrounded=100;float contactLock,airTime; Vector3 preload; bool previousGrounded;
         public Rigidbody Body { get; private set; }
         public SkiContactSystem Contacts { get; private set; }
@@ -40,17 +43,19 @@ namespace PowderFlow
         public void Step(float dt)
         {
             Body.centerOfMass=Input.crouch?Vector3.down*config.crouchHeight:Vector3.zero;
-            if(TryGetComponent<RailSystem>(out var rail)&&rail.Riding){Grounded=false;return;}
+            popAge+=dt;
+            if(TryGetComponent<RailSystem>(out var rail)&&rail.Riding){Grounded=false;PredictedLanding=default;UpdateMotion(dt,rail);return;}
             Contacts.Sample(Body,config);
             contactLock=Mathf.Max(0,contactLock-dt);
             Grounded=Contacts.Grounded && contactLock<=0 && !Bailed;
-            if(Bailed)return;
+            if(Bailed){PredictedLanding=default;UpdateMotion(dt,rail);return;}
             if(Input.pop){bufferedPop=config.popBuffer;Input.pop=false;}
             bufferedPop=Mathf.Max(0,bufferedPop-dt);sinceGrounded=Grounded?0:sinceGrounded+dt;
             if(bufferedPop>0 && (Grounded||sinceGrounded<=config.popBuffer))
             {
                 Body.AddForce(SupportNormal*(config.popImpulse+Speed*config.popSpeedScale),ForceMode.VelocityChange);
                 contactLock=trickConfig?trickConfig.takeoffContactLock:.18f; Grounded=false; bufferedPop=0;
+                popAge=0;
             }
             if(trickConfig)
             {
@@ -59,17 +64,21 @@ namespace PowderFlow
                 {
                     LastLanding=LandingSystem.Evaluate(Body.rotation,Body.linearVelocity,Body.angularVelocity,Contacts.Normal,Contacts.left.hit&&Contacts.right.hit,trickConfig);
                     Compression=Mathf.Clamp01(LastLanding.impact/trickConfig.cleanImpact);
+                    balanceRecovery=LastLanding.quality==LandingQuality.Sketchy?1:0;
                     Bailed=LastLanding.quality==LandingQuality.Bail;
                     if(!Bailed)Body.linearVelocity=Vector3.ProjectOnPlane(Body.linearVelocity,Contacts.Normal)*LastLanding.retention;
-                    Landed?.Invoke(LastLanding); if(Bailed)return;
+                    Landed?.Invoke(LastLanding); if(Bailed){UpdateMotion(dt,rail);return;}
                 }
                 if(!Grounded)
                 {
                     airTime+=dt;Air.Step(Body,Input,trickConfig,dt);
+                    PredictedLanding=LandingSystem.Predict(Body.position,Body.linearVelocity,config.contactReach,config.probeRadius,trickConfig);
                     if(Physics.Raycast(Body.position,Vector3.down,out var landingHit,trickConfig.assistHeight,~(1<<8),QueryTriggerInteraction.Ignore)){LandingSystem.Assist(Body,landingHit.normal,landingHit.distance,trickConfig,dt);Air.SetMomentum(Body.angularVelocity*Air.Inertia);}
+                    Air.SpotLanding(Body,Input,PredictedLanding,trickConfig,dt);
                 }
                 else
                 {
+                    PredictedLanding=default;
                     var desired=Input.modifierRight ? Vector3.up*Input.steer*trickConfig.preloadRate+Body.rotation*Vector3.right*Input.flip*trickConfig.preloadRate : Vector3.zero;
                     preload=Vector3.Lerp(preload,Vector3.ClampMagnitude(desired,trickConfig.maximumPreload),dt*config.steerResponse);
                 }
@@ -109,12 +118,38 @@ namespace PowderFlow
             }
             if(visual)visual.localRotation=Quaternion.Euler(0,0,-Edge*config.maximumLean);
             if(Body.position.y<config.resetDepth)ResetTo(startPosition,startRotation);
+            UpdateMotion(dt,rail);
         }
-        public void EnterAirWithoutRestartingTrick(){contactLock=trickConfig.takeoffContactLock;previousGrounded=false;Grounded=false;Air.Begin(Body,Input,trickConfig,Vector3.zero);}
+        void UpdateMotion(float dt,RailSystem rail)
+        {
+            float response=1-Mathf.Exp(-config.normalResponse*dt);
+            var velocity=Body.isKinematic&&rail&&rail.Riding?rail.Velocity:Body.linearVelocity;
+            float load=hasVelocitySample?Vector3.Dot((velocity-lastVelocity)/Mathf.Max(.001f,dt),Body.rotation*Vector3.right):0;
+            lateralLoad=Mathf.Lerp(lateralLoad,Grounded?Mathf.Clamp(load,-config.maximumGrip,config.maximumGrip):0,response);
+            lastVelocity=velocity;hasVelocitySample=true;
+            motionGrounded=Mathf.Lerp(motionGrounded,Grounded?1:0,response);
+            balanceRecovery=Mathf.MoveTowards(balanceRecovery,0,dt);
+            var angular=Body.angularVelocity;
+            float preparation=PredictedLanding.valid&&trickConfig?1-Mathf.Clamp01(PredictedLanding.time/Mathf.Max(.01f,trickConfig.landingPrepareTime)):0;
+            Motion=new SkierMotionState{
+                speed=velocity.magnitude,normalizedSpeed=Mathf.Clamp01(velocity.magnitude/Mathf.Sqrt(config.speedRadiusScale)),verticalSpeed=velocity.y,
+                groundedAmount=motionGrounded,slopeAngle=Vector3.Angle(SupportNormal,Vector3.up),lateralAcceleration=lateralLoad,
+                carveAmount=Grounded?Edge*Mathf.Lerp(.45f,1,Mathf.Clamp01(Mathf.Abs(lateralLoad)/(config.maximumGrip*.4f))):0,
+                edgeAmount=Edge,skidAmount=Grounded?Mathf.Max(Input.brake?1:0,Mathf.Clamp01(Slip/Mathf.Max(2,Speed)*3)):0,
+                crouchAmount=Input.crouch?1:Input.tuck?1:0,airborneAmount=!Grounded&&!(rail&&rail.Riding)?1:0,airTime=airTime,
+                yawAngularVelocity=Vector3.Dot(angular,Vector3.up),pitchAngularVelocity=Vector3.Dot(angular,Body.rotation*Vector3.right),rollAngularVelocity=Vector3.Dot(angular,Body.rotation*Vector3.forward),
+                grabAmount=TryGetComponent<GrabSystem>(out var grab)&&grab.Current!=GrabType.None?1:0,railAmount=rail&&rail.Riding?1:0,
+                landingPrediction=preparation,landing=PredictedLanding,landingCompression=Compression,impactStrength=LastLanding.impact,
+                switchAmount=Vector3.Dot(Body.rotation*Vector3.forward,velocity)<0?1:0,balanceAmount=rail&&rail.Riding?rail.Balance:balanceRecovery,
+                popAmount=TryGetComponent<SkierPose>(out var pose)?1-Mathf.Clamp01(popAge/pose.Visuals.popDuration):0
+            };
+        }
+        public void EnterAirWithoutRestartingTrick(){contactLock=trickConfig.takeoffContactLock;previousGrounded=false;Grounded=false;airTime=0;popAge=0;Air.Begin(Body,Input,trickConfig,Vector3.zero);}
         public void ResetTo(Vector3 position,Quaternion rotation)
         {
             Body.isKinematic=false;Body.position=position; Body.rotation=rotation; Body.linearVelocity=Body.angularVelocity=Vector3.zero;
-            SupportNormal=rotation*Vector3.up; Edge=0;Bailed=false;PowderOverride=false;bufferedPop=0;sinceGrounded=100;contactLock=0;airTime=0;preload=Vector3.zero;previousGrounded=false;ResetPerformed?.Invoke();
+            SupportNormal=rotation*Vector3.up; Edge=Slip=Compression=0;Grounded=false;Bailed=false;PowderOverride=false;bufferedPop=0;sinceGrounded=100;contactLock=0;airTime=0;preload=Vector3.zero;previousGrounded=false;
+            PredictedLanding=default;Motion=default;LastLanding=default;hasVelocitySample=false;lateralLoad=motionGrounded=balanceRecovery=0;popAge=100;Air.ResetState();ResetPerformed?.Invoke();
         }
         void OnCollisionEnter(Collision collision){if(!Bailed&&collision.relativeVelocity.magnitude>(GetComponentInParent<GameFlow>()?.config.collisionBailSpeed??9)&&collision.contactCount>0&&Mathf.Abs(collision.GetContact(0).normal.y)<.45f)GetComponent<BailSystem>()?.Crash();}
         void Update() { if(Input && Input.reset)ResetTo(safePosition,safeRotation); }

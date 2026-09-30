@@ -117,7 +117,13 @@ def jump(name,width,length,height,deck=0):
             t=(z-length-deck)/(total-length-deck);y=-.23*z+height*(1-t*t*(3-2*t))
         for x in [-width*.5,width*.5]:vertices.append((x,y,z))
     for i in range(sections):a=i*2;faces.append((a,a+2,a+3,a+1))
-    surface=mesh('ContinuousSnowSurface',vertices,faces,p['snow']);duplicate(surface,'Collision_ContinuousSnowSurface')
+    surface=mesh('ContinuousSnowSurface',vertices,faces,p['snow'])
+    # An open curved strip has no enclosed "outside" for normal recalculation.
+    # Explicitly face the riding side upward so Unity casts hit the ramp, not terrain below.
+    for polygon in surface.data.polygons:
+        if polygon.normal.z<0:polygon.flip()
+    surface.data.update();assert all(polygon.normal.z>0 for polygon in surface.data.polygons)
+    duplicate(surface,'Collision_ContinuousSnowSurface')
     # Original sides remain the collision boundary; flared sculpted snow is visual.
     sideverts=[];sidefaces=[];sculpt=[];sculptfaces=[]
     for side in [0,1]:
@@ -136,7 +142,7 @@ def jump(name,width,length,height,deck=0):
     # Packed apron follows the existing grade; it introduces no additional collider.
     apron=[(-width*.5-.25,.23*4+.012,-4),(width*.5+.25,.23*4+.012,-4),(-width*.5,.012,0),(width*.5,.012,0)]
     mesh('PackedApproach',apron,[(0,2,3,1)],p['snow'])
-    return finish(name,'Jumps',{'width':width,'length':length,'height':height,'deck':deck,'continuousCollision':True,'sculptedSides':True,'raisedBankClearance':.20},name=='JumpMedium')
+    return finish(name,'Jumps',{'width':width,'length':length,'height':height,'deck':deck,'continuousCollision':True,'topFacingUp':True,'sculptedSides':True,'raisedBankClearance':.20},name=='JumpMedium')
 
 REGIONS=[('Easy','RIDGE / EASY','FLOW LINE 01',0),('Park','TERRAIN PARK','PARK LINE 02',1),('BigAir','BIG AIR','EXPERT LINE 03',2),('Freeride','FREERIDE','TREE GAPS 04',2),('Lower','LOWER RUN','HOMEWARD 05',0)]
 

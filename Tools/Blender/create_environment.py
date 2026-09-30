@@ -111,7 +111,7 @@ def mountain(chunk):
     for p in o.data.polygons:p.use_smooth=True
     return export(f'Mountain{chunk:02}','Mountain',{'chunk':chunk,'length':150,'width':400,'spacing':5,'seed':42})
 def ridge(variant):
-    clear();rng=random.Random(440+variant);mat=material('distant_rock',(.22,.25,.32));snow=snow_material();verts=[];faces=[];nx=120;nz=32
+    clear();rng=random.Random(440+variant);mat=material('distant_rock',(.22,.25,.32));snow=snow_material();verts=[];faces=[];nx=144;nz=48
     peaks=[];x=-780
     while x<850:
         x+=rng.uniform(120,240);peaks.append((x,rng.uniform(180,360),rng.uniform(70,155),rng.uniform(-.35,.35)))
@@ -126,17 +126,22 @@ def ridge(variant):
             shoulder=math.exp(-((z-115-20*math.sin(x*.009))/95)**2)*.26
             far=math.exp(-abs((z-545-30*math.sin(x*.007+2))/115)**1.8)*.62
             edge_fade=max(0,min(1,(850-abs(x))/140));base=-65+14*math.sin(x*.009+variant)+8*math.sin(z*.017+x*.006)
-            y=base+profile*max(main,far,shoulder)*edge_fade
-            # Small ledges and gullies break large planar faces without changing riding terrain.
-            y+=math.sin(x*.041+z*.021+variant)*9*main
+            # Branching spurs, shelves and gullies give nearby faces a craggy silhouette.
+            relief=(10*math.sin(x*.041+z*.021+variant)+7*math.sin(x*.077-z*.049)+5*math.sin(z*.089+x*.022))*main
+            y=base+(profile*max(main,far,shoulder)+relief)*edge_fade
             verts.append((x,y,z))
     for j in range(nz):
         for i in range(nx):a=j*(nx+1)+i;faces.append((a,a+nx+1,a+nx+2,a+1))
     o=mesh('LayeredAlpineRidge',verts,faces,mat);o.data.materials.append(snow)
+    # Open meshes have no volume from which recalc can infer an outside. Keep +Z up.
+    for polygon in o.data.polygons:
+        if polygon.normal.z<0:polygon.flip()
+    o.data.update()
     for p in o.data.polygons:
         p.use_smooth=False
-        if p.normal.z>.59 and p.center.z>85:p.material_index=1
-    return export(f'Ridge{variant}','EnvironmentDistant',{'seed':440+variant,'layeredProfiles':True,'peakCount':len(peaks),'buriedBase':True},variant==2)
+        gully=math.sin(p.center.x*.025+p.center.y*.017+variant)+.5*math.sin(p.center.x*.058-p.center.y*.031)
+        if p.center.z>45 and (p.normal.z>.50 or (p.normal.z>.22 and gully>.1)):p.material_index=1
+    return export(f'Ridge{variant}','EnvironmentDistant',{'seed':440+variant,'layeredProfiles':True,'peakCount':len(peaks),'buriedBase':True,'cragDetail':True,'upwardNormals':True,'snowShelvesAndGullies':True},variant==2)
 
 def valley():
     clear();vertices=[];faces=[];nx=60;nz=32

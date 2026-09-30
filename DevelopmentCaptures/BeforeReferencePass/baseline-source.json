@@ -1,0 +1,66 @@
+[
+  {
+    "path": "Assets/Settings/TrickConfig.asset",
+    "sha256": "b35b0d268773a856d46c49aa579d0008e4bfe8df7b12a621b6090e585e378d23"
+  },
+  {
+    "path": "Assets/Settings/WorldConfig.asset",
+    "sha256": "a733d7ec034f515018e686ad49828f4b64e3d03e82447e5cbc4df790e7f07730"
+  },
+  {
+    "path": "Assets/Settings/CameraConfig.asset",
+    "sha256": "be05dbd20fd87a587aaecd9d994f7ee7f1ba486a0d9af7e3fa64bd21c274ca0d"
+  },
+  {
+    "path": "Assets/Settings/CharacterVisualConfig.asset",
+    "sha256": "346ec7f6138a26be7d0029abcd8322fee92f760e4c18f4666c4b6df7a43b5748"
+  },
+  {
+    "path": "Assets/Settings/PowderFlowRenderer.asset",
+    "sha256": "0611ddb98a7cef65d07fbd16d8247f561158f1f3ab02f355842e820c119de825"
+  },
+  {
+    "path": "Assets/Settings/AlpinePost.asset",
+    "sha256": "e83859c85b50b175eda11cb2a688289b1f204840a85d18da0e11f83cd947f57d"
+  },
+  {
+    "path": "Assets/Settings/GraphicsConfig.asset",
+    "sha256": "b144ddcad6d18f6a2aad726b59ea2581f8b34e105141b21158cb2bdad0c98d64"
+  },
+  {
+    "path": "Assets/Settings/AssetCatalog.asset",
+    "sha256": "b3554ea4cbf92d743f8fad33b06828779a922751add58e17cb6ec21862a39383"
+  },
+  {
+    "path": "Assets/Settings/GameSystemConfig.asset",
+    "sha256": "3c1eba08d68ee2a401e3ec5cb92a14ddeacc2b645544aa964c7d256274c6a992"
+  },
+  {
+    "path": "Assets/Settings/SkiPhysicsConfig.asset",
+    "sha256": "7044e564e776c45f47782dcb4a4b9e7cfca9f1c1ae025843d712c9b2221c0869"
+  },
+  {
+    "path": "Assets/Settings/PowderFlowURP.asset",
+    "sha256": "4ba284fa2ef9af5329f7446d0673a8a5102cb1380b74b7ab9bb91ee9b393086d"
+  },
+  {
+    "path": "Assets/Scripts/Player/SkierPose.cs",
+    "sha256": "34752b141377f96f01a893b18d6b135c6585955f49acef02e6aadbb6e805c191"
+  },
+  {
+    "path": "Assets/Scripts/SkiPhysics/SkiPhysicsController.cs",
+    "sha256": "3daddec121ee9ced540ea09bd61e022012e173c54c5e84fb70720263d5f4f39c"
+  },
+  {
+    "path": "Assets/Scripts/SkiPhysics/AirControlSystem.cs",
+    "sha256": "cca0ae91bb011239436b417388f4f0dab4d5a3403589e1f4b7c170642fe101d2"
+  },
+  {
+    "path": "Assets/Scripts/Camera/SkiCameraController.cs",
+    "sha256": "2a100b1545b5088a6cb3e16bc37a68a36e80501ca6ec953f4569d3d0b74900b1"
+  },
+  {
+    "path": "Tools/Blender/create_environment.py",
+    "sha256": "33ee83200a4b17ef33286240383877fed63401710e3ef2f753e0d61bc882018f"
+  }
+]

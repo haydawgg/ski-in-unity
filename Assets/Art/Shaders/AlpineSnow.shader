@@ -3,7 +3,7 @@ Shader "PowderFlow/Alpine Snow"
  Properties
  {
   _BaseColor("Snow tint",Color)=(.82,.88,.95,1) _RockColor("Rock",Color)=(.16,.19,.25,1)
-  _RippleStrength("Wind normal strength",Range(0,.3))=.05 _RippleScale("Wind scale",Float)=3
+  _RippleStrength("Wind normal strength",Range(0,.3))=.022 _RippleScale("Wind scale",Float)=1.8
   _Variation("Snow variation",Range(0,.2))=.065 _Glitter("Sparkle",Range(0,.5))=.16
   _DetailDistance("Detail fade distance",Float)=80 _Wrap("Wrap light",Range(0,.5))=.16
   _RimStrength("Snow rim",Range(0,.2))=.055 _SlopeBlend("Slope rock blend",Range(0,1))=1 _Cull("Cull",Float)=2
@@ -46,15 +46,15 @@ Shader "PowderFlow/Alpine Snow"
     #endif
     float3 n=normalize(i.normal);float3 view=normalize(_WorldSpaceCameraPos-i.world);
     float distance=length(_WorldSpaceCameraPos-i.world);float detail=1-smoothstep(_DetailDistance*.25,_DetailDistance,distance);
-    float2 p=i.world.xz*_RippleScale;float warp=(noise21(i.world.xz*.25)-.5)*1.8;
+    float2 p=i.world.xz*_RippleScale;float windNoise=noise21(i.world.xz*.25);float warp=(windNoise-.5)*4;
     float a=dot(p,float2(.75,1.55))+warp,b=dot(p,float2(-1.8,2.4))-warp*.6;
-    float ripple=(sin(a)+sin(b)*.32)/1.32;
+    float ripple=(sin(a)+sin(b)*.32)/1.32*(.35+windNoise*.65);
     float2 slope=float2(.75,1.55)*cos(a)+float2(-1.8,2.4)*cos(b)*.12;
     float3 perturb=float3(-slope.x,0,-slope.y);perturb-=n*dot(n,perturb);
-    n=normalize(n+perturb*_RippleStrength*detail);
+    n=normalize(n+perturb*_RippleStrength*detail*(.35+windNoise*.65));
     float snow=lerp(1,smoothstep(.48,.77,i.normal.y),_SlopeBlend);
     float broad=noise21(i.world.xz*.12)*2-1;
-    half3 snowColor=_BaseColor.rgb*(1+_Variation*(broad*.65+ripple*.35*detail));
+    half3 snowColor=_BaseColor.rgb*(1+_Variation*(broad*.85+ripple*.15*detail));
     half3 rockColor=_RockColor.rgb*lerp(.76,1.20,noise21(i.world.xz*.24+i.world.y*.07));
     half3 albedo=lerp(rockColor,snowColor,snow);
     Light light=GetMainLight(TransformWorldToShadowCoord(i.world));float diffuse=saturate((dot(n,light.direction)+_Wrap)/(1+_Wrap));

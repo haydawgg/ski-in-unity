@@ -1,0 +1,90 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd7cda717a7766f2d8cfbafb85bfe1be, type: 3}
+  m_Name: GraphicsConfig
+  m_EditorClassIdentifier: PowderFlow::PowderFlow.GraphicsConfig
+  snowMaterial: {fileID: 2100000, guid: a768e6f87d21393c8894f7557a866033, type: 2}
+  propSnowMaterial: {fileID: 2100000, guid: 436814fea60cbcdb984a35320766b2b9, type: 2}
+  skyMaterial: {fileID: 2100000, guid: 31a1d2130a77c57c180f7d363c9514a6, type: 2}
+  particleMaterial: {fileID: 2100000, guid: 831255858a24ecddba081cf7ee58cbf3, type: 2}
+  powderMaterial: {fileID: 2100000, guid: 28a7628f60279fdd9b31ca7ac1ed4cfc, type: 2}
+  trackMaterial: {fileID: 2100000, guid: ee9bba0b95d164fa7bc4438fc9337bc7, type: 2}
+  postProfile: {fileID: 11400000, guid: 097a8668e5f85ceaf895afe53d6d2775, type: 2}
+  sunsetTop: {r: 0.16, g: 0.2, b: 0.36, a: 1}
+  sunsetHorizon: {r: 0.76, g: 0.49, b: 0.56, a: 1}
+  sunsetAmbient: {r: 0.34, g: 0.38, b: 0.51, a: 1}
+  sunsetLight: {r: 1, g: 0.79, b: 0.65, a: 1}
+  dayTop: {r: 0.035, g: 0.21, b: 0.49, a: 1}
+  dayHorizon: {r: 0.58, g: 0.76, b: 0.91, a: 1}
+  dayAmbient: {r: 0.44, g: 0.52, b: 0.64, a: 1}
+  dayLight: {r: 1, g: 0.98, b: 0.94, a: 1}
+  sunsetElevation: 13
+  dayElevation: 42
+  sunAzimuth: 160
+  sunIntensity: 1.25
+  fogDensity: 0.00065
+  shadowDistance: 150
+  trackSpacing: 0.18
+  trackWidth: 0.11
+  trackLift: 0.008
+  trackLifetime: 100
+  trackSamples: 1100
+  maxParticles: 1000
+  sprayRate: 50
+  sprayLift: 1.6
+  landingBurst: 80
+  crashBurst: 180
+  trackUpdateInterval: 0.025
+  trackMaximumGap: 2.5
+  trackMaximumInterval: 0.2
+  powderTrackWidth: 1.5
+  powderTrackDepth: 1.35
+  grooveColor: {r: 0.28, g: 0.36, b: 0.48, a: 0.4}
+  grooveRidgeColor: {r: 0.85, g: 0.92, b: 1, a: 0.18}
+  grooveSoftness: 0.22
+  powderSprayMultiplier: 2.2
+  brakeCloudRate: 22
+  railShavingRate: 18
+  particleSoftDistance: 0.3
+  flakeSize: 0.07
+  puffSize: 0.42
+  puffOpacity: 0.25
+  contactAccent: 14
+  sunsetFog: {r: 0.49, g: 0.51, b: 0.66, a: 1}
+  dayFog: {r: 0.58, g: 0.73, b: 0.86, a: 1}
+  sunsetCloud: {r: 0.73, g: 0.66, b: 0.77, a: 1}
+  dayCloud: {r: 0.94, g: 0.96, b: 0.99, a: 1}
+  daySunIntensity: 1.7
+  dayFogDensity: 0.00055
+  cloudScale: 2.8
+  cloudCoverage: 0.48
+  cloudSoftness: 0.22
+  sunRadius: 0.55
+  snowTint: {r: 0.82, g: 0.88, b: 0.95, a: 1}
+  rockTint: {r: 0.16, g: 0.19, b: 0.25, a: 1}
+  rippleStrength: 0.05
+  rippleScale: 3
+  snowVariation: 0.065
+  glitter: 0.16
+  detailDistance: 80
+  lightWrap: 0.16
+  rimStrength: 0.055
+  exposure: 0.1
+  contrast: 5
+  saturation: -4
+  bloomIntensity: 0.28
+  bloomThreshold: 1.1
+  vignetteIntensity: 0.1
+  shadowDepthBias: 0.6
+  shadowNormalBias: 0.35
+  ambientOcclusion: 0.38
+  shadowResolution: 4096

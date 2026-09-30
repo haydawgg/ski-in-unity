@@ -1,0 +1,10 @@
+ParkCruise Desktop720: player viewport=(0.50, 0.46, 9.90), camera=(0.01, 275.32, 361.72), horizon roll=0.00, grounded=True, fov=76.15
+SlowCarve Desktop720: player viewport=(0.50, 0.46, 7.67), camera=(9.99, 268.62, 390.67), horizon roll=0.00, grounded=True, fov=74.76
+RailEntry Desktop720: player viewport=(0.50, 0.48, 7.89), camera=(-17.32, 310.63, 202.62), horizon roll=0.00, grounded=False, fov=75.29
+BigAir Desktop720: player viewport=(0.50, 0.49, 10.58), camera=(7.91, 167.15, 851.93), horizon roll=0.00, grounded=False, fov=77.50
+Bail Desktop720: player viewport=(0.48, 0.43, 9.33), camera=(8.96, 268.67, 389.06), horizon roll=0.00, grounded=False, fov=74.67
+ParkCruise Desktop1080: player viewport=(0.50, 0.46, 9.93), camera=(0.01, 275.28, 361.87), horizon roll=0.00, grounded=True, fov=77.39
+SlowCarve Desktop1080: player viewport=(0.50, 0.46, 7.63), camera=(9.99, 268.63, 390.66), horizon roll=0.00, grounded=True, fov=75.01
+RailEntry Desktop1080: player viewport=(0.50, 0.47, 7.78), camera=(-17.32, 310.60, 202.73), horizon roll=0.00, grounded=False, fov=75.34
+BigAir Desktop1080: player viewport=(0.50, 0.49, 10.63), camera=(7.91, 167.10, 852.09), horizon roll=0.00, grounded=False, fov=77.52
+Bail Desktop1080: player viewport=(0.49, 0.47, 9.46), camera=(8.80, 268.43, 388.90), horizon roll=0.00, grounded=False, fov=74.68

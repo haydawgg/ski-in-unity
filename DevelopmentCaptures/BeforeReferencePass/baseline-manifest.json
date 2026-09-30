@@ -1,0 +1,2756 @@
+{
+  "seed": 42,
+  "assets": [
+    {
+      "name": "Mountain00",
+      "type": "Mountain",
+      "generator": "Tools/Blender/build_all_assets.py",
+      "parameters": {
+        "chunk": 0,
+        "length": 150,
+        "width": 400,
+        "spacing": 5,
+        "seed": 42
+      },
+      "blenderVersion": "5.2.2 LTS",
+      "fbxPath": "Assets/Art/Generated/Mountain/Mountain00.fbx",
+      "previewPath": "",
+      "triangleCount": 4800,
+      "bounds": [
+        [
+          -200.0,
+          -150.0,
+          319.68701171875
+        ],
+        [
+          200.0,
+          0.0,
+          451.8458557128906
+        ]
+      ],
+      "lodCount": 1,
+      "collisionAsset": "Assets/Art/Generated/Mountain/Mountain00.fbx",
+      "timestamp": "2026-09-29T22:22:29.202405+00:00"
+    },
+    {
+      "name": "Mountain01",
+      "type": "Mountain",
+      "generator": "Tools/Blender/build_all_assets.py",
+      "parameters": {
+        "chunk": 1,
+        "length": 150,
+        "width": 400,
+        "spacing": 5,
+        "seed": 42
+      },
+      "blenderVersion": "5.2.2 LTS",
+      "fbxPath": "Assets/Art/Generated/Mountain/Mountain01.fbx",
+      "previewPath": "",
+      "triangleCount": 4800,
+      "bounds": [
+        [
+          -200.0,
+          -300.0,
+          285.7560119628906
+        ],
+        [
+          200.0,
+          -150.0,
+          421.1332702636719
+        ]
+      ],
+      "lodCount": 1,
+      "collisionAsset": "Assets/Art/Generated/Mountain/Mountain01.fbx",
+      "timestamp": "2026-09-29T22:22:29.232888+00:00"
+    },
+    {
+      "name": "Mountain02",
+      "type": "Mountain",
+      "generator": "Tools/Blender/build_all_assets.py",
+      "parameters": {
+        "chunk": 2,
+        "length": 150,
+        "width": 400,
+        "spacing": 5,
+        "seed": 42
+      },
+      "blenderVersion": "5.2.2 LTS",
+      "fbxPath": "Assets/Art/Generated/Mountain/Mountain02.fbx",
+      "previewPath": "",
+      "triangleCount": 4800,
+      "bounds": [
+        [
+          -200.0,
+          -450.0,
+          249.8564453125
+        ],
+        [
+          200.0,
+          -300.0,
+          383.52935791015625
+        ]
+      ],
+      "lodCount": 1,
+      "collisionAsset": "Assets/Art/Generated/Mountain/Mountain02.fbx",
+      "timestamp": "2026-09-29T22:22:29.263823+00:00"
+    },
+    {
+      "name": "Mountain03",
+      "type": "Mountain",
+      "generator": "Tools/Blender/build_all_assets.py",
+      "parameters": {
+        "chunk": 3,
+        "length": 150,
+        "width": 400,
+        "spacing": 5,
+        "seed": 42
+      },
+      "blenderVersion": "5.2.2 LTS",
+      "fbxPath": "Assets/Art/Generated/Mountain/Mountain03.fbx",
+      "previewPath": "",
+      "triangleCount": 4800,
+      "bounds": [
+        [
+          -200.0,
+          -600.0,
+          216.44491577148438
+        ],
+        [
+          200.0,
+          -450.0,
+          354.1981506347656
+        ]
+      ],
+      "lodCount": 1,
+      "collisionAsset": "Assets/Art/Generated/Mountain/Mountain03.fbx",
+      "timestamp": "2026-09-29T22:22:29.294082+00:00"
+    },
+    {
+      "name": "Mountain04",
+      "type": "Mountain",
+      "generator": "Tools/Blender/build_all_assets.py",
+      "parameters": {
+        "chunk": 4,
+        "length": 150,
+        "width": 400,
+        "spacing": 5,
+        "seed": 42
+      },
+      "blenderVersion": "5.2.2 LTS",
+      "fbxPath": "Assets/Art/Generated/Mountain/Mountain04.fbx",
+      "previewPath": "",
+      "triangleCount": 4800,
+      "bounds": [
+        [
+          -200.0,
+          -750.0,
+          182.290771484375
+        ],
+        [
+          200.0,
+          -600.0,
+          315.5558776855469
+        ]
+      ],
+      "lodCount": 1,
+      "collisionAsset": "Assets/Art/Generated/Mountain/Mountain04.fbx",
+      "timestamp": "2026-09-29T22:22:29.324949+00:00"
+    },
+    {
+      "name": "Mountain05",
+      "type": "Mountain",
+      "generator": "Tools/Blender/build_all_assets.py",
+      "parameters": {
+        "chunk": 5,
+        "length": 150,
+        "width": 400,
+        "spacing": 5,
+        "seed": 42
+      },
+      "blenderVersion": "5.2.2 LTS",
+      "fbxPath": "Assets/Art/Generated/Mountain/Mountain05.fbx",
+      "previewPath": "",
+      "triangleCount": 4800,
+      "bounds": [
+        [
+          -200.0,
+          -900.0,
+          148.46917724609375
+        ],
+        [
+          200.0,
+          -750.0,
+          278.5916748046875
+        ]
+      ],
+      "lodCount": 1,
+      "collisionAsset": "Assets/Art/Generated/Mountain/Mountain05.fbx",
+      "timestamp": "2026-09-29T22:22:29.355324+00:00"
+    },
+    {
+      "name": "Mountain06",
+      "type": "Mountain",
+      "generator": "Tools/Blender/build_all_assets.py",
+      "parameters": {
+        "chunk": 6,
+        "length": 150,
+        "width": 400,
+        "spacing": 5,
+        "seed": 42
+      },
+      "blenderVersion": "5.2.2 LTS",
+      "fbxPath": "Assets/Art/Generated/Mountain/Mountain06.fbx",
+      "previewPath": "",
+      "triangleCount": 4800,
+      "bounds": [
+        [
+          -200.0,
+          -1050.0,
+          112.61376190185547
+        ],
+        [
+          200.0,
+          -900.0,
+          243.17591857910156
+        ]
+      ],
+      "lodCount": 1,
+      "collisionAsset": "Assets/Art/Generated/Mountain/Mountain06.fbx",
+      "timestamp": "2026-09-29T22:22:29.385896+00:00"
+    },
+    {
+      "name": "Mountain07",
+      "type": "Mountain",
+      "generator": "Tools/Blender/build_all_assets.py",
+      "parameters": {
+        "chunk": 7,
+        "length": 150,
+        "width": 400,
+        "spacing": 5,
+        "seed": 42
+      },
+      "blenderVersion": "5.2.2 LTS",
+      "fbxPath": "Assets/Art/Generated/Mountain/Mountain07.fbx",
+      "previewPath": "",
+      "triangleCount": 4800,
+      "bounds": [
+        [
+          -200.0,
+          -1200.0,
+          79.6297378540039
+        ],
+        [
+          200.0,
+          -1050.0,
+          208.76602172851562
+        ]
+      ],
+      "lodCount": 1,
+      "collisionAsset": "Assets/Art/Generated/Mountain/Mountain07.fbx",
+      "timestamp": "2026-09-29T22:22:29.416517+00:00"
+    },
+    {
+      "name": "Mountain08",
+      "type": "Mountain",
+      "generator": "Tools/Blender/build_all_assets.py",
+      "parameters": {
+        "chunk": 8,
+        "length": 150,
+        "width": 400,
+        "spacing": 5,
+        "seed": 42
+      },
+      "blenderVersion": "5.2.2 LTS",
+      "fbxPath": "Assets/Art/Generated/Mountain/Mountain08.fbx",
+      "previewPath": "",
+      "triangleCount": 4800,
+      "bounds": [
+        [
+          -200.0,
+          -1350.0,
+          43.815948486328125
+        ],
+        [
+          200.0,
+          -1200.0,
+          174.62306213378906
+        ]
+      ],
+      "lodCount": 1,
+      "collisionAsset": "Assets/Art/Generated/Mountain/Mountain08.fbx",
+      "timestamp": "2026-09-29T22:22:29.447274+00:00"
+    },
+    {
+      "name": "Mountain09",
+      "type": "Mountain",
+      "generator": "Tools/Blender/build_all_assets.py",
+      "parameters": {
+        "chunk": 9,
+        "length": 150,
+        "width": 400,
+        "spacing": 5,
+        "seed": 42
+      },
+      "blenderVersion": "5.2.2 LTS",
+      "fbxPath": "Assets/Art/Generated/Mountain/Mountain09.fbx",
+      "previewPath": "",
+      "triangleCount": 4800,
+      "bounds": [
+        [
+          -200.0,
+          -1500.0,
+          10.271607398986816
+        ],
+        [
+          200.0,
+          -1350.0,
+          138.44566345214844
+        ]
+      ],
+      "lodCount": 1,
+      "collisionAsset": "Assets/Art/Generated/Mountain/Mountain09.fbx",
+      "timestamp": "2026-09-29T22:22:29.477560+00:00"
+    },
+    {
+      "name": "Skier",
+      "type": "Character",
+      "generator": "Tools/Blender/build_all_assets.py",
+      "parameters": {
+        "seed": 42,
+        "heightMeters": 1.85,
+        "skiLength": 1.7,
+        "sourcePoses": 17,
+        "artRevision": "MotionQuality",
+        "jointWeights": "shoulder-hip-elbow-knee",
+        "foundationActions": [
+          "Ski_Neutral",
+          "Ski_Crouch",
+          "Ski_Tuck",
+          "Ski_Carve_Left",
+          "Ski_Carve_Right",
+          "Ski_Pop",
+          "Ski_Airborne",
+          "Ski_Land",
+          "Ski_Rail",
+          "Ski_Bail_Start"
+        ],
+        "exportAnimations": true,
+        "continuousGarments": true,
+        "skinnedRenderers": 5
+      },
+      "blenderVersion": "5.2.2 LTS",
+      "fbxPath": "Assets/Art/Generated/Character/Skier.fbx",
+      "previewPath": "Assets/Art/Generated/Character/Skier.png",
+      "triangleCount": 10846,
+      "bounds": [
+        [
+          -0.4519999623298645,
+          -0.8500000238418579,
+          -1.2000000476837158
+        ],
+        [
+          0.4519999623298645,
+          0.8500000238418579,
+          1.065000057220459
+        ]
+      ],
+      "lodCount": 1,
+      "collisionAsset": "",
+      "timestamp": "2026-09-30T18:59:59.146638+00:00"
+    },
+    {
+      "name": "Pine0",
+      "type": "Trees",
+      "generator": "Tools/Blender/build_all_assets.py",
+      "parameters": {
+        "seed": 42,
+        "height": 5,
+        "lodCount": 3,
+        "lodTriangles": [
+          3650,
+          2326,
+          1166
+        ],
+        "asymmetricWhorls": true
+      },
+      "blenderVersion": "5.2.2 LTS",
+      "fbxPath": "Assets/Art/Generated/Trees/Pine0.fbx",
+      "previewPath": "",
+      "triangleCount": 7142,
+      "bounds": [
+        [
+          -1.3737057447433472,
+          -1.3590279817581177,
+          -0.002226591110229492
+        ],
+        [
+          1.3247501850128174,
+          1.063314437866211,
+          5.099999904632568
+        ]
+      ],
+      "lodCount": 3,
+      "collisionAsset": "Assets/Art/Generated/Trees/Pine0.fbx",
+      "timestamp": "2026-09-30T00:52:32.732927+00:00"
+    },
+    {
+      "name": "Pine1",
+      "type": "Trees",
+      "generator": "Tools/Blender/build_all_assets.py",
+      "parameters": {
+        "seed": 43,
+        "height": 8,
+        "lodCount": 3,
+        "lodTriangles": [
+          4354,
+          2774,
+          1390
+        ],
+        "asymmetricWhorls": true
+      },
+      "blenderVersion": "5.2.2 LTS",
+      "fbxPath": "Assets/Art/Generated/Trees/Pine1.fbx",
+      "previewPath": "",
+      "triangleCount": 8518,
+      "bounds": [
+        [
+          -2.0794637203216553,
+          -1.8915743827819824,
+          -0.0036094188690185547
+        ],
+        [
+          2.0683741569519043,
+          1.931371808052063,
+          8.15999984741211
+        ]
+      ],
+      "lodCount": 3,
+      "collisionAsset": "Assets/Art/Generated/Trees/Pine1.fbx",
+      "timestamp": "2026-09-30T00:52:32.788408+00:00"
+    },
+    {
+      "name": "Pine2",
+      "type": "Trees",
+      "generator": "Tools/Blender/build_all_assets.py",
+      "parameters": {
+        "seed": 44,
+        "height": 12,
+        "lodCount": 3,
+        "lodTriangles": [
+          4794,
+          3054,
+          1530
+        ],
+        "asymmetricWhorls": true
+      },
+      "blenderVersion": "5.2.2 LTS",
+      "fbxPath": "Assets/Art/Generated/Trees/Pine2.fbx",
+      "previewPath": "Assets/Art/Generated/Trees/Pine2.png",
+      "triangleCount": 9378,
+      "bounds": [
+        [
+          -2.618248462677002,
+          -2.3714380264282227,
+          -0.0010862350463867188
+        ],
+        [
+          2.997603416442871,
+          2.8628523349761963,
+          12.239999771118164
+        ]
+      ],
+      "lodCount": 3,
+      "collisionAsset": "Assets/Art/Generated/Trees/Pine2.fbx",
+      "timestamp": "2026-09-30T00:52:33.373442+00:00"
+    },
+    {
+      "name": "Pine3",
+      "type": "Trees",
+      "generator": "Tools/Blender/build_all_assets.py",
+      "parameters": {
+        "seed": 45,
+        "height": 7,
+        "lodCount": 3,
+        "lodTriangles": [
+          3650,
+          2326,
+          1166
+        ],
+        "asymmetricWhorls": true
+      },
+      "blenderVersion": "5.2.2 LTS",
+      "fbxPath": "Assets/Art/Generated/Trees/Pine3.fbx",
+      "previewPath": "",
+      "triangleCount": 7142,
+      "bounds": [
+        [
+          -1.6883972883224487,
+          -1.8522449731826782,
+          -0.0014390945434570312
+        ],
+        [
+          1.4973485469818115,
+          1.7583441734313965,
+          7.139999866485596
+        ]
+      ],
+      "lodCount": 3,
+      "collisionAsset": "Assets/Art/Generated/Trees/Pine3.fbx",
+      "timestamp": "2026-09-30T00:52:33.428919+00:00"
+    },
+    {
+      "name": "Rock0",
+      "type": "Rocks",
+      "generator": "Tools/Blender/build_all_assets.py",
+      "parameters": {
+        "seed": 420,
+        "snowLedges": true
+      },
+      "blenderVersion": "5.2.2 LTS",
+      "fbxPath": "Assets/Art/Generated/Rocks/Rock0.fbx",
+      "previewPath": "Assets/Art/Generated/Rocks/Rock0.png",
+      "triangleCount": 100,
+      "bounds": [
+        [
+          -1.1888208389282227,
+          -1.0500000715255737,
+          -0.19999998807907104
+        ],
+        [
+          1.188820719718933,
+          1.0499999523162842,
+          1.2999999523162842
+        ]
+      ],
+      "lodCount": 1,
+      "collisionAsset": "Assets/Art/Generated/Rocks/Rock0.fbx",
+      "timestamp": "2026-09-30T00:52:33.913841+00:00"
+    },
+    {
+      "name": "Rock1",
+      "type": "Rocks",
+      "generator": "Tools/Blender/build_all_assets.py",
+      "parameters": {
+        "seed": 421,
+        "snowLedges": true
+      },
+      "blenderVersion": "5.2.2 LTS",
+      "fbxPath": "Assets/Art/Generated/Rocks/Rock1.fbx",
+      "previewPath": "",
+      "triangleCount": 100,
+      "bounds": [
+        [
+          -1.3219687938690186,
+          -1.1200001239776611,
+          -0.30000001192092896
+        ],
+        [
+          1.321968674659729,
+          1.1200000047683716,
+          1.4000000953674316
+        ]
+      ],
+      "lodCount": 1,
+      "collisionAsset": "Assets/Art/Generated/Rocks/Rock1.fbx",
+      "timestamp": "2026-09-30T00:52:33.921790+00:00"
+    },
+    {
+      "name": "Rock2",
+      "type": "Rocks",
+      "generator": "Tools/Blender/build_all_assets.py",
+      "parameters": {
+        "seed": 422,
+        "snowLedges": true
+      },
+      "blenderVersion": "5.2.2 LTS",
+      "fbxPath": "Assets/Art/Generated/Rocks/Rock2.fbx",
+      "previewPath": "",
+      "triangleCount": 100,
+      "bounds": [
+        [
+          -1.4551167488098145,
+          -1.1900001764297485,
+          -0.3999999761581421
+        ],
+        [
+          1.455116629600525,
+          1.190000057220459,
+          1.5
+        ]
+      ],
+      "lodCount": 1,
+      "collisionAsset": "Assets/Art/Generated/Rocks/Rock2.fbx",
+      "timestamp": "2026-09-30T00:52:33.928165+00:00"
+    },
+    {
+      "name": "Rock3",
+      "type": "Rocks",
+      "generator": "Tools/Blender/build_all_assets.py",
+      "parameters": {
+        "seed": 423,
+        "snowLedges": true
+      },
+      "blenderVersion": "5.2.2 LTS",
+      "fbxPath": "Assets/Art/Generated/Rocks/Rock3.fbx",
+      "previewPath": "",
+      "triangleCount": 100,
+      "bounds": [
+        [
+          -1.5882647037506104,
+          -1.2600001096725464,
+          -0.4999999403953552
+        ],
+        [
+          1.5882644653320312,
+          1.2599999904632568,
+          1.5999999046325684
+        ]
+      ],
+      "lodCount": 1,
+      "collisionAsset": "Assets/Art/Generated/Rocks/Rock3.fbx",
+      "timestamp": "2026-09-30T00:52:33.934363+00:00"
+    },
+    {
+      "name": "Rock4",
+      "type": "Rocks",
+      "generator": "Tools/Blender/build_all_assets.py",
+      "parameters": {
+        "seed": 424,
+        "snowLedges": true
+      },
+      "blenderVersion": "5.2.2 LTS",
+      "fbxPath": "Assets/Art/Generated/Rocks/Rock4.fbx",
+      "previewPath": "",
+      "triangleCount": 100,
+      "bounds": [
+        [
+          -1.7214126586914062,
+          -1.3300001621246338,
+          -0.5999999642372131
+        ],
+        [
+          1.7214124202728271,
+          1.3300000429153442,
+          1.7000000476837158
+        ]
+      ],
+      "lodCount": 1,
+      "collisionAsset": "Assets/Art/Generated/Rocks/Rock4.fbx",
+      "timestamp": "2026-09-30T00:52:33.940660+00:00"
+    },
+    {
+      "name": "Rock5",
+      "type": "Rocks",
+      "generator": "Tools/Blender/build_all_assets.py",
+      "parameters": {
+        "seed": 425,
+        "snowLedges": true
+      },
+      "blenderVersion": "5.2.2 LTS",
+      "fbxPath": "Assets/Art/Generated/Rocks/Rock5.fbx",
+      "previewPath": "",
+      "triangleCount": 100,
+      "bounds": [
+        [
+          -1.8545606136322021,
+          -1.4000000953674316,
+          -0.699999988079071
+        ],
+        [
+          1.854560375213623,
+          1.399999976158142,
+          1.7999999523162842
+        ]
+      ],
+      "lodCount": 1,
+      "collisionAsset": "Assets/Art/Generated/Rocks/Rock5.fbx",
+      "timestamp": "2026-09-30T00:52:33.947110+00:00"
+    },
+    {
+      "name": "Shrub0",
+      "type": "EnvironmentAccent",
+      "generator": "Tools/Blender/build_all_assets.py",
+      "parameters": {
+        "seed": 620,
+        "lodCount": 3,
+        "lodTriangles": [
+          384,
+          240,
+          168
+        ],
+        "collision": false
+      },
+      "blenderVersion": "5.2.2 LTS",
+      "fbxPath": "Assets/Art/Generated/EnvironmentAccent/Shrub0.fbx",
+      "previewPath": "Assets/Art/Generated/EnvironmentAccent/Shrub0.png",
+      "triangleCount": 792,
+      "bounds": [
+        [
+          -0.9237001538276672,
+          -0.6990101337432861,
+          0.020000003278255463
+        ],
+        [
+          0.5970067381858826,
+          0.4864186942577362,
+          0.9255459904670715
+        ]
+      ],
+      "lodCount": 3,
+      "collisionAsset": "",
+      "timestamp": "2026-09-30T00:52:34.426571+00:00"
+    },
+    {
+      "name": "Shrub1",
+      "type": "EnvironmentAccent",
+      "generator": "Tools/Blender/build_all_assets.py",
+      "parameters": {
+        "seed": 621,
+        "lodCount": 3,
+        "lodTriangles": [
+          512,
+          320,
+          224
+        ],
+        "collision": false
+      },
+      "blenderVersion": "5.2.2 LTS",
+      "fbxPath": "Assets/Art/Generated/EnvironmentAccent/Shrub1.fbx",
+      "previewPath": "",
+      "triangleCount": 1056,
+      "bounds": [
+        [
+          -0.7584958672523499,
+          -0.7123226523399353,
+          0.020000003278255463
+        ],
+        [
+          0.8454353213310242,
+          0.7257605195045471,
+          1.0554372072219849
+        ]
+      ],
+      "lodCount": 3,
+      "collisionAsset": "",
+      "timestamp": "2026-09-30T00:52:34.442106+00:00"
+    },
+    {
+      "name": "Ridge0",
+      "type": "EnvironmentDistant",
+      "generator": "Tools/Blender/build_all_assets.py",
+      "parameters": {
+        "seed": 440,
+        "layeredProfiles": true,
+        "peakCount": 10,
+        "buriedBase": true
+      },
+      "blenderVersion": "5.2.2 LTS",
+      "fbxPath": "Assets/Art/Generated/EnvironmentDistant/Ridge0.fbx",
+      "previewPath": "",
+      "triangleCount": 7680,
+      "bounds": [
+        [
+          -850.0,
+          -720.0,
+          -86.31982421875
+        ],
+        [
+          850.0,
+          0.0,
+          348.0863952636719
+        ]
+      ],
+      "lodCount": 1,
+      "collisionAsset": "",
+      "timestamp": "2026-09-30T00:52:34.494832+00:00"
+    },
+    {
+      "name": "Ridge1",
+      "type": "EnvironmentDistant",
+      "generator": "Tools/Blender/build_all_assets.py",
+      "parameters": {
+        "seed": 441,
+        "layeredProfiles": true,
+        "peakCount": 11,
+        "buriedBase": true
+      },
+      "blenderVersion": "5.2.2 LTS",
+      "fbxPath": "Assets/Art/Generated/EnvironmentDistant/Ridge1.fbx",
+      "previewPath": "",
+      "triangleCount": 7680,
+      "bounds": [
+        [
+          -850.0,
+          -720.0,
+          -78.03176879882812
+        ],
+        [
+          850.0,
+          0.0,
+          389.423583984375
+        ]
+      ],
+      "lodCount": 1,
+      "collisionAsset": "",
+      "timestamp": "2026-09-30T00:52:34.548513+00:00"
+    },
+    {
+      "name": "Ridge2",
+      "type": "EnvironmentDistant",
+      "generator": "Tools/Blender/build_all_assets.py",
+      "parameters": {
+        "seed": 442,
+        "layeredProfiles": true,
+        "peakCount": 10,
+        "buriedBase": true
+      },
+      "blenderVersion": "5.2.2 LTS",
+      "fbxPath": "Assets/Art/Generated/EnvironmentDistant/Ridge2.fbx",
+      "previewPath": "Assets/Art/Generated/EnvironmentDistant/Ridge2.png",
+      "triangleCount": 7680,
+      "bounds": [
+        [
+          -850.0,
+          -720.0,
+          -80.08829498291016
+        ],
+        [
+          850.0,
+          0.0,
+          378.6919860839844
+        ]
+      ],
+      "lodCount": 1,
+      "collisionAsset": "",
+      "timestamp": "2026-09-30T00:52:35.067414+00:00"
+    },
+    {
+      "name": "Ridge3",
+      "type": "EnvironmentDistant",
+      "generator": "Tools/Blender/build_all_assets.py",
+      "parameters": {
+        "seed": 443,
+        "layeredProfiles": true,
+        "peakCount": 10,
+        "buriedBase": true
+      },
+      "blenderVersion": "5.2.2 LTS",
+      "fbxPath": "Assets/Art/Generated/EnvironmentDistant/Ridge3.fbx",
+      "previewPath": "",
+      "triangleCount": 7680,
+      "bounds": [
+        [
+          -850.0,
+          -720.0,
+          -86.14570617675781
+        ],
+        [
+          850.0,
+          0.0,
+          392.6662902832031
+        ]
+      ],
+      "lodCount": 1,
+      "collisionAsset": "",
+      "timestamp": "2026-09-30T00:52:35.121798+00:00"
+    },
+    {
+      "name": "Ridge4",
+      "type": "EnvironmentDistant",
+      "generator": "Tools/Blender/build_all_assets.py",
+      "parameters": {
+        "seed": 444,
+        "layeredProfiles": true,
+        "peakCount": 9,
+        "buriedBase": true
+      },
+      "blenderVersion": "5.2.2 LTS",
+      "fbxPath": "Assets/Art/Generated/EnvironmentDistant/Ridge4.fbx",
+      "previewPath": "",
+      "triangleCount": 7680,
+      "bounds": [
+        [
+          -850.0,
+          -720.0,
+          -84.11439514160156
+        ],
+        [
+          850.0,
+          0.0,
+          354.3807067871094
+        ]
+      ],
+      "lodCount": 1,
+      "collisionAsset": "",
+      "timestamp": "2026-09-30T00:52:35.174628+00:00"
+    },
+    {
+      "name": "ValleyFloor",
+      "type": "EnvironmentDistant",
+      "generator": "Tools/Blender/build_all_assets.py",
+      "parameters": {
+        "seed": 42,
+        "collision": false,
+        "buriedRidgeTransition": true
+      },
+      "blenderVersion": "5.2.2 LTS",
+      "fbxPath": "Assets/Art/Generated/EnvironmentDistant/ValleyFloor.fbx",
+      "previewPath": "",
+      "triangleCount": 3840,
+      "bounds": [
+        [
+          -900.0,
+          -2780.0,
+          -9.950762748718262
+        ],
+        [
+          900.0,
+          -1500.0,
+          130.34910583496094
+        ]
+      ],
+      "lodCount": 1,
+      "collisionAsset": "",
+      "timestamp": "2026-09-30T00:52:35.200208+00:00"
+    },
+    {
+      "name": "Rail_flat",
+      "type": "Rails",
+      "generator": "Tools/Blender/build_all_assets.py",
+      "parameters": {
+        "length": 12,
+        "height": 1.2,
+        "tubeRadius": 0.07,
+        "seed": 42,
+        "connectedSupports": true,
+        "explicitCollision": true,
+        "frontPreview": true
+      },
+      "blenderVersion": "5.2.2 LTS",
+      "fbxPath": "Assets/Art/Generated/Rails/Rail_flat.fbx",
+      "previewPath": "",
+      "triangleCount": 1888,
+      "bounds": [
+        [
+          -0.42500001192092896,
+          -12.0,
+          -2.575000047683716
+        ],
+        [
+          0.42500001192092896,
+          0.0,
+          1.2735000848770142
+        ]
+      ],
+      "lodCount": 1,
+      "collisionAsset": "Assets/Art/Generated/Rails/Rail_flat.fbx",
+      "timestamp": "2026-09-30T02:00:48.797474+00:00",
+      "metadata": {
+        "railId": "Flat",
+        "width": 0.13,
+        "points": [
+          {
+            "x": 0,
+            "y": 1.2,
+            "z": 0
+          },
+          {
+            "x": 0,
+            "y": 1.2,
+            "z": 12
+          }
+        ]
+      }
+    },
+    {
+      "name": "Rail_down",
+      "type": "Rails",
+      "generator": "Tools/Blender/build_all_assets.py",
+      "parameters": {
+        "length": 12,
+        "height": 1.2,
+        "tubeRadius": 0.07,
+        "seed": 42,
+        "connectedSupports": true,
+        "explicitCollision": true,
+        "frontPreview": true
+      },
+      "blenderVersion": "5.2.2 LTS",
+      "fbxPath": "Assets/Art/Generated/Rails/Rail_down.fbx",
+      "previewPath": "",
+      "triangleCount": 1888,
+      "bounds": [
+        [
+          -0.42500001192092896,
+          -12.015365600585938,
+          -2.575000286102295
+        ],
+        [
+          0.42500001192092896,
+          0.015366077423095703,
+          1.268292784690857
+        ]
+      ],
+      "lodCount": 1,
+      "collisionAsset": "Assets/Art/Generated/Rails/Rail_down.fbx",
+      "timestamp": "2026-09-30T02:00:48.843304+00:00",
+      "metadata": {
+        "railId": "Down",
+        "width": 0.13,
+        "points": [
+          {
+            "x": 0,
+            "y": 1.2,
+            "z": 0
+          },
+          {
+            "x": 0,
+            "y": -1.5,
+            "z": 12
+          }
+        ]
+      }
+    },
+    {
+      "name": "Rail_kink",
+      "type": "Rails",
+      "generator": "Tools/Blender/build_all_assets.py",
+      "parameters": {
+        "length": 12,
+        "height": 1.2,
+        "tubeRadius": 0.07,
+        "seed": 42,
+        "connectedSupports": true,
+        "explicitCollision": true,
+        "frontPreview": true
+      },
+      "blenderVersion": "5.2.2 LTS",
+      "fbxPath": "Assets/Art/Generated/Rails/Rail_kink.fbx",
+      "previewPath": "Assets/Art/Generated/Rails/Rail_kink.png",
+      "triangleCount": 1976,
+      "bounds": [
+        [
+          -0.42500001192092896,
+          -12.019082069396973,
+          -2.575000047683716
+        ],
+        [
+          0.42500001192092896,
+          0.010383844375610352,
+          1.2692255973815918
+        ]
+      ],
+      "lodCount": 1,
+      "collisionAsset": "Assets/Art/Generated/Rails/Rail_kink.fbx",
+      "timestamp": "2026-09-30T02:00:49.359452+00:00",
+      "metadata": {
+        "railId": "Kink",
+        "width": 0.13,
+        "points": [
+          {
+            "x": 0,
+            "y": 1.2,
+            "z": 0
+          },
+          {
+            "x": 0,
+            "y": 0.3,
+            "z": 6
+          },
+          {
+            "x": 0,
+            "y": -1.4,
+            "z": 12
+          }
+        ]
+      }
+    },
+    {
+      "name": "Rail_rainbow",
+      "type": "Rails",
+      "generator": "Tools/Blender/build_all_assets.py",
+      "parameters": {
+        "length": 12,
+        "height": 1.2,
+        "tubeRadius": 0.07,
+        "seed": 42,
+        "connectedSupports": true,
+        "explicitCollision": true,
+        "frontPreview": true
+      },
+      "blenderVersion": "5.2.2 LTS",
+      "fbxPath": "Assets/Art/Generated/Rails/Rail_rainbow.fbx",
+      "previewPath": "",
+      "triangleCount": 3912,
+      "bounds": [
+        [
+          -0.42500001192092896,
+          -12.029769897460938,
+          -2.575000047683716
+        ],
+        [
+          0.42500001192092896,
+          0.02976977825164795,
+          3.069967031478882
+        ]
+      ],
+      "lodCount": 1,
+      "collisionAsset": "Assets/Art/Generated/Rails/Rail_rainbow.fbx",
+      "timestamp": "2026-09-30T02:00:49.498650+00:00",
+      "metadata": {
+        "railId": "Rainbow",
+        "width": 0.13,
+        "points": [
+          {
+            "x": 0,
+            "y": 1.2,
+            "z": 0.0
+          },
+          {
+            "x": 0,
+            "y": 1.4349471459960927,
+            "z": 0.5
+          },
+          {
+            "x": 0,
+            "y": 1.6658742811845373,
+            "z": 1.0
+          },
+          {
+            "x": 0,
+            "y": 1.8888301782571615,
+            "z": 1.5
+          },
+          {
+            "x": 0,
+            "y": 2.0999999999999996,
+            "z": 2.0
+          },
+          {
+            "x": 0,
+            "y": 2.295770572215697,
+            "z": 2.5
+          },
+          {
+            "x": 0,
+            "y": 2.4727922061357854,
+            "z": 3.0
+          },
+          {
+            "x": 0,
+            "y": 2.6280360125242233,
+            "z": 3.5
+          },
+          {
+            "x": 0,
+            "y": 2.7588457268119893,
+            "z": 4.0
+          },
+          {
+            "x": 0,
+            "y": 2.862983158520316,
+            "z": 4.5
+          },
+          {
+            "x": 0,
+            "y": 2.938666487320323,
+            "z": 5.0
+          },
+          {
+            "x": 0,
+            "y": 2.9846007504728584,
+            "z": 5.5
+          },
+          {
+            "x": 0,
+            "y": 3.0,
+            "z": 6.0
+          },
+          {
+            "x": 0,
+            "y": 2.9846007504728584,
+            "z": 6.5
+          },
+          {
+            "x": 0,
+            "y": 2.938666487320323,
+            "z": 7.0
+          },
+          {
+            "x": 0,
+            "y": 2.8629831585203163,
+            "z": 7.5
+          },
+          {
+            "x": 0,
+            "y": 2.7588457268119897,
+            "z": 8.0
+          },
+          {
+            "x": 0,
+            "y": 2.6280360125242233,
+            "z": 8.5
+          },
+          {
+            "x": 0,
+            "y": 2.472792206135786,
+            "z": 9.0
+          },
+          {
+            "x": 0,
+            "y": 2.2957705722156976,
+            "z": 9.5
+          },
+          {
+            "x": 0,
+            "y": 2.0999999999999996,
+            "z": 10.0
+          },
+          {
+            "x": 0,
+            "y": 1.888830178257162,
+            "z": 10.5
+          },
+          {
+            "x": 0,
+            "y": 1.6658742811845377,
+            "z": 11.0
+          },
+          {
+            "x": 0,
+            "y": 1.4349471459960936,
+            "z": 11.5
+          },
+          {
+            "x": 0,
+            "y": 1.2000000000000002,
+            "z": 12.0
+          }
+        ]
+      }
+    },
+    {
+      "name": "Rail_wide",
+      "type": "Rails",
+      "generator": "Tools/Blender/build_all_assets.py",
+      "parameters": {
+        "length": 12,
+        "height": 1.2,
+        "tubeRadius": 0.13,
+        "seed": 42,
+        "connectedSupports": true,
+        "explicitCollision": true,
+        "frontPreview": true
+      },
+      "blenderVersion": "5.2.2 LTS",
+      "fbxPath": "Assets/Art/Generated/Rails/Rail_wide.fbx",
+      "previewPath": "",
+      "triangleCount": 1888,
+      "bounds": [
+        [
+          -0.42500001192092896,
+          -12.0,
+          -2.575000047683716
+        ],
+        [
+          0.42500001192092896,
+          0.0,
+          1.3335001468658447
+        ]
+      ],
+      "lodCount": 1,
+      "collisionAsset": "Assets/Art/Generated/Rails/Rail_wide.fbx",
+      "timestamp": "2026-09-30T02:00:49.545542+00:00",
+      "metadata": {
+        "railId": "Wide",
+        "width": 0.13,
+        "points": [
+          {
+            "x": 0,
+            "y": 1.2,
+            "z": 0
+          },
+          {
+            "x": 0,
+            "y": 1.2,
+            "z": 12
+          }
+        ]
+      }
+    },
+    {
+      "name": "Box_flat",
+      "type": "Boxes",
+      "generator": "Tools/Blender/build_all_assets.py",
+      "parameters": {
+        "width": 0.65,
+        "length": 10,
+        "closedEnds": true,
+        "explicitCollision": true,
+        "frontPreview": true
+      },
+      "blenderVersion": "5.2.2 LTS",
+      "fbxPath": "Assets/Art/Generated/Boxes/Box_flat.fbx",
+      "previewPath": "",
+      "triangleCount": 3556,
+      "bounds": [
+        [
+          -0.3830000162124634,
+          -10.032999992370605,
+          -2.109999895095825
+        ],
+        [
+          0.3830000162124634,
+          0.032999999821186066,
+          0.8035000562667847
+        ]
+      ],
+      "lodCount": 1,
+      "collisionAsset": "Assets/Art/Generated/Boxes/Box_flat.fbx",
+      "timestamp": "2026-09-30T02:00:49.803202+00:00",
+      "metadata": {
+        "railId": "Flat Box",
+        "width": 0.65,
+        "points": [
+          {
+            "x": 0,
+            "y": 0.8,
+            "z": 0.0
+          },
+          {
+            "x": 0,
+            "y": 0.8,
+            "z": 0.5
+          },
+          {
+            "x": 0,
+            "y": 0.8,
+            "z": 1.0
+          },
+          {
+            "x": 0,
+            "y": 0.8,
+            "z": 1.5
+          },
+          {
+            "x": 0,
+            "y": 0.8,
+            "z": 2.0
+          },
+          {
+            "x": 0,
+            "y": 0.8,
+            "z": 2.5
+          },
+          {
+            "x": 0,
+            "y": 0.8,
+            "z": 3.0
+          },
+          {
+            "x": 0,
+            "y": 0.8,
+            "z": 3.5
+          },
+          {
+            "x": 0,
+            "y": 0.8,
+            "z": 4.0
+          },
+          {
+            "x": 0,
+            "y": 0.8,
+            "z": 4.5
+          },
+          {
+            "x": 0,
+            "y": 0.8,
+            "z": 5.0
+          },
+          {
+            "x": 0,
+            "y": 0.8,
+            "z": 5.5
+          },
+          {
+            "x": 0,
+            "y": 0.8,
+            "z": 6.0
+          },
+          {
+            "x": 0,
+            "y": 0.8,
+            "z": 6.5
+          },
+          {
+            "x": 0,
+            "y": 0.8,
+            "z": 7.0
+          },
+          {
+            "x": 0,
+            "y": 0.8,
+            "z": 7.5
+          },
+          {
+            "x": 0,
+            "y": 0.8,
+            "z": 8.0
+          },
+          {
+            "x": 0,
+            "y": 0.8,
+            "z": 8.5
+          },
+          {
+            "x": 0,
+            "y": 0.8,
+            "z": 9.0
+          },
+          {
+            "x": 0,
+            "y": 0.8,
+            "z": 9.5
+          },
+          {
+            "x": 0,
+            "y": 0.8,
+            "z": 10.0
+          }
+        ]
+      }
+    },
+    {
+      "name": "Box_down",
+      "type": "Boxes",
+      "generator": "Tools/Blender/build_all_assets.py",
+      "parameters": {
+        "width": 0.65,
+        "length": 10,
+        "closedEnds": true,
+        "explicitCollision": true,
+        "frontPreview": true
+      },
+      "blenderVersion": "5.2.2 LTS",
+      "fbxPath": "Assets/Art/Generated/Boxes/Box_down.fbx",
+      "previewPath": "",
+      "triangleCount": 3556,
+      "bounds": [
+        [
+          -0.3830000162124634,
+          -10.032999992370605,
+          -2.109999895095825
+        ],
+        [
+          0.3830000162124634,
+          0.032999999821186066,
+          0.800000011920929
+        ]
+      ],
+      "lodCount": 1,
+      "collisionAsset": "Assets/Art/Generated/Boxes/Box_down.fbx",
+      "timestamp": "2026-09-30T02:00:50.054163+00:00",
+      "metadata": {
+        "railId": "Down Box",
+        "width": 0.65,
+        "points": [
+          {
+            "x": 0,
+            "y": 0.8,
+            "z": 0.0
+          },
+          {
+            "x": 0,
+            "y": 0.685,
+            "z": 0.5
+          },
+          {
+            "x": 0,
+            "y": 0.5700000000000001,
+            "z": 1.0
+          },
+          {
+            "x": 0,
+            "y": 0.455,
+            "z": 1.5
+          },
+          {
+            "x": 0,
+            "y": 0.34,
+            "z": 2.0
+          },
+          {
+            "x": 0,
+            "y": 0.22499999999999998,
+            "z": 2.5
+          },
+          {
+            "x": 0,
+            "y": 0.10999999999999999,
+            "z": 3.0
+          },
+          {
+            "x": 0,
+            "y": -0.0050000000000000044,
+            "z": 3.5
+          },
+          {
+            "x": 0,
+            "y": -0.12,
+            "z": 4.0
+          },
+          {
+            "x": 0,
+            "y": -0.2350000000000001,
+            "z": 4.5
+          },
+          {
+            "x": 0,
+            "y": -0.3500000000000001,
+            "z": 5.0
+          },
+          {
+            "x": 0,
+            "y": -0.4650000000000001,
+            "z": 5.5
+          },
+          {
+            "x": 0,
+            "y": -0.5800000000000001,
+            "z": 6.0
+          },
+          {
+            "x": 0,
+            "y": -0.6950000000000001,
+            "z": 6.5
+          },
+          {
+            "x": 0,
+            "y": -0.81,
+            "z": 7.0
+          },
+          {
+            "x": 0,
+            "y": -0.925,
+            "z": 7.5
+          },
+          {
+            "x": 0,
+            "y": -1.04,
+            "z": 8.0
+          },
+          {
+            "x": 0,
+            "y": -1.155,
+            "z": 8.5
+          },
+          {
+            "x": 0,
+            "y": -1.2700000000000002,
+            "z": 9.0
+          },
+          {
+            "x": 0,
+            "y": -1.385,
+            "z": 9.5
+          },
+          {
+            "x": 0,
+            "y": -1.5000000000000002,
+            "z": 10.0
+          }
+        ]
+      }
+    },
+    {
+      "name": "Box_wide",
+      "type": "Boxes",
+      "generator": "Tools/Blender/build_all_assets.py",
+      "parameters": {
+        "width": 1.8,
+        "length": 10,
+        "closedEnds": true,
+        "explicitCollision": true,
+        "frontPreview": true
+      },
+      "blenderVersion": "5.2.2 LTS",
+      "fbxPath": "Assets/Art/Generated/Boxes/Box_wide.fbx",
+      "previewPath": "Assets/Art/Generated/Boxes/Box_wide.png",
+      "triangleCount": 3556,
+      "bounds": [
+        [
+          -0.9299807548522949,
+          -10.032999992370605,
+          -2.109999895095825
+        ],
+        [
+          0.9299807548522949,
+          0.032999999821186066,
+          0.8035000562667847
+        ]
+      ],
+      "lodCount": 1,
+      "collisionAsset": "Assets/Art/Generated/Boxes/Box_wide.fbx",
+      "timestamp": "2026-09-30T02:00:50.737187+00:00",
+      "metadata": {
+        "railId": "Wide Box",
+        "width": 1.8,
+        "points": [
+          {
+            "x": 0,
+            "y": 0.8,
+            "z": 0.0
+          },
+          {
+            "x": 0,
+            "y": 0.8,
+            "z": 0.5
+          },
+          {
+            "x": 0,
+            "y": 0.8,
+            "z": 1.0
+          },
+          {
+            "x": 0,
+            "y": 0.8,
+            "z": 1.5
+          },
+          {
+            "x": 0,
+            "y": 0.8,
+            "z": 2.0
+          },
+          {
+            "x": 0,
+            "y": 0.8,
+            "z": 2.5
+          },
+          {
+            "x": 0,
+            "y": 0.8,
+            "z": 3.0
+          },
+          {
+            "x": 0,
+            "y": 0.8,
+            "z": 3.5
+          },
+          {
+            "x": 0,
+            "y": 0.8,
+            "z": 4.0
+          },
+          {
+            "x": 0,
+            "y": 0.8,
+            "z": 4.5
+          },
+          {
+            "x": 0,
+            "y": 0.8,
+            "z": 5.0
+          },
+          {
+            "x": 0,
+            "y": 0.8,
+            "z": 5.5
+          },
+          {
+            "x": 0,
+            "y": 0.8,
+            "z": 6.0
+          },
+          {
+            "x": 0,
+            "y": 0.8,
+            "z": 6.5
+          },
+          {
+            "x": 0,
+            "y": 0.8,
+            "z": 7.0
+          },
+          {
+            "x": 0,
+            "y": 0.8,
+            "z": 7.5
+          },
+          {
+            "x": 0,
+            "y": 0.8,
+            "z": 8.0
+          },
+          {
+            "x": 0,
+            "y": 0.8,
+            "z": 8.5
+          },
+          {
+            "x": 0,
+            "y": 0.8,
+            "z": 9.0
+          },
+          {
+            "x": 0,
+            "y": 0.8,
+            "z": 9.5
+          },
+          {
+            "x": 0,
+            "y": 0.8,
+            "z": 10.0
+          }
+        ]
+      }
+    },
+    {
+      "name": "Box_narrow",
+      "type": "Boxes",
+      "generator": "Tools/Blender/build_all_assets.py",
+      "parameters": {
+        "width": 0.65,
+        "length": 10,
+        "closedEnds": true,
+        "explicitCollision": true,
+        "frontPreview": true
+      },
+      "blenderVersion": "5.2.2 LTS",
+      "fbxPath": "Assets/Art/Generated/Boxes/Box_narrow.fbx",
+      "previewPath": "",
+      "triangleCount": 3556,
+      "bounds": [
+        [
+          -0.3830000162124634,
+          -10.032999992370605,
+          -2.109999895095825
+        ],
+        [
+          0.3830000162124634,
+          0.032999999821186066,
+          0.8035000562667847
+        ]
+      ],
+      "lodCount": 1,
+      "collisionAsset": "Assets/Art/Generated/Boxes/Box_narrow.fbx",
+      "timestamp": "2026-09-30T02:00:51.009410+00:00",
+      "metadata": {
+        "railId": "Narrow Box",
+        "width": 0.65,
+        "points": [
+          {
+            "x": 0,
+            "y": 0.8,
+            "z": 0.0
+          },
+          {
+            "x": 0,
+            "y": 0.8,
+            "z": 0.5
+          },
+          {
+            "x": 0,
+            "y": 0.8,
+            "z": 1.0
+          },
+          {
+            "x": 0,
+            "y": 0.8,
+            "z": 1.5
+          },
+          {
+            "x": 0,
+            "y": 0.8,
+            "z": 2.0
+          },
+          {
+            "x": 0,
+            "y": 0.8,
+            "z": 2.5
+          },
+          {
+            "x": 0,
+            "y": 0.8,
+            "z": 3.0
+          },
+          {
+            "x": 0,
+            "y": 0.8,
+            "z": 3.5
+          },
+          {
+            "x": 0,
+            "y": 0.8,
+            "z": 4.0
+          },
+          {
+            "x": 0,
+            "y": 0.8,
+            "z": 4.5
+          },
+          {
+            "x": 0,
+            "y": 0.8,
+            "z": 5.0
+          },
+          {
+            "x": 0,
+            "y": 0.8,
+            "z": 5.5
+          },
+          {
+            "x": 0,
+            "y": 0.8,
+            "z": 6.0
+          },
+          {
+            "x": 0,
+            "y": 0.8,
+            "z": 6.5
+          },
+          {
+            "x": 0,
+            "y": 0.8,
+            "z": 7.0
+          },
+          {
+            "x": 0,
+            "y": 0.8,
+            "z": 7.5
+          },
+          {
+            "x": 0,
+            "y": 0.8,
+            "z": 8.0
+          },
+          {
+            "x": 0,
+            "y": 0.8,
+            "z": 8.5
+          },
+          {
+            "x": 0,
+            "y": 0.8,
+            "z": 9.0
+          },
+          {
+            "x": 0,
+            "y": 0.8,
+            "z": 9.5
+          },
+          {
+            "x": 0,
+            "y": 0.8,
+            "z": 10.0
+          }
+        ]
+      }
+    },
+    {
+      "name": "Box_kink",
+      "type": "Boxes",
+      "generator": "Tools/Blender/build_all_assets.py",
+      "parameters": {
+        "width": 0.65,
+        "length": 10,
+        "closedEnds": true,
+        "explicitCollision": true,
+        "frontPreview": true
+      },
+      "blenderVersion": "5.2.2 LTS",
+      "fbxPath": "Assets/Art/Generated/Boxes/Box_kink.fbx",
+      "previewPath": "",
+      "triangleCount": 3556,
+      "bounds": [
+        [
+          -0.3830000162124634,
+          -10.032999992370605,
+          -2.109999895095825
+        ],
+        [
+          0.3830000162124634,
+          0.032999999821186066,
+          0.8035000562667847
+        ]
+      ],
+      "lodCount": 1,
+      "collisionAsset": "Assets/Art/Generated/Boxes/Box_kink.fbx",
+      "timestamp": "2026-09-30T02:00:51.272484+00:00",
+      "metadata": {
+        "railId": "Kink Box",
+        "width": 0.65,
+        "points": [
+          {
+            "x": 0,
+            "y": 0.8,
+            "z": 0.0
+          },
+          {
+            "x": 0,
+            "y": 0.8,
+            "z": 0.5
+          },
+          {
+            "x": 0,
+            "y": 0.8,
+            "z": 1.0
+          },
+          {
+            "x": 0,
+            "y": 0.8,
+            "z": 1.5
+          },
+          {
+            "x": 0,
+            "y": 0.8,
+            "z": 2.0
+          },
+          {
+            "x": 0,
+            "y": 0.8,
+            "z": 2.5
+          },
+          {
+            "x": 0,
+            "y": 0.8,
+            "z": 3.0
+          },
+          {
+            "x": 0,
+            "y": 0.8,
+            "z": 3.5
+          },
+          {
+            "x": 0,
+            "y": 0.8,
+            "z": 4.0
+          },
+          {
+            "x": 0,
+            "y": 0.8,
+            "z": 4.5
+          },
+          {
+            "x": 0,
+            "y": 0.8,
+            "z": 5.0
+          },
+          {
+            "x": 0,
+            "y": 0.65,
+            "z": 5.5
+          },
+          {
+            "x": 0,
+            "y": 0.5,
+            "z": 6.0
+          },
+          {
+            "x": 0,
+            "y": 0.3500000000000001,
+            "z": 6.5
+          },
+          {
+            "x": 0,
+            "y": 0.20000000000000007,
+            "z": 7.0
+          },
+          {
+            "x": 0,
+            "y": 0.050000000000000044,
+            "z": 7.5
+          },
+          {
+            "x": 0,
+            "y": -0.09999999999999987,
+            "z": 8.0
+          },
+          {
+            "x": 0,
+            "y": -0.25,
+            "z": 8.5
+          },
+          {
+            "x": 0,
+            "y": -0.3999999999999999,
+            "z": 9.0
+          },
+          {
+            "x": 0,
+            "y": -0.5499999999999998,
+            "z": 9.5
+          },
+          {
+            "x": 0,
+            "y": -0.7,
+            "z": 10.0
+          }
+        ]
+      }
+    },
+    {
+      "name": "Hut",
+      "type": "Environment",
+      "generator": "Tools/Blender/build_all_assets.py",
+      "parameters": {
+        "seed": 42,
+        "parkPolish": true,
+        "explicitCollision": true,
+        "frontPreview": true
+      },
+      "blenderVersion": "5.2.2 LTS",
+      "fbxPath": "Assets/Art/Generated/Environment/Hut.fbx",
+      "previewPath": "Assets/Art/Generated/Environment/Hut.png",
+      "triangleCount": 3052,
+      "bounds": [
+        [
+          -4.026963233947754,
+          -3.1000001430511475,
+          -0.019999980926513672
+        ],
+        [
+          4.026963233947754,
+          3.950000047683716,
+          4.595000267028809
+        ]
+      ],
+      "lodCount": 1,
+      "collisionAsset": "Assets/Art/Generated/Environment/Hut.fbx",
+      "timestamp": "2026-09-30T02:32:45.222904+00:00"
+    },
+    {
+      "name": "LiftTower",
+      "type": "Environment",
+      "generator": "Tools/Blender/build_all_assets.py",
+      "parameters": {
+        "seed": 42,
+        "parkPolish": true,
+        "explicitCollision": true,
+        "frontPreview": true
+      },
+      "blenderVersion": "5.2.2 LTS",
+      "fbxPath": "Assets/Art/Generated/Environment/LiftTower.fbx",
+      "previewPath": "Assets/Art/Generated/Environment/LiftTower.png",
+      "triangleCount": 1448,
+      "bounds": [
+        [
+          -4.0,
+          -0.8200000524520874,
+          -0.03000020980834961
+        ],
+        [
+          4.0,
+          0.8200000524520874,
+          14.670000076293945
+        ]
+      ],
+      "lodCount": 1,
+      "collisionAsset": "Assets/Art/Generated/Environment/LiftTower.fbx",
+      "timestamp": "2026-09-30T02:00:52.946467+00:00"
+    },
+    {
+      "name": "Floodlight",
+      "type": "Environment",
+      "generator": "Tools/Blender/build_all_assets.py",
+      "parameters": {
+        "seed": 42,
+        "parkPolish": true,
+        "explicitCollision": true,
+        "frontPreview": true
+      },
+      "blenderVersion": "5.2.2 LTS",
+      "fbxPath": "Assets/Art/Generated/Environment/Floodlight.fbx",
+      "previewPath": "",
+      "triangleCount": 904,
+      "bounds": [
+        [
+          -1.034999966621399,
+          -0.2750000059604645,
+          0.0
+        ],
+        [
+          1.034999966621399,
+          0.4749999940395355,
+          10.3149995803833
+        ]
+      ],
+      "lodCount": 1,
+      "collisionAsset": "Assets/Art/Generated/Environment/Floodlight.fbx",
+      "timestamp": "2026-09-30T02:00:52.974134+00:00"
+    },
+    {
+      "name": "Fence",
+      "type": "Environment",
+      "generator": "Tools/Blender/build_all_assets.py",
+      "parameters": {
+        "seed": 42,
+        "parkPolish": true,
+        "explicitCollision": true,
+        "frontPreview": true
+      },
+      "blenderVersion": "5.2.2 LTS",
+      "fbxPath": "Assets/Art/Generated/Environment/Fence.fbx",
+      "previewPath": "",
+      "triangleCount": 548,
+      "bounds": [
+        [
+          -0.07999999821186066,
+          -4.079999923706055,
+          -0.9200000166893005
+        ],
+        [
+          0.07999999821186066,
+          0.07999999821186066,
+          1.2799999713897705
+        ]
+      ],
+      "lodCount": 1,
+      "collisionAsset": "Assets/Art/Generated/Environment/Fence.fbx",
+      "timestamp": "2026-09-30T02:00:52.996214+00:00"
+    },
+    {
+      "name": "Flag",
+      "type": "EnvironmentAccent",
+      "generator": "Tools/Blender/build_all_assets.py",
+      "parameters": {
+        "seed": 42,
+        "parkPolish": true,
+        "explicitCollision": false,
+        "frontPreview": true,
+        "collision": false
+      },
+      "blenderVersion": "5.2.2 LTS",
+      "fbxPath": "Assets/Art/Generated/EnvironmentAccent/Flag.fbx",
+      "previewPath": "",
+      "triangleCount": 108,
+      "bounds": [
+        [
+          -1.0,
+          -0.0808880403637886,
+          0.0
+        ],
+        [
+          0.03500000014901161,
+          0.06442008912563324,
+          2.5
+        ]
+      ],
+      "lodCount": 1,
+      "collisionAsset": "",
+      "timestamp": "2026-09-30T02:00:53.042438+00:00"
+    },
+    {
+      "name": "LiftCable",
+      "type": "EnvironmentAccent",
+      "generator": "Tools/Blender/build_all_assets.py",
+      "parameters": {
+        "seed": 42,
+        "parkPolish": true,
+        "explicitCollision": false,
+        "frontPreview": true,
+        "collision": false
+      },
+      "blenderVersion": "5.2.2 LTS",
+      "fbxPath": "Assets/Art/Generated/EnvironmentAccent/LiftCable.fbx",
+      "previewPath": "",
+      "triangleCount": 480,
+      "bounds": [
+        [
+          -0.021650634706020355,
+          -100.00096130371094,
+          -1.024999976158142
+        ],
+        [
+          0.021650634706020355,
+          0.0009577274322509766,
+          0.024981766939163208
+        ]
+      ],
+      "lodCount": 1,
+      "collisionAsset": "",
+      "timestamp": "2026-09-30T02:00:53.075828+00:00"
+    },
+    {
+      "name": "LiftChair",
+      "type": "EnvironmentAccent",
+      "generator": "Tools/Blender/build_all_assets.py",
+      "parameters": {
+        "seed": 42,
+        "parkPolish": true,
+        "explicitCollision": false,
+        "frontPreview": true,
+        "collision": false
+      },
+      "blenderVersion": "5.2.2 LTS",
+      "fbxPath": "Assets/Art/Generated/EnvironmentAccent/LiftChair.fbx",
+      "previewPath": "Assets/Art/Generated/EnvironmentAccent/LiftChair.png",
+      "triangleCount": 412,
+      "bounds": [
+        [
+          -1.274999976158142,
+          -0.48500004410743713,
+          -3.1599998474121094
+        ],
+        [
+          1.274999976158142,
+          0.5,
+          0.0
+        ]
+      ],
+      "lodCount": 1,
+      "collisionAsset": "",
+      "timestamp": "2026-09-30T02:00:53.536447+00:00"
+    },
+    {
+      "name": "StartGate",
+      "type": "EnvironmentAccent",
+      "generator": "Tools/Blender/build_all_assets.py",
+      "parameters": {
+        "seed": 42,
+        "parkPolish": true,
+        "explicitCollision": false,
+        "frontPreview": true,
+        "collision": false
+      },
+      "blenderVersion": "5.2.2 LTS",
+      "fbxPath": "Assets/Art/Generated/EnvironmentAccent/StartGate.fbx",
+      "previewPath": "",
+      "triangleCount": 1388,
+      "bounds": [
+        [
+          -10.274999618530273,
+          -0.2750000059604645,
+          0.0
+        ],
+        [
+          10.274999618530273,
+          0.2750000059604645,
+          5.125
+        ]
+      ],
+      "lodCount": 1,
+      "collisionAsset": "",
+      "timestamp": "2026-09-30T02:00:53.558341+00:00"
+    },
+    {
+      "name": "BoundaryMarker",
+      "type": "EnvironmentAccent",
+      "generator": "Tools/Blender/build_all_assets.py",
+      "parameters": {
+        "seed": 42,
+        "parkPolish": true,
+        "explicitCollision": false,
+        "frontPreview": true,
+        "collision": false
+      },
+      "blenderVersion": "5.2.2 LTS",
+      "fbxPath": "Assets/Art/Generated/EnvironmentAccent/BoundaryMarker.fbx",
+      "previewPath": "",
+      "triangleCount": 112,
+      "bounds": [
+        [
+          -0.039000000804662704,
+          -0.039000000804662704,
+          0.0
+        ],
+        [
+          0.039000000804662704,
+          0.039000000804662704,
+          1.5
+        ]
+      ],
+      "lodCount": 1,
+      "collisionAsset": "",
+      "timestamp": "2026-09-30T02:00:53.572315+00:00"
+    },
+    {
+      "name": "FeatureEasy",
+      "type": "EnvironmentAccent",
+      "generator": "Tools/Blender/build_all_assets.py",
+      "parameters": {
+        "seed": 42,
+        "parkPolish": true,
+        "explicitCollision": false,
+        "frontPreview": true,
+        "collision": false
+      },
+      "blenderVersion": "5.2.2 LTS",
+      "fbxPath": "Assets/Art/Generated/EnvironmentAccent/FeatureEasy.fbx",
+      "previewPath": "",
+      "triangleCount": 740,
+      "bounds": [
+        [
+          -0.3100000023841858,
+          -0.05000000074505806,
+          0.0
+        ],
+        [
+          0.3100000023841858,
+          0.07700002193450928,
+          2.179999828338623
+        ]
+      ],
+      "lodCount": 1,
+      "collisionAsset": "",
+      "timestamp": "2026-09-30T02:00:53.590082+00:00"
+    },
+    {
+      "name": "FeatureMedium",
+      "type": "EnvironmentAccent",
+      "generator": "Tools/Blender/build_all_assets.py",
+      "parameters": {
+        "seed": 42,
+        "parkPolish": true,
+        "explicitCollision": false,
+        "frontPreview": true,
+        "collision": false
+      },
+      "blenderVersion": "5.2.2 LTS",
+      "fbxPath": "Assets/Art/Generated/EnvironmentAccent/FeatureMedium.fbx",
+      "previewPath": "",
+      "triangleCount": 844,
+      "bounds": [
+        [
+          -0.3100000023841858,
+          -0.05000000074505806,
+          0.0
+        ],
+        [
+          0.3100000023841858,
+          0.07699999958276749,
+          2.179999828338623
+        ]
+      ],
+      "lodCount": 1,
+      "collisionAsset": "",
+      "timestamp": "2026-09-30T02:00:53.610368+00:00"
+    },
+    {
+      "name": "FeatureExpert",
+      "type": "EnvironmentAccent",
+      "generator": "Tools/Blender/build_all_assets.py",
+      "parameters": {
+        "seed": 42,
+        "parkPolish": true,
+        "explicitCollision": false,
+        "frontPreview": true,
+        "collision": false
+      },
+      "blenderVersion": "5.2.2 LTS",
+      "fbxPath": "Assets/Art/Generated/EnvironmentAccent/FeatureExpert.fbx",
+      "previewPath": "",
+      "triangleCount": 920,
+      "bounds": [
+        [
+          -0.3100000023841858,
+          -0.05000000074505806,
+          0.0
+        ],
+        [
+          0.3100000023841858,
+          0.07699999958276749,
+          2.179999828338623
+        ]
+      ],
+      "lodCount": 1,
+      "collisionAsset": "",
+      "timestamp": "2026-09-30T02:00:53.631348+00:00"
+    },
+    {
+      "name": "Sign",
+      "type": "Environment",
+      "generator": "Tools/Blender/build_all_assets.py",
+      "parameters": {
+        "seed": 42,
+        "parkPolish": true,
+        "explicitCollision": true,
+        "frontPreview": true
+      },
+      "blenderVersion": "5.2.2 LTS",
+      "fbxPath": "Assets/Art/Generated/Environment/Sign.fbx",
+      "previewPath": "",
+      "triangleCount": 2496,
+      "bounds": [
+        [
+          -1.7000000476837158,
+          -0.12999999523162842,
+          0.0
+        ],
+        [
+          1.7000000476837158,
+          0.1379999965429306,
+          3.3249998092651367
+        ]
+      ],
+      "lodCount": 1,
+      "collisionAsset": "Assets/Art/Generated/Environment/Sign.fbx",
+      "timestamp": "2026-09-30T02:12:56.187594+00:00"
+    },
+    {
+      "name": "SignEasy",
+      "type": "Environment",
+      "generator": "Tools/Blender/build_all_assets.py",
+      "parameters": {
+        "seed": 42,
+        "parkPolish": true,
+        "explicitCollision": true,
+        "frontPreview": true
+      },
+      "blenderVersion": "5.2.2 LTS",
+      "fbxPath": "Assets/Art/Generated/Environment/SignEasy.fbx",
+      "previewPath": "",
+      "triangleCount": 2284,
+      "bounds": [
+        [
+          -1.7000000476837158,
+          -0.12999999523162842,
+          0.0
+        ],
+        [
+          1.7000000476837158,
+          0.1379999965429306,
+          3.3249998092651367
+        ]
+      ],
+      "lodCount": 1,
+      "collisionAsset": "Assets/Art/Generated/Environment/SignEasy.fbx",
+      "timestamp": "2026-09-30T02:12:56.216462+00:00"
+    },
+    {
+      "name": "SignPark",
+      "type": "Environment",
+      "generator": "Tools/Blender/build_all_assets.py",
+      "parameters": {
+        "seed": 42,
+        "parkPolish": true,
+        "explicitCollision": true,
+        "frontPreview": true
+      },
+      "blenderVersion": "5.2.2 LTS",
+      "fbxPath": "Assets/Art/Generated/Environment/SignPark.fbx",
+      "previewPath": "Assets/Art/Generated/Environment/SignPark.png",
+      "triangleCount": 2432,
+      "bounds": [
+        [
+          -1.7000000476837158,
+          -0.12999999523162842,
+          0.0
+        ],
+        [
+          1.7000000476837158,
+          0.1379999965429306,
+          3.3249998092651367
+        ]
+      ],
+      "lodCount": 1,
+      "collisionAsset": "Assets/Art/Generated/Environment/SignPark.fbx",
+      "timestamp": "2026-09-30T02:12:56.769342+00:00"
+    },
+    {
+      "name": "SignBigAir",
+      "type": "Environment",
+      "generator": "Tools/Blender/build_all_assets.py",
+      "parameters": {
+        "seed": 42,
+        "parkPolish": true,
+        "explicitCollision": true,
+        "frontPreview": true
+      },
+      "blenderVersion": "5.2.2 LTS",
+      "fbxPath": "Assets/Art/Generated/Environment/SignBigAir.fbx",
+      "previewPath": "",
+      "triangleCount": 2356,
+      "bounds": [
+        [
+          -1.7000000476837158,
+          -0.12999999523162842,
+          0.0
+        ],
+        [
+          1.7000000476837158,
+          0.1379999965429306,
+          3.3249998092651367
+        ]
+      ],
+      "lodCount": 1,
+      "collisionAsset": "Assets/Art/Generated/Environment/SignBigAir.fbx",
+      "timestamp": "2026-09-30T02:12:56.798275+00:00"
+    },
+    {
+      "name": "SignFreeride",
+      "type": "Environment",
+      "generator": "Tools/Blender/build_all_assets.py",
+      "parameters": {
+        "seed": 42,
+        "parkPolish": true,
+        "explicitCollision": true,
+        "frontPreview": true
+      },
+      "blenderVersion": "5.2.2 LTS",
+      "fbxPath": "Assets/Art/Generated/Environment/SignFreeride.fbx",
+      "previewPath": "",
+      "triangleCount": 2500,
+      "bounds": [
+        [
+          -1.7000000476837158,
+          -0.12999999523162842,
+          0.0
+        ],
+        [
+          1.7000000476837158,
+          0.1379999965429306,
+          3.3249998092651367
+        ]
+      ],
+      "lodCount": 1,
+      "collisionAsset": "Assets/Art/Generated/Environment/SignFreeride.fbx",
+      "timestamp": "2026-09-30T02:12:56.828183+00:00"
+    },
+    {
+      "name": "SignLower",
+      "type": "Environment",
+      "generator": "Tools/Blender/build_all_assets.py",
+      "parameters": {
+        "seed": 42,
+        "parkPolish": true,
+        "explicitCollision": true,
+        "frontPreview": true
+      },
+      "blenderVersion": "5.2.2 LTS",
+      "fbxPath": "Assets/Art/Generated/Environment/SignLower.fbx",
+      "previewPath": "",
+      "triangleCount": 2504,
+      "bounds": [
+        [
+          -1.7000000476837158,
+          -0.12999999523162842,
+          0.0
+        ],
+        [
+          1.7000000476837158,
+          0.1379999965429306,
+          3.3249998092651367
+        ]
+      ],
+      "lodCount": 1,
+      "collisionAsset": "Assets/Art/Generated/Environment/SignLower.fbx",
+      "timestamp": "2026-09-30T02:12:56.859131+00:00"
+    },
+    {
+      "name": "JumpSmall",
+      "type": "Jumps",
+      "generator": "Tools/Blender/build_all_assets.py",
+      "parameters": {
+        "width": 6,
+        "length": 10,
+        "height": 1.8,
+        "deck": 0,
+        "continuousCollision": true,
+        "topFacingUp": true,
+        "sculptedSides": true,
+        "raisedBankClearance": 0.2,
+        "explicitCollision": true,
+        "frontPreview": true
+      },
+      "blenderVersion": "5.2.2 LTS",
+      "fbxPath": "Assets/Art/Generated/Jumps/JumpSmall.fbx",
+      "previewPath": "",
+      "triangleCount": 1538,
+      "bounds": [
+        [
+          -3.9719998836517334,
+          -10.0,
+          -2.4000000953674316
+        ],
+        [
+          3.9719998836517334,
+          4.0,
+          0.9319999814033508
+        ]
+      ],
+      "lodCount": 1,
+      "collisionAsset": "Assets/Art/Generated/Jumps/JumpSmall.fbx",
+      "timestamp": "2026-09-30T19:19:33.103444+00:00"
+    },
+    {
+      "name": "JumpMedium",
+      "type": "Jumps",
+      "generator": "Tools/Blender/build_all_assets.py",
+      "parameters": {
+        "width": 10,
+        "length": 16,
+        "height": 4.5,
+        "deck": 0,
+        "continuousCollision": true,
+        "topFacingUp": true,
+        "sculptedSides": true,
+        "raisedBankClearance": 0.2,
+        "explicitCollision": true,
+        "frontPreview": true
+      },
+      "blenderVersion": "5.2.2 LTS",
+      "fbxPath": "Assets/Art/Generated/Jumps/JumpMedium.fbx",
+      "previewPath": "Assets/Art/Generated/Jumps/JumpMedium.png",
+      "triangleCount": 1538,
+      "bounds": [
+        [
+          -6.998000144958496,
+          -16.0,
+          -3.7799999713897705
+        ],
+        [
+          6.998000144958496,
+          4.0,
+          0.9319999814033508
+        ]
+      ],
+      "lodCount": 1,
+      "collisionAsset": "Assets/Art/Generated/Jumps/JumpMedium.fbx",
+      "timestamp": "2026-09-30T19:19:33.560761+00:00"
+    },
+    {
+      "name": "JumpLarge",
+      "type": "Jumps",
+      "generator": "Tools/Blender/build_all_assets.py",
+      "parameters": {
+        "width": 18,
+        "length": 24,
+        "height": 8,
+        "deck": 0,
+        "continuousCollision": true,
+        "topFacingUp": true,
+        "sculptedSides": true,
+        "raisedBankClearance": 0.2,
+        "explicitCollision": true,
+        "frontPreview": true
+      },
+      "blenderVersion": "5.2.2 LTS",
+      "fbxPath": "Assets/Art/Generated/Jumps/JumpLarge.fbx",
+      "previewPath": "",
+      "triangleCount": 1538,
+      "bounds": [
+        [
+          -11.050000190734863,
+          -24.0,
+          -5.619999885559082
+        ],
+        [
+          11.050000190734863,
+          4.0,
+          2.4800000190734863
+        ]
+      ],
+      "lodCount": 1,
+      "collisionAsset": "Assets/Art/Generated/Jumps/JumpLarge.fbx",
+      "timestamp": "2026-09-30T19:19:33.576657+00:00"
+    },
+    {
+      "name": "Tabletop",
+      "type": "Jumps",
+      "generator": "Tools/Blender/build_all_assets.py",
+      "parameters": {
+        "width": 18,
+        "length": 18,
+        "height": 5,
+        "deck": 12,
+        "continuousCollision": true,
+        "topFacingUp": true,
+        "sculptedSides": true,
+        "raisedBankClearance": 0.2,
+        "explicitCollision": true,
+        "frontPreview": true
+      },
+      "blenderVersion": "5.2.2 LTS",
+      "fbxPath": "Assets/Art/Generated/Jumps/Tabletop.fbx",
+      "previewPath": "",
+      "triangleCount": 1538,
+      "bounds": [
+        [
+          -11.050000190734863,
+          -57.0,
+          -13.210000038146973
+        ],
+        [
+          11.050000190734863,
+          4.0,
+          0.9319999814033508
+        ]
+      ],
+      "lodCount": 1,
+      "collisionAsset": "Assets/Art/Generated/Jumps/Tabletop.fbx",
+      "timestamp": "2026-09-30T19:19:33.591430+00:00"
+    },
+    {
+      "name": "Hip",
+      "type": "Jumps",
+      "generator": "Tools/Blender/build_all_assets.py",
+      "parameters": {
+        "width": 12,
+        "length": 15,
+        "height": 4,
+        "deck": 0,
+        "continuousCollision": true,
+        "topFacingUp": true,
+        "sculptedSides": true,
+        "raisedBankClearance": 0.2,
+        "explicitCollision": true,
+        "frontPreview": true
+      },
+      "blenderVersion": "5.2.2 LTS",
+      "fbxPath": "Assets/Art/Generated/Jumps/Hip.fbx",
+      "previewPath": "",
+      "triangleCount": 1538,
+      "bounds": [
+        [
+          -7.808000087738037,
+          -15.0,
+          -3.549999952316284
+        ],
+        [
+          7.808000087738037,
+          4.0,
+          0.9319999814033508
+        ]
+      ],
+      "lodCount": 1,
+      "collisionAsset": "Assets/Art/Generated/Jumps/Hip.fbx",
+      "timestamp": "2026-09-30T19:19:33.606987+00:00"
+    },
+    {
+      "name": "QuarterPipe",
+      "type": "Jumps",
+      "generator": "Tools/Blender/build_all_assets.py",
+      "parameters": {
+        "width": 16,
+        "length": 7,
+        "height": 6,
+        "deck": 0,
+        "continuousCollision": true,
+        "topFacingUp": true,
+        "sculptedSides": true,
+        "raisedBankClearance": 0.2,
+        "explicitCollision": true,
+        "frontPreview": true
+      },
+      "blenderVersion": "5.2.2 LTS",
+      "fbxPath": "Assets/Art/Generated/Jumps/QuarterPipe.fbx",
+      "previewPath": "",
+      "triangleCount": 1538,
+      "bounds": [
+        [
+          -10.050000190734863,
+          -7.0,
+          -1.7100000381469727
+        ],
+        [
+          10.050000190734863,
+          4.0,
+          4.389999866485596
+        ]
+      ],
+      "lodCount": 1,
+      "collisionAsset": "Assets/Art/Generated/Jumps/QuarterPipe.fbx",
+      "timestamp": "2026-09-30T19:19:33.622670+00:00"
+    }
+  ]
+}

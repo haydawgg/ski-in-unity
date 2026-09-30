@@ -17,7 +17,9 @@ namespace PowderFlow
         void Start()
         {
             skier=GetComponent<SkiPhysicsController>();skier.TookOff+=Begin;skier.Landed+=Finish;
+            skier.ResetPerformed+=Clear;
         }
+        void Clear(){tracking=false;current=new TrickRecord();previous=skier.Body.rotation;}
         public void Begin()
         {
             current=new TrickRecord{takeoffSpeed=skier.Speed,switchTakeoff=Vector3.Dot(skier.transform.forward,skier.Body.linearVelocity)<0};tracking=true;previous=skier.Body.rotation;

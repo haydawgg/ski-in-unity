@@ -16,9 +16,15 @@
 *.VC.opendb
 *.opensdf
 *.sdf
-*.opensdf
 *.blend1
 *.blend2
 __pycache__/
 *.pyc
 Assets/Generated/
+
+# Raw frame-by-frame test renders stay local; compact review videos and sheets are committed.
+/DevelopmentCaptures/**/Sequences/**/*.png
+/DevelopmentCaptures/ReferenceComparison/**/*.png
+# Raw player logs can contain machine-local network details; structured receipts are kept.
+/DevelopmentCaptures/AfterReferencePass/Unity-build.log
+/DevelopmentCaptures/AfterReferencePass/*-native.log

@@ -1,0 +1,37 @@
+[
+  {
+    "name": "Ridge0",
+    "triangles": 13824,
+    "upwardAreaFraction": 1.0,
+    "snowAreaFraction": 0.4315,
+    "finite": true
+  },
+  {
+    "name": "Ridge1",
+    "triangles": 13824,
+    "upwardAreaFraction": 1.0,
+    "snowAreaFraction": 0.4499,
+    "finite": true
+  },
+  {
+    "name": "Ridge2",
+    "triangles": 13824,
+    "upwardAreaFraction": 1.0,
+    "snowAreaFraction": 0.4519,
+    "finite": true
+  },
+  {
+    "name": "Ridge3",
+    "triangles": 13824,
+    "upwardAreaFraction": 1.0,
+    "snowAreaFraction": 0.4126,
+    "finite": true
+  },
+  {
+    "name": "Ridge4",
+    "triangles": 13824,
+    "upwardAreaFraction": 1.0,
+    "snowAreaFraction": 0.4051,
+    "finite": true
+  }
+]

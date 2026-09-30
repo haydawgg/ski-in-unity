@@ -29,10 +29,10 @@ MonoBehaviour:
   powderFriction: 0.07
   powderDrag: 0.35
   flatGrip: 2
-  edgeGrip: 10
-  maximumGrip: 18
-  steerResponse: 5
-  sidecutRadius: 14
+  edgeGrip: 11.5
+  maximumGrip: 20
+  steerResponse: 7
+  sidecutRadius: 12
   speedRadiusScale: 900
   brakeRotationRate: 2
   brakeDeceleration: 9

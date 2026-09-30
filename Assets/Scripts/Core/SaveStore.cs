@@ -5,7 +5,7 @@ namespace PowderFlow
 {
     [Serializable] public class SavedGame
     {
-        public float master=.8f,sfx=.8f,music=.5f,keyboardSensitivity=1,gamepadSensitivity=1,cameraSensitivity=1,fov=73;
+        public float master=.8f,sfx=.8f,music=.5f,keyboardSensitivity=1,gamepadSensitivity=1,cameraSensitivity=1,fov=67;
         public bool invertCamera,day,mph,fullscreen;public int quality=2,width=1920,height=1080,outfit,highScore;
     }
     public static class SaveStore

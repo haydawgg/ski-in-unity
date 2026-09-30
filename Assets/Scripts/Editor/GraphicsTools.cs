@@ -54,9 +54,9 @@ namespace PowderFlow
         public static void ConfigureVisualPolish()
         {
             var c=Config<GraphicsConfig>("GraphicsConfig");
-            c.sunsetTop=new Color(.16f,.20f,.36f);c.sunsetHorizon=new Color(.76f,.49f,.56f);c.sunsetAmbient=new Color(.34f,.38f,.51f);c.sunsetLight=new Color(1,.79f,.65f);
+            c.sunsetTop=new Color(.16f,.20f,.36f);c.sunsetHorizon=new Color(.76f,.60f,.64f);c.sunsetAmbient=new Color(.37f,.43f,.58f);c.sunsetLight=new Color(1,.84f,.76f);
             c.dayTop=new Color(.035f,.21f,.49f);c.dayHorizon=new Color(.58f,.76f,.91f);c.dayAmbient=new Color(.44f,.52f,.64f);c.dayLight=new Color(1,.98f,.94f);
-            c.sunIntensity=1.25f;c.daySunIntensity=1.7f;c.rippleStrength=.05f;c.rippleScale=3;c.fogDensity=.00065f;EditorUtility.SetDirty(c);ConfigureGraphics();
+            c.sunIntensity=1.25f;c.daySunIntensity=1.7f;c.rippleStrength=.022f;c.rippleScale=1.8f;c.fogDensity=.0007f;EditorUtility.SetDirty(c);ConfigureGraphics();
         }
     }
 }

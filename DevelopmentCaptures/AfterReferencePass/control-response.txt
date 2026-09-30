@@ -1,0 +1,4 @@
+yaw velocity after .25s input=1.122
+yaw velocity after 1s input=4.352
+free-air yaw after .3s release=4.313
+near-contact released yaw from 5rad/s=3.866

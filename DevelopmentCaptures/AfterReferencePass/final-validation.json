@@ -1,0 +1,120 @@
+{
+  "editMode": {
+    "total": 36,
+    "passed": 36,
+    "failed": 0,
+    "skipped": 0
+  },
+  "playMode": {
+    "total": 24,
+    "passed": 24,
+    "failed": 0,
+    "skipped": 0
+  },
+  "nativeRuns": {
+    "SunsetPark": {
+      "area": 1,
+      "day": false,
+      "initialSpeed": 0.0,
+      "runSeconds": 12.0,
+      "startX": 0.0,
+      "startZ": 360.0,
+      "runStartZ": 363.39,
+      "frameRateCap": 144,
+      "vSyncCount": 0,
+      "width": 1920,
+      "height": 1080,
+      "quality": 2,
+      "maxSpeed": 22.01,
+      "distance": 141.12,
+      "exitCode": 0
+    },
+    "SunsetBigAir": {
+      "area": 2,
+      "day": false,
+      "initialSpeed": 0.0,
+      "runSeconds": 12.0,
+      "startX": 0.0,
+      "startZ": 830.0,
+      "runStartZ": 833.52,
+      "frameRateCap": 144,
+      "vSyncCount": 0,
+      "width": 1920,
+      "height": 1080,
+      "quality": 2,
+      "maxSpeed": 20.85,
+      "distance": 128.17,
+      "exitCode": 0
+    },
+    "DayFreeride": {
+      "area": 3,
+      "day": true,
+      "initialSpeed": 15.0,
+      "runSeconds": 12.0,
+      "startX": 75.0,
+      "startZ": 1120.0,
+      "runStartZ": 1142.88,
+      "frameRateCap": 144,
+      "vSyncCount": 0,
+      "width": 1920,
+      "height": 1080,
+      "quality": 2,
+      "maxSpeed": 10.28,
+      "distance": 72.36,
+      "exitCode": 0
+    }
+  },
+  "performance": {
+    "SunsetPark": {
+      "gpu": "AMD Radeon RX 6600 XT (radeonsi, navi23, ACO, DRM 3.64, 7.2.8-1-cachyos)",
+      "cpu": "AMD Ryzen 5 9600X 6-Core Processor",
+      "width": 1920,
+      "height": 1080,
+      "quality": 2,
+      "frameRateCap": 144,
+      "samples": 1728,
+      "averageFps": 143.99593828256906,
+      "meanFrameMs": 6.9446403275463195,
+      "p50FrameMs": 6.942003999999002,
+      "p95FrameMs": 7.077533000000358,
+      "p99FrameMs": 7.172782999999683,
+      "meanMainThreadMs": 6.938894788773142,
+      "meanGcBytes": 1970.326388888889
+    },
+    "SunsetBigAir": {
+      "gpu": "AMD Radeon RX 6600 XT (radeonsi, navi23, ACO, DRM 3.64, 7.2.8-1-cachyos)",
+      "cpu": "AMD Ryzen 5 9600X 6-Core Processor",
+      "width": 1920,
+      "height": 1080,
+      "quality": 2,
+      "frameRateCap": 144,
+      "samples": 1727,
+      "averageFps": 143.86960820066182,
+      "meanFrameMs": 6.950738328314985,
+      "p50FrameMs": 6.941733000001449,
+      "p95FrameMs": 7.068233000000035,
+      "p99FrameMs": 7.169073000000026,
+      "meanMainThreadMs": 6.9450203537926996,
+      "meanGcBytes": 2007.8529241459178
+    },
+    "DayFreeride": {
+      "gpu": "AMD Radeon RX 6600 XT (radeonsi, navi23, ACO, DRM 3.64, 7.2.8-1-cachyos)",
+      "cpu": "AMD Ryzen 5 9600X 6-Core Processor",
+      "width": 1920,
+      "height": 1080,
+      "quality": 2,
+      "frameRateCap": 144,
+      "samples": 1728,
+      "averageFps": 143.98948450794245,
+      "meanFrameMs": 6.944951594328682,
+      "p50FrameMs": 6.941374000000167,
+      "p95FrameMs": 7.072232999998818,
+      "p99FrameMs": 7.166503000000546,
+      "meanMainThreadMs": 6.939223365740737,
+      "meanGcBytes": 1713.1944444444443
+    }
+  },
+  "executableSha256": "26901901cc6dd63212d741b339897f072d34cb7b3f08419fe451fc8e77c79a1f",
+  "managedAssemblySha256": "3fcee8546c3bac3a78aea531971fbe3a6dd782aa5296f76edb45895698d70346",
+  "archiveSha256": "684ffb9c9162f860b7e553da935bd37f02795c9bc063f66ddd41683f953358f4"
+}

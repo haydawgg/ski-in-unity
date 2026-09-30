@@ -1,0 +1,2 @@
+lip 105: launch=18.83m/s airtime=1.67s terrain clearance=5.26m landing=Perfect speed=20.20
+lip 900: launch=21.98m/s airtime=3.27s terrain clearance=18.51m landing=Sketchy speed=14.53

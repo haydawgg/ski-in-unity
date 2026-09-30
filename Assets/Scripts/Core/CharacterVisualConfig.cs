@@ -15,10 +15,19 @@ namespace PowderFlow
         public Color ambientFill=new Color(.12f,.15f,.20f);
         public float fabricRim=.14f,equipmentRim=.08f,fabricWeave=.035f;
         [Header("Body posing")]
-        public float neutralBend=.16f,airBend=.34f,railBend=.48f,tuckBend=.82f,poseResponse=14,rootDrop=.20f;
+        public float neutralBend=.30f,airBend=.38f,railBend=.48f,tuckBend=.82f,poseResponse=14,rootDrop=.20f;
+        public float stanceDrop=.10f;
+        [Header("Physics motion response")]
+        public float motionResponse=9, carveHipShift=.065f, carveCounterLean=12, carveKneeBend=12, carveArmBalance=20;
+        public float rotationTuck=.46f, rotationPoseSpeed=6, airArmFold=24, landingArmSpread=18;
+        public float airKneeLift=18,airTorsoBend=10,grabCounterArm=18;
+        public float popDuration=.18f, popExtension=.85f, landingLegBend=.24f, landingRecovery=2.2f;
+        public float sketchyDuration=.65f, sketchyHipShift=.045f, sketchyArmBalance=24;
+        public float grabBlendResponse=11, grabTorsoTwist=12, grabHipShift=.025f, grabReleaseTime=.13f;
+        public float grabReachAdjustment=.28f;
         public float thighBend=55,shinBend=95,footBend=40,spineBend=25,armNeutral=-12,armBend=30,elbowBend=-35,armSpread=12,headCounterBend=.55f;
         [Header("Grab and equipment posing")]
-        public float grabThigh=-130,grabShin=105,grabFoot=-30,grabSpine=18,crossYaw=30,poleSway=18,poleFrequency=3.5f;
+        public float grabThigh=-145,grabShin=105,grabFoot=-30,grabSpine=35,crossYaw=30,poleSway=18,poleFrequency=3.5f;
         public Vector3 crossBodyGrabAngles=new Vector3(-150,80,-30),noseGrabAngles=new Vector3(-130,100,60);
         public Vector3 poleTrail=new Vector3(.6f,-.5f,-.8f);
         public OutfitPalette[] outfits={

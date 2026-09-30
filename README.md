@@ -122,7 +122,7 @@ The smoke test warms up for two seconds, then performs an automatic tuck descent
 | Menu back / outfit preview from settings | Escape / O | B / Y |
 | Look around | Hold right mouse and move | — |
 | Day / Sunset | L, or settings | Settings |
-| Telemetry / editor gizmos | F1 / F2 | — |
+| Telemetry / editor gizmos / slow motion | F1 / F2 / F3 (1× → 0.5× → 0.25×) | — |
 
 Use Q for Safety and E for Mute. Shift changes them to Tail/Nose; Ctrl to Stale/Method; Shift+Ctrl to Japan/Blunt. Q+E crosses the skis. Gamepad triggers and bumpers select the same poses. Ctrl/RB also adds off-axis rotation/preload.
 
@@ -151,6 +151,18 @@ The core playable loop, build and automation are implemented. This delivery rema
 - Audio is generated Foley without a music track. Music volume is retained for future music. Outfit customization uses six coordinated color presets.
 - Physics debug gizmos require the Unity Scene view. Optional photo mode, replay buffer and challenges are not included.
 - Only Linux is packaged. Windows/macOS need their Unity build modules and target-specific verification.
-- No reference video was supplied. Automated checks and inspected captures cannot certify subjective fun, literal reference matching, or hours-long stability. Earlier performance measurements remain historical evidence; routine visual polish work uses capped runs and desktop landscape validation.
+- The supplied 64.9 s reference is analyzed in `Reference/REFERENCE_ANALYSIS.md`. The 2026-09-30 gameplay pass adds force-driven posing, smooth ski-contact grabs, trajectory preparation, rail approach blending and functional production ramp contact. Automated checks and captures do not certify subjective fun or hours-long stability. Desktop landscape runs keep the 144 FPS cap.
 
 See `Documentation/FINAL_REPORT.md`, `MILESTONES.md`, `DECISIONS.md` and `MASTER_PLAN.md` for evidence and implementation details.
+
+## Gameplay and animation quality pass
+
+See [current-state audit](Documentation/CURRENT_PROJECT_AUDIT.md) and [pass report](Documentation/GAMEPLAY_QUALITY_REPORT.md). Matched baseline/current clips and reviewed poses are in `DevelopmentCaptures/`. `PhysicsTest.unity` remains the animation lab; F1 shows motion/contact/prediction data, F2 draws Scene-view contact probes, F3 cycles slow motion.
+
+Regenerate only the affected assets with `Tools/Build/generate-assets.sh character` and `Tools/Build/generate-assets.sh jumps`. The 21-bone hierarchy, ski/binding geometry, all rail paths and jump profiles remain compatible. Blender now exports ten temporal foundation clips; runtime posing and IK retain control with root motion disabled.
+
+## Reference video improvement pass
+
+The follow-up comparison and implementation are documented in [reference pass report](Documentation/REFERENCE_PASS_REPORT.md), [reference observations](Reference/REFERENCE_GAMEPLAY_ANALYSIS.md) and [prioritized gaps](Documentation/REFERENCE_GAP_ANALYSIS.md). Matched states, clips and measurements are in `DevelopmentCaptures/BeforeReferencePass`, `AfterReferencePass` and `ReferenceComparison`.
+
+Carving and rotation input respond faster, released rotation slows earlier near contact, mild aligned terrain hops preserve momentum, and the follow camera shows a larger skier. Physics-driven knees-up posing, counterbalancing grabs, loaded-turn spray, subtler snow detail and five rebuilt Blender ridge assets improve the presentation. Saved FOV choices are retained; fresh settings use 67° with 9° of speed widening. Regenerate only the affected scenery with `Tools/Build/generate-assets.sh backdrop`.

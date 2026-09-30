@@ -15,7 +15,7 @@ Up/Down arrows: flips. Left/Right arrows: rolls / rail balance.
 Q/E: Safety/Mute. Shift: Tail/Nose. Ctrl: Stale/Method.
 Shift+Ctrl: Japan/Blunt. Q+E: cross skis.
 R: quick retry. T: set grounded marker. Y: retry marker.
-Escape: pause. L: Day/Sunset. F1: telemetry.
+Escape: pause. L: Day/Sunset. F1: telemetry. F3: 1x / 0.5x / 0.25x speed.
 Hold right mouse to look around.
 
 Gamepad: left stick steers/spins, stick vertical flips, right stick

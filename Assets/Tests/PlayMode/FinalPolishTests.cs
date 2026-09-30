@@ -12,7 +12,7 @@ namespace PowderFlow.Tests
     public class FinalPolishTests:PlayWorldTestBase
     {
 #if UNITY_EDITOR
-        const string Output="Documentation/VisualPolish/Phase7";
+        static string Output=>System.Environment.GetEnvironmentVariable("POWDERFLOW_REVIEW_OUTPUT")??"Documentation/VisualPolish/Phase7";
         bool asyncShaders;
         [SetUp]public void PrepareReview(){asyncShaders=ShaderUtil.allowAsyncCompilation;ShaderUtil.allowAsyncCompilation=false;}
         [TearDown]public void RestoreShaders(){ShaderUtil.allowAsyncCompilation=asyncShaders;}

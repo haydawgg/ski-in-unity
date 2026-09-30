@@ -68,11 +68,13 @@ def preview(path,objects,front=False):
     bpy.data.objects.remove(camera,do_unlink=True);bpy.data.objects.remove(light,do_unlink=True)
 def export(name,kind,parameters,preview_image=False,metadata=None):
     folder=OUT/kind;folder.mkdir(parents=True,exist_ok=True);SOURCE.mkdir(parents=True,exist_ok=True)
+    # Action authoring changes pose channels; flush evaluated matrices before FBX binds.
+    bpy.context.view_layer.update()
     objects=[o for o in bpy.context.scene.objects if o.type in ('MESH','ARMATURE')];tris,bounds=validate(objects)
     blend=SOURCE/(name+'.blend');bpy.ops.wm.save_as_mainfile(filepath=str(blend))
     bpy.ops.object.select_all(action='DESELECT')
     for o in objects:o.select_set(True)
-    fbx=folder/(name+'.fbx');bpy.ops.export_scene.fbx(filepath=str(fbx),use_selection=True,axis_forward='-Z',axis_up='Y',apply_scale_options='FBX_SCALE_ALL',add_leaf_bones=False,bake_anim=False,use_mesh_modifiers=True)
+    fbx=folder/(name+'.fbx');bpy.ops.export_scene.fbx(filepath=str(fbx),use_selection=True,axis_forward='-Z',axis_up='Y',apply_scale_options='FBX_SCALE_ALL',add_leaf_bones=False,bake_anim=parameters.get('exportAnimations',False),bake_anim_use_all_actions=True,bake_anim_use_nla_strips=False,use_mesh_modifiers=True)
     image=folder/(name+'.png')
     if preview_image:preview(image,objects,parameters.get('frontPreview',False))
     record={'name':name,'type':kind,'generator':'Tools/Blender/build_all_assets.py','parameters':parameters,'blenderVersion':bpy.app.version_string,'fbxPath':str(fbx.relative_to(ROOT)),'previewPath':str(image.relative_to(ROOT)) if preview_image else '', 'triangleCount':tris,'bounds':bounds,'lodCount':parameters.get('lodCount',1),'collisionAsset':str(fbx.relative_to(ROOT)) if kind not in ('Character','Skis','EnvironmentDistant','EnvironmentAccent') else '', 'timestamp':datetime.datetime.now(datetime.timezone.utc).isoformat()}

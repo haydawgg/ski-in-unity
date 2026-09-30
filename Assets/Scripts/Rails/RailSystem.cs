@@ -5,6 +5,9 @@ namespace PowderFlow
     public class RailSystem : MonoBehaviour
     {
         public bool Riding { get; private set; }public float Balance { get; private set; } public RailPath Current { get; private set; }
+        public Vector3 Velocity=>Riding&&Current?Tangent*speed*direction:Vector3.zero;
+        Vector3 Tangent{get{Current.Evaluate(distance,out var tangent);return tangent;}}
+        Vector3 captureOffset;
         SkiPhysicsController skier;TrickTracker tracker;float distance,speed,direction,cooldown,yawVelocity;
         void Start(){skier=GetComponent<SkiPhysicsController>();tracker=GetComponent<TrickTracker>();skier.ResetPerformed+=Clear;}
         void FixedUpdate()
@@ -20,7 +23,8 @@ namespace PowderFlow
                     float at=path.Closest(sample,out var point,out var captureTangent);float d=Vector3.Distance(sample,point);
                     if(d>c.railCaptureDistance+path.width*.5f || sample.y<point.y-.3f || Vector3.Angle(skier.transform.up,Vector3.up)>60)continue;
                     float along=Vector3.Dot(skier.Body.linearVelocity,captureTangent);if(Mathf.Abs(along)<c.railMinimumSpeed)continue;
-                    Current=path;distance=at;direction=Mathf.Sign(along);speed=Mathf.Abs(along);Balance=0;Riding=true;skier.Body.isKinematic=true;
+                    Current=path;distance=at;direction=Mathf.Sign(along);speed=Mathf.Abs(along);Balance=0;Riding=true;
+                    captureOffset=skier.Body.position-(point+Vector3.up*skier.config.rideHeight);yawVelocity=Vector3.Dot(skier.Body.angularVelocity,Vector3.up);skier.Body.isKinematic=true;
                     if(!tracker.tracking)tracker.Begin();tracker.current.rail=path.railId;break;
                 }
                 return;
@@ -34,7 +38,8 @@ namespace PowderFlow
             yawVelocity=Mathf.Lerp(yawVelocity,skier.Input.steer*3,dt*3);
             skier.Body.MoveRotation(Quaternion.AngleAxis(yawVelocity*Mathf.Rad2Deg*dt,Vector3.up)*skier.Body.rotation);
             var pointOnRail=Current.Evaluate(distance,out tangent)+Vector3.up*skier.config.rideHeight;
-            skier.Body.MovePosition(pointOnRail);tracker.current.railTime+=dt;
+            captureOffset*=Mathf.Exp(-c.railCaptureResponse*dt);
+            skier.Body.MovePosition(pointOnRail+captureOffset);tracker.current.railTime+=dt;
             if(skier.Input.pop || distance<=0 || distance>=Current.Length || speed<c.railMinimumSpeed)
             {
                 skier.Input.pop=false;Exit(tangent*speed*direction+Vector3.up*c.railPop);
@@ -46,6 +51,6 @@ namespace PowderFlow
             Riding=false;cooldown=.5f;Current=null;skier.Body.isKinematic=false;skier.Body.linearVelocity=velocity;skier.Body.angularVelocity=Vector3.up*yawVelocity;
             skier.EnterAirWithoutRestartingTrick();
         }
-        void Clear(){Riding=false;Current=null;cooldown=0;if(skier)skier.Body.isKinematic=false;}
+        void Clear(){Riding=false;Current=null;cooldown=0;Balance=yawVelocity=0;captureOffset=Vector3.zero;if(skier)skier.Body.isKinematic=false;}
     }
 }

@@ -55,14 +55,15 @@ namespace PowderFlow
             var right=Vector3.Cross(normal,Vector3.ProjectOnPlane(skier.transform.forward,normal).normalized).normalized;
             float slip=Vector3.Dot(velocity,right),edge=skier.Edge;var outward=right*(Mathf.Abs(slip)>.5f?-Mathf.Sign(slip):Mathf.Abs(edge)>.05f?-Mathf.Sign(edge):0);
             float factor=skier.Surface==SurfaceType.Powder?config.powderSprayMultiplier:skier.Surface==SurfaceType.Ice?.35f:1;
-            float rate=config.sprayRate*(.18f+Mathf.Abs(edge)*skier.Speed*.055f+skier.Slip*.12f+(skier.Input.brake?.65f:0))*factor;
+            float load=Mathf.Clamp01(Mathf.Abs(skier.Motion.lateralAcceleration)/Mathf.Max(1,skier.config.maximumGrip));
+            float rate=config.sprayRate*(.18f+Mathf.Abs(edge)*skier.Speed*.055f+skier.Slip*.12f+load*config.carveLoadSpray+(skier.Input.brake?.65f:0))*factor;
             int flakesNow=Accumulate(ref flakeCarry,Mathf.Min(rate,220),dt,36);
-            int puffsNow=Accumulate(ref puffCarry,(skier.Input.brake?config.brakeCloudRate*factor:rate*.12f)*Mathf.Clamp01(skier.Speed/10),dt,12);
+            int puffsNow=Accumulate(ref puffCarry,(skier.Input.brake?config.brakeCloudRate*factor:rate*(.1f+load*.12f))*Mathf.Clamp01(skier.Speed/10),dt,12);
             for(int i=0;i<flakesNow+puffsNow;i++)
             {
                 bool mist=i>=flakesNow;var contact=(i%2==0)?skier.Contacts.left:skier.Contacts.right;if(!contact.hit)continue;
                 var point=contact.point+contact.normal*.035f-travel*.25f;
-                float sideways=Random.Range(.25f,1.1f)+Mathf.Min(skier.Slip,6)*.2f;
+                float sideways=Random.Range(.25f,1.1f)+Mathf.Min(skier.Slip,6)*.2f+load*config.carveFanSpeed;
                 var motion=outward*sideways+right*Random.Range(-.25f,.25f)-velocity*(mist?.035f:.07f)+contact.normal*Random.Range(mist?.15f:.35f,mist?.55f:config.sprayLift);
                 bool emitted=Emit(mist?powder:flakes,point,motion,mist?config.puffSize*Random.Range(.65f,1.2f)*(skier.Input.brake?1.35f:1):config.flakeSize*Random.Range(.5f,1.25f),Random.Range(mist?.4f:.3f,mist?.9f:.8f),mist?config.puffOpacity:.75f);
                 if(emitted)GroundParticlesEmitted++;
