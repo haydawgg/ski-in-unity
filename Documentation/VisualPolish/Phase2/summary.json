@@ -1,0 +1,66 @@
+{
+  "phase": "VP2",
+  "date": "2026-09-29",
+  "characterTriangles": 10846,
+  "skinnedRenderers": 5,
+  "outfits": 6,
+  "editMode": {
+    "passed": 24,
+    "failed": 0
+  },
+  "playMode": {
+    "passed": 13,
+    "failed": 0
+  },
+  "finalCharacterReview": {
+    "passed": 1,
+    "failed": 0
+  },
+  "connectedDescentMeters": 1405,
+  "regionsVisited": 5,
+  "wristToGrabTargetMeters": {
+    "Safety": 0.112,
+    "Mute": 0.079,
+    "Japan": 0.079,
+    "Tail": 0.093,
+    "Nose": 0.0,
+    "Stale": 0.112,
+    "Blunt": 0.093,
+    "Method": 0.112,
+    "CrissCross": 0.112
+  },
+  "fixedCameraGpuFlushFps": 419.5,
+  "nativeProfiles": {
+    "Day": {
+      "averageFps": 675.11,
+      "averageFrameMs": 1.48,
+      "p95FrameMs": 1.8,
+      "p99FrameMs": 2.28,
+      "width": 1920,
+      "height": 1080,
+      "quality": 2,
+      "maxSpeed": 17.49,
+      "distance": 101.85,
+      "gpu": "AMD Radeon RX 6600 XT (radeonsi, navi23, ACO, DRM 3.64, 7.2.8-1-cachyos)"
+    },
+    "Sunset": {
+      "averageFps": 639.73,
+      "averageFrameMs": 1.56,
+      "p95FrameMs": 2.0,
+      "p99FrameMs": 2.25,
+      "width": 1920,
+      "height": 1080,
+      "quality": 2,
+      "maxSpeed": 17.49,
+      "distance": 101.85,
+      "gpu": "AMD Radeon RX 6600 XT (radeonsi, navi23, ACO, DRM 3.64, 7.2.8-1-cachyos)"
+    }
+  },
+  "linuxBuildBytes": 183705372,
+  "packageBytes": 70450248,
+  "packageSha256": "85c8d02b107369f0d8993be1f04ec71c1c876394f5a5efd23ba523b16a8b5e64",
+  "nativeMenuExitCode": 0,
+  "packageLaunchExitCode": 0,
+  "method": "Visible native Wayland player, High quality, 1920x1080, VSync disabled, 2 second warm-up and 12 second automatic upper-run tuck. Separate fixed-camera benchmark uses synchronous GPU readback.",
+  "packageLaunchMethod": "Extracted archive portable Play.sh; fresh 1920x1080 menu capture; no exception or shader errors."
+}

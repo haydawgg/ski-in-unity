@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="1" result="Passed" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-09-30 00:19:26Z" end-time="2026-09-30 00:19:27Z" duration="0.7434479">
+  <test-suite type="TestSuite" id="1031" name="PowderFlow" fullname="PowderFlow" runstate="Runnable" testcasecount="13" result="Passed" start-time="2026-09-30 00:19:26Z" end-time="2026-09-30 00:19:27Z" duration="0.743448" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="PlayMode" />
+    </properties>
+    <test-suite type="Assembly" id="1025" name="PowderFlow.PlayTests.dll" fullname="/home/haydend/Documents/ChatGPT/ski-in-unity/Library/ScriptAssemblies/PowderFlow.PlayTests.dll" runstate="Runnable" testcasecount="13" result="Passed" start-time="2026-09-30 00:19:26Z" end-time="2026-09-30 00:19:27Z" duration="0.739612" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="104310" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="PlayMode" />
+        <property name="EditorOnly" value="False" />
+      </properties>
+      <test-suite type="TestSuite" id="1026" name="PowderFlow" fullname="PowderFlow" runstate="Runnable" testcasecount="13" result="Passed" start-time="2026-09-30 00:19:26Z" end-time="2026-09-30 00:19:27Z" duration="0.739347" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="SetUpFixture" id="1016" name="Tests" fullname="PowderFlow.Tests.PlayTestIsolation" classname="PowderFlow.Tests.PlayTestIsolation" runstate="Runnable" testcasecount="13" result="Passed" start-time="2026-09-30 00:19:26Z" end-time="2026-09-30 00:19:27Z" duration="0.738956" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestFixture" id="1005" name="CharacterPolishTests" fullname="PowderFlow.Tests.CharacterPolishTests" classname="PowderFlow.Tests.CharacterPolishTests" runstate="Runnable" testcasecount="1" result="Passed" start-time="2026-09-30 00:19:26Z" end-time="2026-09-30 00:19:27Z" duration="0.736762" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1006" name="CaptureGarmentsOutfitsAndGrabReach" fullname="PowderFlow.Tests.CharacterPolishTests.CaptureGarmentsOutfitsAndGrabReach" methodname="CaptureGarmentsOutfitsAndGrabReach" classname="PowderFlow.Tests.CharacterPolishTests" runstate="Runnable" seed="486487189" result="Passed" start-time="2026-09-30 00:19:26Z" end-time="2026-09-30 00:19:27Z" duration="0.732519" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[VP2 GRAB Safety reach error 0.112m
+VP2 GRAB Mute reach error 0.079m
+VP2 GRAB Japan reach error 0.079m
+VP2 GRAB Tail reach error 0.093m
+VP2 GRAB Nose reach error 0.000m
+VP2 GRAB Stale reach error 0.112m
+VP2 GRAB Blunt reach error 0.093m
+VP2 GRAB Method reach error 0.112m
+VP2 GRAB CrissCross reach error 0.112m
+Saving results to: /home/haydend/.config/unity3d/PowderFlow Studio/PowderFlow/TestResults.xml
+]]></output>
+            </test-case>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

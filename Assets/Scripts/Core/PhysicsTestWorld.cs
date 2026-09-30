@@ -47,7 +47,7 @@ namespace PowderFlow
             capsule.material=new PhysicsMaterial("Frictionless body"){dynamicFriction=0,staticFriction=0,bounciness=0};
             obj.AddComponent<Rigidbody>(); obj.AddComponent<SkierInput>();obj.AddComponent<SkiContactSystem>();
             player=obj.AddComponent<SkiPhysicsController>();player.Initialize(physicsConfig);player.trickConfig=trickConfig;
-            var pose=obj.AddComponent<SkierPose>();pose.Bind(catalog&&catalog.Find("Skier") ? Instantiate(catalog.Find("Skier"),obj.transform).transform : TemporarySkierBuilder.Build(obj.transform));obj.AddComponent<OutfitSystem>();
+            var pose=obj.AddComponent<SkierPose>();pose.config=catalog?catalog.characterVisuals:null;pose.Bind(catalog&&catalog.Find("Skier") ? Instantiate(catalog.Find("Skier"),obj.transform).transform : TemporarySkierBuilder.Build(obj.transform));obj.AddComponent<OutfitSystem>();
             obj.AddComponent<TrickTracker>();obj.AddComponent<GrabSystem>();obj.AddComponent<ComboSystem>();obj.AddComponent<SessionMarkerSystem>();obj.AddComponent<BailSystem>();obj.AddComponent<RailSystem>();
             obj.AddComponent<RideHUD>().skier=player;
             var camera=new GameObject("Follow camera").AddComponent<Camera>();followCamera=camera;camera.tag="MainCamera";camera.farClipPlane=3000;camera.transform.position=position-new Vector3(0,-3,6);camera.gameObject.AddComponent<AudioListener>();

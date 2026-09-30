@@ -80,3 +80,11 @@
 - Latest Linux build: **183,332,044 bytes**. Visible 1080p High-quality short profile: Sunset **652.48 FPS**, p95 **1.93 ms**, p99 **2.66 ms**; Day **737.68 FPS**, p95 **1.60 ms**, p99 **1.91 ms**. Both measure a 12-second upper-run tuck after two seconds of warm-up, not a complete mountain stress run.
 - Fixed injected test input and virtual gamepad/focus isolation; capture/profile launches now run in the background. No ski-force, air or rail tuning changes. Refreshed Linux archive, captures, XML and profiles are described in `VisualPolish/Phase1/REPORT.md`.
 - The previous M9/M10 rendering descriptions recorded intended settings that were not fully active in the saved build; FINAL_REPORT now records the VP1 correction. Primitive clothing/trees, repeated ridge shape, motion effects and menu presentation remain the later polish phases. Next: VP2 skier/clothing/skis/pose readability.
+
+## VP2 — Skier, clothing, equipment and poses: passed
+
+- Generated a tailored 10,846-triangle skier with continuous weighted sleeves/pants, jacket/collar/hem/pockets, helmet/goggle detail, gloves, boots, bindings, metal edges and curved original ski graphics. Five skinned renderers retain independent equipment bones.
+- Added CharacterVisualConfig, Skier Surface material response, six coordinated outfits and a usable AssetPreview. Refined body posing, restored ski positions on air transitions, improved Nose/Mute/Japan reach and trailed poles away from the hand's actual side.
+- Checks: EditMode **24/24**, PlayMode **13/13**, final targeted character review **1/1**, manifest **48/48**. All nine grab states captured from three views; active-wrist error is at most **11.2 cm** after settling. Connected descent: **1,405 m**, five regions. Core force/collider/trick/rail tuning unchanged.
+- Linux build: **183,705,372 bytes**. Visible High-quality 1080p short profiles: Sunset **639.73 FPS**, p95 **2.00 ms**, p99 **2.25 ms**; Day **675.11 FPS**, p95 **1.80 ms**, p99 **2.28 ms**. Native menu/gameplay exit 0 with no runtime/shader errors. Evidence, reproduction, archive checksum and review limitations are in `VisualPolish/Phase2/REPORT.md`.
+- Grabs remain stylized procedural approximations; dynamic action sequences and dense-region performance are reviewed in VP7. Next: VP3 vegetation/mountain composition.

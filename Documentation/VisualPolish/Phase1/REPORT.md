@@ -1,5 +1,7 @@
 # VP1 — Rendering foundation
 
+**Historical VP1 evidence.** The current character pass is reported in `../Phase2/REPORT.md`. The VP1 archive is preserved as `Builds/Packages/PowderFlow-VP1-Linux.tar.gz`; the usual package path now contains VP2.
+
 2026-09-29 · Unity 6000.3.25f1 / URP 17.3 · Linux x86_64
 
 ## Changes

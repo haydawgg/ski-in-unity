@@ -1,0 +1,9 @@
+Safety: 0.112m
+Mute: 0.079m
+Japan: 0.079m
+Tail: 0.093m
+Nose: 0.000m
+Stale: 0.112m
+Blunt: 0.093m
+Method: 0.112m
+CrissCross: 0.112m

@@ -4,9 +4,9 @@ An original, playable freestyle skiing game made with Unity URP and Blender. Gra
 
 ## Visual polish
 
-The detailed seven-phase plan is in `Documentation/VISUAL_POLISH_PLAN.md`. The first pass repairs persistent post-processing, native-player fog, soft shadows and generated snow material assignments, then refines the Day/Sunset palette, clouds and snow detail. Skier/clothing, vegetation, props, motion effects and UI have dedicated later phases.
+The detailed seven-phase plan is in `Documentation/VISUAL_POLISH_PLAN.md`. VP1 repairs persistent post-processing, native-player fog, soft shadows and snow assignments. VP2 adds a tailored 10,846-triangle skier, continuous garments, equipment details, coordinated outfits, readable materials and improved grab/pose handling. Vegetation, props, motion effects and UI have dedicated later phases.
 
-Current captures and validation are in `Documentation/VisualPolish/Phase1/REPORT.md`. `Documentation/FINAL_REPORT.md` and `Documentation/Validation/` preserve the earlier M10 delivery results. The latest archive remains `Builds/Packages/PowderFlow-Linux.tar.gz`.
+Current captures and validation are in `Documentation/VisualPolish/Phase2/REPORT.md`; VP1 evidence remains in `Documentation/VisualPolish/Phase1/`. `Documentation/FINAL_REPORT.md` and `Documentation/Validation/` preserve the earlier M10 delivery results. The latest archive remains `Builds/Packages/PowderFlow-Linux.tar.gz`.
 
 ## Play the Linux build
 
@@ -49,7 +49,7 @@ cd /home/haydend/Documents/ChatGPT/ski-in-unity
 ./scripts/open_editor.sh
 ```
 
-Open `Assets/Scenes/MainMenu.unity` and press Play. `Mountain.unity` starts directly on the mountain. `PhysicsTest.unity` contains slope, kicker and rail fixtures; `AssetPreview.unity` isolates the generated skier.
+Open `Assets/Scenes/MainMenu.unity` and press Play. `Mountain.unity` starts directly on the mountain. `PhysicsTest.unity` contains slope, kicker and rail fixtures. In `AssetPreview.unity`, press Play, use **1–6** to review the outfits and **Left/Right** to rotate the generated skier.
 
 ## Reproduce setup, assets, tests and build
 
@@ -63,6 +63,7 @@ Tools/Build/setup.sh
 python Tools/Build/generate_audio.py
 Tools/Build/generate-assets.sh all
 Tools/Build/polish-graphics.sh
+Tools/Build/polish-character.sh
 Tools/Build/test.sh EditMode
 Tools/Build/test.sh PlayMode
 Tools/Build/build-linux.sh
@@ -75,6 +76,8 @@ Tools/Build/run.sh
 EditMode runs without graphics. PlayMode and the standalone build require a graphics session. Results and diagnostics are in ignored `Logs/`. An optional second argument filters tests, for example `Tools/Build/test.sh PlayMode PowderFlow.Tests.GraphicsPlayTests`.
 
 `polish-graphics.sh` reapplies the VP1 palette and render foundation. In Unity use **PowderFlow → Apply Visual Polish Foundation**. GraphicsConfig and the snow/sky materials contain editable parameters; normal asset regeneration reapplies graphics and preserves these assignments.
+
+`polish-character.sh` applies the character material response from `Assets/Settings/CharacterVisualConfig.asset`. The same config contains pose values, grab angles, pole motion and six outfit palettes. Character regeneration reapplies these materials automatically. **PowderFlow → Configure Character Visuals** is the matching editor command.
 
 Unity occasionally reports a Bee backend closed-pipe failure before compilation. If the log contains that specific transient failure, rerun the command once. Actual C# errors must be fixed. The licensing retry and bundled .NET shutdown messages seen on this workstation did not prevent successful tests or builds.
 
@@ -121,7 +124,7 @@ Settings include volumes, sensitivities, FOV, quality, Day/Sunset, six outfits, 
 - **Tricks and rails:** cumulative quaternion rotation tracking, grab hand IK, composed names, repeat penalties, combos, rail projection/capture/balance and momentum-preserving pop exits. Bails use a jointed ragdoll.
 - **Camera:** travel-following spring camera with speed FOV, obstruction casts, portrait framing, landing shake and an upright horizon during rotations.
 - **World:** ten Blender terrain chunks, approximately 345 m drop, designed jump/rail lines, ridge/easy area, park, big air, freeride powder and lower run. A seeded generator places vegetation and props away from central approaches.
-- **Art:** `Tools/Blender` creates all 48 asset entries. `ArtSource/Blender` stores editable source files; `Assets/Art/Generated` stores FBX, previews and metadata. `GeneratedAssetImporter` builds prefabs, colliders, LODs, materials and `AssetCatalog` automatically.
+- **Art:** `Tools/Blender` creates all 48 asset entries. The skier uses five skinned renderers with continuous joint weights and separate equipment bones. `ArtSource/Blender` stores editable source files; `Assets/Art/Generated` stores FBX, previews and metadata. `GeneratedAssetImporter` builds prefabs, colliders, LODs, materials and `AssetCatalog` automatically.
 - **Rendering/audio:** original URP snow/rock and sky shaders, ACES/bloom/SSAO, two lighting presets, fading per-ski grooves, capped snow particles, and generated WAV loops/impacts. No downloaded content or music.
 - **Tuning:** `Assets/Settings` holds physics, trick, camera, world, graphics and game-system ScriptableObjects. Runtime code lives in `Assets/Scripts` by subsystem; automated checks are in `Assets/Tests`.
 

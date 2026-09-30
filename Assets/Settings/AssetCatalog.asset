@@ -13,329 +13,330 @@ MonoBehaviour:
   m_Name: AssetCatalog
   m_EditorClassIdentifier: PowderFlow::PowderFlow.AssetCatalog
   assets:
-  - name: Skier
-    type: Character
-    prefab: {fileID: 3723794963440931544, guid: a47daf1d0284f2baa8a1ccea4f20f2b2, type: 3}
-    metadata: 
   - name: Pine0
     type: Trees
     prefab: {fileID: 2038967046395071161, guid: d24ce1f93c1f84f17affe623b96ab47a, type: 3}
-    metadata: 
+    metadata:
   - name: Pine1
     type: Trees
     prefab: {fileID: 4932503013689924869, guid: e34e46b97ec4ce56fabe564dc52559fa, type: 3}
-    metadata: 
+    metadata:
   - name: Pine2
     type: Trees
     prefab: {fileID: 411650333271597811, guid: deb7cb5c3cf0e2890a65a81ccf4e0348, type: 3}
-    metadata: 
+    metadata:
   - name: Pine3
     type: Trees
     prefab: {fileID: 5425173722577871745, guid: 15edfa0926bb31dc6941f4dc249bc500, type: 3}
-    metadata: 
+    metadata:
   - name: Rock0
     type: Rocks
     prefab: {fileID: 8202282408205972030, guid: bf7e3c52cb4b8b9fbb1f8309829e81c0, type: 3}
-    metadata: 
+    metadata:
   - name: Rock1
     type: Rocks
     prefab: {fileID: 5039389858974913224, guid: 4d8c982dba0ec9923985326fa0fcf235, type: 3}
-    metadata: 
+    metadata:
   - name: Rock2
     type: Rocks
     prefab: {fileID: 4608248517444412855, guid: 1e2c151c82973a042aa7c9f61382eaf8, type: 3}
-    metadata: 
+    metadata:
   - name: Rock3
     type: Rocks
     prefab: {fileID: 1280489994367941343, guid: 31ed2b27ffa3157a4994f139f2a33aec, type: 3}
-    metadata: 
+    metadata:
   - name: Rock4
     type: Rocks
     prefab: {fileID: 7354995866940410094, guid: e9b35f45bb8c05dfbbcc7bba785dbf45, type: 3}
-    metadata: 
+    metadata:
   - name: Rock5
     type: Rocks
     prefab: {fileID: 488078717052570560, guid: 3a0fd102165849e65971019ac5da9a16, type: 3}
-    metadata: 
+    metadata:
   - name: Rail_flat
     type: Rails
     prefab: {fileID: 6383793352132039829, guid: 427f98d394fc60fd2953bd6c065881be, type: 3}
-    metadata: "{\n  \"railId\": \"Flat\",\n  \"width\": 0.13,\n  \"points\": [\n   
-      {\n      \"x\": 0,\n      \"y\": 1.2,\n      \"z\": 0\n    },\n    {\n     
+    metadata: "{\n  \"railId\": \"Flat\",\n  \"width\": 0.13,\n  \"points\": [\n
+      {\n      \"x\": 0,\n      \"y\": 1.2,\n      \"z\": 0\n    },\n    {\n
       \"x\": 0,\n      \"y\": 1.2,\n      \"z\": 12\n    }\n  ]\n}"
   - name: Rail_down
     type: Rails
     prefab: {fileID: 5460567435099135398, guid: bf856ac3c747d62f6a115ada9d11d10c, type: 3}
-    metadata: "{\n  \"railId\": \"Down\",\n  \"width\": 0.13,\n  \"points\": [\n   
-      {\n      \"x\": 0,\n      \"y\": 1.2,\n      \"z\": 0\n    },\n    {\n     
+    metadata: "{\n  \"railId\": \"Down\",\n  \"width\": 0.13,\n  \"points\": [\n
+      {\n      \"x\": 0,\n      \"y\": 1.2,\n      \"z\": 0\n    },\n    {\n
       \"x\": 0,\n      \"y\": -1.5,\n      \"z\": 12\n    }\n  ]\n}"
   - name: Rail_kink
     type: Rails
     prefab: {fileID: 8108468745129173427, guid: ffc758c0ed703134e92ec6f2e7f3d003, type: 3}
-    metadata: "{\n  \"railId\": \"Kink\",\n  \"width\": 0.13,\n  \"points\": [\n   
-      {\n      \"x\": 0,\n      \"y\": 1.2,\n      \"z\": 0\n    },\n    {\n     
-      \"x\": 0,\n      \"y\": 0.3,\n      \"z\": 6\n    },\n    {\n      \"x\": 0,\n     
+    metadata: "{\n  \"railId\": \"Kink\",\n  \"width\": 0.13,\n  \"points\": [\n
+      {\n      \"x\": 0,\n      \"y\": 1.2,\n      \"z\": 0\n    },\n    {\n
+      \"x\": 0,\n      \"y\": 0.3,\n      \"z\": 6\n    },\n    {\n      \"x\": 0,\n
       \"y\": -1.4,\n      \"z\": 12\n    }\n  ]\n}"
   - name: Rail_rainbow
     type: Rails
     prefab: {fileID: 8964534305771619793, guid: 0f7390f15c43cbea3be343e5054d8ec7, type: 3}
-    metadata: "{\n  \"railId\": \"Rainbow\",\n  \"width\": 0.13,\n  \"points\": [\n   
-      {\n      \"x\": 0,\n      \"y\": 1.2,\n      \"z\": 0.0\n    },\n    {\n     
-      \"x\": 0,\n      \"y\": 1.4349471459960927,\n      \"z\": 0.5\n    },\n   
-      {\n      \"x\": 0,\n      \"y\": 1.6658742811845373,\n      \"z\": 1.0\n   
+    metadata: "{\n  \"railId\": \"Rainbow\",\n  \"width\": 0.13,\n  \"points\": [\n
+      {\n      \"x\": 0,\n      \"y\": 1.2,\n      \"z\": 0.0\n    },\n    {\n
+      \"x\": 0,\n      \"y\": 1.4349471459960927,\n      \"z\": 0.5\n    },\n
+      {\n      \"x\": 0,\n      \"y\": 1.6658742811845373,\n      \"z\": 1.0\n
       },\n    {\n      \"x\": 0,\n      \"y\": 1.8888301782571615,\n      \"z\":
-      1.5\n    },\n    {\n      \"x\": 0,\n      \"y\": 2.0999999999999996,\n     
-      \"z\": 2.0\n    },\n    {\n      \"x\": 0,\n      \"y\": 2.295770572215697,\n     
-      \"z\": 2.5\n    },\n    {\n      \"x\": 0,\n      \"y\": 2.4727922061357854,\n     
-      \"z\": 3.0\n    },\n    {\n      \"x\": 0,\n      \"y\": 2.6280360125242233,\n     
-      \"z\": 3.5\n    },\n    {\n      \"x\": 0,\n      \"y\": 2.7588457268119893,\n     
-      \"z\": 4.0\n    },\n    {\n      \"x\": 0,\n      \"y\": 2.862983158520316,\n     
-      \"z\": 4.5\n    },\n    {\n      \"x\": 0,\n      \"y\": 2.938666487320323,\n     
-      \"z\": 5.0\n    },\n    {\n      \"x\": 0,\n      \"y\": 2.9846007504728584,\n     
+      1.5\n    },\n    {\n      \"x\": 0,\n      \"y\": 2.0999999999999996,\n
+      \"z\": 2.0\n    },\n    {\n      \"x\": 0,\n      \"y\": 2.295770572215697,\n
+      \"z\": 2.5\n    },\n    {\n      \"x\": 0,\n      \"y\": 2.4727922061357854,\n
+      \"z\": 3.0\n    },\n    {\n      \"x\": 0,\n      \"y\": 2.6280360125242233,\n
+      \"z\": 3.5\n    },\n    {\n      \"x\": 0,\n      \"y\": 2.7588457268119893,\n
+      \"z\": 4.0\n    },\n    {\n      \"x\": 0,\n      \"y\": 2.862983158520316,\n
+      \"z\": 4.5\n    },\n    {\n      \"x\": 0,\n      \"y\": 2.938666487320323,\n
+      \"z\": 5.0\n    },\n    {\n      \"x\": 0,\n      \"y\": 2.9846007504728584,\n
       \"z\": 5.5\n    },\n    {\n      \"x\": 0,\n      \"y\": 3.0,\n      \"z\":
-      6.0\n    },\n    {\n      \"x\": 0,\n      \"y\": 2.9846007504728584,\n     
-      \"z\": 6.5\n    },\n    {\n      \"x\": 0,\n      \"y\": 2.938666487320323,\n     
-      \"z\": 7.0\n    },\n    {\n      \"x\": 0,\n      \"y\": 2.8629831585203163,\n     
-      \"z\": 7.5\n    },\n    {\n      \"x\": 0,\n      \"y\": 2.7588457268119897,\n     
-      \"z\": 8.0\n    },\n    {\n      \"x\": 0,\n      \"y\": 2.6280360125242233,\n     
-      \"z\": 8.5\n    },\n    {\n      \"x\": 0,\n      \"y\": 2.472792206135786,\n     
-      \"z\": 9.0\n    },\n    {\n      \"x\": 0,\n      \"y\": 2.2957705722156976,\n     
-      \"z\": 9.5\n    },\n    {\n      \"x\": 0,\n      \"y\": 2.0999999999999996,\n     
-      \"z\": 10.0\n    },\n    {\n      \"x\": 0,\n      \"y\": 1.888830178257162,\n     
-      \"z\": 10.5\n    },\n    {\n      \"x\": 0,\n      \"y\": 1.6658742811845377,\n     
-      \"z\": 11.0\n    },\n    {\n      \"x\": 0,\n      \"y\": 1.4349471459960936,\n     
-      \"z\": 11.5\n    },\n    {\n      \"x\": 0,\n      \"y\": 1.2000000000000002,\n     
+      6.0\n    },\n    {\n      \"x\": 0,\n      \"y\": 2.9846007504728584,\n
+      \"z\": 6.5\n    },\n    {\n      \"x\": 0,\n      \"y\": 2.938666487320323,\n
+      \"z\": 7.0\n    },\n    {\n      \"x\": 0,\n      \"y\": 2.8629831585203163,\n
+      \"z\": 7.5\n    },\n    {\n      \"x\": 0,\n      \"y\": 2.7588457268119897,\n
+      \"z\": 8.0\n    },\n    {\n      \"x\": 0,\n      \"y\": 2.6280360125242233,\n
+      \"z\": 8.5\n    },\n    {\n      \"x\": 0,\n      \"y\": 2.472792206135786,\n
+      \"z\": 9.0\n    },\n    {\n      \"x\": 0,\n      \"y\": 2.2957705722156976,\n
+      \"z\": 9.5\n    },\n    {\n      \"x\": 0,\n      \"y\": 2.0999999999999996,\n
+      \"z\": 10.0\n    },\n    {\n      \"x\": 0,\n      \"y\": 1.888830178257162,\n
+      \"z\": 10.5\n    },\n    {\n      \"x\": 0,\n      \"y\": 1.6658742811845377,\n
+      \"z\": 11.0\n    },\n    {\n      \"x\": 0,\n      \"y\": 1.4349471459960936,\n
+      \"z\": 11.5\n    },\n    {\n      \"x\": 0,\n      \"y\": 1.2000000000000002,\n
       \"z\": 12.0\n    }\n  ]\n}"
   - name: Rail_wide
     type: Rails
     prefab: {fileID: 5302716067248359590, guid: f616fa6896c905d8194cfbfa5b1b90df, type: 3}
-    metadata: "{\n  \"railId\": \"Wide\",\n  \"width\": 0.13,\n  \"points\": [\n   
-      {\n      \"x\": 0,\n      \"y\": 1.2,\n      \"z\": 0\n    },\n    {\n     
+    metadata: "{\n  \"railId\": \"Wide\",\n  \"width\": 0.13,\n  \"points\": [\n
+      {\n      \"x\": 0,\n      \"y\": 1.2,\n      \"z\": 0\n    },\n    {\n
       \"x\": 0,\n      \"y\": 1.2,\n      \"z\": 12\n    }\n  ]\n}"
   - name: Box_flat
     type: Boxes
     prefab: {fileID: 7483876321325551318, guid: 1c422fcb063ea7bc1a31f079f18ca283, type: 3}
     metadata: "{\n  \"railId\": \"Flat Box\",\n  \"width\": 0.65,\n  \"points\":
-      [\n    {\n      \"x\": 0,\n      \"y\": 0.8,\n      \"z\": 0.0\n    },\n   
-      {\n      \"x\": 0,\n      \"y\": 0.8,\n      \"z\": 0.5\n    },\n    {\n     
+      [\n    {\n      \"x\": 0,\n      \"y\": 0.8,\n      \"z\": 0.0\n    },\n
+      {\n      \"x\": 0,\n      \"y\": 0.8,\n      \"z\": 0.5\n    },\n    {\n
       \"x\": 0,\n      \"y\": 0.8,\n      \"z\": 1.0\n    },\n    {\n      \"x\":
-      0,\n      \"y\": 0.8,\n      \"z\": 1.5\n    },\n    {\n      \"x\": 0,\n     
+      0,\n      \"y\": 0.8,\n      \"z\": 1.5\n    },\n    {\n      \"x\": 0,\n
       \"y\": 0.8,\n      \"z\": 2.0\n    },\n    {\n      \"x\": 0,\n      \"y\":
-      0.8,\n      \"z\": 2.5\n    },\n    {\n      \"x\": 0,\n      \"y\": 0.8,\n     
+      0.8,\n      \"z\": 2.5\n    },\n    {\n      \"x\": 0,\n      \"y\": 0.8,\n
       \"z\": 3.0\n    },\n    {\n      \"x\": 0,\n      \"y\": 0.8,\n      \"z\":
-      3.5\n    },\n    {\n      \"x\": 0,\n      \"y\": 0.8,\n      \"z\": 4.0\n   
-      },\n    {\n      \"x\": 0,\n      \"y\": 0.8,\n      \"z\": 4.5\n    },\n   
-      {\n      \"x\": 0,\n      \"y\": 0.8,\n      \"z\": 5.0\n    },\n    {\n     
+      3.5\n    },\n    {\n      \"x\": 0,\n      \"y\": 0.8,\n      \"z\": 4.0\n
+      },\n    {\n      \"x\": 0,\n      \"y\": 0.8,\n      \"z\": 4.5\n    },\n
+      {\n      \"x\": 0,\n      \"y\": 0.8,\n      \"z\": 5.0\n    },\n    {\n
       \"x\": 0,\n      \"y\": 0.8,\n      \"z\": 5.5\n    },\n    {\n      \"x\":
-      0,\n      \"y\": 0.8,\n      \"z\": 6.0\n    },\n    {\n      \"x\": 0,\n     
+      0,\n      \"y\": 0.8,\n      \"z\": 6.0\n    },\n    {\n      \"x\": 0,\n
       \"y\": 0.8,\n      \"z\": 6.5\n    },\n    {\n      \"x\": 0,\n      \"y\":
-      0.8,\n      \"z\": 7.0\n    },\n    {\n      \"x\": 0,\n      \"y\": 0.8,\n     
+      0.8,\n      \"z\": 7.0\n    },\n    {\n      \"x\": 0,\n      \"y\": 0.8,\n
       \"z\": 7.5\n    },\n    {\n      \"x\": 0,\n      \"y\": 0.8,\n      \"z\":
-      8.0\n    },\n    {\n      \"x\": 0,\n      \"y\": 0.8,\n      \"z\": 8.5\n   
-      },\n    {\n      \"x\": 0,\n      \"y\": 0.8,\n      \"z\": 9.0\n    },\n   
-      {\n      \"x\": 0,\n      \"y\": 0.8,\n      \"z\": 9.5\n    },\n    {\n     
+      8.0\n    },\n    {\n      \"x\": 0,\n      \"y\": 0.8,\n      \"z\": 8.5\n
+      },\n    {\n      \"x\": 0,\n      \"y\": 0.8,\n      \"z\": 9.0\n    },\n
+      {\n      \"x\": 0,\n      \"y\": 0.8,\n      \"z\": 9.5\n    },\n    {\n
       \"x\": 0,\n      \"y\": 0.8,\n      \"z\": 10.0\n    }\n  ]\n}"
   - name: Box_down
     type: Boxes
     prefab: {fileID: 9062594291917016762, guid: 7de9cc7057680846d852d3d7bfb2b6a8, type: 3}
     metadata: "{\n  \"railId\": \"Down Box\",\n  \"width\": 0.65,\n  \"points\":
-      [\n    {\n      \"x\": 0,\n      \"y\": 0.8,\n      \"z\": 0.0\n    },\n   
-      {\n      \"x\": 0,\n      \"y\": 0.685,\n      \"z\": 0.5\n    },\n    {\n     
-      \"x\": 0,\n      \"y\": 0.5700000000000001,\n      \"z\": 1.0\n    },\n   
-      {\n      \"x\": 0,\n      \"y\": 0.455,\n      \"z\": 1.5\n    },\n    {\n     
+      [\n    {\n      \"x\": 0,\n      \"y\": 0.8,\n      \"z\": 0.0\n    },\n
+      {\n      \"x\": 0,\n      \"y\": 0.685,\n      \"z\": 0.5\n    },\n    {\n
+      \"x\": 0,\n      \"y\": 0.5700000000000001,\n      \"z\": 1.0\n    },\n
+      {\n      \"x\": 0,\n      \"y\": 0.455,\n      \"z\": 1.5\n    },\n    {\n
       \"x\": 0,\n      \"y\": 0.34,\n      \"z\": 2.0\n    },\n    {\n      \"x\":
-      0,\n      \"y\": 0.22499999999999998,\n      \"z\": 2.5\n    },\n    {\n     
-      \"x\": 0,\n      \"y\": 0.10999999999999999,\n      \"z\": 3.0\n    },\n   
-      {\n      \"x\": 0,\n      \"y\": -0.0050000000000000044,\n      \"z\": 3.5\n   
-      },\n    {\n      \"x\": 0,\n      \"y\": -0.12,\n      \"z\": 4.0\n    },\n   
-      {\n      \"x\": 0,\n      \"y\": -0.2350000000000001,\n      \"z\": 4.5\n   
+      0,\n      \"y\": 0.22499999999999998,\n      \"z\": 2.5\n    },\n    {\n
+      \"x\": 0,\n      \"y\": 0.10999999999999999,\n      \"z\": 3.0\n    },\n
+      {\n      \"x\": 0,\n      \"y\": -0.0050000000000000044,\n      \"z\": 3.5\n
+      },\n    {\n      \"x\": 0,\n      \"y\": -0.12,\n      \"z\": 4.0\n    },\n
+      {\n      \"x\": 0,\n      \"y\": -0.2350000000000001,\n      \"z\": 4.5\n
       },\n    {\n      \"x\": 0,\n      \"y\": -0.3500000000000001,\n      \"z\":
-      5.0\n    },\n    {\n      \"x\": 0,\n      \"y\": -0.4650000000000001,\n     
-      \"z\": 5.5\n    },\n    {\n      \"x\": 0,\n      \"y\": -0.5800000000000001,\n     
-      \"z\": 6.0\n    },\n    {\n      \"x\": 0,\n      \"y\": -0.6950000000000001,\n     
+      5.0\n    },\n    {\n      \"x\": 0,\n      \"y\": -0.4650000000000001,\n
+      \"z\": 5.5\n    },\n    {\n      \"x\": 0,\n      \"y\": -0.5800000000000001,\n
+      \"z\": 6.0\n    },\n    {\n      \"x\": 0,\n      \"y\": -0.6950000000000001,\n
       \"z\": 6.5\n    },\n    {\n      \"x\": 0,\n      \"y\": -0.81,\n      \"z\":
-      7.0\n    },\n    {\n      \"x\": 0,\n      \"y\": -0.925,\n      \"z\": 7.5\n   
-      },\n    {\n      \"x\": 0,\n      \"y\": -1.04,\n      \"z\": 8.0\n    },\n   
-      {\n      \"x\": 0,\n      \"y\": -1.155,\n      \"z\": 8.5\n    },\n    {\n     
-      \"x\": 0,\n      \"y\": -1.2700000000000002,\n      \"z\": 9.0\n    },\n   
-      {\n      \"x\": 0,\n      \"y\": -1.385,\n      \"z\": 9.5\n    },\n    {\n     
+      7.0\n    },\n    {\n      \"x\": 0,\n      \"y\": -0.925,\n      \"z\": 7.5\n
+      },\n    {\n      \"x\": 0,\n      \"y\": -1.04,\n      \"z\": 8.0\n    },\n
+      {\n      \"x\": 0,\n      \"y\": -1.155,\n      \"z\": 8.5\n    },\n    {\n
+      \"x\": 0,\n      \"y\": -1.2700000000000002,\n      \"z\": 9.0\n    },\n
+      {\n      \"x\": 0,\n      \"y\": -1.385,\n      \"z\": 9.5\n    },\n    {\n
       \"x\": 0,\n      \"y\": -1.5000000000000002,\n      \"z\": 10.0\n    }\n  ]\n}"
   - name: Box_wide
     type: Boxes
     prefab: {fileID: 7646732749237253003, guid: 77831d26c4259cf66b4413fdcc77a5e0, type: 3}
-    metadata: "{\n  \"railId\": \"Wide Box\",\n  \"width\": 1.8,\n  \"points\": [\n   
-      {\n      \"x\": 0,\n      \"y\": 0.8,\n      \"z\": 0.0\n    },\n    {\n     
+    metadata: "{\n  \"railId\": \"Wide Box\",\n  \"width\": 1.8,\n  \"points\": [\n
+      {\n      \"x\": 0,\n      \"y\": 0.8,\n      \"z\": 0.0\n    },\n    {\n
       \"x\": 0,\n      \"y\": 0.8,\n      \"z\": 0.5\n    },\n    {\n      \"x\":
-      0,\n      \"y\": 0.8,\n      \"z\": 1.0\n    },\n    {\n      \"x\": 0,\n     
+      0,\n      \"y\": 0.8,\n      \"z\": 1.0\n    },\n    {\n      \"x\": 0,\n
       \"y\": 0.8,\n      \"z\": 1.5\n    },\n    {\n      \"x\": 0,\n      \"y\":
-      0.8,\n      \"z\": 2.0\n    },\n    {\n      \"x\": 0,\n      \"y\": 0.8,\n     
+      0.8,\n      \"z\": 2.0\n    },\n    {\n      \"x\": 0,\n      \"y\": 0.8,\n
       \"z\": 2.5\n    },\n    {\n      \"x\": 0,\n      \"y\": 0.8,\n      \"z\":
-      3.0\n    },\n    {\n      \"x\": 0,\n      \"y\": 0.8,\n      \"z\": 3.5\n   
-      },\n    {\n      \"x\": 0,\n      \"y\": 0.8,\n      \"z\": 4.0\n    },\n   
-      {\n      \"x\": 0,\n      \"y\": 0.8,\n      \"z\": 4.5\n    },\n    {\n     
+      3.0\n    },\n    {\n      \"x\": 0,\n      \"y\": 0.8,\n      \"z\": 3.5\n
+      },\n    {\n      \"x\": 0,\n      \"y\": 0.8,\n      \"z\": 4.0\n    },\n
+      {\n      \"x\": 0,\n      \"y\": 0.8,\n      \"z\": 4.5\n    },\n    {\n
       \"x\": 0,\n      \"y\": 0.8,\n      \"z\": 5.0\n    },\n    {\n      \"x\":
-      0,\n      \"y\": 0.8,\n      \"z\": 5.5\n    },\n    {\n      \"x\": 0,\n     
+      0,\n      \"y\": 0.8,\n      \"z\": 5.5\n    },\n    {\n      \"x\": 0,\n
       \"y\": 0.8,\n      \"z\": 6.0\n    },\n    {\n      \"x\": 0,\n      \"y\":
-      0.8,\n      \"z\": 6.5\n    },\n    {\n      \"x\": 0,\n      \"y\": 0.8,\n     
+      0.8,\n      \"z\": 6.5\n    },\n    {\n      \"x\": 0,\n      \"y\": 0.8,\n
       \"z\": 7.0\n    },\n    {\n      \"x\": 0,\n      \"y\": 0.8,\n      \"z\":
-      7.5\n    },\n    {\n      \"x\": 0,\n      \"y\": 0.8,\n      \"z\": 8.0\n   
-      },\n    {\n      \"x\": 0,\n      \"y\": 0.8,\n      \"z\": 8.5\n    },\n   
-      {\n      \"x\": 0,\n      \"y\": 0.8,\n      \"z\": 9.0\n    },\n    {\n     
+      7.5\n    },\n    {\n      \"x\": 0,\n      \"y\": 0.8,\n      \"z\": 8.0\n
+      },\n    {\n      \"x\": 0,\n      \"y\": 0.8,\n      \"z\": 8.5\n    },\n
+      {\n      \"x\": 0,\n      \"y\": 0.8,\n      \"z\": 9.0\n    },\n    {\n
       \"x\": 0,\n      \"y\": 0.8,\n      \"z\": 9.5\n    },\n    {\n      \"x\":
       0,\n      \"y\": 0.8,\n      \"z\": 10.0\n    }\n  ]\n}"
   - name: Box_narrow
     type: Boxes
     prefab: {fileID: 5415242828583533231, guid: c7a32bba26ca95e318144fa7d0e8cf52, type: 3}
     metadata: "{\n  \"railId\": \"Narrow Box\",\n  \"width\": 0.65,\n  \"points\":
-      [\n    {\n      \"x\": 0,\n      \"y\": 0.8,\n      \"z\": 0.0\n    },\n   
-      {\n      \"x\": 0,\n      \"y\": 0.8,\n      \"z\": 0.5\n    },\n    {\n     
+      [\n    {\n      \"x\": 0,\n      \"y\": 0.8,\n      \"z\": 0.0\n    },\n
+      {\n      \"x\": 0,\n      \"y\": 0.8,\n      \"z\": 0.5\n    },\n    {\n
       \"x\": 0,\n      \"y\": 0.8,\n      \"z\": 1.0\n    },\n    {\n      \"x\":
-      0,\n      \"y\": 0.8,\n      \"z\": 1.5\n    },\n    {\n      \"x\": 0,\n     
+      0,\n      \"y\": 0.8,\n      \"z\": 1.5\n    },\n    {\n      \"x\": 0,\n
       \"y\": 0.8,\n      \"z\": 2.0\n    },\n    {\n      \"x\": 0,\n      \"y\":
-      0.8,\n      \"z\": 2.5\n    },\n    {\n      \"x\": 0,\n      \"y\": 0.8,\n     
+      0.8,\n      \"z\": 2.5\n    },\n    {\n      \"x\": 0,\n      \"y\": 0.8,\n
       \"z\": 3.0\n    },\n    {\n      \"x\": 0,\n      \"y\": 0.8,\n      \"z\":
-      3.5\n    },\n    {\n      \"x\": 0,\n      \"y\": 0.8,\n      \"z\": 4.0\n   
-      },\n    {\n      \"x\": 0,\n      \"y\": 0.8,\n      \"z\": 4.5\n    },\n   
-      {\n      \"x\": 0,\n      \"y\": 0.8,\n      \"z\": 5.0\n    },\n    {\n     
+      3.5\n    },\n    {\n      \"x\": 0,\n      \"y\": 0.8,\n      \"z\": 4.0\n
+      },\n    {\n      \"x\": 0,\n      \"y\": 0.8,\n      \"z\": 4.5\n    },\n
+      {\n      \"x\": 0,\n      \"y\": 0.8,\n      \"z\": 5.0\n    },\n    {\n
       \"x\": 0,\n      \"y\": 0.8,\n      \"z\": 5.5\n    },\n    {\n      \"x\":
-      0,\n      \"y\": 0.8,\n      \"z\": 6.0\n    },\n    {\n      \"x\": 0,\n     
+      0,\n      \"y\": 0.8,\n      \"z\": 6.0\n    },\n    {\n      \"x\": 0,\n
       \"y\": 0.8,\n      \"z\": 6.5\n    },\n    {\n      \"x\": 0,\n      \"y\":
-      0.8,\n      \"z\": 7.0\n    },\n    {\n      \"x\": 0,\n      \"y\": 0.8,\n     
+      0.8,\n      \"z\": 7.0\n    },\n    {\n      \"x\": 0,\n      \"y\": 0.8,\n
       \"z\": 7.5\n    },\n    {\n      \"x\": 0,\n      \"y\": 0.8,\n      \"z\":
-      8.0\n    },\n    {\n      \"x\": 0,\n      \"y\": 0.8,\n      \"z\": 8.5\n   
-      },\n    {\n      \"x\": 0,\n      \"y\": 0.8,\n      \"z\": 9.0\n    },\n   
-      {\n      \"x\": 0,\n      \"y\": 0.8,\n      \"z\": 9.5\n    },\n    {\n     
+      8.0\n    },\n    {\n      \"x\": 0,\n      \"y\": 0.8,\n      \"z\": 8.5\n
+      },\n    {\n      \"x\": 0,\n      \"y\": 0.8,\n      \"z\": 9.0\n    },\n
+      {\n      \"x\": 0,\n      \"y\": 0.8,\n      \"z\": 9.5\n    },\n    {\n
       \"x\": 0,\n      \"y\": 0.8,\n      \"z\": 10.0\n    }\n  ]\n}"
   - name: Box_kink
     type: Boxes
     prefab: {fileID: 6948852394145296960, guid: 48acfb510b7d92fcfa793482f5acf4d9, type: 3}
     metadata: "{\n  \"railId\": \"Kink Box\",\n  \"width\": 0.65,\n  \"points\":
-      [\n    {\n      \"x\": 0,\n      \"y\": 0.8,\n      \"z\": 0.0\n    },\n   
-      {\n      \"x\": 0,\n      \"y\": 0.8,\n      \"z\": 0.5\n    },\n    {\n     
+      [\n    {\n      \"x\": 0,\n      \"y\": 0.8,\n      \"z\": 0.0\n    },\n
+      {\n      \"x\": 0,\n      \"y\": 0.8,\n      \"z\": 0.5\n    },\n    {\n
       \"x\": 0,\n      \"y\": 0.8,\n      \"z\": 1.0\n    },\n    {\n      \"x\":
-      0,\n      \"y\": 0.8,\n      \"z\": 1.5\n    },\n    {\n      \"x\": 0,\n     
+      0,\n      \"y\": 0.8,\n      \"z\": 1.5\n    },\n    {\n      \"x\": 0,\n
       \"y\": 0.8,\n      \"z\": 2.0\n    },\n    {\n      \"x\": 0,\n      \"y\":
-      0.8,\n      \"z\": 2.5\n    },\n    {\n      \"x\": 0,\n      \"y\": 0.8,\n     
+      0.8,\n      \"z\": 2.5\n    },\n    {\n      \"x\": 0,\n      \"y\": 0.8,\n
       \"z\": 3.0\n    },\n    {\n      \"x\": 0,\n      \"y\": 0.8,\n      \"z\":
-      3.5\n    },\n    {\n      \"x\": 0,\n      \"y\": 0.8,\n      \"z\": 4.0\n   
-      },\n    {\n      \"x\": 0,\n      \"y\": 0.8,\n      \"z\": 4.5\n    },\n   
-      {\n      \"x\": 0,\n      \"y\": 0.8,\n      \"z\": 5.0\n    },\n    {\n     
+      3.5\n    },\n    {\n      \"x\": 0,\n      \"y\": 0.8,\n      \"z\": 4.0\n
+      },\n    {\n      \"x\": 0,\n      \"y\": 0.8,\n      \"z\": 4.5\n    },\n
+      {\n      \"x\": 0,\n      \"y\": 0.8,\n      \"z\": 5.0\n    },\n    {\n
       \"x\": 0,\n      \"y\": 0.65,\n      \"z\": 5.5\n    },\n    {\n      \"x\":
-      0,\n      \"y\": 0.5,\n      \"z\": 6.0\n    },\n    {\n      \"x\": 0,\n     
-      \"y\": 0.3500000000000001,\n      \"z\": 6.5\n    },\n    {\n      \"x\": 0,\n     
+      0,\n      \"y\": 0.5,\n      \"z\": 6.0\n    },\n    {\n      \"x\": 0,\n
+      \"y\": 0.3500000000000001,\n      \"z\": 6.5\n    },\n    {\n      \"x\": 0,\n
       \"y\": 0.20000000000000007,\n      \"z\": 7.0\n    },\n    {\n      \"x\":
-      0,\n      \"y\": 0.050000000000000044,\n      \"z\": 7.5\n    },\n    {\n     
-      \"x\": 0,\n      \"y\": -0.09999999999999987,\n      \"z\": 8.0\n    },\n   
-      {\n      \"x\": 0,\n      \"y\": -0.25,\n      \"z\": 8.5\n    },\n    {\n     
-      \"x\": 0,\n      \"y\": -0.3999999999999999,\n      \"z\": 9.0\n    },\n   
-      {\n      \"x\": 0,\n      \"y\": -0.5499999999999998,\n      \"z\": 9.5\n   
-      },\n    {\n      \"x\": 0,\n      \"y\": -0.7,\n      \"z\": 10.0\n    }\n 
+      0,\n      \"y\": 0.050000000000000044,\n      \"z\": 7.5\n    },\n    {\n
+      \"x\": 0,\n      \"y\": -0.09999999999999987,\n      \"z\": 8.0\n    },\n
+      {\n      \"x\": 0,\n      \"y\": -0.25,\n      \"z\": 8.5\n    },\n    {\n
+      \"x\": 0,\n      \"y\": -0.3999999999999999,\n      \"z\": 9.0\n    },\n
+      {\n      \"x\": 0,\n      \"y\": -0.5499999999999998,\n      \"z\": 9.5\n
+      },\n    {\n      \"x\": 0,\n      \"y\": -0.7,\n      \"z\": 10.0\n    }\n
       ]\n}"
   - name: JumpSmall
     type: Jumps
     prefab: {fileID: 8808672661883465373, guid: 9e0ed22c8f6d811ea8f3c8f09e85c9ed, type: 3}
-    metadata: 
+    metadata:
   - name: JumpMedium
     type: Jumps
     prefab: {fileID: 7960753791917465126, guid: d6025237bd54ee772bebde37d3682cdf, type: 3}
-    metadata: 
+    metadata:
   - name: JumpLarge
     type: Jumps
     prefab: {fileID: 6402311338215440160, guid: 35fc208b8fe887c7daa3bb7765b83054, type: 3}
-    metadata: 
+    metadata:
   - name: Tabletop
     type: Jumps
     prefab: {fileID: 5444935759635492728, guid: bd9a0cb1d051b51759ed4ae9afb03d4a, type: 3}
-    metadata: 
+    metadata:
   - name: Hip
     type: Jumps
     prefab: {fileID: 2614698214704163563, guid: 0a4c558eb8aefce87bae315682d1d8de, type: 3}
-    metadata: 
+    metadata:
   - name: QuarterPipe
     type: Jumps
     prefab: {fileID: 2656638885383307148, guid: ab20537471eb9ac3eb9ecb5610da14f1, type: 3}
-    metadata: 
+    metadata:
   - name: Mountain00
     type: Mountain
     prefab: {fileID: 7507868363525628443, guid: dad3107b2d7e5ff2ea73e42fb5511a14, type: 3}
-    metadata: 
+    metadata:
   - name: Mountain01
     type: Mountain
     prefab: {fileID: 5251975792060126341, guid: 9813d2b947ff7a167b71e08fea1114a5, type: 3}
-    metadata: 
+    metadata:
   - name: Mountain02
     type: Mountain
     prefab: {fileID: 6500480057219502458, guid: 9c39e4807ca3ed1ca86d5d9930d438e3, type: 3}
-    metadata: 
+    metadata:
   - name: Mountain03
     type: Mountain
     prefab: {fileID: 356242756996477106, guid: 21477e51257468d3ca7efb8d8bd8f06c, type: 3}
-    metadata: 
+    metadata:
   - name: Mountain04
     type: Mountain
     prefab: {fileID: 9072281765263610561, guid: 90e6a0f5ccee285f7b9d723c9bf20ccb, type: 3}
-    metadata: 
+    metadata:
   - name: Mountain05
     type: Mountain
     prefab: {fileID: 5228029073254439440, guid: f53a09e9d3459038eb224c45bf7a2e77, type: 3}
-    metadata: 
+    metadata:
   - name: Mountain06
     type: Mountain
     prefab: {fileID: 8831934802433203866, guid: f8639438fcbefe3dcb510228297c3ef9, type: 3}
-    metadata: 
+    metadata:
   - name: Mountain07
     type: Mountain
     prefab: {fileID: 7001316329117472340, guid: 4464849b5214ab311a67ee1dd7dfcb69, type: 3}
-    metadata: 
+    metadata:
   - name: Mountain08
     type: Mountain
     prefab: {fileID: 6906947276853249475, guid: 49cd1b208516f043995967b580677fdf, type: 3}
-    metadata: 
+    metadata:
   - name: Mountain09
     type: Mountain
     prefab: {fileID: 6726686525382259984, guid: cd13015dd6fbc086483d7e9d24b672f8, type: 3}
-    metadata: 
+    metadata:
   - name: Ridge0
     type: EnvironmentDistant
     prefab: {fileID: 5804924285833546649, guid: bfb121835293b4cfca6664266e1bb112, type: 3}
-    metadata: 
+    metadata:
   - name: Ridge1
     type: EnvironmentDistant
     prefab: {fileID: 5158228307167791746, guid: c24050de9cd063380b5177a4e9cc1ee8, type: 3}
-    metadata: 
+    metadata:
   - name: Ridge2
     type: EnvironmentDistant
     prefab: {fileID: 1942623942299980201, guid: 8b4aed85c2474fa0ba6e5918be3ca925, type: 3}
-    metadata: 
+    metadata:
   - name: ValleyFloor
     type: EnvironmentDistant
     prefab: {fileID: 5988784919229968531, guid: 535f70b7ccc4e4a37b045de7c0a150f2, type: 3}
-    metadata: 
+    metadata:
   - name: Hut
     type: Environment
     prefab: {fileID: 8534013679285753160, guid: a46129b6c9d552cc4a4ef45d9fed17cf, type: 3}
-    metadata: 
+    metadata:
   - name: LiftTower
     type: Environment
     prefab: {fileID: 5129475816524910414, guid: 742e7e62a1835d346bbd42728757b6db, type: 3}
-    metadata: 
+    metadata:
   - name: Floodlight
     type: Environment
     prefab: {fileID: 7701323933285300834, guid: f47918680c356ddc0bb52590583146c3, type: 3}
-    metadata: 
+    metadata:
   - name: Fence
     type: Environment
     prefab: {fileID: 7683284667454150347, guid: a0933cbfc7feff3e883783a0f0a9b516, type: 3}
-    metadata: 
+    metadata:
   - name: Sign
     type: Environment
     prefab: {fileID: 6072030456589495219, guid: f544aea38ebf5d75ea3ae0d27ae48cf9, type: 3}
-    metadata: 
+    metadata:
   - name: Flag
     type: Environment
     prefab: {fileID: 5884804111444004310, guid: f400a3b2a180dd11ebf745fdb25841f6, type: 3}
-    metadata: 
+    metadata:
   - name: LiftCable
     type: Environment
     prefab: {fileID: 2651649634782530933, guid: 3b2c68f83859a7117a75a14028cb3f0f, type: 3}
-    metadata: 
+    metadata:
+  - name: Skier
+    type: Character
+    prefab: {fileID: 3723794963440931544, guid: a47daf1d0284f2baa8a1ccea4f20f2b2, type: 3}
+    metadata:
+  characterVisuals: {fileID: 11400000, guid: 8da08260566aeed7e89ee2470cdd2fd5, type: 2}

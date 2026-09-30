@@ -7,6 +7,7 @@ namespace PowderFlow
     public class AssetCatalog : ScriptableObject
     {
         public GeneratedAsset[] assets=new GeneratedAsset[0];
+        public CharacterVisualConfig characterVisuals;
         public GameObject Find(string name){foreach(var a in assets)if(a.name==name)return a.prefab;return null;}
     }
 }

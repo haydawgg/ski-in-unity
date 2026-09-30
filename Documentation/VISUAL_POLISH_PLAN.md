@@ -126,4 +126,5 @@ Before images are preserved in `Documentation/VisualPolish/Before/`. New review 
 
 - Baseline review: complete.
 - VP1: complete. Persistent post/fog/shadows and terrain snow assignments repaired; Day/Sunset/cloud/snow refinement inspected in editor and native captures. 23 EditMode + 12 PlayMode checks passed; final render capture check repeated. Short visible 1080p native averages: Sunset 652.48 FPS / Day 737.68 FPS. Evidence and limits: `VisualPolish/Phase1/REPORT.md`.
-- VP2–VP7: planned.
+- VP2: complete. Continuous clothing, detailed equipment, five skinned renderers, 10,846 triangles, coordinated palettes, character shader/config and improved grab/pose handling. 24 EditMode + 13 PlayMode checks passed; final character review repeated. Native short 1080p averages: Sunset 639.73 FPS / Day 675.11 FPS. Evidence: `VisualPolish/Phase2/REPORT.md`.
+- VP3–VP7: planned. Next: mountain and vegetation composition.

@@ -32,6 +32,7 @@ namespace PowderFlow
                 var anim=instance.GetComponentInChildren<Animator>();if(anim)anim.enabled=false;
                 foreach(var renderer in instance.GetComponentsInChildren<Renderer>())
                 {
+                    if(asset.type=="Character"&&renderer is SkinnedMeshRenderer skinned){skinned.updateWhenOffscreen=true;skinned.localBounds=new Bounds(Vector3.zero,Vector3.one*4);}
                     var list=renderer.sharedMaterials;
                     for(int i=0;i<list.Length;i++)
                     {
@@ -72,7 +73,7 @@ namespace PowderFlow
             }
             var catalog=Config<AssetCatalog>("AssetCatalog");catalog.assets=records.ToArray();EditorUtility.SetDirty(catalog);
             var scene=EditorSceneManager.OpenScene("Assets/Scenes/PhysicsTest.unity");var world=UnityEngine.Object.FindFirstObjectByType<PhysicsTestWorld>();world.catalog=catalog;EditorSceneManager.SaveScene(scene);
-            CreateAssetPreview(catalog);AssetDatabase.SaveAssets();if(File.Exists("Assets/Settings/GraphicsConfig.asset")&&File.Exists("Assets/Scenes/Mountain.unity"))ConfigureGraphics();Debug.Log("GENERATED IMPORT PASS "+records.Count);
+            CreateAssetPreview(catalog);ConfigureCharacterGraphics();AssetDatabase.SaveAssets();if(File.Exists("Assets/Settings/GraphicsConfig.asset")&&File.Exists("Assets/Scenes/Mountain.unity"))ConfigureGraphics();Debug.Log("GENERATED IMPORT PASS "+records.Count);
         }
         public static void CreateAssetPreview(AssetCatalog catalog)
         {

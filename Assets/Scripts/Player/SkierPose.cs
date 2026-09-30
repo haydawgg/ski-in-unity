@@ -5,43 +5,60 @@ namespace PowderFlow
     public class SkierPose : MonoBehaviour
     {
         public Transform root,hips,spine,head,leftArm,leftElbow,leftHand,rightArm,rightElbow,rightHand,leftThigh,leftShin,leftFoot,rightThigh,rightShin,rightFoot,leftSki,rightSki,leftPole,rightPole;
-        SkiPhysicsController skier;GrabSystem grab;Dictionary<Transform,Quaternion> neutral=new Dictionary<Transform,Quaternion>();
+        public CharacterVisualConfig config;public CharacterVisualConfig Visuals=>config?config:CharacterVisualConfig.Default;
+        SkiPhysicsController skier;GrabSystem grab;float displayedBend;
+        Dictionary<Transform,Quaternion> neutral=new Dictionary<Transform,Quaternion>();Dictionary<Transform,Vector3> positions=new Dictionary<Transform,Vector3>();
         void Start(){skier=GetComponent<SkiPhysicsController>();grab=GetComponent<GrabSystem>();Cache();}
-        public void Cache(){neutral.Clear();if(root)foreach(var t in root.GetComponentsInChildren<Transform>())neutral[t]=t.localRotation;}
+        public void Cache(){neutral.Clear();positions.Clear();if(root)foreach(var t in root.GetComponentsInChildren<Transform>()){neutral[t]=t.localRotation;positions[t]=t.localPosition;}}
         public void Bind(Transform source)
         {
             root=source;var driver=GetComponent<SkiPhysicsController>();if(driver&&driver.config)root.localPosition=Vector3.up*driver.config.visualRideOffset;Transform Find(string n){foreach(var t in source.GetComponentsInChildren<Transform>())if(t.name==n)return t;return null;}
             hips=Find("Hips");spine=Find("Spine");head=Find("Head");leftArm=Find("UpperArm_L");leftElbow=Find("LowerArm_L");leftHand=Find("Hand_L");rightArm=Find("UpperArm_R");rightElbow=Find("LowerArm_R");rightHand=Find("Hand_R");
             leftThigh=Find("Thigh_L");leftShin=Find("Shin_L");leftFoot=Find("Foot_L");rightThigh=Find("Thigh_R");rightShin=Find("Shin_R");rightFoot=Find("Foot_R");leftSki=Find("Ski_L");rightSki=Find("Ski_R");leftPole=Find("Pole_L");rightPole=Find("Pole_R");Cache();
         }
-        void Pose(Transform t,Vector3 angles){if(t&&neutral.TryGetValue(t,out var q))t.localRotation=q*Quaternion.Euler(angles);}
-        void LateUpdate()
+        void Pose(Transform t,Vector3 angles){if(t&&neutral.TryGetValue(t,out var q)){t.localPosition=positions[t];t.localRotation=q*Quaternion.Euler(angles);}}
+        void LateUpdate(){ApplyPose();}
+        public void ApplyPose(bool immediate=false)
         {
             if(!root||!leftSki||!skier)return;
-            float bend=skier.Input.crouch?1:skier.Input.tuck?.75f:skier.Compression;
-            if(grab&&grab.Current!=GrabType.None)bend=1;
-            float thighAngle=grab&&grab.Current!=GrabType.None ? -130 : -bend*55;
-            Pose(leftThigh,new Vector3(thighAngle,0,0));Pose(rightThigh,new Vector3(thighAngle,0,0));Pose(leftShin,new Vector3(bend*95,0,0));Pose(rightShin,new Vector3(bend*95,0,0));
-            Pose(leftFoot,new Vector3(-bend*40,0,0));Pose(rightFoot,new Vector3(-bend*40,0,0));Pose(spine,new Vector3(bend*25,0,0));
-            root.localPosition=Vector3.up*(skier.config.visualRideOffset-bend*.20f);
+            var c=Visuals;bool grabbing=grab&&grab.Current!=GrabType.None;bool ridingRail=TryGetComponent<RailSystem>(out var rail)&&rail.Riding;
+            float wanted=skier.Input.crouch?1:skier.Input.tuck?c.tuckBend:ridingRail?c.railBend:skier.Grounded?c.neutralBend:c.airBend;
+            wanted=Mathf.Max(wanted,skier.Compression);if(grabbing)wanted=1;
+            displayedBend=immediate?wanted:Mathf.Lerp(displayedBend,wanted,1-Mathf.Exp(-c.poseResponse*Time.deltaTime));float bend=displayedBend;
+            float thighAngle=grabbing?c.grabThigh:-bend*c.thighBend,shinAngle=grabbing?c.grabShin:bend*c.shinBend;
+            float footAngle=grabbing?c.grabFoot:-bend*c.footBend;
+            if(grabbing&&(grab.Current==GrabType.Mute||grab.Current==GrabType.Japan)){thighAngle=c.crossBodyGrabAngles.x;shinAngle=c.crossBodyGrabAngles.y;footAngle=c.crossBodyGrabAngles.z;}
+            if(grabbing&&grab.Current==GrabType.Nose){thighAngle=c.noseGrabAngles.x;shinAngle=c.noseGrabAngles.y;footAngle=c.noseGrabAngles.z;}
+            Pose(leftThigh,new Vector3(thighAngle,0,0));Pose(rightThigh,new Vector3(thighAngle,0,0));Pose(leftShin,new Vector3(shinAngle,0,0));Pose(rightShin,new Vector3(shinAngle,0,0));
+            Pose(leftFoot,new Vector3(footAngle,0,0));Pose(rightFoot,new Vector3(footAngle,0,0));
+            Pose(spine,new Vector3(grabbing?c.grabSpine:bend*c.spineBend,0,0));Pose(head,new Vector3(-bend*c.spineBend*c.headCounterBend,0,0));
+            root.localPosition=Vector3.up*(skier.config.visualRideOffset-bend*c.rootDrop);
             root.localRotation=Quaternion.Euler(0,0,-skier.Edge*skier.config.maximumLean*(skier.Grounded?1:.25f));
-            Pose(leftArm,new Vector3(-20-bend*25,0,-15));Pose(rightArm,new Vector3(-20-bend*25,0,15));Pose(leftElbow,new Vector3(-25,0,0));Pose(rightElbow,new Vector3(-25,0,0));
+            Pose(leftArm,new Vector3(c.armNeutral-bend*c.armBend,0,-c.armSpread));Pose(rightArm,new Vector3(c.armNeutral-bend*c.armBend,0,c.armSpread));Pose(leftElbow,new Vector3(c.elbowBend,0,0));Pose(rightElbow,new Vector3(c.elbowBend,0,0));
+            Pose(leftSki,Vector3.zero);Pose(rightSki,Vector3.zero);
             if(skier.Grounded)
             {
                 AlignFoot(leftThigh,leftShin,leftFoot,leftSki,skier.Contacts.left);
                 AlignFoot(rightThigh,rightShin,rightFoot,rightSki,skier.Contacts.right);
             }
             bool crossed=!skier.Grounded&&(skier.Input.modifierLeft || (grab&&grab.Current==GrabType.CrissCross));
-            if(!skier.Grounded){Pose(leftSki,Vector3.zero);Pose(rightSki,Vector3.zero);}
-            if(crossed){leftSki.rotation=Quaternion.AngleAxis(30,skier.transform.up)*leftSki.rotation;rightSki.rotation=Quaternion.AngleAxis(-30,skier.transform.up)*rightSki.rotation;}
-            float swing=skier.Grounded?0:Mathf.Sin(Time.time*4)*25;
-            Pose(leftPole,new Vector3(-55+swing,0,15));Pose(rightPole,new Vector3(-55-swing,0,-15));
-            if(grab&&grab.Current!=GrabType.None)
+            if(crossed){leftSki.rotation=Quaternion.AngleAxis(c.crossYaw,skier.transform.up)*leftSki.rotation;rightSki.rotation=Quaternion.AngleAxis(-c.crossYaw,skier.transform.up)*rightSki.rotation;}
+            if(grabbing)
             {
                 Vector3 target=grab.Target(leftSki,rightSki);
                 SolveArm(grab.LeftHand?leftArm:rightArm,grab.LeftHand?leftElbow:rightElbow,grab.LeftHand?leftHand:rightHand,target);
                 if(grab.Current==GrabType.CrissCross)SolveArm(grab.LeftHand?rightArm:leftArm,grab.LeftHand?rightElbow:leftElbow,grab.LeftHand?rightHand:leftHand,(grab.LeftHand?rightSki:leftSki).position);
             }
+            float swing=skier.Grounded?0:Mathf.Sin(Time.time*c.poleFrequency)*c.poleSway;
+            TrailPole(leftPole,-1,swing);TrailPole(rightPole,1,-swing);
+        }
+        void TrailPole(Transform pole,float side,float swing)
+        {
+            if(!pole)return;Pose(pole,Vector3.zero);
+            float handSide=Vector3.Dot(pole.position-hips.position,skier.transform.right);if(Mathf.Abs(handSide)>.05f)side=Mathf.Sign(handSide);
+            Vector3 trail=Visuals.poleTrail;Vector3 direction=skier.transform.forward*trail.z+skier.transform.up*trail.y+skier.transform.right*side*trail.x;
+            direction=Quaternion.AngleAxis(swing,skier.transform.forward)*direction;
+            pole.rotation=Quaternion.FromToRotation(pole.up,direction.normalized)*pole.rotation;
         }
         void AlignFoot(Transform thigh,Transform shin,Transform foot,Transform ski,SkiContact contact)
         {
