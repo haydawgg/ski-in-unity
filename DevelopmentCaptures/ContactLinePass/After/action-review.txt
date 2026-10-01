@@ -1,0 +1,20 @@
+Sunset Carve: frame=22, grounded=True, rail=False, grab=None, bail=False, yaw=0.0, particles=25
+Sunset Brake: frame=36, grounded=True, rail=False, grab=None, bail=False, yaw=0.0, particles=66
+Sunset SpinGrab: frame=60, grounded=False, rail=False, grab=Safety, bail=False, yaw=132.6, particles=3
+Sunset Rail: frame=116, grounded=False, rail=True, grab=None, bail=False, yaw=0.0, particles=5
+Sunset RailPopGrab: frame=137, grounded=False, rail=False, grab=Safety, bail=False, yaw=0.0, particles=0
+Sunset Landing: frame=166, grounded=True, rail=False, grab=None, bail=False, yaw=-0.1, particles=75
+Sunset Bail: frame=185, grounded=False, rail=False, grab=None, bail=True, yaw=-0.1, particles=201
+Sunset Reset: frame=197, grounded=True, rail=False, grab=None, bail=False, yaw=0.0, particles=0
+Sunset Powder: frame=250, grounded=True, rail=False, grab=None, bail=False, yaw=0.0, particles=59
+Sunset sequence: actual takeoffs=1, successful landings=2, crashes=1, rail samples=19, grab samples=24, max tracked air yaw=195.5; 288 samples / 12 simulated seconds / 1280x720
+Day Carve: frame=22, grounded=True, rail=False, grab=None, bail=False, yaw=0.0, particles=26
+Day Brake: frame=36, grounded=True, rail=False, grab=None, bail=False, yaw=0.0, particles=64
+Day SpinGrab: frame=60, grounded=False, rail=False, grab=Safety, bail=False, yaw=133.5, particles=4
+Day Rail: frame=116, grounded=False, rail=True, grab=None, bail=False, yaw=0.0, particles=6
+Day RailPopGrab: frame=137, grounded=False, rail=False, grab=Safety, bail=False, yaw=0.0, particles=0
+Day Landing: frame=166, grounded=True, rail=False, grab=None, bail=False, yaw=-0.1, particles=75
+Day Bail: frame=185, grounded=False, rail=False, grab=None, bail=True, yaw=-0.1, particles=201
+Day Reset: frame=197, grounded=True, rail=False, grab=None, bail=False, yaw=0.0, particles=0
+Day Powder: frame=250, grounded=True, rail=False, grab=None, bail=False, yaw=0.0, particles=53
+Day sequence: actual takeoffs=1, successful landings=2, crashes=1, rail samples=19, grab samples=24, max tracked air yaw=194.9; 288 samples / 12 simulated seconds / 1280x720

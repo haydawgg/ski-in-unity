@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="48" result="Passed" total="48" passed="48" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-09-30 23:36:38Z" end-time="2026-09-30 23:36:39Z" duration="1.1169295">
+  <test-suite type="TestSuite" id="1000" name="PowderFlow" fullname="PowderFlow" runstate="Runnable" testcasecount="48" result="Passed" start-time="2026-09-30 23:36:38Z" end-time="2026-09-30 23:36:39Z" duration="1.116930" total="48" passed="48" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="EditMode" />
+    </properties>
+    <test-suite type="Assembly" id="1066" name="PowderFlow.EditTests.dll" fullname="/home/haydend/Documents/ChatGPT/ski-in-unity/Library/ScriptAssemblies/PowderFlow.EditTests.dll" runstate="Runnable" testcasecount="48" result="Passed" start-time="2026-09-30 23:36:38Z" end-time="2026-09-30 23:36:39Z" duration="1.113177" total="48" passed="48" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="345109" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="EditMode" />
+        <property name="EditorOnly" value="True" />
+      </properties>
+      <test-suite type="TestSuite" id="1067" name="PowderFlow" fullname="PowderFlow" runstate="Runnable" testcasecount="48" result="Passed" start-time="2026-09-30 23:36:38Z" end-time="2026-09-30 23:36:39Z" duration="1.113012" total="48" passed="48" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="TestSuite" id="1068" name="Tests" fullname="PowderFlow.Tests" runstate="Runnable" testcasecount="48" result="Passed" start-time="2026-09-30 23:36:38Z" end-time="2026-09-30 23:36:39Z" duration="1.112886" total="48" passed="48" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestFixture" id="1001" name="AirLandingTests" fullname="PowderFlow.Tests.AirLandingTests" classname="PowderFlow.Tests.AirLandingTests" runstate="Runnable" testcasecount="3" result="Passed" start-time="2026-09-30 23:36:38Z" end-time="2026-09-30 23:36:38Z" duration="0.023321" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1002" name="AngularMomentumConservedAndTuckSpeedsSpin" fullname="PowderFlow.Tests.AirLandingTests.AngularMomentumConservedAndTuckSpeedsSpin" methodname="AngularMomentumConservedAndTuckSpeedsSpin" classname="PowderFlow.Tests.AirLandingTests" runstate="Runnable" seed="3759220" result="Passed" start-time="2026-09-30 23:36:38Z" end-time="2026-09-30 23:36:38Z" duration="0.010751" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1004" name="FifteenMeterPerSecondRampLaunchFollowsBallisticArc" fullname="PowderFlow.Tests.AirLandingTests.FifteenMeterPerSecondRampLaunchFollowsBallisticArc" methodname="FifteenMeterPerSecondRampLaunchFollowsBallisticArc" classname="PowderFlow.Tests.AirLandingTests" runstate="Runnable" seed="1051002146" result="Passed" start-time="2026-09-30 23:36:38Z" end-time="2026-09-30 23:36:38Z" duration="0.004431" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1003" name="SlopeTransitionPreservesMoreSpeedAndFailedTrickBails" fullname="PowderFlow.Tests.AirLandingTests.SlopeTransitionPreservesMoreSpeedAndFailedTrickBails" methodname="SlopeTransitionPreservesMoreSpeedAndFailedTrickBails" classname="PowderFlow.Tests.AirLandingTests" runstate="Runnable" seed="856281058" result="Passed" start-time="2026-09-30 23:36:38Z" end-time="2026-09-30 23:36:38Z" duration="0.001408" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1005" name="CharacterTests" fullname="PowderFlow.Tests.CharacterTests" classname="PowderFlow.Tests.CharacterTests" runstate="Runnable" testcasecount="2" result="Passed" start-time="2026-09-30 23:36:38Z" end-time="2026-09-30 23:36:38Z" duration="0.012825" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1006" name="GeneratedCharacterHasRequiredBonesAndSeparateSkis" fullname="PowderFlow.Tests.CharacterTests.GeneratedCharacterHasRequiredBonesAndSeparateSkis" methodname="GeneratedCharacterHasRequiredBonesAndSeparateSkis" classname="PowderFlow.Tests.CharacterTests" runstate="Runnable" seed="1552879110" result="Passed" start-time="2026-09-30 23:36:38Z" end-time="2026-09-30 23:36:38Z" duration="0.008486" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1007" name="PolishedGarmentsHaveBlendedWeightsAndBoundedGeometry" fullname="PowderFlow.Tests.CharacterTests.PolishedGarmentsHaveBlendedWeightsAndBoundedGeometry" methodname="PolishedGarmentsHaveBlendedWeightsAndBoundedGeometry" classname="PowderFlow.Tests.CharacterTests" runstate="Runnable" seed="203837713" result="Passed" start-time="2026-09-30 23:36:38Z" end-time="2026-09-30 23:36:38Z" duration="0.003640" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1008" name="ContactQualityTests" fullname="PowderFlow.Tests.ContactQualityTests" classname="PowderFlow.Tests.ContactQualityTests" runstate="Runnable" testcasecount="12" result="Passed" start-time="2026-09-30 23:36:38Z" end-time="2026-09-30 23:36:38Z" duration="0.376140" total="12" passed="12" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1021" name="ARealMissingSurfaceReleasesSupportWithoutHysteresis" fullname="PowderFlow.Tests.ContactQualityTests.ARealMissingSurfaceReleasesSupportWithoutHysteresis" methodname="ARealMissingSurfaceReleasesSupportWithoutHysteresis" classname="PowderFlow.Tests.ContactQualityTests" runstate="Runnable" seed="1999846244" result="Passed" start-time="2026-09-30 23:36:38Z" end-time="2026-09-30 23:36:38Z" duration="0.012185" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1019" name="LandingStartsANewSupportFrameWithoutASecondLaunch" fullname="PowderFlow.Tests.ContactQualityTests.LandingStartsANewSupportFrameWithoutASecondLaunch" methodname="LandingStartsANewSupportFrameWithoutASecondLaunch" classname="PowderFlow.Tests.ContactQualityTests" runstate="Runnable" seed="976491612" result="Passed" start-time="2026-09-30 23:36:38Z" end-time="2026-09-30 23:36:38Z" duration="0.011816" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1020" name="MildTerrainRecapturePreservesMomentumAndOneLanding" fullname="PowderFlow.Tests.ContactQualityTests.MildTerrainRecapturePreservesMomentumAndOneLanding" methodname="MildTerrainRecapturePreservesMomentumAndOneLanding" classname="PowderFlow.Tests.ContactQualityTests" runstate="Runnable" seed="1282987794" result="Passed" start-time="2026-09-30 23:36:38Z" end-time="2026-09-30 23:36:38Z" duration="0.006594" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1018" name="PopReleasesImmediatelyAndDoesNotRegroundDuringClearAir" fullname="PowderFlow.Tests.ContactQualityTests.PopReleasesImmediatelyAndDoesNotRegroundDuringClearAir" methodname="PopReleasesImmediatelyAndDoesNotRegroundDuringClearAir" classname="PowderFlow.Tests.ContactQualityTests" runstate="Runnable" seed="1028724437" result="Passed" start-time="2026-09-30 23:36:38Z" end-time="2026-09-30 23:36:38Z" duration="0.010362" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-suite type="ParameterizedMethod" id="1017" name="RecordDeterministicRoute" fullname="PowderFlow.Tests.ContactQualityTests.RecordDeterministicRoute" classname="PowderFlow.Tests.ContactQualityTests" runstate="Runnable" testcasecount="8" result="Passed" start-time="2026-09-30 23:36:38Z" end-time="2026-09-30 23:36:38Z" duration="0.333771" total="8" passed="8" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1009" name="RecordDeterministicRoute(&quot;Flat&quot;,0.0f)" fullname="PowderFlow.Tests.ContactQualityTests.RecordDeterministicRoute(&quot;Flat&quot;,0.0f)" methodname="RecordDeterministicRoute" classname="PowderFlow.Tests.ContactQualityTests" runstate="Runnable" seed="1284627941" result="Passed" start-time="2026-09-30 23:36:38Z" end-time="2026-09-30 23:36:38Z" duration="0.039531" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[Flat: transitions=0 ground=1000/1000 oneSki=0 heightStepSum=0.00000 speed=6.96
+]]></output>
+              </test-case>
+              <test-case id="1010" name="RecordDeterministicRoute(&quot;Slope&quot;,0.0f)" fullname="PowderFlow.Tests.ContactQualityTests.RecordDeterministicRoute(&quot;Slope&quot;,0.0f)" methodname="RecordDeterministicRoute" classname="PowderFlow.Tests.ContactQualityTests" runstate="Runnable" seed="1663895359" result="Passed" start-time="2026-09-30 23:36:38Z" end-time="2026-09-30 23:36:38Z" duration="0.080503" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[Slope: transitions=0 ground=1000/1000 oneSki=0 heightStepSum=0.00175 speed=19.39
+]]></output>
+              </test-case>
+              <test-case id="1011" name="RecordDeterministicRoute(&quot;Slope&quot;,0.25f)" fullname="PowderFlow.Tests.ContactQualityTests.RecordDeterministicRoute(&quot;Slope&quot;,0.25f)" methodname="RecordDeterministicRoute" classname="PowderFlow.Tests.ContactQualityTests" runstate="Runnable" seed="985014895" result="Passed" start-time="2026-09-30 23:36:38Z" end-time="2026-09-30 23:36:38Z" duration="0.014263" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[SlopeGentleCarve: transitions=0 ground=250/250 oneSki=0 heightStepSum=0.00005 speed=16.63
+]]></output>
+              </test-case>
+              <test-case id="1012" name="RecordDeterministicRoute(&quot;Slope&quot;,0.8f)" fullname="PowderFlow.Tests.ContactQualityTests.RecordDeterministicRoute(&quot;Slope&quot;,0.8f)" methodname="RecordDeterministicRoute" classname="PowderFlow.Tests.ContactQualityTests" runstate="Runnable" seed="1637758952" result="Passed" start-time="2026-09-30 23:36:38Z" end-time="2026-09-30 23:36:38Z" duration="0.014695" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[SlopeHardCarve: transitions=0 ground=250/250 oneSki=0 heightStepSum=0.00003 speed=12.97
+]]></output>
+              </test-case>
+              <test-case id="1013" name="RecordDeterministicRoute(&quot;Rollers&quot;,0.0f)" fullname="PowderFlow.Tests.ContactQualityTests.RecordDeterministicRoute(&quot;Rollers&quot;,0.0f)" methodname="RecordDeterministicRoute" classname="PowderFlow.Tests.ContactQualityTests" runstate="Runnable" seed="519010753" result="Passed" start-time="2026-09-30 23:36:38Z" end-time="2026-09-30 23:36:38Z" duration="0.053246" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[Rollers: transitions=0 ground=1000/1000 oneSki=0 heightStepSum=0.47749 speed=19.41
+]]></output>
+              </test-case>
+              <test-case id="1014" name="RecordDeterministicRoute(&quot;Ripple&quot;,0.0f)" fullname="PowderFlow.Tests.ContactQualityTests.RecordDeterministicRoute(&quot;Ripple&quot;,0.0f)" methodname="RecordDeterministicRoute" classname="PowderFlow.Tests.ContactQualityTests" runstate="Runnable" seed="1886617938" result="Passed" start-time="2026-09-30 23:36:38Z" end-time="2026-09-30 23:36:38Z" duration="0.045082" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[Ripple: transitions=0 ground=1000/1000 oneSki=0 heightStepSum=9.43325 speed=19.14
+]]></output>
+              </test-case>
+              <test-case id="1015" name="RecordDeterministicRoute(&quot;Seam&quot;,0.0f)" fullname="PowderFlow.Tests.ContactQualityTests.RecordDeterministicRoute(&quot;Seam&quot;,0.0f)" methodname="RecordDeterministicRoute" classname="PowderFlow.Tests.ContactQualityTests" runstate="Runnable" seed="432833008" result="Passed" start-time="2026-09-30 23:36:38Z" end-time="2026-09-30 23:36:38Z" duration="0.044157" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[Seam: transitions=0 ground=1000/1000 oneSki=0 heightStepSum=2.37930 speed=19.36
+]]></output>
+              </test-case>
+              <test-case id="1016" name="RecordDeterministicRoute(&quot;OneSki&quot;,0.0f)" fullname="PowderFlow.Tests.ContactQualityTests.RecordDeterministicRoute(&quot;OneSki&quot;,0.0f)" methodname="RecordDeterministicRoute" classname="PowderFlow.Tests.ContactQualityTests" runstate="Runnable" seed="1942711927" result="Passed" start-time="2026-09-30 23:36:38Z" end-time="2026-09-30 23:36:38Z" duration="0.040742" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[OneSki: transitions=0 ground=1000/1000 oneSki=1000 heightStepSum=0.00173 speed=19.39
+]]></output>
+              </test-case>
+            </test-suite>
+          </test-suite>
+          <test-suite type="TestFixture" id="1022" name="EnvironmentAssetTests" fullname="PowderFlow.Tests.EnvironmentAssetTests" classname="PowderFlow.Tests.EnvironmentAssetTests" runstate="Runnable" testcasecount="2" result="Passed" start-time="2026-09-30 23:36:38Z" end-time="2026-09-30 23:36:38Z" duration="0.028641" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1023" name="GeneratedCatalogHasLodsPathsAndSeamlessTerrain" fullname="PowderFlow.Tests.EnvironmentAssetTests.GeneratedCatalogHasLodsPathsAndSeamlessTerrain" methodname="GeneratedCatalogHasLodsPathsAndSeamlessTerrain" classname="PowderFlow.Tests.EnvironmentAssetTests" runstate="Runnable" seed="2107857978" result="Passed" start-time="2026-09-30 23:36:38Z" end-time="2026-09-30 23:36:38Z" duration="0.025387" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1024" name="SceneryLodsAreBoundedAndAccentsAreNonColliding" fullname="PowderFlow.Tests.EnvironmentAssetTests.SceneryLodsAreBoundedAndAccentsAreNonColliding" methodname="SceneryLodsAreBoundedAndAccentsAreNonColliding" classname="PowderFlow.Tests.EnvironmentAssetTests" runstate="Runnable" seed="1680052064" result="Passed" start-time="2026-09-30 23:36:38Z" end-time="2026-09-30 23:36:38Z" duration="0.002193" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1025" name="GraphicsFoundationTests" fullname="PowderFlow.Tests.GraphicsFoundationTests" classname="PowderFlow.Tests.GraphicsFoundationTests" runstate="Runnable" testcasecount="2" result="Passed" start-time="2026-09-30 23:36:38Z" end-time="2026-09-30 23:36:38Z" duration="0.004804" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1026" name="PostEffectsArePersistentSubassetsAndRendererHasResources" fullname="PowderFlow.Tests.GraphicsFoundationTests.PostEffectsArePersistentSubassetsAndRendererHasResources" methodname="PostEffectsArePersistentSubassetsAndRendererHasResources" classname="PowderFlow.Tests.GraphicsFoundationTests" runstate="Runnable" seed="555666926" result="Passed" start-time="2026-09-30 23:36:38Z" end-time="2026-09-30 23:36:38Z" duration="0.002311" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1027" name="SoftShadowsDepthAndRuntimeFogAreRetained" fullname="PowderFlow.Tests.GraphicsFoundationTests.SoftShadowsDepthAndRuntimeFogAreRetained" methodname="SoftShadowsDepthAndRuntimeFogAreRetained" classname="PowderFlow.Tests.GraphicsFoundationTests" runstate="Runnable" seed="1754120188" result="Passed" start-time="2026-09-30 23:36:38Z" end-time="2026-09-30 23:36:38Z" duration="0.001610" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1028" name="GroundPhysicsTests" fullname="PowderFlow.Tests.GroundPhysicsTests" classname="PowderFlow.Tests.GroundPhysicsTests" runstate="Runnable" testcasecount="5" result="Passed" start-time="2026-09-30 23:36:38Z" end-time="2026-09-30 23:36:39Z" duration="0.601301" total="5" passed="5" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1032" name="BrakeStopsAndPowderSlows" fullname="PowderFlow.Tests.GroundPhysicsTests.BrakeStopsAndPowderSlows" methodname="BrakeStopsAndPowderSlows" classname="PowderFlow.Tests.GroundPhysicsTests" runstate="Runnable" seed="1818710951" result="Passed" start-time="2026-09-30 23:36:38Z" end-time="2026-09-30 23:36:38Z" duration="0.023488" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1033" name="CarvingTurnsSmoothlyAndKeepsContact" fullname="PowderFlow.Tests.GroundPhysicsTests.CarvingTurnsSmoothlyAndKeepsContact" methodname="CarvingTurnsSmoothlyAndKeepsContact" classname="PowderFlow.Tests.GroundPhysicsTests" runstate="Runnable" seed="462042845" result="Passed" start-time="2026-09-30 23:36:38Z" end-time="2026-09-30 23:36:38Z" duration="0.008499" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1029" name="GravityAcceleratesAndUphillSlows" fullname="PowderFlow.Tests.GroundPhysicsTests.GravityAcceleratesAndUphillSlows" methodname="GravityAcceleratesAndUphillSlows" classname="PowderFlow.Tests.GroundPhysicsTests" runstate="Runnable" seed="634211120" result="Passed" start-time="2026-09-30 23:36:38Z" end-time="2026-09-30 23:36:38Z" duration="0.023227" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1031" name="SwitchCarvingUsesTravelDirection" fullname="PowderFlow.Tests.GroundPhysicsTests.SwitchCarvingUsesTravelDirection" methodname="SwitchCarvingUsesTravelDirection" classname="PowderFlow.Tests.GroundPhysicsTests" runstate="Runnable" seed="1929570209" result="Passed" start-time="2026-09-30 23:36:38Z" end-time="2026-09-30 23:36:38Z" duration="0.006219" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1030" name="TerminalSpeedAndTuckAreSane" fullname="PowderFlow.Tests.GroundPhysicsTests.TerminalSpeedAndTuckAreSane" methodname="TerminalSpeedAndTuckAreSane" classname="PowderFlow.Tests.GroundPhysicsTests" runstate="Runnable" seed="1792648110" result="Passed" start-time="2026-09-30 23:36:38Z" end-time="2026-09-30 23:36:39Z" duration="0.538868" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[t 0 speed 0.03355218 grounded True height 0.75 pos (0.00, 1.17, 0.43)
+t 20 speed 25.14933 grounded True height 0.750023 pos (0.00, -123.21, 342.18)
+t 40 speed 25.60137 grounded True height 0.7500924 pos (0.00, -297.71, 821.60)
+t 60 speed 25.60546 grounded True height 0.7498669 pos (0.00, -472.85, 1302.80)
+t 80 speed 25.60552 grounded True height 0.7497117 pos (0.00, -647.99, 1784.00)
+t 100 speed 25.60551 grounded True height 0.7504417 pos (0.00, -823.15, 2265.24)
+t 0 speed 0.03355218 grounded True height 0.75 pos (0.00, 1.17, 0.43)
+t 20 speed 34.59593 grounded True height 0.7499856 pos (0.00, -151.15, 418.94)
+t 40 speed 37.36245 grounded True height 0.7500677 pos (0.00, -401.55, 1106.90)
+t 60 speed 37.47782 grounded True height 0.7503843 pos (0.00, -657.71, 1810.69)
+t 80 speed 37.48248 grounded True height 0.7501394 pos (0.00, -914.13, 2515.19)
+t 100 speed 37.48263 grounded True height 0.750486 pos (0.00, -1170.57, 3219.78)
+Terminal upright 25.61, tuck 37.48
+]]></output>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1034" name="KickerTests" fullname="PowderFlow.Tests.KickerTests" classname="PowderFlow.Tests.KickerTests" runstate="Runnable" testcasecount="1" result="Passed" start-time="2026-09-30 23:36:39Z" end-time="2026-09-30 23:36:39Z" duration="0.006164" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1035" name="ContinuousKickerLaunchesFromEntryMomentum" fullname="PowderFlow.Tests.KickerTests.ContinuousKickerLaunchesFromEntryMomentum" methodname="ContinuousKickerLaunchesFromEntryMomentum" classname="PowderFlow.Tests.KickerTests" runstate="Runnable" seed="1000369319" result="Passed" start-time="2026-09-30 23:36:39Z" end-time="2026-09-30 23:36:39Z" duration="0.005212" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[Kicker launch velocity (0.00, 8.53, 11.88)
+]]></output>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1036" name="MotionQualityEditTests" fullname="PowderFlow.Tests.MotionQualityEditTests" classname="PowderFlow.Tests.MotionQualityEditTests" runstate="Runnable" testcasecount="6" result="Passed" start-time="2026-09-30 23:36:39Z" end-time="2026-09-30 23:36:39Z" duration="0.011163" total="6" passed="6" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1039" name="EveryProductionJumpHasAnUpwardRidingCollider" fullname="PowderFlow.Tests.MotionQualityEditTests.EveryProductionJumpHasAnUpwardRidingCollider" methodname="EveryProductionJumpHasAnUpwardRidingCollider" classname="PowderFlow.Tests.MotionQualityEditTests" runstate="Runnable" seed="1359565506" result="Passed" start-time="2026-09-30 23:36:39Z" end-time="2026-09-30 23:36:39Z" duration="0.001725" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1042" name="FoundationClipsKeepTheImportedRigInBindPose" fullname="PowderFlow.Tests.MotionQualityEditTests.FoundationClipsKeepTheImportedRigInBindPose" methodname="FoundationClipsKeepTheImportedRigInBindPose" classname="PowderFlow.Tests.MotionQualityEditTests" runstate="Runnable" seed="400307204" result="Passed" start-time="2026-09-30 23:36:39Z" end-time="2026-09-30 23:36:39Z" duration="0.006233" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1037" name="PredictionFollowsVelocityToDownhillContactAndIgnoresTriggers" fullname="PowderFlow.Tests.MotionQualityEditTests.PredictionFollowsVelocityToDownhillContactAndIgnoresTriggers" methodname="PredictionFollowsVelocityToDownhillContactAndIgnoresTriggers" classname="PowderFlow.Tests.MotionQualityEditTests" runstate="Runnable" seed="1953851177" result="Passed" start-time="2026-09-30 23:36:39Z" end-time="2026-09-30 23:36:39Z" duration="0.000789" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1041" name="ReleasedPreloadCanSpotButDoesNotStopInstantly" fullname="PowderFlow.Tests.MotionQualityEditTests.ReleasedPreloadCanSpotButDoesNotStopInstantly" methodname="ReleasedPreloadCanSpotButDoesNotStopInstantly" classname="PowderFlow.Tests.MotionQualityEditTests" runstate="Runnable" seed="470329187" result="Passed" start-time="2026-09-30 23:36:39Z" end-time="2026-09-30 23:36:39Z" duration="0.000488" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1040" name="ShallowAlignedTerrainRecapturePreservesSpeedButBadLandingsStillFail" fullname="PowderFlow.Tests.MotionQualityEditTests.ShallowAlignedTerrainRecapturePreservesSpeedButBadLandingsStillFail" methodname="ShallowAlignedTerrainRecapturePreservesSpeedButBadLandingsStillFail" classname="PowderFlow.Tests.MotionQualityEditTests" runstate="Runnable" seed="2073407936" result="Passed" start-time="2026-09-30 23:36:39Z" end-time="2026-09-30 23:36:39Z" duration="0.000325" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1038" name="SpottingPreservesFreeAirAndHeldInputButDampsReleasedRotation" fullname="PowderFlow.Tests.MotionQualityEditTests.SpottingPreservesFreeAirAndHeldInputButDampsReleasedRotation" methodname="SpottingPreservesFreeAirAndHeldInputButDampsReleasedRotation" classname="PowderFlow.Tests.MotionQualityEditTests" runstate="Runnable" seed="552657314" result="Passed" start-time="2026-09-30 23:36:39Z" end-time="2026-09-30 23:36:39Z" duration="0.000438" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1043" name="ParkAssetTests" fullname="PowderFlow.Tests.ParkAssetTests" classname="PowderFlow.Tests.ParkAssetTests" runstate="Runnable" testcasecount="1" result="Passed" start-time="2026-09-30 23:36:39Z" end-time="2026-09-30 23:36:39Z" duration="0.023952" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1044" name="ImportedParkRetainsSurfacesAndUsesOnlyExplicitCollision" fullname="PowderFlow.Tests.ParkAssetTests.ImportedParkRetainsSurfacesAndUsesOnlyExplicitCollision" methodname="ImportedParkRetainsSurfacesAndUsesOnlyExplicitCollision" classname="PowderFlow.Tests.ParkAssetTests" runstate="Runnable" seed="546383396" result="Passed" start-time="2026-09-30 23:36:39Z" end-time="2026-09-30 23:36:39Z" duration="0.023327" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1045" name="PresentationTests" fullname="PowderFlow.Tests.PresentationTests" classname="PowderFlow.Tests.PresentationTests" runstate="Runnable" testcasecount="2" result="Passed" start-time="2026-09-30 23:36:39Z" end-time="2026-09-30 23:36:39Z" duration="0.007385" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1046" name="SettingsAndFeedbackStayInsideSupportedSafeAreas" fullname="PowderFlow.Tests.PresentationTests.SettingsAndFeedbackStayInsideSupportedSafeAreas" methodname="SettingsAndFeedbackStayInsideSupportedSafeAreas" classname="PowderFlow.Tests.PresentationTests" runstate="Runnable" seed="1188505538" result="Passed" start-time="2026-09-30 23:36:39Z" end-time="2026-09-30 23:36:39Z" duration="0.006036" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1047" name="ThemeHasFontsAndFeedbackFadesWithDistinctLandingTiers" fullname="PowderFlow.Tests.PresentationTests.ThemeHasFontsAndFeedbackFadesWithDistinctLandingTiers" methodname="ThemeHasFontsAndFeedbackFadesWithDistinctLandingTiers" classname="PowderFlow.Tests.PresentationTests" runstate="Runnable" seed="571369976" result="Passed" start-time="2026-09-30 23:36:39Z" end-time="2026-09-30 23:36:39Z" duration="0.000567" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1048" name="RailTests" fullname="PowderFlow.Tests.RailTests" classname="PowderFlow.Tests.RailTests" runstate="Runnable" testcasecount="1" result="Passed" start-time="2026-09-30 23:36:39Z" end-time="2026-09-30 23:36:39Z" duration="0.001794" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1049" name="KinkPathProjectionAndTangentsStayContinuous" fullname="PowderFlow.Tests.RailTests.KinkPathProjectionAndTangentsStayContinuous" methodname="KinkPathProjectionAndTangentsStayContinuous" classname="PowderFlow.Tests.RailTests" runstate="Runnable" seed="1448916667" result="Passed" start-time="2026-09-30 23:36:39Z" end-time="2026-09-30 23:36:39Z" duration="0.001228" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1050" name="SaveTests" fullname="PowderFlow.Tests.SaveTests" classname="PowderFlow.Tests.SaveTests" runstate="Runnable" testcasecount="1" result="Passed" start-time="2026-09-30 23:36:39Z" end-time="2026-09-30 23:36:39Z" duration="0.002695" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1051" name="SettingsAndHighScoreRoundTripAndReplaceAtomically" fullname="PowderFlow.Tests.SaveTests.SettingsAndHighScoreRoundTripAndReplaceAtomically" methodname="SettingsAndHighScoreRoundTripAndReplaceAtomically" classname="PowderFlow.Tests.SaveTests" runstate="Runnable" seed="884088159" result="Passed" start-time="2026-09-30 23:36:39Z" end-time="2026-09-30 23:36:39Z" duration="0.002218" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1052" name="SetupTests" fullname="PowderFlow.Tests.SetupTests" classname="PowderFlow.Tests.SetupTests" runstate="Runnable" testcasecount="1" result="Passed" start-time="2026-09-30 23:36:39Z" end-time="2026-09-30 23:36:39Z" duration="0.004667" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1053" name="LinearUrpAndHundredHertzAreConfigured" fullname="PowderFlow.Tests.SetupTests.LinearUrpAndHundredHertzAreConfigured" methodname="LinearUrpAndHundredHertzAreConfigured" classname="PowderFlow.Tests.SetupTests" runstate="Runnable" seed="1538556818" result="Passed" start-time="2026-09-30 23:36:39Z" end-time="2026-09-30 23:36:39Z" duration="0.000356" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1054" name="SnowVisualTests" fullname="PowderFlow.Tests.SnowVisualTests" classname="PowderFlow.Tests.SnowVisualTests" runstate="Runnable" testcasecount="2" result="Passed" start-time="2026-09-30 23:36:39Z" end-time="2026-09-30 23:36:39Z" duration="0.004240" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1055" name="ContinuousEmissionSurvivesShortRenderStepsAndRejectsCatchupSpikes" fullname="PowderFlow.Tests.SnowVisualTests.ContinuousEmissionSurvivesShortRenderStepsAndRejectsCatchupSpikes" methodname="ContinuousEmissionSurvivesShortRenderStepsAndRejectsCatchupSpikes" classname="PowderFlow.Tests.SnowVisualTests" runstate="Runnable" seed="1063311602" result="Passed" start-time="2026-09-30 23:36:39Z" end-time="2026-09-30 23:36:39Z" duration="0.000333" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1056" name="SoftShapeMaterialsAndShadersSurviveReload" fullname="PowderFlow.Tests.SnowVisualTests.SoftShapeMaterialsAndShadersSurviveReload" methodname="SoftShapeMaterialsAndShadersSurviveReload" classname="PowderFlow.Tests.SnowVisualTests" runstate="Runnable" seed="142813633" result="Passed" start-time="2026-09-30 23:36:39Z" end-time="2026-09-30 23:36:39Z" duration="0.003492" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1057" name="TrickTests" fullname="PowderFlow.Tests.TrickTests" classname="PowderFlow.Tests.TrickTests" runstate="Runnable" testcasecount="7" result="Passed" start-time="2026-09-30 23:36:39Z" end-time="2026-09-30 23:36:39Z" duration="0.002511" total="7" passed="7" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1064" name="CompositionNamesAndScoresActualMotion" fullname="PowderFlow.Tests.TrickTests.CompositionNamesAndScoresActualMotion" methodname="CompositionNamesAndScoresActualMotion" classname="PowderFlow.Tests.TrickTests" runstate="Runnable" seed="1466531388" result="Passed" start-time="2026-09-30 23:36:39Z" end-time="2026-09-30 23:36:39Z" duration="0.000760" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-suite type="ParameterizedMethod" id="1063" name="SpinsQuantizeWithinTolerance" fullname="PowderFlow.Tests.TrickTests.SpinsQuantizeWithinTolerance" classname="PowderFlow.Tests.TrickTests" runstate="Runnable" testcasecount="5" result="Passed" start-time="2026-09-30 23:36:39Z" end-time="2026-09-30 23:36:39Z" duration="0.000596" total="5" passed="5" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1058" name="SpinsQuantizeWithinTolerance(180)" fullname="PowderFlow.Tests.TrickTests.SpinsQuantizeWithinTolerance(180)" methodname="SpinsQuantizeWithinTolerance" classname="PowderFlow.Tests.TrickTests" runstate="Runnable" seed="1741007667" result="Passed" start-time="2026-09-30 23:36:39Z" end-time="2026-09-30 23:36:39Z" duration="0.000158" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1059" name="SpinsQuantizeWithinTolerance(360)" fullname="PowderFlow.Tests.TrickTests.SpinsQuantizeWithinTolerance(360)" methodname="SpinsQuantizeWithinTolerance" classname="PowderFlow.Tests.TrickTests" runstate="Runnable" seed="1434362115" result="Passed" start-time="2026-09-30 23:36:39Z" end-time="2026-09-30 23:36:39Z" duration="0.000037" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1060" name="SpinsQuantizeWithinTolerance(540)" fullname="PowderFlow.Tests.TrickTests.SpinsQuantizeWithinTolerance(540)" methodname="SpinsQuantizeWithinTolerance" classname="PowderFlow.Tests.TrickTests" runstate="Runnable" seed="1570650568" result="Passed" start-time="2026-09-30 23:36:39Z" end-time="2026-09-30 23:36:39Z" duration="0.000024" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1061" name="SpinsQuantizeWithinTolerance(720)" fullname="PowderFlow.Tests.TrickTests.SpinsQuantizeWithinTolerance(720)" methodname="SpinsQuantizeWithinTolerance" classname="PowderFlow.Tests.TrickTests" runstate="Runnable" seed="1781003167" result="Passed" start-time="2026-09-30 23:36:39Z" end-time="2026-09-30 23:36:39Z" duration="0.000023" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1062" name="SpinsQuantizeWithinTolerance(1080)" fullname="PowderFlow.Tests.TrickTests.SpinsQuantizeWithinTolerance(1080)" methodname="SpinsQuantizeWithinTolerance" classname="PowderFlow.Tests.TrickTests" runstate="Runnable" seed="1196468158" result="Passed" start-time="2026-09-30 23:36:39Z" end-time="2026-09-30 23:36:39Z" duration="0.000021" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+            </test-suite>
+            <test-case id="1065" name="TrackerAccumulatesBeyondAFullRevolution" fullname="PowderFlow.Tests.TrickTests.TrackerAccumulatesBeyondAFullRevolution" methodname="TrackerAccumulatesBeyondAFullRevolution" classname="PowderFlow.Tests.TrickTests" runstate="Runnable" seed="1981745684" result="Passed" start-time="2026-09-30 23:36:39Z" end-time="2026-09-30 23:36:39Z" duration="0.000613" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[Saving results to: /home/haydend/.config/unity3d/PowderFlow Studio/PowderFlow/TestResults.xml
+]]></output>
+            </test-case>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="2" result="Passed" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-09-30 23:31:13Z" end-time="2026-09-30 23:31:45Z" duration="31.6688395">
+  <test-suite type="TestSuite" id="1064" name="PowderFlow" fullname="PowderFlow" runstate="Runnable" testcasecount="38" result="Passed" start-time="2026-09-30 23:31:13Z" end-time="2026-09-30 23:31:45Z" duration="31.668840" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="PlayMode" />
+    </properties>
+    <test-suite type="Assembly" id="1058" name="PowderFlow.PlayTests.dll" fullname="/home/haydend/Documents/ChatGPT/ski-in-unity/Library/ScriptAssemblies/PowderFlow.PlayTests.dll" runstate="Runnable" testcasecount="38" result="Passed" start-time="2026-09-30 23:31:13Z" end-time="2026-09-30 23:31:45Z" duration="31.664277" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="342839" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="PlayMode" />
+        <property name="EditorOnly" value="False" />
+      </properties>
+      <test-suite type="TestSuite" id="1059" name="PowderFlow" fullname="PowderFlow" runstate="Runnable" testcasecount="38" result="Passed" start-time="2026-09-30 23:31:13Z" end-time="2026-09-30 23:31:45Z" duration="31.659975" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="SetUpFixture" id="1038" name="Tests" fullname="PowderFlow.Tests.PlayTestIsolation" classname="PowderFlow.Tests.PlayTestIsolation" runstate="Runnable" testcasecount="38" result="Passed" start-time="2026-09-30 23:31:13Z" end-time="2026-09-30 23:31:45Z" duration="31.652626" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestFixture" id="1007" name="ContactLineReviewTests" fullname="PowderFlow.Tests.ContactLineReviewTests" classname="PowderFlow.Tests.ContactLineReviewTests" runstate="Runnable" testcasecount="4" result="Passed" start-time="2026-09-30 23:31:13Z" end-time="2026-09-30 23:31:45Z" duration="31.644754" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1009" name="AlternateBoxBranchReconnects" fullname="PowderFlow.Tests.ContactLineReviewTests.AlternateBoxBranchReconnects" methodname="AlternateBoxBranchReconnects" classname="PowderFlow.Tests.ContactLineReviewTests" runstate="Runnable" seed="33090343" result="Passed" start-time="2026-09-30 23:31:13Z" end-time="2026-09-30 23:31:27Z" duration="13.888149" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[AlternateLine: time=27.30 z=816.19 x=-17.92 speed=21.04 jumps=2 landings=5 rails=Box_wide/Box_down/Rail_wide resets=0 bail=False
+]]></output>
+            </test-case>
+            <test-case id="1008" name="MainAuthoredLineUsesRealPhysics" fullname="PowderFlow.Tests.ContactLineReviewTests.MainAuthoredLineUsesRealPhysics" methodname="MainAuthoredLineUsesRealPhysics" classname="PowderFlow.Tests.ContactLineReviewTests" runstate="Runnable" seed="859624090" result="Passed" start-time="2026-09-30 23:31:27Z" end-time="2026-09-30 23:31:45Z" duration="17.747478" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[AuthoredLine: time=35.63 z=816.43 x=-17.91 speed=21.12 jumps=3 landings=6 rails=Rail_down/Box_down/Rail_wide resets=0 bail=False
+Saving results to: /home/haydend/.config/unity3d/PowderFlow Studio/PowderFlow/TestResults.xml
+]]></output>
+            </test-case>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

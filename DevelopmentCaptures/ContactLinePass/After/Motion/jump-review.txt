@@ -1,0 +1,2 @@
+lip 105: launch=18.87m/s airtime=1.70s terrain clearance=5.39m landing=Perfect impact=8.97 upright=11.48 alignment=0.26 speed=20.62
+lip 900: launch=22.16m/s airtime=3.33s terrain clearance=18.94m landing=Clean impact=18.42 upright=27.06 alignment=1.00 speed=20.82

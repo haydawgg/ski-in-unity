@@ -1,0 +1,5 @@
+launch t=1.68 z=326.75 speed=20.99
+landing t=4.33 z=379.23 quality=Clean impact=14.10 alignment=0.25 upright=21.27 contacts=True/True speed=20.22
+launch t=7.97 z=456.74 speed=21.16
+landing t=10.69 z=511.06 quality=Clean impact=14.67 alignment=0.24 upright=21.25 contacts=True/True speed=20.46
+end z=537.93 speed=21.50 launches=2 landings=2 bail=False

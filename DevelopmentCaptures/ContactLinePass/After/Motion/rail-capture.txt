@@ -1,0 +1,1 @@
+entry offset=.7m first correction=0.091m settled=0.005m speed=9.78m/s

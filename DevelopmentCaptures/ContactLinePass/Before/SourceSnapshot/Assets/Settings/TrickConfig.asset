@@ -1,0 +1,67 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae199816dd10d43b494df6378b66eeb5, type: 3}
+  m_Name: TrickConfig
+  m_EditorClassIdentifier: PowderFlow::PowderFlow.TrickConfig
+  baseInertia: 18
+  tuckInertiaReduction: 0.35
+  yawTorque: 78
+  pitchTorque: 62
+  rollTorque: 48
+  angularDrag: 0.03
+  maximumAngularSpeed: 12
+  preloadRate: 3
+  maximumPreload: 3.8
+  takeoffContactLock: 0.18
+  perfectAlignment: 15
+  cleanAlignment: 35
+  sketchyAlignment: 60
+  uprightBailAngle: 65
+  perfectImpact: 10.5
+  cleanImpact: 21
+  bailImpact: 34
+  bailAngularSpeed: 13
+  assistHeight: 2.4
+  assistAngle: 42
+  assistResponse: 3
+  landingAngularDamping: 4
+  compressionResponse: 8
+  terrainRecaptureImpact: 2.5
+  perfectRetention: 0.99
+  cleanRetention: 0.91
+  sketchyRetention: 0.76
+  flatImpactScrub: 0.15
+  rotationTolerance: 30
+  scorePerHalfTurn: 180
+  flipScore: 550
+  grabScorePerSecond: 260
+  switchBonus: 1.25
+  corkBonus: 1.3
+  comboTimeout: 7
+  repeatDecay: 0.22
+  bailRecovery: 2
+  grabBuffer: 0.14
+  railCaptureDistance: 0.85
+  railMinimumSpeed: 2
+  railMaximumVerticalSpeed: 7
+  railFriction: 0.6
+  railBalanceResponse: 1.2
+  railInstability: 0.3
+  railPop: 3.5
+  railScorePerSecond: 320
+  predictionHorizon: 0.8
+  predictionStep: 0.05
+  landingPrepareTime: 0.46
+  spottingTime: 0.42
+  spottingAngularDamping: 6
+  rotationReleaseThreshold: 0.08
+  railCaptureResponse: 14

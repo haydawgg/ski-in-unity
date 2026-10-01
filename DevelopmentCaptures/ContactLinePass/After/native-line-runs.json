@@ -1,0 +1,48 @@
+{
+  "NativeAuthoredLine": {
+    "exitCode": 0,
+    "seconds": 34.7864,
+    "launches": 3,
+    "landings": 6,
+    "railCaptures": 3,
+    "performance": {
+      "gpu": "AMD Radeon RX 6600 XT (radeonsi, navi23, ACO, DRM 3.64, 7.2.8-1-cachyos)",
+      "cpu": "AMD Ryzen 5 9600X 6-Core Processor",
+      "width": 1920,
+      "height": 1080,
+      "quality": 2,
+      "frameRateCap": 144,
+      "samples": 4718,
+      "averageFps": 143.92944241014416,
+      "meanFrameMs": 6.947848774056808,
+      "p50FrameMs": 6.9331029999997185,
+      "p95FrameMs": 7.147662000001276,
+      "p99FrameMs": 7.259622999999493,
+      "meanMainThreadMs": 6.9433327687579345,
+      "meanGcBytes": 2677.505298855447
+    }
+  },
+  "NativeAlternateLine": {
+    "exitCode": 0,
+    "seconds": 26.4763,
+    "launches": 2,
+    "landings": 5,
+    "railCaptures": 3,
+    "performance": {
+      "gpu": "AMD Radeon RX 6600 XT (radeonsi, navi23, ACO, DRM 3.64, 7.2.8-1-cachyos)",
+      "cpu": "AMD Ryzen 5 9600X 6-Core Processor",
+      "width": 1920,
+      "height": 1080,
+      "quality": 2,
+      "frameRateCap": 144,
+      "samples": 3522,
+      "averageFps": 143.9319961148534,
+      "meanFrameMs": 6.947725502271434,
+      "p50FrameMs": 6.932523000001467,
+      "p95FrameMs": 7.155263000001355,
+      "p99FrameMs": 7.262672999999609,
+      "meanMainThreadMs": 6.942926296422481,
+      "meanGcBytes": 2586.68086314594
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "Assets/Scripts/SkiPhysics/SkiContactSystem.cs": "96086c74a2b89b6ce67d06170df10529f6b6c89141e8e0d62d1cdd7e59224fc6",
+  "Assets/Scripts/SkiPhysics/SkiPhysicsController.cs": "70292d12eed8d96b37754f4db5bcd8406dc86dc0d9475fabe6dbea5aefe3618c",
+  "Assets/Scripts/Core/SkiPhysicsConfig.cs": "ed0f0e0aebda7e0c86a8bb97aa914959ec4475c04335072512ec7d05632bccc9",
+  "Assets/Scripts/Core/WorldConfig.cs": "2328d8f4d3fff8e30264d12c670c9d73c32fe68ae547b3671f21edf0425a7c4a",
+  "Assets/Scripts/Environment/MountainWorld.cs": "a1d19c6309649c557a1c75a9f91d19fa5be3214330e42b7cdee57af78a879106",
+  "Assets/Settings/SkiPhysicsConfig.asset": "67e4fc911b279aba83ce462d0d5fa5d35a0a2f525cb9b344c2aba072d7cdbee1",
+  "Assets/Settings/WorldConfig.asset": "a733d7ec034f515018e686ad49828f4b64e3d03e82447e5cbc4df790e7f07730",
+  "Assets/Settings/TrickConfig.asset": "dbe93eff2ccff4ee6029c62ea3561c310762ba094bb93b984df5da2c016c8df3",
+  "Assets/Settings/CameraConfig.asset": "6d0bcead08180165c1ec8a55675f9154e3eae358355d8f31c064fcfc13626f94",
+  "Assets/Settings/CharacterVisualConfig.asset": "0176fc39f97f1ccb0579a258fbbc2cddac807c0e74dcedda9db0916c22ee0129"
+}

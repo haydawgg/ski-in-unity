@@ -1,0 +1,17 @@
+{
+  "area": 1,
+  "day": false,
+  "initialSpeed": 0.0,
+  "runSeconds": 12.0,
+  "startX": 0.0,
+  "startZ": 360.0,
+  "runStartZ": 363.35,
+  "frameRateCap": 144,
+  "vSyncCount": 0,
+  "width": 1920,
+  "height": 1080,
+  "quality": 2,
+  "maxSpeed": 22.09,
+  "distance": 141.66,
+  "exitCode": 0
+}

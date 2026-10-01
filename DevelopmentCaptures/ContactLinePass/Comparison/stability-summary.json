@@ -1,0 +1,410 @@
+{
+  "Flat": {
+    "before": {
+      "ticks": 1000,
+      "groundedTicks": 1000.0,
+      "transitions": 0,
+      "oneSkiTicks": 0,
+      "heightSDmm": 0.00992274224094488,
+      "heightStepMm": 0.00017575083426040323,
+      "normalVelocitySD": 7.712214093386038e-05,
+      "supportAccelerationSD": 0.001554293800397957,
+      "finalSpeed": 6.968988
+    },
+    "after": {
+      "ticks": 1000,
+      "groundedTicks": 1000.0,
+      "transitions": 0,
+      "oneSkiTicks": 0,
+      "heightSDmm": 0.0,
+      "heightStepMm": 0.0,
+      "normalVelocitySD": 0.0,
+      "supportAccelerationSD": 0.0,
+      "finalSpeed": 6.969146
+    }
+  },
+  "OneSki": {
+    "before": {
+      "ticks": 1000,
+      "groundedTicks": 1000.0,
+      "transitions": 0,
+      "oneSkiTicks": 1000,
+      "heightSDmm": 10.03063286029345,
+      "heightStepMm": 3.0481523915461626,
+      "normalVelocitySD": 0.06194718367609736,
+      "supportAccelerationSD": 1.482661149948059,
+      "finalSpeed": 19.37593
+    },
+    "after": {
+      "ticks": 1000,
+      "groundedTicks": 1000.0,
+      "transitions": 0,
+      "oneSkiTicks": 1000,
+      "heightSDmm": 0.00408545915940826,
+      "heightStepMm": 0.001976640711897329,
+      "normalVelocitySD": 2.472593128231529e-05,
+      "supportAccelerationSD": 0.00048466716248892784,
+      "finalSpeed": 19.39039
+    }
+  },
+  "ProductionExistingParkLine": {
+    "before": {
+      "ticks": 1200,
+      "groundedTicks": 401.0,
+      "transitions": 34,
+      "oneSkiTicks": 3,
+      "heightSDmm": 184.78116249407353,
+      "heightStepMm": 8.476143333333331,
+      "normalVelocitySD": 1.751054931138788,
+      "supportAccelerationSD": 21.730590062939736,
+      "finalSpeed": 16.09023
+    },
+    "after": {
+      "ticks": 1200,
+      "groundedTicks": 663.0,
+      "transitions": 5,
+      "oneSkiTicks": 0,
+      "heightSDmm": 125.94427601483987,
+      "heightStepMm": 3.913564056939503,
+      "normalVelocitySD": 0.6861304263224446,
+      "supportAccelerationSD": 6.463128348495018,
+      "finalSpeed": 21.49106
+    }
+  },
+  "ProductionExistingRailLine": {
+    "before": {
+      "ticks": 500,
+      "groundedTicks": 126.0,
+      "transitions": 5,
+      "oneSkiTicks": 3,
+      "heightSDmm": 60.173836688875554,
+      "heightStepMm": 15.7298,
+      "normalVelocitySD": 0.6695251941751907,
+      "supportAccelerationSD": 6.959578632921703,
+      "finalSpeed": 12.84626
+    },
+    "after": {
+      "ticks": 500,
+      "groundedTicks": 128.0,
+      "transitions": 3,
+      "oneSkiTicks": 0,
+      "heightSDmm": 94.75769521990155,
+      "heightStepMm": 23.413148148148146,
+      "normalVelocitySD": 0.468143858049721,
+      "supportAccelerationSD": 7.499461461236729,
+      "finalSpeed": 12.97686
+    }
+  },
+  "ProductionGentleCarve": {
+    "before": {
+      "ticks": 300,
+      "groundedTicks": 300.0,
+      "transitions": 1,
+      "oneSkiTicks": 0,
+      "heightSDmm": 1.8959501502940448,
+      "heightStepMm": 0.5844522613065362,
+      "normalVelocitySD": 0.010408961835841267,
+      "supportAccelerationSD": 0.3386072310267516,
+      "finalSpeed": 18.21238
+    },
+    "after": {
+      "ticks": 300,
+      "groundedTicks": 300.0,
+      "transitions": 1,
+      "oneSkiTicks": 0,
+      "heightSDmm": 0.8218536105049339,
+      "heightStepMm": 0.13945226130653363,
+      "normalVelocitySD": 0.005526326024358317,
+      "supportAccelerationSD": 0.14126800033594167,
+      "finalSpeed": 18.21691
+    }
+  },
+  "ProductionHardCarve": {
+    "before": {
+      "ticks": 300,
+      "groundedTicks": 300.0,
+      "transitions": 1,
+      "oneSkiTicks": 0,
+      "heightSDmm": 5.703528494219611,
+      "heightStepMm": 0.5816180904522642,
+      "normalVelocitySD": 0.027985160171204577,
+      "supportAccelerationSD": 0.6253050824195798,
+      "finalSpeed": 12.12739
+    },
+    "after": {
+      "ticks": 300,
+      "groundedTicks": 300.0,
+      "transitions": 1,
+      "oneSkiTicks": 0,
+      "heightSDmm": 5.824207947789982,
+      "heightStepMm": 0.49164321608040407,
+      "normalVelocitySD": 0.02899403455664458,
+      "supportAccelerationSD": 0.6132055464435676,
+      "finalSpeed": 12.12567
+    }
+  },
+  "ProductionLargeJump": {
+    "before": {
+      "ticks": 700,
+      "groundedTicks": 171.0,
+      "transitions": 13,
+      "oneSkiTicks": 0,
+      "heightSDmm": 218.8844401490223,
+      "heightStepMm": 13.878528571428564,
+      "normalVelocitySD": 2.760861983815928,
+      "supportAccelerationSD": 33.58168678951394,
+      "finalSpeed": 20.39576
+    },
+    "after": {
+      "ticks": 700,
+      "groundedTicks": 367.0,
+      "transitions": 3,
+      "oneSkiTicks": 0,
+      "heightSDmm": 130.3230642135786,
+      "heightStepMm": 2.962469924812031,
+      "normalVelocitySD": 0.6950289178019322,
+      "supportAccelerationSD": 5.61512724060116,
+      "finalSpeed": 22.79186
+    }
+  },
+  "ProductionRoughTerrain": {
+    "before": {
+      "ticks": 300,
+      "groundedTicks": 300.0,
+      "transitions": 1,
+      "oneSkiTicks": 0,
+      "heightSDmm": 4.601413287173299,
+      "heightStepMm": 0.9790351758793947,
+      "normalVelocitySD": 0.029648133295197103,
+      "supportAccelerationSD": 0.5606409056347509,
+      "finalSpeed": 4.631398
+    },
+    "after": {
+      "ticks": 300,
+      "groundedTicks": 300.0,
+      "transitions": 1,
+      "oneSkiTicks": 0,
+      "heightSDmm": 3.9980063749198775,
+      "heightStepMm": 0.4178994974874364,
+      "normalVelocitySD": 0.02742450525292298,
+      "supportAccelerationSD": 0.36436325309836665,
+      "finalSpeed": 4.61835
+    }
+  },
+  "ProductionSmallJump": {
+    "before": {
+      "ticks": 500,
+      "groundedTicks": 275.0,
+      "transitions": 13,
+      "oneSkiTicks": 11,
+      "heightSDmm": 138.4161654688838,
+      "heightStepMm": 6.642212643678162,
+      "normalVelocitySD": 1.1109291237333074,
+      "supportAccelerationSD": 11.692383767934317,
+      "finalSpeed": 20.7438
+    },
+    "after": {
+      "ticks": 500,
+      "groundedTicks": 330.0,
+      "transitions": 3,
+      "oneSkiTicks": 0,
+      "heightSDmm": 99.19095272379741,
+      "heightStepMm": 3.99172925764192,
+      "normalVelocitySD": 0.46564099207619153,
+      "supportAccelerationSD": 5.165525671018044,
+      "finalSpeed": 22.40959
+    }
+  },
+  "ProductionStraight": {
+    "before": {
+      "ticks": 300,
+      "groundedTicks": 300.0,
+      "transitions": 1,
+      "oneSkiTicks": 0,
+      "heightSDmm": 3.844505406287654,
+      "heightStepMm": 0.6463718592964789,
+      "normalVelocitySD": 0.019636710309191303,
+      "supportAccelerationSD": 0.5397443534218898,
+      "finalSpeed": 19.52728
+    },
+    "after": {
+      "ticks": 300,
+      "groundedTicks": 300.0,
+      "transitions": 1,
+      "oneSkiTicks": 0,
+      "heightSDmm": 2.661008689007796,
+      "heightStepMm": 0.2116934673366841,
+      "normalVelocitySD": 0.013120411861584224,
+      "supportAccelerationSD": 0.2659531108513903,
+      "finalSpeed": 19.53693
+    }
+  },
+  "ProductionUndulations": {
+    "before": {
+      "ticks": 600,
+      "groundedTicks": 600.0,
+      "transitions": 1,
+      "oneSkiTicks": 0,
+      "heightSDmm": 7.652870206105941,
+      "heightStepMm": 0.8303286573146299,
+      "normalVelocitySD": 0.038946465053117156,
+      "supportAccelerationSD": 0.7627825521331074,
+      "finalSpeed": 22.53901
+    },
+    "after": {
+      "ticks": 600,
+      "groundedTicks": 600.0,
+      "transitions": 1,
+      "oneSkiTicks": 0,
+      "heightSDmm": 8.396432506749278,
+      "heightStepMm": 0.493659318637275,
+      "normalVelocitySD": 0.043811303377999565,
+      "supportAccelerationSD": 0.6472579561050846,
+      "finalSpeed": 22.54024
+    }
+  },
+  "Ripple": {
+    "before": {
+      "ticks": 1000,
+      "groundedTicks": 1000.0,
+      "transitions": 0,
+      "oneSkiTicks": 0,
+      "heightSDmm": 38.497503285840146,
+      "heightStepMm": 13.160685205784205,
+      "normalVelocitySD": 0.25330396871067795,
+      "supportAccelerationSD": 8.021570692708359,
+      "finalSpeed": 19.10688
+    },
+    "after": {
+      "ticks": 1000,
+      "groundedTicks": 1000.0,
+      "transitions": 0,
+      "oneSkiTicks": 0,
+      "heightSDmm": 36.68391317244253,
+      "heightStepMm": 10.493045606229144,
+      "normalVelocitySD": 0.24666640061127418,
+      "supportAccelerationSD": 7.897571986237769,
+      "finalSpeed": 19.13555
+    }
+  },
+  "Rollers": {
+    "before": {
+      "ticks": 1000,
+      "groundedTicks": 1000.0,
+      "transitions": 0,
+      "oneSkiTicks": 0,
+      "heightSDmm": 20.91294869561387,
+      "heightStepMm": 2.6402013348164632,
+      "normalVelocitySD": 0.11513976168782862,
+      "supportAccelerationSD": 2.1185612218005163,
+      "finalSpeed": 19.39314
+    },
+    "after": {
+      "ticks": 1000,
+      "groundedTicks": 1000.0,
+      "transitions": 0,
+      "oneSkiTicks": 0,
+      "heightSDmm": 22.90219035459248,
+      "heightStepMm": 0.5311290322580646,
+      "normalVelocitySD": 0.120548631048612,
+      "supportAccelerationSD": 1.7218400200066106,
+      "finalSpeed": 19.40599
+    }
+  },
+  "Seam": {
+    "before": {
+      "ticks": 1000,
+      "groundedTicks": 1000.0,
+      "transitions": 0,
+      "oneSkiTicks": 0,
+      "heightSDmm": 25.303114866147933,
+      "heightStepMm": 5.9465595105672975,
+      "normalVelocitySD": 0.18242593670226923,
+      "supportAccelerationSD": 3.747100762365265,
+      "finalSpeed": 19.41781
+    },
+    "after": {
+      "ticks": 1000,
+      "groundedTicks": 1000.0,
+      "transitions": 0,
+      "oneSkiTicks": 0,
+      "heightSDmm": 20.236363923353025,
+      "heightStepMm": 2.646609566184649,
+      "normalVelocitySD": 0.13985448285719027,
+      "supportAccelerationSD": 3.3953076880021267,
+      "finalSpeed": 19.35701
+    }
+  },
+  "Slope": {
+    "before": {
+      "ticks": 1000,
+      "groundedTicks": 1000.0,
+      "transitions": 0,
+      "oneSkiTicks": 0,
+      "heightSDmm": 10.009188023351097,
+      "heightStepMm": 2.2785116796440485,
+      "normalVelocitySD": 0.06682141662012857,
+      "supportAccelerationSD": 1.2501096898731683,
+      "finalSpeed": 19.34797
+    },
+    "after": {
+      "ticks": 1000,
+      "groundedTicks": 1000.0,
+      "transitions": 0,
+      "oneSkiTicks": 0,
+      "heightSDmm": 0.004131564137490986,
+      "heightStepMm": 0.0019477196885407907,
+      "normalVelocitySD": 2.503617382908179e-05,
+      "supportAccelerationSD": 0.0004913421689679994,
+      "finalSpeed": 19.39038
+    }
+  },
+  "SlopeGentleCarve": {
+    "before": {
+      "ticks": 250,
+      "groundedTicks": 250.0,
+      "transitions": 0,
+      "oneSkiTicks": 0,
+      "heightSDmm": 4.374549320223365,
+      "heightStepMm": 2.417845637583897,
+      "normalVelocitySD": 0.018534358381678308,
+      "supportAccelerationSD": 0.767801877967129,
+      "finalSpeed": 16.62823
+    },
+    "after": {
+      "ticks": 250,
+      "groundedTicks": 250.0,
+      "transitions": 0,
+      "oneSkiTicks": 0,
+      "heightSDmm": 0.0007016171795849223,
+      "heightStepMm": 0.00034228187920149297,
+      "normalVelocitySD": 3.2276307099790707e-06,
+      "supportAccelerationSD": 8.243474483225745e-05,
+      "finalSpeed": 16.63344
+    }
+  },
+  "SlopeHardCarve": {
+    "before": {
+      "ticks": 250,
+      "groundedTicks": 250.0,
+      "transitions": 0,
+      "oneSkiTicks": 0,
+      "heightSDmm": 3.1203275960207897,
+      "heightStepMm": 0.8662617449664414,
+      "normalVelocitySD": 0.019779045415100855,
+      "supportAccelerationSD": 0.4619741317351687,
+      "finalSpeed": 12.98711
+    },
+    "after": {
+      "ticks": 250,
+      "groundedTicks": 250.0,
+      "transitions": 0,
+      "oneSkiTicks": 0,
+      "heightSDmm": 0.0006007772743322529,
+      "heightStepMm": 0.00026845637584664583,
+      "normalVelocitySD": 3.1051283745156533e-06,
+      "supportAccelerationSD": 5.5148157620024476e-05,
+      "finalSpeed": 12.99199
+    }
+  }
+}

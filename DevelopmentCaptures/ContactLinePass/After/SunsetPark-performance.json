@@ -1,0 +1,16 @@
+{
+    "gpu": "AMD Radeon RX 6600 XT (radeonsi, navi23, ACO, DRM 3.64, 7.2.8-1-cachyos)",
+    "cpu": "AMD Ryzen 5 9600X 6-Core Processor",
+    "width": 1920,
+    "height": 1080,
+    "quality": 2,
+    "frameRateCap": 144,
+    "samples": 1728,
+    "averageFps": 143.9769714233346,
+    "meanFrameMs": 6.9455551822916619,
+    "p50FrameMs": 6.933242999998868,
+    "p95FrameMs": 7.1367230000003449,
+    "p99FrameMs": 7.197432999998199,
+    "meanMainThreadMs": 6.938720097222208,
+    "meanGcBytes": 1957.7337962962963
+}

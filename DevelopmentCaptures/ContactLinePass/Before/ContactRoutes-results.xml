@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="8" result="Passed" total="8" passed="8" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-09-30 22:52:07Z" end-time="2026-09-30 22:52:08Z" duration="0.2630001">
+  <test-suite type="TestSuite" id="1000" name="PowderFlow" fullname="PowderFlow" runstate="Runnable" testcasecount="44" result="Passed" start-time="2026-09-30 22:52:07Z" end-time="2026-09-30 22:52:08Z" duration="0.263000" total="8" passed="8" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="EditMode" />
+    </properties>
+    <test-suite type="Assembly" id="1062" name="PowderFlow.EditTests.dll" fullname="/home/haydend/Documents/ChatGPT/ski-in-unity/Library/ScriptAssemblies/PowderFlow.EditTests.dll" runstate="Runnable" testcasecount="44" result="Passed" start-time="2026-09-30 22:52:07Z" end-time="2026-09-30 22:52:08Z" duration="0.259359" total="8" passed="8" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="325294" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="EditMode" />
+        <property name="EditorOnly" value="True" />
+      </properties>
+      <test-suite type="TestSuite" id="1063" name="PowderFlow" fullname="PowderFlow" runstate="Runnable" testcasecount="44" result="Passed" start-time="2026-09-30 22:52:07Z" end-time="2026-09-30 22:52:08Z" duration="0.259144" total="8" passed="8" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="TestSuite" id="1064" name="Tests" fullname="PowderFlow.Tests" runstate="Runnable" testcasecount="44" result="Passed" start-time="2026-09-30 22:52:07Z" end-time="2026-09-30 22:52:08Z" duration="0.259027" total="8" passed="8" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestFixture" id="1008" name="ContactQualityTests" fullname="PowderFlow.Tests.ContactQualityTests" classname="PowderFlow.Tests.ContactQualityTests" runstate="Runnable" testcasecount="8" result="Passed" start-time="2026-09-30 22:52:07Z" end-time="2026-09-30 22:52:08Z" duration="0.258286" total="8" passed="8" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-suite type="ParameterizedMethod" id="1017" name="RecordDeterministicRoute" fullname="PowderFlow.Tests.ContactQualityTests.RecordDeterministicRoute" classname="PowderFlow.Tests.ContactQualityTests" runstate="Runnable" testcasecount="8" result="Passed" start-time="2026-09-30 22:52:07Z" end-time="2026-09-30 22:52:08Z" duration="0.256492" total="8" passed="8" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1009" name="RecordDeterministicRoute(&quot;Flat&quot;,0.0f)" fullname="PowderFlow.Tests.ContactQualityTests.RecordDeterministicRoute(&quot;Flat&quot;,0.0f)" methodname="RecordDeterministicRoute" classname="PowderFlow.Tests.ContactQualityTests" runstate="Runnable" seed="600102585" result="Passed" start-time="2026-09-30 22:52:07Z" end-time="2026-09-30 22:52:07Z" duration="0.055380" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[Flat: transitions=0 ground=1000/1000 oneSki=0 heightStepSum=0.00016 speed=6.96
+]]></output>
+              </test-case>
+              <test-case id="1010" name="RecordDeterministicRoute(&quot;Slope&quot;,0.0f)" fullname="PowderFlow.Tests.ContactQualityTests.RecordDeterministicRoute(&quot;Slope&quot;,0.0f)" methodname="RecordDeterministicRoute" classname="PowderFlow.Tests.ContactQualityTests" runstate="Runnable" seed="1343519812" result="Passed" start-time="2026-09-30 22:52:07Z" end-time="2026-09-30 22:52:07Z" duration="0.035641" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[Slope: transitions=0 ground=1000/1000 oneSki=0 heightStepSum=2.04838 speed=19.35
+]]></output>
+              </test-case>
+              <test-case id="1011" name="RecordDeterministicRoute(&quot;Slope&quot;,0.25f)" fullname="PowderFlow.Tests.ContactQualityTests.RecordDeterministicRoute(&quot;Slope&quot;,0.25f)" methodname="RecordDeterministicRoute" classname="PowderFlow.Tests.ContactQualityTests" runstate="Runnable" seed="639140558" result="Passed" start-time="2026-09-30 22:52:07Z" end-time="2026-09-30 22:52:07Z" duration="0.009521" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[SlopeGentleCarve: transitions=0 ground=250/250 oneSki=0 heightStepSum=0.36026 speed=16.63
+]]></output>
+              </test-case>
+              <test-case id="1012" name="RecordDeterministicRoute(&quot;Slope&quot;,0.8f)" fullname="PowderFlow.Tests.ContactQualityTests.RecordDeterministicRoute(&quot;Slope&quot;,0.8f)" methodname="RecordDeterministicRoute" classname="PowderFlow.Tests.ContactQualityTests" runstate="Runnable" seed="1234496143" result="Passed" start-time="2026-09-30 22:52:07Z" end-time="2026-09-30 22:52:07Z" duration="0.010397" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[SlopeHardCarve: transitions=0 ground=250/250 oneSki=0 heightStepSum=0.12907 speed=12.96
+]]></output>
+              </test-case>
+              <test-case id="1013" name="RecordDeterministicRoute(&quot;Rollers&quot;,0.0f)" fullname="PowderFlow.Tests.ContactQualityTests.RecordDeterministicRoute(&quot;Rollers&quot;,0.0f)" methodname="RecordDeterministicRoute" classname="PowderFlow.Tests.ContactQualityTests" runstate="Runnable" seed="222211816" result="Passed" start-time="2026-09-30 22:52:07Z" end-time="2026-09-30 22:52:08Z" duration="0.036075" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[Rollers: transitions=0 ground=1000/1000 oneSki=0 heightStepSum=2.37356 speed=19.39
+]]></output>
+              </test-case>
+              <test-case id="1014" name="RecordDeterministicRoute(&quot;Ripple&quot;,0.0f)" fullname="PowderFlow.Tests.ContactQualityTests.RecordDeterministicRoute(&quot;Ripple&quot;,0.0f)" methodname="RecordDeterministicRoute" classname="PowderFlow.Tests.ContactQualityTests" runstate="Runnable" seed="1176361201" result="Passed" start-time="2026-09-30 22:52:08Z" end-time="2026-09-30 22:52:08Z" duration="0.034886" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[Ripple: transitions=0 ground=1000/1000 oneSki=0 heightStepSum=11.83147 speed=19.11
+]]></output>
+              </test-case>
+              <test-case id="1015" name="RecordDeterministicRoute(&quot;Seam&quot;,0.0f)" fullname="PowderFlow.Tests.ContactQualityTests.RecordDeterministicRoute(&quot;Seam&quot;,0.0f)" methodname="RecordDeterministicRoute" classname="PowderFlow.Tests.ContactQualityTests" runstate="Runnable" seed="592597695" result="Passed" start-time="2026-09-30 22:52:08Z" end-time="2026-09-30 22:52:08Z" duration="0.036517" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[Seam: transitions=0 ground=1000/1000 oneSki=0 heightStepSum=5.34597 speed=19.42
+]]></output>
+              </test-case>
+              <test-case id="1016" name="RecordDeterministicRoute(&quot;OneSki&quot;,0.0f)" fullname="PowderFlow.Tests.ContactQualityTests.RecordDeterministicRoute(&quot;OneSki&quot;,0.0f)" methodname="RecordDeterministicRoute" classname="PowderFlow.Tests.ContactQualityTests" runstate="Runnable" seed="1907780871" result="Passed" start-time="2026-09-30 22:52:08Z" end-time="2026-09-30 22:52:08Z" duration="0.032663" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[OneSki: transitions=0 ground=1000/1000 oneSki=1000 heightStepSum=2.74029 speed=19.38
+Saving results to: /home/haydend/.config/unity3d/PowderFlow Studio/PowderFlow/TestResults.xml
+]]></output>
+              </test-case>
+            </test-suite>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

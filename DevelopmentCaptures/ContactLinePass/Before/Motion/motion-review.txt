@@ -1,0 +1,5 @@
+carve -1: amount=-0.788 load=-11.81 knees=80.6/125.1 speed=16.12
+carve 1: amount=0.788 load=11.82 knees=123.6/78.7 speed=16.10
+crouch=0.979 pop bend=0.458 vertical=-0.08
+prepare=0.263 time=0.339 predicted impact=13.71
+impact=13.82 quality=Clean compressed=0.461 recovered=0.300 fast air=0.740

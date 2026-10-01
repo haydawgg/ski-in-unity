@@ -1,0 +1,22 @@
+{
+  "area": 1,
+  "day": false,
+  "initialSpeed": 0.0,
+  "runSeconds": 8.0,
+  "startX": 0.0,
+  "startZ": 360.0,
+  "runStartZ": 363.35,
+  "frameRateCap": 144,
+  "vSyncCount": 0,
+  "width": 1920,
+  "height": 1080,
+  "quality": 2,
+  "maxSpeed": 16.66,
+  "distance": 79.53,
+  "extractedPath": "/tmp/powderflow-contactline-package.bUEHvT/Linux",
+  "archiveSha256": "c2229d0621a79b10938f1e8672b30a561c8bfdfeaa1bbd684d9d1d2909e7d33c",
+  "archiveBytes": 77856270,
+  "exitCode": 0,
+  "humanSheetIncluded": true,
+  "temporaryExtractionCleanedUp": true
+}

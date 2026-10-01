@@ -2,6 +2,14 @@
 
 An original, playable freestyle skiing game made with Unity URP and Blender. Gravity drives the skier down a connected 1.5 km mountain; carve, pop, rotate, grab, grind, land switch, and retry lines with session markers.
 
+## Ski contact and authored flow line
+
+The focused contact/line pass is described in `Documentation/CONTACT_LINE_PASS_REPORT.md`. It refines the existing four spherecast contacts against the hit surface and starts a fresh support frame on landing. The existing Rigidbody, carving, tricks, procedural pose, rails and camera remain in use.
+
+Pause → **RESTART PARK** starts the authored roll-in at z=250. After the medium jump, choose the left down rail or right wide box; both reconnect for the down box, large kicker and wide exit rail. The left route also has a side hit. Feature placements and branch data are editable in `WorldConfig.freestyleLine`. `Documentation/HUMAN_PLAYTEST.md` has the compact feel-rating sheet and controls. Contact traces, full-line clips and comparisons are in `DevelopmentCaptures/ContactLinePass/`.
+
+`Tools/Build/generate-assets.sh line` regenerates only the two Blender entry banks and imports them through the existing pipeline. The original production jump profiles are retained. The optional native `--smoke-test --smoke-line --profile` flags review the complete line; add `--line-branch --smoke-speed=22` for the faster right branch. Ordinary play uses player controls.
+
 ## Visual polish
 
 The detailed seven-phase plan is in `Documentation/VISUAL_POLISH_PLAN.md`. VP1 repairs persistent post-processing, native-player fog, soft shadows and snow assignments. VP2 adds a tailored 10,846-triangle skier, continuous garments, equipment details, coordinated outfits, readable materials and improved grab/pose handling. VP3 adds asymmetric pines, crossfaded LODs, rock/shrub clusters, region composition and layered ridges. VP4 finishes park hardware, jump side banks, lodge/lift/light detail and original wayfinding. VP5 adds soft terrain-following grooves, layered carve/brake snow, landing accents and rail frost with clean flight/retry transitions. VP6 adds travel/state camera framing, a minimal text-only corner HUD, grouped responsive menus and a live outfit preview. VP7 finishes rail/air ski alignment and rider-relative IK, clears decorative jump-bank overlap, and reviews action/region/outfit consistency with desktop-only package validation. All seven visual phases are complete.

@@ -1,0 +1,6 @@
+yaw=0, tuck=False: leftAxis=1.000, rightAxis=1.000, leftBinding=0.085, rightBinding=0.085
+yaw=0, tuck=True: leftAxis=1.000, rightAxis=1.000, leftBinding=0.085, rightBinding=0.085
+yaw=90, tuck=False: leftAxis=1.000, rightAxis=1.000, leftBinding=0.085, rightBinding=0.085
+yaw=90, tuck=True: leftAxis=1.000, rightAxis=1.000, leftBinding=0.085, rightBinding=0.085
+yaw=180, tuck=False: leftAxis=1.000, rightAxis=1.000, leftBinding=0.085, rightBinding=0.085
+yaw=180, tuck=True: leftAxis=1.000, rightAxis=1.000, leftBinding=0.085, rightBinding=0.085
